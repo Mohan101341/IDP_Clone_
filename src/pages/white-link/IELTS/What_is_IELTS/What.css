@@ -1,0 +1,122 @@
+.what-container {
+    padding-left: 150px;
+    padding-top: 30px;
+    background-image: url('/public/assets/Ielts\ banner.jpg');
+    background-repeat:no-repeat;
+    background-position: right; 
+    background-size: contain;
+    height: 290px;
+    border-bottom: 1px solid rgb(241, 241, 241);
+}
+.wp {
+    padding-left: 20px;
+    font-size:20px;
+}
+.wh {
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    
+}
+.wb {
+    margin-top: 20px;
+    margin-left: 13px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.wb:hover {
+    background-color: #0f1c2a;
+    color: white;
+    transition: 0.3s;
+}
+.matter {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-size: 17px;
+    border-bottom: 1px solid rgb(241, 241, 241);
+    line-height: 1.8;
+    background-color: rgb(234, 255, 255);
+}
+.h2 {
+    padding-left: 140px;
+    font-size: 34px;
+}
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.box {
+    width: 30%;
+    background-color: white;
+    border: 1px solid rgb(238, 238, 238);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+.box:hover {
+    box-shadow: rgb(199, 253, 255) 0px 0px 10px 2px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(50, 151, 252);
+    transform: translateY(-3px);
+}
+.box-container1 {
+    display: flex;
+    gap:250px;
+    margin-left: 250px;
+   
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.hmat {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: rgb(199, 253, 255) 0px 0px 10px 2px;
+    border-color: rgb(50, 151, 252);
+    transform: translateY(-3px);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 17px;
+    margin: 0 0 8px 0;
+}
+
+.card-desc {
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 0;
+}

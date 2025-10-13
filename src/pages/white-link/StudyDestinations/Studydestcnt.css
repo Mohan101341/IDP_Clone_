@@ -1,0 +1,29 @@
+.studydestcnt-container{
+    margin:4rem;
+}
+h2{
+    gap:2rem;
+}
+p{
+    gap:1.5rem;
+}
+.studydestcnt-cards{
+    display:flex;
+    margin:4rem;
+    gap:4rem;
+    background-color: rgb(253, 253, 253);
+}
+.card1{
+    border:1px solid rgb(255, 255, 255);
+    padding:1rem;
+    width:50%;
+    text-align: center;
+    box-shadow: 10px 10px 5px grey;
+}
+.card2{
+    border:1px solid rgb(255, 255, 255);
+    padding:1rem;
+    width:50%;
+    text-align: center;
+    box-shadow: 10px 10px 5px rgb(175, 175, 175);
+}

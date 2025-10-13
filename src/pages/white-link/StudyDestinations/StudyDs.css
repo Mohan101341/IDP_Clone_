@@ -1,0 +1,103 @@
+.stdy-dest-bg {
+  width: 100%;
+  height: 400px;
+  background-image:
+    linear-gradient(120deg, rgba(0,0,0,0.55) 0%, rgba(44,62,80,0.35) 100%),
+    url("https://th.bing.com/th/id/OIP.tY0o4Wa0WE3AqKkC__hMlAHaDt?w=298&h=175&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+}
+
+.stdy-dest-content {
+
+  margin:4rem;
+  text-align: left;
+ 
+}
+
+.stdy-dest-content h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color:white;
+  letter-spacing: 1px;
+}
+
+.stdy-dest-content h2 {
+  font-size: 1.5rem;
+  color:white;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stdy-dest-breadcrumb {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.stdy-dest-content h3 {
+  font-size: 1.25rem;
+  color:white;
+  font-weight: 500;
+  margin-bottom: 1.1rem;
+}
+
+.stdy-dest-content p {
+  font-size: 1.1rem;
+  color:white;
+  margin-bottom: 1.5rem;
+}
+
+.stdy-dest-btn {
+  background: #ffffff;
+  color: #23272b;
+  border: none;
+  padding: 0.8rem 2.2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.09);
+  transition: background 0.2s;
+}
+
+.stdy-dest-btn:hover {
+  background: #ffb300;
+}
+
+@media (max-width: 700px) {
+  .stdy-dest-bg {
+    height: 350px;
+  }
+  .stdy-dest-content {
+    padding: 1.2rem 0.7rem;
+    font-size: 0.98rem;
+  }
+  .stdy-dest-content h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.stdy-dest-info {
+  background: #f1f5fa;
+  border-radius: 14px;
+  padding: 2rem 2.2rem;
+  margin: 2.5rem auto 0 auto;
+  
+  color: #23272b;
+  font-size: 1.13rem;
+  
+  line-height: 1.7;
+  text-align: left;
+}
+.stdy-dest-info strong {
+ 
+  
+  font-size: 2rem;
+}

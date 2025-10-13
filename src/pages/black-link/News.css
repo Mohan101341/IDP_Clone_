@@ -1,0 +1,72 @@
+
+
+h1{
+   
+    margin: 20px;
+    color: black;
+    
+}
+button{
+    padding: 15px 30px;
+    gap: 1rem;
+    border-radius: 1rem;
+    background-color: blue;
+    color: azure;
+    
+}
+.card {
+  list-style: none;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+.News1con {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+@media (max-width: 768px) {
+   button{
+    padding: 15px 30px;
+    gap: 1rem;
+    border-radius: 1rem;
+    background-color: blue;
+    color: azure;
+    
+}
+  
+}

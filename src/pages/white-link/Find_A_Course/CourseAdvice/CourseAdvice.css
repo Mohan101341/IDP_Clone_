@@ -1,0 +1,97 @@
+.course-banner {
+    background-image: url('/public/assets/self.jpg');
+    background-size: 1700px;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    opacity: 2;
+}
+.course-banner p1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding-left: 90px;
+    margin-top: 50px;
+}
+.course-banner h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    font-size: 3.5rem;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 80px;
+}
+.course-banner p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin: auto;
+    text-align: right to left;
+    padding-top: 40px;
+    padding-left: 80px;
+
+}
+.course-banner-button {
+    background-color: #1f82df;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: white;
+    background-size: 40px;
+    border: none;
+    padding: 12px 39px 12px 32px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 19px;
+    margin-top: 20px;
+    margin-left: 80px;
+    display: flex;
+    padding-right: 20px;
+    align-items: center;
+}
+.course-banner-button:hover {
+    background-color: #2b6bb4;
+}
+.course-banner-text {
+    background-color: white;       
+    color: #000000;                
+    padding: 20px 30px;           
+    border-radius: 10px;          
+    display: inline-block;        
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding-left: 80px;
+    font-size: 18px;
+}
+.course-banner-list {
+    padding-left: 50px;
+    font-size: 19px;
+}
+.course-banner-para {
+    font-size: 19px;
+    padding-left: 50px;
+}
+.para {
+    font-size: 19px;
+    padding-left: 50px;
+}
+.course-banner-box {
+    border: 1.5px solid #000000;
+    border-radius: 9px;
+    padding: 15px 40px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #1f82df;
+    cursor: pointer;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.course-banner-line {
+    text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #e65100;
+  font-family: inherit;
+  font-weight: inherit;
+}

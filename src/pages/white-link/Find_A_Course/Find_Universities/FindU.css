@@ -1,0 +1,207 @@
+.FindU-container {
+    padding: 35px;
+    padding-left: 90px;
+    background-color: rgb(230, 248, 255);
+    border-bottom: 4px solid rgb(238, 238, 238);
+}
+.FindU-t {
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 20px;
+}
+.FindU-button {
+    margin-left: 40px;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 21px 38px;
+    font-weight: bold;
+}
+.FindU-button:hover {
+    background-color: #29aae6;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+.FindU-b1 {
+    color: rgb(0, 0, 0);
+    padding: 20px 40px;
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid rgb(197, 197, 197);
+    border-radius: 8px;
+    margin-left: 50px;
+    padding-left: 40px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.FindU-b1:hover {
+       background-color: rgb(20, 50, 172);
+       color: rgb(255, 255, 255);
+
+}
+.FindU-detail {
+    color :black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.FindU-detail:hover {
+    color: blue;
+    cursor: pointer;
+}
+.FindU-boxes {
+    margin: 30px auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    
+}
+.FindU-box1 {
+    margin: 0;
+    height: auto;
+    min-height: 520px;
+    background-color:  #f7f8f8;
+    font-size: 17px;
+    text-align: left;
+    border: 2px solid #eaeaea;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(130, 199, 255, 0.1);
+    padding: 23px;
+}
+.FindU-box1:hover {
+    box-shadow: 5px 10px 20px rgba(11, 112, 244, 0.15);
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    border:1px solid #2248d1;
+}
+.FindU-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+.FindU-heart-icon {
+    font-size: 27px;
+    color: #dd1f1f;
+    cursor: pointer;
+    margin-top: 8px;
+}
+.FindU-heart-icon:hover {
+    color: #440505;
+}
+.FindU-University-logo {
+    
+    margin-bottom: 10px;
+}
+.FindU-logo-m {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 8px 12px;
+    border: 1px solid #d6d6d6;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.FindU-University-name {
+    font-size: 13px;
+    color: #050303;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
+.FindU-program-details {
+   margin: 20px 7px;
+   flex-grow: 1;
+}
+.FindU-detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #000000;
+}
+.FindU-detail-icon {
+     margin-right: 10px;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+.FindU-action-buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.FindU-btn {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border: 1px solid #d3d3d3;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.FindU-btn:hover {
+    border:1px solid #6bb5ff;
+    color: #000000;
+    
+}
+.FIndU-Arrs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; 
+    padding-bottom: 50px; 
+}
+.FIndU-page-link {
+    min-width: 34px;
+    height: 34px;
+    margin: 0 4px;
+    padding: 0 5px; 
+    font-size: 20px;
+    font-weight: 500;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px; 
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.FIndU-page-link.FIndU-active {
+    background-color: #e9ecef; 
+    color: #343a40; 
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.FIndU-page-link.FIndU-current {
+    background-color: #f7f7f7; 
+    color: #343a40;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.FIndU-page-link.FIndU-disabled {
+    color: #adb5bd; 
+    cursor: default;
+    pointer-events: none; 
+}
+.FIndU-page-link {
+    background-color: transparent;
+    font-weight: 600;
+    padding: 0 6px;
+    cursor: pointer;
+}

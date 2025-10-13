@@ -1,0 +1,167 @@
+.essentials-section {
+  padding: 4rem 0;
+  background:#e5e7eb;
+}
+
+.essentials-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.essentials-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.essentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.essential-card {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.essential-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.essential-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2563eb; /* Blue */
+  margin-bottom: 1rem;
+}
+
+.essential-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+}
+/* Tablet view */
+@media (max-width: 1024px) {
+  .essentials-container {
+    padding: 0 1rem;
+  }
+
+  .essentials-title {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .essentials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .essential-card {
+    padding: 1.25rem;
+  }
+
+  .essential-text {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile view → improved layout */
+@media (max-width: 768px) {
+  .essentials-section {
+    padding: 3rem 0;
+  }
+
+  .essentials-container {
+    padding: 0 1rem;
+  }
+  
+  .essentials-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .essentials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .essential-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+  }
+
+  .essential-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .essential-icon {
+    margin: 0 1rem 0 0;
+    flex-shrink: 0;
+    color: #2563eb;
+  }
+
+  .essential-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .essential-text {
+    font-size: 1rem;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+    color: #374151;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .essentials-section {
+    padding: 2rem 0;
+  }
+
+  .essentials-container {
+    padding: 0 0.75rem;
+  }
+
+  .essentials-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .essential-card {
+    padding: 0.875rem;
+    border-radius: 10px;
+  }
+
+  .essential-icon {
+    margin: 0 0.75rem 0 0;
+  }
+
+  .essential-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .essential-text {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,101 @@
+.idp-section {
+  background-color: #1f2b38;
+  color: white;
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.idp-container h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.idp-container p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #c0c7d1;
+   margin: 0.5rem 0;
+  transition: opacity 0.3s;
+}
+
+.video-card:hover p {
+  opacity: 0; /* Hide the title when hovering */
+}
+
+/* Carousel */
+.idp-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.video-card {
+  flex: 0 0 calc(25% - 1rem); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #778191;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.video-card:hover {
+  
+    
+  transform: translateY(-5px);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.video-card p {
+  margin: 0.5rem 0;
+}
+
+/* Navigation buttons */
+.carousel-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel-buttons button {
+  padding: 1rem 1rem;
+  background-color:transparent;
+  color: #807b7b;
+  border: none;
+  border-radius: 60%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.carousel-buttons button:hover:enabled {
+  background-color: #292c33;
+  color: white;
+}
+
+.carousel-buttons button:disabled {
+background-color: #353b48;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .video-card {
+    flex: 0 0 calc(50% - 1rem); /* 2 videos per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .video-card {
+    flex: 0 0 100%; /* 1 video per row */
+  }
+}

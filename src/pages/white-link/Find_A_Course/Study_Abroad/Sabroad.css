@@ -1,0 +1,147 @@
+.Sabroad-container {
+    padding: 20px;
+    padding-left: 100px;
+    background-image: url('/public/assets/Subject-listing-banner.jpg');
+    background-size: 1400px;
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 350px;
+    opacity: 2;
+   
+}
+.Sabroad-description {
+    padding-left: 60px;
+    font-size: 17px;
+    padding-top: 20px;
+}
+.Sabroad-title {
+    font-weight: bold;
+    padding-left: 40px;
+    font-size: 37px;
+}
+.Sabroad-p {
+    font-size: 20px;
+    padding-left: 55px;
+    padding-top: 20px;
+    padding-right: 500px;
+}
+.search-bar-container {
+    gap: 10px; 
+    max-width: 500px; 
+    padding: 40px 20px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 15px 100px;
+    border: 2px solid #ababab;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.search-input:hover {
+    border-color: blueviolet;
+}
+.Sabroad-l {
+    text-decoration: underline orange 5px solid;
+    font-size: 40px;
+}
+.Sabroad-card-container {
+    padding-left: 140px;
+    display: inline-block;
+    vertical-align: top;
+    width: 58%;
+}
+.FindC-search-icon {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(240px); 
+    font-size: 18px;
+    cursor: pointer; 
+    z-index: 2; 
+}
+.Sabroad-mat {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-bottom: 30px;
+}
+.Sabroad-in {
+    display: inline-block;
+    vertical-align: top;
+    width: 38%;
+    margin-left: 24px;
+    padding: 26px;
+    box-sizing: border-box;
+    background-color: #eaf6ff;
+    border: 1px solid #010202;
+    border-radius: 12px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+.Sabroad-in .side {
+    margin: 0 0 12px 0;
+    font-size: 22px;
+}
+.Sabroad-in p1 {
+    display: block;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.Sabroad-in .Sabroad-bt button {
+    background-color: #1167fb;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    margin-top:20px;
+    padding: 10px 16px;
+    border-radius: 9px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.Sabroad-bt button:hover {
+    background-color: #274f93;
+}
+
+
+.subject-list {
+    margin: 0 0 24px 0;
+}
+
+.subject-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.subject-list .subject-row {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.subject-text {
+    color: #595959;
+}
+.Sabroad-mat-title {
+    font-weight: bold;
+    font-size: 40px;
+    text-decoration: underline 5px solid orange;
+}
+
+.subject-plus {
+    color: #333333;
+    font-size: 26px;
+    line-height: 2;
+}
+
+.matter {
+    margin: 0;
+    padding: 0 48px 0 0; 
+    line-height: 56px;   
+    font-weight: 700;
+}
