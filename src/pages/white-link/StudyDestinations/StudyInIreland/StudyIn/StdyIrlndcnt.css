@@ -1,0 +1,119 @@
+
+.study-in-ireland-guide {
+   
+    line-height: 1.6;
+    width:100%;
+
+   padding: 3rem;;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography and Headings */
+h1 {
+    color: #004c3f; /* Deep Irish Green */
+    font-size: 2.2em;
+   
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #1a1a1a;
+    font-size: 1.8em;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #333;
+    font-size: 1.3em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Sections and Paragraphs */
+section {
+    padding: 20px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Lists */
+ul, ol {
+    margin: 10px 0 20px 20px;
+    padding-left: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Tables Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+a {
+    color: #007a4d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button:hover {
+    background-color: #004c3f;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .study-in-ireland-guide {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+    
+    section ul {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    }
+}

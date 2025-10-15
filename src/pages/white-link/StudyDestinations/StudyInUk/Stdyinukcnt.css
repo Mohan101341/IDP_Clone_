@@ -1,0 +1,130 @@
+
+.study-in-uk-guide {
+    font-family: 'Georgia', serif; 
+    line-height: 1.6;
+    max-width: 100%;
+  
+    padding: 25px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    color: #002147; 
+    font-size: 2.5em;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    color: #1a1a1a;
+    font-size: 1.8em;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    border-left: 5px solid #005eb8; /* Royal Blue accent */
+    padding-left: 10px;
+}
+
+h3 {
+    color: #333;
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 20px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Lists (Why Study/Top Courses) */
+ul {
+    list-style-type: disc;
+    margin: 10px 0 20px 20px;
+    padding-left: 15px;
+}
+
+ol {
+    margin: 10px 0 20px 20px;
+    padding-left: 15px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Tables Styling (University, Intakes, Cost, Visa) */
+.uk-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+}
+
+.uk-table th, .uk-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+.uk-table th {
+    background-color: #005eb8; /* Royal Blue header */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.uk-table tr:nth-child(even) {
+    background-color: #f2f7ff; /* Light stripe for readability */
+}
+
+/* Call to Action (Fastlane) */
+.fastlane-cta {
+    background-color: #fffacd; /* Light gold/yellow background */
+    border: 1px solid #ffd700;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .study-in-uk-guide {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .uk-table th, .uk-table td {
+        padding: 8px 10px;
+        font-size: 0.85em;
+        display: block; /* Stack table cells on small screens (can be complex for large tables, but works for key data) */
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
