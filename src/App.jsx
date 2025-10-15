@@ -80,6 +80,8 @@ import Stdycancnt from "./pages/white-link/StudyDestinations/StudyInCanada/Stdyc
 import StdyUkhero from "./pages/white-link/StudyDestinations/StudyInUk/StdyUkhero.jsx";
 import StdyIrlndhero from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndhero.jsx";
 import StdyUsahero from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsahero.jsx";
+import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndcnt.jsx";
+import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
 
 
 // Layout wrapper for white-link pages
@@ -460,7 +462,7 @@ export default function App() {
           <>
             <Navbar />
            <StdyIrlndhero />
-           
+            <StdyIrlndcnt />
             <Contact />
             <Footer />
           </>
@@ -471,7 +473,7 @@ export default function App() {
           <>
             <Navbar />
            <StdyUkhero />
-           
+           <Stdyinukcnt/>
             <Contact />
             <Footer />
           </>

@@ -1,5 +1,5 @@
 import React from "react"
-
+import "./Stdycanct.css"
 function Stdycancnt() {
 
     return(
@@ -7,12 +7,12 @@ function Stdycancnt() {
 <div className="study-canada">
   <h1>Know why study in Canada is so popular with Indian students</h1>
 
-  <p className="highlight">
+  <p >
    30 Top-Ranked Universities | 3 Years of PSW | High Employability | Affordable Tuition – Canada is Your Path to Success!
 
   </p>
 
-  <div className="content">
+  <div >
     <p>
     Canada is a premier destination for nearly half a million international students, renowned for offering high-quality, affordable education with degrees that are recognised worldwide. Canadian universities not only provide a great return on investment but also rank highly on global indices for quality of life, making it an attractive location for students from around the globe, including a large number from India.
     </p>
@@ -26,7 +26,7 @@ function Stdycancnt() {
 
    
 
-    <div className="benefit">
+    <div >
       <h1>Latest Update for Canada</h1>
       <p>
        <strong>Study Permit Cap:</strong> In 2025, IRCC plans to issue 437,000 visas, a 10% reduction compared to the 2024 targets. Despite a 35% cap introduced in January 2024, IDP observed no significant impact on student seat allocations. It is advised to expedite the student application process at all stages to mitigate any potential risks due to the cap. </p>
@@ -41,113 +41,145 @@ function Stdycancnt() {
     <button>Avail Free Councling</button>
     </div>
 
-    <div className="benefit">
-      <h3> Top-Ranked Universities</h3>
+    <div >
+      <h3> Why Study in Canada?</h3>
       <p>
-        Numerous Australian universities are regularly featured in global rankings. Institutions like the University of Melbourne, Australian National University, University of Sydney, University of Queensland, and UNSW Sydney are recognised in the QS World University Rankings 2025 for their academic reputation and high standards of research.
-      </p>
+       Top Student Destination: Canada is celebrated for its student-friendly atmosphere. In 2025, three Canadian cities made it to the top 50 of the QS Best Student Cities list.  </p>
+      <p>Extended Work Opportunities: After graduation, students can benefit from up to 3 years of post-study work rights
+
+      , enhancing their career prospects.</p>
+      <p>World-Class Education: Canadian universities are globally recognised for their quality yet remain affordable. The
+
+         QS World University Rankings 2025 features three Canadian institutions in the top 50, with 30 universities
+
+        in total making the list.</p>
+
+        <p>Cultural Diversity: Canada's multicultural environment welcomes students from around the globe, providing a rich tapestry of interactions and perspectives
+
+        </p>
+
+    
     </div>
 
-    <div className="benefit">
-      <h3>Employment Opportunities</h3>
-      <p>
-        Australia provides up to 6 years of post-study work rights for Indian students, which is a big draw for career-focused graduates.
-      </p>
+    <div >
+      <h3>Top courses to study in Canada</h3>
+     <ul>
+      <li>Computer science</li>
+      <li>Business</li>
+      <li>Engineering</li>
+      <li>Health sciences</li>
+      <li>Physiotherapy</li>
+      <li>Information technology</li>
+      <li>Animation and gaming</li>
+      <li>Hospitality</li>
+     </ul>
     </div>
 
-    <div className="benefit">
-      <h3> Quality of Life</h3>
+   
+
+    <div >
+      <h3>Top universities to study in Canada</h3>
       <p>
-        Australia is known for its high standard of living, beautiful landscapes, and vibrant cities, making it an attractive destination for students from India looking for a balance between study and lifestyle.
+       When deciding which university to study at, it is crucial that you also look at the world university rankings.
       </p>
-    </div>
 
-    <div className="benefit">
-      <h3> International Student Support</h3>
-      <p>
-        Australian universities offer a range of services to help students adjust to life in Australia and succeed academically, from orientation programs to legal services and career advice.
-      </p>
-    </div>
-    <button>Avail Free Councling</button>
-  </div>
-</div>
-
-<div className="australia-update">
-  <h1>New update for Australia</h1>
-  <strong>Australia Commits to Maintaining High Education Standards for Indian Students in 2025</strong>
-  <p>
-    The Australian Government recently introduced Ministerial Direction 111 (MD 111) to process offshore student visa
-    applications in a more balanced way across education providers. Under MD 111 they have given a capacity limit to
-    universities/providers and students are encouraged to apply for their visas early to be considered under Priority 1.
-  </p>
-
-  
-</div>
-<div className="cost"> 
-    <h1>Cost of studying in Australia</h1>
-    <p>The cost of study in Australia depends on the type of qualification and the university or school you opt for. For instance, veterinary and medical degrees cost substantially more than other degrees. The average tuition fees at one of Australia’s tertiary institutions range between * AUD 20,000 and AUD 30,000 a year.</p>
-     <div className="aush-cost-table">
+      <div class="canada-university-table">
+  <h2>Top Canadian Universities (QS World University Rankings 2025)</h2>
   <table>
     <thead>
       <tr>
-        <th>S.no.</th>
-        <th>Australia Study Program</th>
-        <th>Average fees in AUD*</th>
+        <th>S.No.</th>
+        <th>Institution</th>
+        <th>QS Ranking 2025 (Globally)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>1.</td>
-        <td>School</td>
-        <td>$7,800 to $30,000 annually</td>
+        <td>1</td>
+        <td>University of Toronto</td>
+        <td>25</td>
       </tr>
       <tr>
-        <td>2.</td>
-        <td>English language studies</td>
-        <td>$350–450 weekly (varies as per course length)</td>
+        <td>2</td>
+        <td>McGill University</td>
+        <td>29</td>
       </tr>
       <tr>
-        <td>3.</td>
-        <td>Vocational Education and Training (Certificates I to IV, Diploma and Advanced Diploma)</td>
-        <td>$4,000 – $22,000 annually</td>
+        <td>3</td>
+        <td>University of British Columbia</td>
+        <td>38</td>
       </tr>
       <tr>
-        <td>4.</td>
-        <td>Undergraduate Bachelor’s degree</td>
-        <td>$15,000 – $35,000 annually</td>
+        <td>4</td>
+        <td>University of Alberta</td>
+        <td>96</td>
       </tr>
       <tr>
-        <td>5.</td>
-        <td>Postgraduate Master’s Degree</td>
-        <td>$20,000 – $42,000 annually</td>
+        <td>5</td>
+        <td>University of Waterloo</td>
+        <td>115</td>
       </tr>
       <tr>
-        <td>6.</td>
-        <td>Doctoral Degree</td>
-        <td>
-          $20,000 – $42,000 annually (attractive scholarships up to 100% available with living grants on meeting the university requirements)
-        </td>
+        <td>6</td>
+        <td>Western University</td>
+        <td>120</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Université de Montréal</td>
+        <td>159</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>McMaster University</td>
+        <td>176</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>University of Ottawa</td>
+        <td>189</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Queen's University at Kingston</td>
+        <td>193</td>
       </tr>
     </tbody>
   </table>
 </div>
- <p>Most commonly, courses in humanities, arts, and education are a little cheaper, while subjects such as medicine and engineering are likely to be more expensive. If you wish to study at a postgraduate level, the tuition fee is typically higher, and the cost of studying in Australia vary depending on the program
 
-We know you have a lot of questions in your mind, so have answered common questions students as you raise about studying and living in Australia.</p>
+    </div>
+    
+  </div>
+</div>
 
+
+<div className="cost"> 
+    <h1>Intakes in Canada</h1>
+    <p>Unlike a single intake in Indian universities, Canadian colleges and universities offer three intakes. In some universities, intakes may also be referred to as a semester. The three intakes available in Canada are:.</p>
+     <ul>
+      <li>Fall: A popular intake among Indian students, The Fall intake starts in the month of September</li>
+      <li>Winter: Starts in January; it’s best if you miss the September intake</li>
+      <li>Summer: Available for limited programs and colleges, the Summer intake usually starts around April and May</li>
+     </ul>
+     
+    
+ 
 <button>Avail free counselling</button>
 </div>
 <div className="visa-requirements">
-  <h1>Student visa requirements for Australia</h1>
-  <p>As of July 1, 2016, the Subclass 500 student visa has been available, permitting you to stay in Australia for the entire duration of your study program according to your enrollment and completion dates. To ensure a hassle-free experience, make sure your visa remains valid and follow the conditions listed on your student visa. For more detailed information, check out the Australian Government’s Department of Home Affairs website.</p>
-  <h1>Scholarships to study in Australia</h1>
+  <h1>Cost to study in Canada</h1>
+  <p>Your expenditure on tuition fees depends on the type of qualification and institution you opt for. To cover this, you will need approximately between CAD 13,000 - CAD 35,000 a year.</p>
+  <p>Your expenditure on tuition fees depends on the type of qualification and institution you opt for. To cover this, you will need approximately between CAD 13,000 - CAD 35,000 a year.</p>
   <p>Here are some popular scholarship programs you can apply to study in Australia as an Indian student:</p>
+
+
   <table>
     <thead>
       <tr>
         <th>S.no.</th>
-        <th>Australia Study Program</th>
-        <th>Average fees in AUD*</th>
+        <th> Study Program</th>
+        <th>Anual fee</th>
       </tr>
     </thead>
     <tbody>
@@ -189,7 +221,7 @@ We know you have a lot of questions in your mind, so have answered common questi
 </div>
 
 <div>
-  <h1>Intakes in Australia</h1>
+  <h1>Intakes inCanada</h1>
   <p>We know you have a lot of questions in your mind, so have answered common questions students as you raise about studying and living in Australia.
 
 Unlike a single intake in Indian universities, Australian colleges and universities offer two major intakes. In some universities, intakes may also be referred to as a semester. <br></br>The two intakes available in Australia are:</p><br></br>
