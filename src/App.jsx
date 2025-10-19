@@ -82,7 +82,7 @@ import StdyIrlndhero from "./pages/white-link/StudyDestinations/StudyInIreland/S
 import StdyUsahero from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsahero.jsx";
 import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndcnt.jsx";
 import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
-
+import StdyUsacnt from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsacnt.jsx";
 
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
@@ -483,7 +483,7 @@ export default function App() {
           <>
             <Navbar />
           <StdyUsahero />
-           
+           <StdyUsacnt/>
             <Contact />
             <Footer />
           </>
