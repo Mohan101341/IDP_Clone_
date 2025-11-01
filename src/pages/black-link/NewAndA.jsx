@@ -62,7 +62,7 @@ const NewAndA = () => {
   return (
     <div>
       {/* Header Section */}
-      <div className="News1con">
+      <div className="News2con">
         <p>IDP India</p>
         <h1>746 news and articles</h1>
         <button>Filter articles</button>
@@ -72,9 +72,9 @@ const NewAndA = () => {
       <p>Showing 1-12 of 746 results</p>
 
       {/* Cards Grid */}
-      <div className="card-grid">
+      <div className="card1-grid">
         {articles.map((article, index) => (
-          <div className="card" key={index}>
+          <div className="card1" key={index}>
             <div>
               <img src={article.img} alt={article.title} />
             </div>

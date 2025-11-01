@@ -1,16 +1,16 @@
-.important-links-section {
-  background: #e5e5e5;
-  padding: 40px 0;
+.important-links-section2 {
+  background: #f5f5f5;
+  padding: 40px ;
   font-family: Arial, sans-serif;
 }
 
-.container {
-  max-width: 1200px;
+.container2 {
+  max-width: 1300px;
   margin: auto;
-  padding: 0 20px;
+  padding: 40px;
 }
 
-.heading {
+.heading2 {
   font-size: 28px;
   font-weight: bold;
   color: #333;
@@ -19,7 +19,7 @@
   display: inline-block;
 }
 
-.heading .underline {
+.heading2 .underline2 {
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -29,51 +29,75 @@
   border-radius: 2px;
 }
 
-.links-grid {
+.links-grid2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 520px);
+  gap: 4px 3px;
+  justify-content: space-between;
 }
 
-.card {
+.important-links-section2 .card2 {
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 20px;
   border-radius: 10px;
-  padding: 20px;
-  transition: 0.3s ease;
+  box-shadow: 0px 14px 13px rgba(0, 0, 0, 0.05);
+  padding: 40px 40px 40px 50px;
+  transition:transform(0.3);
 }
 
-.card:hover {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+.important-links-section2 .card2:hover {
+  border:1px solid #5badff;
+  box-shadow: 0px 13px 16px rgba(83, 223, 255, 0.1);
 }
 
-.card .icon {
+.important-links-section2 .card2 .icon2 {
   font-size: 32px;
-  color: #007bff;
+  color: #272727;
   margin-bottom: 10px;
 }
 
-.card h3 {
+.important-links-section2 .card2 h3 {
   font-size: 18px;
   font-weight: bold;
-  color: #222;
+  color: #373737;
   margin-bottom: 8px;
 }
 
-.card p {
+.important-links-section2 .card2 p {
   font-size: 14px;
-  color: #555;
+  color: #8e8e8e;
   margin-bottom: 15px;
   line-height: 1.4;
 }
 
-.learn-more {
+.learn-more2 {
   font-size: 14px;
   font-weight: 500;
   color: #0066cc;
   text-decoration: none;
 }
 
-.learn-more:hover {
+.learn-more2:hover {
   text-decoration: underline;
+}
+
+/* Responsive behavior to keep 3x2 layout on desktop and stack on smaller screens */
+@media (max-width: 1024px) {
+  .links-grid2 {
+    grid-template-columns: repeat(2, 520px);
+    gap: 32px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .container2 {
+    padding: 0 20px;
+  }
+  .links-grid2 {
+    grid-template-columns: minmax(300px, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
 }

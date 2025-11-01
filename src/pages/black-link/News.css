@@ -14,7 +14,7 @@ button{
     color: azure;
     
 }
-.card {
+.card1 {
   list-style: none;
   padding: 1.5rem;
   margin: 1.5rem;
@@ -23,10 +23,10 @@ button{
   transition: all 0.3s ease-in-out;
 }
 
-.card:hover {
+.card1:hover {
   transform: translateY(-5px);
 }
-.News1con {
+.News2con {
   padding: 15px 20px;
   display: flex;
   flex-direction: column;
@@ -34,13 +34,13 @@ button{
   margin-bottom: 2rem;
 }
 
-.card-grid {
+.card1-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.card {
+.card1 {
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -49,11 +49,11 @@ button{
   transition: transform 0.2s;
 }
 
-.card:hover {
+.card1:hover {
   transform: translateY(-5px);
 }
 
-.card img {
+.card1 img {
   width: 100%;
   height: auto;
   border-radius: 6px;

@@ -1,25 +1,30 @@
-.idp-section {
+.idp-section1 {
   text-align: center;
   padding: 4rem 0;
+  border-radius: 1rem;
   background-color: #1e1e1e;
   color: #fff;
 }
 
-.idp-container {
-    background-color: rgb(0, 0, 0);
+.idp-container1 {
+
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+.headi {
+  color: white;
+  margin-left: -30px;
+}
 
-.idp-container h2 {
+.idp-container1 h2 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
-.idp-container p {
+.idp-container1 p {
   max-width: 800px;
   margin: 0 auto 2rem;
   color: #dcdcdc;
@@ -28,7 +33,7 @@
 }
 
 /* ✅ Make carousel horizontal */
-.idp-carousel {
+.idp-carousel1 {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -38,7 +43,7 @@
 }
 
 /* ✅ Video cards in a horizontal line */
-.video-card {
+.video-card1 {
   flex: 0 0 23%; /* fits 4 videos per row */
   border-radius: 12px;
   overflow: hidden;
@@ -47,19 +52,19 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.video-card:hover {
+.video-card1:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
-.video-card video {
+.video-card1 video {
   width: 100%;
   height: auto;
   display: block;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.video-card p {
+.video-card1 p {
   color: #f1f1f1;
   font-size: 0.95rem;
   padding: 10px 12px;
@@ -69,14 +74,14 @@
 }
 
 /* ✅ Buttons */
-.carousel-buttons {
+.carousel-buttons1 {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   gap: 16px;
 }
 
-.carousel-buttons button {
+.carousel-buttons1 button {
   background: transparent;
   color: #fff;
   border: 1.5px solid #fff;
@@ -87,13 +92,13 @@
   transition: all 0.25s ease;
 }
 
-.carousel-buttons button:hover:not(:disabled) {
+.carousel-buttons1 button:hover:not(:disabled) {
   background-color: #ffffff;
   color: #1e1e1e;
   transform: scale(1.05);
 }
 
-.carousel-buttons button:disabled {
+.carousel-buttons1 button:disabled {
   border-color: #666;
   color: #666;
   cursor: not-allowed;
@@ -102,35 +107,35 @@
 
 /* ✅ Responsive layout */
 @media (max-width: 1024px) {
-  .video-card {
+  .video-card1 {
     flex: 0 0 31%;
   }
 }
 
 @media (max-width: 768px) {
-  .video-card {
+  .video-card1 {
     flex: 0 0 48%;
   }
 
-  .idp-container h2 {
+  .idp-container1 h2 {
     font-size: 1.8rem;
   }
 
-  .idp-container p {
+  .idp-container1 p {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .video-card {
+  .video-card1 {
     flex: 0 0 100%;
   }
 
-  .idp-container h2 {
+  .idp-container1 h2 {
     font-size: 1.6rem;
   }
 
-  .carousel-buttons button {
+  .carousel-buttons1 button {
     font-size: 1rem;
     padding: 8px 14px;
   }

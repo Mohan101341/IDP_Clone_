@@ -1,0 +1,21 @@
+.std-can-container{
+    background-color: white;
+    margin:3rem;
+    text-align: justify;
+    color: black;
+    gap:3rem;
+}
+
+
+p {
+  margin-bottom: 1.5rem; 
+  line-height: 1.6; 
+}
+
+/* Optional – for better text layout */
+
+button{
+  margin-bottom: 2rem;
+}
+
+

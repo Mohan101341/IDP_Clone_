@@ -21,10 +21,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="services">
+    <section className="services1">
+      
       {services.map((service, index) => (
-        <div key={index} className="service-card">
-          <div className="icon">{service.icon}</div>
+        <div key={index} className="service-card1">
+          <div className="icon1">{service.icon}</div>
           <h3>{service.title}</h3>
           <p>{service.desc}</p>
         </div>

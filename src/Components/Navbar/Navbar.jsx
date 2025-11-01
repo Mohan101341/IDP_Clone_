@@ -4,7 +4,52 @@ import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faAngleDown, faBars, faTimes, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as faRegularHeart } from "@fortawesome/free-regular-svg-icons";
-
+const styles = {
+  navButton: {
+    background: "none",
+    border: "none",
+    cursor: "pointer",
+    fontSize: "inherit",
+    color: "inherit",
+    display: "flex",
+    alignItems: "center",
+    gap: "3px",
+  },
+  dropdownMenu: {
+    position: "absolute",
+    backgroundColor: "rgba(255, 255, 255, 1)",
+    boxShadow: "0 4px 8px rgba(18, 2, 2, 0.1)",
+    listStyle: "none",
+    padding: "10px 0",
+    marginTop: "5px",
+    borderRadius: "4px",
+    zIndex: 1000,
+    minWidth: 200,
+  },
+  dropdownItem: {
+    padding: "8px 20px",
+    cursor: "pointer",
+    whiteSpace: "nowrap",
+  },
+  navItem: {
+    cursor: "pointer",
+    position: "relative",
+  },
+  secondLevelMenu: {
+    position: "absolute",
+    top: 0,
+    left: "100%",
+    backgroundColor: "#f5f5f5",
+    boxShadow: "0 4px 8px rgba(18, 2, 2, 0.1)",
+    listStyle: "none",
+    padding: "10px 0",
+    marginTop: 0,
+    borderRadius: "4px",
+    zIndex: 1001,
+    minWidth: 260,
+    height: "100%",
+  },
+};
 // Black bar dropdown data
 const balckDropworn = {
   "Find-us": {
@@ -48,64 +93,85 @@ const dropdownData = {
       { label: "Arrive and thrive", path: "/study-abroad/arrive-and-thrive" },
     ],
   },
+
+
   "Study-destinations": {
-    path: "/pages/white-link/StudyDestinations/StudyDs",
+    path: "/study-destinations",
     items: [
-      { label: "Study in Australia", path: "/pages/white-link/StudyDestinations/StudyDs" },
-      { label: "Study in Canada", path: "/pages/white-link/StudyDestinations/StudyDs" },
-      { label: "Study in Ireland", path: "/pages/white-link/StudyDestinations/StudyDs" },
-      { label: "Study in UK", path: "/pages/white-link/StudyDestinations/StudyDs" },
-      { label: "Study in USA", path: "/pages/white-link/StudyDestinations/StudyDs" },
+      { label: "Study in Australia", path: "/study-destinations/australia" },
+      { label: "Study in Canada", path: "/study-destinations/canada" },
+      { label: "Study in Ireland", path: "/study-destinations/ireland" },
+      { label: "Study in UK", path: "/study-destinations/uk" },
+      { label: "Study in USA", path: "/study-destinations/usa" },
     ],
   },
+
   "Find-a-course": {
-    path: "/pages/white-link/Find1",
+    path: "/pages/FindC",
     items: [
-      { label: "Undergraduate", path: "/pages/white-link/Find1" },
-      { label: "Postgraduate", path: "/pages/white-link/Find1" },
-      { label: "Diploma", path: "/pages/white-link/Find1" },
-      { label: "Certificate", path: "/pages/white-link/Find1" },
-      { label: "Short Courses", path: "/pages/white-link/Find1" },
+      { label: "Course Advice", path: "/pages/CourseA" },
+      { label: "Courses with Instant Offer", path: "/pages/Courseof" },
+      { label: "Study Abroad cources", path: "/pages/Sabroad" },
+      { label: "Find scholorships", path: "/pages/Scholar" },
+      { label: "Find Universities", path: "/pages/FindU" },
+      { label: "University Rankings - THE", path: "/pages/Uranking" },
+      { label: "Complete University Guide (CUG)", path: "/pages/Cug" },
     ],
   },
-  "IELTS": {
-    path: "/pages/white-link/IELTS",
+  "English Tests": {
+    path: "/pages/EnglishT",
     items: [
-      { label: "IELTS Academic", path: "/pages/white-link/IELTS" },
-      { label: "IELTS General Training", path: "/pages/white-link/IELTS" },
-      { label: "IELTS Preparation", path: "/pages/white-link/IELTS" },
-      { label: "Test Dates", path: "/pages/white-link/IELTS" },
+      {label: "Toefl", path: "/pages" },
+      { label: "duolingo", path: "/pages" },
+      { label: "IELTS", path: "/pages/IELTSPage" },
     ],
   },
 
   "Student-essentials": {
-    path: "/pages/white-link/Student_Essentials",
+    path: "/student-essentials",
     items: [
-      { label: "Education Loan", path: "/pages/white-link/Student_Essentials/EducationLoan" },
-      { label: "Money Transfer", path: "/pages/white-link/Student_Essentials/Money_Transfer" },
-      { label: "Health Insurance", path: "/pages/white-link/Student_Essentials/HealthInsurance" },
-      { label: "Student Banking", path: "/pages/white-link/Student_Essentials/StudentBanking" },
-      { label: "Accommodation", path: "/pages/white-link/Student_Essentials/Accommodation" },
-      { label: "International SIM Cards", path: "/pages/white-link/Student_Essentials/InternationalSimCards" },
-      { label: "Guardian_Ship", path: "/pages/white-link/Student_Essentials/Guardian_Ship" },
-      { label: "Forex Cards", path: "/pages/white-link/Student_Essentials/ForexCards" },
-      { label: "ISIC", path: "/pages/white-link/Student_Essentials/ISIC" },
+      { label: "Education Loan", path: "/student-essentials/EducationLoan" },
+      { label: "Money Transfer", path: "/student-essentials/Money_Transfer" },
+      { label: "Health Insurance", path: "/student-essentials/HealthInsurance" },
+      { label: "Student Banking", path: "/student-essentials/StudentBanking" },
+      { label: "Accommodation", path: "/student-essentials/Accommodation" },
+      { label: "International SIM Cards", path: "/student-essentials/InternationalSimCards" },
+      { label: "Guardian Ship", path: "/student-essentials/Guardian-Ship" },
+      { label: "Forex Cards", path: "/student-essentials/ForexCards" },
+      { label: "ISIC", path: "/student-essentials/ISIC" },
+      { label: "Student Travel Support", path: "/student-essentials/Travel_Support" },
     ],
   },
 
 
 };
 
+const submenuData = {
+  "University Rankings - THE": [
+    { label: "QS World University Rankings", path: "/pages/Qsworld" }
+  ],
+  "IELTS": [
+    { label: "Book an IELTS Test", path: "/pages/Book" },
+    { label: "What is IELTS?", path: "/pages/what" },
+    { label: "IELTS Preparation", path: "/pages/Prep" }
+  ],
+};
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-
+  const [openSecondLevel, setOpenSecondLevel] = useState(null);
+  const [dropdownHeight, setDropdownHeight] = useState(null);
+ 
+  const dropdownRef = React.useRef(null);
+  
   const toggleDropdown = (key) => {
     setOpenDropdown((prev) => (prev === key ? null : key));
   };
 
   const closeDropdown = () => {
     setOpenDropdown(null);
+    setOpenSecondLevel(null);
   };
 
   const toggleMobileMenu = () => {
@@ -123,16 +189,21 @@ const Navbar = () => {
       document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
-
+   useEffect(() => {
+    if (openDropdown && dropdownRef.current) {
+      setDropdownHeight(dropdownRef.current.clientHeight);
+    } else {
+      setDropdownHeight(null);
+    }
+  }, [openDropdown]);
   return (
     <>
-      {/* Top Black Bar */}
-      <div className="black-container">
-        <ul className="black-links">
-          <li className="black-li">
+      <div className="black-containera">
+        <ul className="black-linksa">
+          <li className="black-lia">
             <Link to="/pages/NewAndA">News and articles</Link>
           </li>
-          <li className="black-li">
+          <li className="black-lia">
             <Link to="/pages/Events">Events</Link>
           </li>
 
@@ -211,19 +282,44 @@ const Navbar = () => {
                 </Link>
 
                 {openDropdown === key && (
-                  <ul className="white-dropdown">
-                    {items.items.map((item, idx) => (
-                      <li key={idx} className="white-dropdown-item">
-                        <Link
-                          to={item.path}
-                          onClick={closeDropdown}
-                        >
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <ul style={styles.dropdownMenu} ref={dropdownRef}>
+                  {items.items.map((item, idx) => (
+                    <li
+                      key={idx}
+                      style={styles.dropdownItem}
+                      onMouseEnter={() => setOpenSecondLevel(item.label)}
+                      onMouseLeave={() => setOpenSecondLevel(null)}
+                    >
+                      <Link
+                        to={item.path}
+                        onClick={closeDropdown}
+                        style={{ color: "#161111ff", textDecoration: "none" }}
+                      >
+                        {item.label}
+                      </Link>
+
+                      {submenuData[item.label] && openSecondLevel === item.label && (
+                        <ul style={{
+                          ...styles.secondLevelMenu,
+                          height: dropdownHeight ? dropdownHeight : styles.secondLevelMenu.height,
+                        }}>
+                          {submenuData[item.label].map((sub, sIdx) => (
+                            <li key={sIdx} style={styles.dropdownItem}>
+                              <Link
+                                to={sub.path}
+                                onClick={closeDropdown}
+                                style={{ color: "#161111ff", textDecoration: "none" }}
+                              >
+                                {sub.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
               </li>
             ))}
           </ul>

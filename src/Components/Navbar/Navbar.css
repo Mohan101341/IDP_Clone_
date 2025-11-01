@@ -1,22 +1,25 @@
 /* ============================= */
 /* Top Black Bar */
 /* ============================= */
-.black-container {
-  background-color: #444444;
+.black-container,
+.black-containera {
+  background-color: #292929;
   color: white;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 25px;
-  padding: 8px 25px;
+  padding: 0.2px 29px;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid rgb(65, 65, 65);
   z-index: 9999;
   position: relative; 
   
 }
 
-.black-links {
+.black-links,
+.black-linksa {
   display: flex;
   align-items: center;
   gap: 25px;
@@ -25,7 +28,8 @@
   padding: 0;
 }
 
-.black-links li {
+.black-links li,
+.black-linksa li {
 
   color: #f5f5f5;
   text-decoration: none;
@@ -36,14 +40,16 @@
 
 }
 
-.black-li a {
+.black-li a,
+.black-lia a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 10px;
+  padding: 6px 1px;
   border-radius: 12px;
 }
-.black-li a:hover { text-decoration: underline; }
+.black-li a:hover,
+.black-lia a:hover { text-decoration: underline; }
 
 .black-li1 > button, .nav-button {
   padding: 6px 10px;
@@ -56,12 +62,14 @@
   align-items: center;
   gap: 6px;
 }
-.black-li1 > button { color: #fff; }
-.nav-button { color: #333; text-decoration: none; }
-.nav-button:hover { color: #2a4866ff; }
+.black-li1 > button { color: #00802f; }
+.nav-button { color: #b83939; text-decoration: none; }
+.nav-button:hover { color: rgb(46, 119, 192); }
 .black-li1 > button:hover {
-  background-color: rgb(25, 16, 122);
-  color: #fff;
+  background-color: rgb(35, 75, 255);
+  color: #fafafa;
+ margin-top: 1px;
+ 
 }
 
 .black-li2 a {
@@ -76,7 +84,8 @@
   color: #fff;
 }
 
-.black-links>li:not(:last-child)::after {
+.black-links>li:not(:last-child)::after,
+.black-linksa>li:not(:last-child)::after {
   content: "|";
   display: inline-block;
   margin-left: 12px;
@@ -86,7 +95,8 @@
 
 /* Hide top black bar on mobile */
 @media (max-width: 768px) {
-  .black-container {
+  .black-container,
+  .black-containera {
     display: none;
   }
 }
@@ -278,22 +288,27 @@
   background: #222;
   color: #fff;
   position: absolute;
-  right: 0;
-  left: auto;
+  left: 50%;
+  right: auto;
   top: 100%;
   min-width: 240px;
+  width: max-content;           /* lean width */
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(18, 2, 2, 0.1);
   padding: 0;
   margin: 0;
   z-index: 10000;
+  transform: translateX(-50%);
+  text-align: left;
 }
 .nav-item { position: relative; }
+.black-li1.has-dropdown { position: relative; }
 
 .find-us-dropdown li {
   padding: 8px 20px;
   white-space: nowrap;
   cursor: pointer;
+  text-align: left;
 }
 
 .find-us-dropdown li:hover,
@@ -365,25 +380,30 @@
   background: #ffffff;
   color: #222;
   position: absolute;
-  right: 0;
-  left: auto;
+  left: 50%;
+  right: auto;
   top: 100%;
   min-width: 260px;
+  width: max-content;          /* lean width */
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   padding: 8px 0;
   margin: 6px 0 0 0;
+  transform: translateX(-50%);
+  text-align: left;
 }
 
 .white-dropdown-item {
   padding: 10px 18px;
   color: #222;               /* ensure visible by default */
+  text-align: left;
 }
 
 .white-dropdown-item a {
   display: block;
   color: #222 !important;    /* override any inherited white */
   text-decoration: none;
+  text-align: left;
 }
 
 /* Ensure visibility in all link states before hover */
@@ -411,6 +431,7 @@
 /* Buttons */
 /* ============================= */
 .nav-buttons {
+  justify-items: center;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -428,6 +449,7 @@
 
 .login-btn {
   border: none;
+  margin-top: 30px;
   background-color: rgb(6 132 104 / 1);
   color: #fff;
 }
@@ -437,6 +459,7 @@
 }
 
 .signup-btn {
+  margin-top: 30px;
   background-color: #fff;
   color: #333;
 }
@@ -453,6 +476,7 @@
 .icon-btn.heart {
   display: inline-flex;
   font-size: 22px;
+  margin-left: 10px;
   color: red;
   transition: transform 0.3s ease, color 0.3s ease;
 }

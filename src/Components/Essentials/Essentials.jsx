@@ -6,7 +6,7 @@ const Essentials = () => {
   const essentials = [
     {
       title: "Education Loan",
-      path: "/pages/white-link/Student_Essentials/EducationLoan",
+      path: "/student-essentials/EducationLoan",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path d="M12 1v22" />
         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
@@ -14,7 +14,7 @@ const Essentials = () => {
     },
     {
       title: "Accommodation",
-      path: "/pages/white-link/Student_Essentials/Accommodation",
+      path: "/student-essentials/Accommodation",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path d="M3 12L12 3l9 9v9H3v-9Z" />
         <path d="M9 21v-6h6v6" />
@@ -22,7 +22,7 @@ const Essentials = () => {
     },
     {
       title: "Banking",
-      path: "/pages/white-link/Student_Essentials/StudentBanking",
+      path: "/student-essentials/StudentBanking",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path d="M12 2 2 7l10 5 10-5-10-5Z" />
         <path d="M2 7v13h20V7" />
@@ -31,7 +31,7 @@ const Essentials = () => {
     },
     {
       title: "Health Insurance",
-      path: "/pages/white-link/Student_Essentials/HealthInsurance",
+      path: "/student-essentials/HealthInsurance",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path d="M12 21s8-4 8-10V5l-8-3-8 3v6c0 6 8 10 8 10Z" />
         <path d="M9 10h6M12 7v6" />
@@ -39,7 +39,7 @@ const Essentials = () => {
     },
     {
       title: "Money Transfer",
-      path: "/pages/white-link/Student_Essentials/Money_Transfer",
+      path: "/student-essentials/Money_Transfer",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <rect x="3" y="3" width="18" height="18" rx="2" />
         <path d="M7 8h10M7 12h10" />
@@ -48,7 +48,7 @@ const Essentials = () => {
     },
     {
       title: "International SIM Cards",
-      path: "/pages/white-link/Student_Essentials/InternationalSimCards",
+      path: "/student-essentials/InternationalSimCards",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <rect x="5" y="2" width="14" height="20" rx="2" />
         <path d="M9 8h6v8H9z" />
@@ -56,7 +56,7 @@ const Essentials = () => {
     },
     {
       title: "Forex Cards",
-      path: "/pages/white-link/Student_Essentials/ForexCards",
+      path: "/student-essentials/ForexCards",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <rect x="2" y="5" width="20" height="14" rx="2" />
         <path d="M2 10h20" />
@@ -66,7 +66,7 @@ const Essentials = () => {
     },
     {
       title: "Guardian Ship",
-      path: "/pages/white-link/Student_Essentials/Guardian_Ship",
+      path: "/student-essentials/Guardian-Ship",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <circle cx="12" cy="7" r="4" />
         <path d="M5.5 21a7 7 0 0 1 13 0Z" />
@@ -74,7 +74,7 @@ const Essentials = () => {
     },
     {
       title: "ISIC Card",
-      path: "/pages/white-link/Student_Essentials/ISIC",
+      path: "/student-essentials/ISIC",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <rect x="2" y="4" width="20" height="16" rx="2" />
         <path d="M2 10h20" />
@@ -83,7 +83,7 @@ const Essentials = () => {
     },
     {
       title: "Student Travel Support",
-      path: "/pages/white-link/Student_Essentials/Travel_Support",
+      path: "/student-essentials/Travel_Support",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path d="M21 16v-2a3 3 0 0 0-3-3H9l-2-5H3v2h3l2 5H4v8h2v-3h12v3h2v-5h1z" />
       </svg>`,

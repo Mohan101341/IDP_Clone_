@@ -1,0 +1,78 @@
+.prep {
+    padding-left: 90px;
+    padding-top: 20px;
+    background-image: url("/public/assets/prepie.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 380px;
+    height: 380px;
+    background-color: black;
+    box-shadow: 7px 6px 15px rgb(65, 65, 65);
+
+}
+.p1{
+    color: white;
+}
+.prep h1 {
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: -50px;
+    margin-bottom: 10px;
+}
+.p2 {
+    margin-top: -30px;
+    color: white;
+}
+.btn {
+    margin-left: 110px;
+    margin-top: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+    background-color: #1528ff85;
+    color: white;
+   
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.prep1 {
+    padding-left: 190px;
+    padding-top: 20px;
+    background-color: #f5f5f5;
+    
+    font-size: 18px;
+    border-bottom: 2px solid rgb(231, 231, 231);
+}
+.p3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    padding-right: 130px;
+}
+.line {
+    margin-left: -240px;
+    margin-bottom: -20px;
+}
+.list {
+    line-height: 2.5;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+.line1 {
+    margin-left:7px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    margin-right: 200px;
+}
+.btn1 {
+    margin-left: 7px;
+    margin-top: 10px;
+    font-weight: bold;
+    border: 1px solid rgb(237, 237, 237);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+    border-radius: 30px;
+}

@@ -44,19 +44,19 @@ const Import = () => {
   ];
 
   return (
-    <div className="important-links-section">
-      <div className="container">
-        <h2 className="heading">
+    <div className="important-links-section2">
+      <div className="container2">
+        <h2 className="heading2">
           Important Links
-          <span className="underline"></span>
+          <span className="underline2"></span>
         </h2>
-        <div className="links-grid">
+        <div className="links-grid2">
           {links.map((link, index) => (
-            <div key={index} className="card">
-              <div className="icon">{link.icon}</div>
+            <div key={index} className="card2">
+              <div className="icon2">{link.icon}</div>
               <h3>{link.title}</h3>
               <p>{link.desc}</p>
-              <a href="#" className="learn-more">
+              <a href="#" className="learn-more2">
                 Learn More →
               </a>
             </div>

@@ -63,13 +63,14 @@ const EssentialsCards = () => {
   ];
 
   return (
-    <div className="essentials-grid">
+    <div className="essentials-grid4">
+      <h1 style={{ gridColumn: "span 5", textAlign: "center" }}>Student Essentials Cards</h1>
       {essentials.map((item, index) => (
-        <div key={index} className="card">
-          <FontAwesomeIcon icon={item.icon} className="icon" />
+        <div key={index} className="card4">
+          <FontAwesomeIcon icon={item.icon} className="icon4" />
           <h3>{item.title}</h3>
           <p>{item.desc}</p>
-          <button className="learn-btn">Learn more →</button>
+          <button className="learn-btn4">Learn more →</button>
         </div>
       ))}
     </div>

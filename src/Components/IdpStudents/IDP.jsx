@@ -50,17 +50,17 @@ const IDP = () => {
   }, [startIndex]);
 
   return (
-    <section className="idp-section">
-      <div className="idp-container">
-        <h2>IDP students succeeding globally</h2>
+    <section className="idp-section1">
+      <div className="idp-container1">
+        <h2 className="headi">IDP students succeeding globally</h2>
         <p>
           There’s nothing more rewarding than seeing our students achieve their dreams
           and share their success stories with us.
         </p>
 
-        <div className="idp-carousel">
+        <div className="idp-carousel1">
           {visibleVideos.map((video, index) => (
-            <div className="video-card" key={startIndex + index}>
+            <div className="video-card1" key={startIndex + index}>
               <video
                 ref={(el) => (videoRefs.current[index] = el)} // cleaner ref mapping
                 controls
@@ -74,7 +74,7 @@ const IDP = () => {
           ))}
         </div>
 
-        <div className="carousel-buttons">
+        <div className="carousel-buttons1">
           <button onClick={prevSlide} disabled={startIndex === 0}>
             &lt;
           </button>

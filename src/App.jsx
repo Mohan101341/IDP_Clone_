@@ -25,10 +25,9 @@ import NewAndA from "./pages/black-link/NewAndA";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
 
 // White-Link Pages
-import IELTS from "./pages/white-link/IELTS/IELTS";
-import Find1 from "./pages/white-link/Find_A_Course/Find1";
-import StudyDs from "./pages/white-link/StudyDestinations/StudyDs";
+import EnglishT from "./pages/white-link/EnglishTests/EnglishT.jsx";
 import Avail from "./pages/white-link/Avail_Free/Avail";
+import IELTSPage from "./pages/white-link/IELTS/IELTS1.jsx";
 import SignIN from "./pages/white-link/Sign_In/SignIN";
 import Sign_Up from "./pages/white-link/Sign_Up/Sign_Up";
 
@@ -59,6 +58,36 @@ import StudyAbroadPromo from "./pages/white-link/Student_Essentials/StudentEssFr
 import ShortList from "./Components/ShortList/ShortList";
 import Related_Articles from "./pages/Related_Articles/Related_Articles";
 import FindH from "./pages/black-link/Find/FindH";
+import FindCountryPage from "./pages/black-link/Find/FindCountryPage";
+import InfoSection from "./pages/black-link/Find/InfoSection";
+//Find a course and IELTS 
+
+import CourseA from "./pages/white-link/Find_A_Course/CourseAdvice/CourseAdvice";
+import FindC from "./pages/white-link/Find_A_Course/CourseAdvice/Findcourses/FindC";
+import Courseof from "./pages/white-link/Find_A_Course/Courseinstant/Courseof";
+import Sabroad from "./pages/white-link/Find_A_Course/Study_Abroad/Sabroad";
+import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar"
+import FindU from "./pages/white-link/Find_A_Course/Find_Universities/FindU";
+import Oneac from "./Components/On_signin_banner/Oneac";
+import Uranking from "./pages/white-link/Find_A_Course/University_Ranking/Uranking";
+import Qsworld from "./pages/white-link/Find_A_Course/University_Ranking/Qs_World/Qsworld";
+import Cug from "./pages/white-link/Find_A_Course/C_U_G/Cug";
+import Book from "./pages/white-link/IELTS/Book_IELTS/Book";
+import What from "./pages/white-link/IELTS/What_is_IELTS/What";
+import Prep from "./pages/white-link/IELTS/IELTS_prep/Prep";
+// Study Destinations
+import Askidp from "./pages/white-link/Study_Abroad/AskIdp/Askidp";
+import ExploreAbroadPrgms from "./pages/white-link/StudyDestinations/ExploreAbroadPrgms";
+import Studydestcnt from "./pages/white-link/StudyDestinations/Studydestcnt";
+import StdyAushero from "./pages/white-link/StudyDestinations/StudyInAustralia/StdyAushero";
+import StdyAustcnt from "./pages/white-link/StudyDestinations/StudyInAustralia/StdyAustcnt.jsx";
+import Stdycanhero from "./pages/white-link/StudyDestinations/StudyInCanada/Stdycanhero.jsx";
+import Stdycancnt from "./pages/white-link/StudyDestinations/StudyInCanada/Stdycancnt.jsx";
+import StdyUkhero from "./pages/white-link/StudyDestinations/StudyInUk/StdyUkhero.jsx";
+import StdyIrlndhero from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndhero.jsx";
+import StdyUsahero from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsahero.jsx";
+import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndcnt.jsx";
+import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
 
 
 // ✅ Layout for white-link pages
@@ -106,7 +135,7 @@ export default function App() {
           }
         />
 
-        {/* 📚 Study Details */}
+        {/* 📚 Study Details - Generic and Specific */}
         <Route
           path="/study/:slug"
           element={
@@ -157,7 +186,8 @@ export default function App() {
             <>
               <Navbar />
               <BlueNav />
-              <FindH/>
+              <FindH />
+              <InfoSection />
               <Find />
               <Footer />
             </>
@@ -231,34 +261,237 @@ export default function App() {
             </WhiteLinkLayout>
           }
         />
+
         <Route
-          path="/pages/white-link/StudyDestinations/StudyDs"
+          path="/study-destinations"
           element={
             <WhiteLinkLayout>
-              <StudyDs />
+              {/* <StudyDs /> This component was not provided */}
+              <ExploreAbroadPrgms />
+              <Studydestcnt />
+              <Askidp />
+              <Contact />
             </WhiteLinkLayout>
           }
         />
         <Route
-          path="/pages/white-link/Find1"
+          path="/study-destinations/australia"
           element={
             <WhiteLinkLayout>
-              <Find1 />
+              <StdyAushero />
+              <StdyAustcnt />
+              <Contact />
             </WhiteLinkLayout>
           }
         />
         <Route
-          path="/pages/white-link/IELTS"
+          path="/study-destinations/canada"
           element={
             <WhiteLinkLayout>
-              <IELTS />
+              <Stdycanhero />
+              <Stdycancnt />
+              <Contact />
             </WhiteLinkLayout>
           }
         />
+        <Route
+          path="/study-destinations/ireland"
+          element={
+            <WhiteLinkLayout>
+              <StdyIrlndhero />
+              <StdyIrlndcnt />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/study-destinations/uk"
+          element={
+            <WhiteLinkLayout>
+              <StdyUkhero />
+              <Stdyinukcnt />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/study-destinations/usa"
+          element={
+            <WhiteLinkLayout>
+              <StdyUsahero />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        
+        {/* Find A course */}
+          <Route
+          path="/pages/CourseA"
+          element={
+            <>
+              <Navbar />
+              <CourseA/>
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+          <Route
+          path="/pages/Scholar"
+          element={
+            <>
+              <Navbar />
+              <Scholar/>
+              <IDP />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+            <Route
+          path="/pages/Sabroad"
+          element={
+            <>
+              <Navbar />
+              <Sabroad />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+            <Route
+          path="/pages/EnglishT"
+          element={
+            <>
+              <Navbar />
+              <EnglishT />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+            <Route
+          path="/pages/FindU"
+          element={
+            <>
+              <Navbar />
+              <FindU/>
+              <Oneac />
+              <Fastlane />
+              <Footer />
+            </>
+          }
+          />
+            <Route
+          path="/pages/Courseof"
+          element={
+            <>
+              <Navbar />
+              <Courseof />
+              <Fastlane />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+          <Route
+          path="/pages/FindC"
+          element={
+            <>
+              <Navbar />
+              <FindC/>
+              <Oneac />
+              <Fastlane />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+          <Route
+          path="/pages/Uranking"
+          element={
+            <>
+              <Navbar />
+              <Uranking/>
+              <Oneac/>
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+          <Route
+          path="/pages/IELTSPage"
+          element={
+            <>
+              <Navbar />
+              <IELTSPage/>
+              <Contact />
+              <Footer />
+            </>
+          }
+           />
+          <Route
+          path="/pages/Qsworld"
+          element={
+            <>
+              <Navbar />
+              <Qsworld/>
+              <Contact />
+              <Footer />
+            </>
+          }
+           />
+          <Route
+          path="/pages/Cug"
+          element={
+            <>
+              <Navbar />
+              <Cug/>
+              <Oneac/>
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+
+        {/* IELTS Page */}
+       <Route
+          path="/pages/What"
+          element={
+            <>
+              <Navbar />
+              <What/>
+              <Contact />
+              <Footer />
+            </>
+          }
+            />
+          <Route
+          path="/pages/Book"
+          element={
+            <>
+
+              <Book/>
+              <Footer />
+            </>
+          }
+            />
+          <Route
+          path="/pages/Prep"
+          element={
+            <>
+              <Navbar />
+              <Prep/>
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+
 
         {/* 🎓 Student Essentials */}
         <Route
-          path="/pages/white-link/Student_Essentials"
+          path="/student-essentials"
           element={
             <WhiteLinkLayout>
               <Student />
@@ -273,20 +506,20 @@ export default function App() {
           ["StudentBanking", StudentBanking],
           ["Accommodation", Accommodation],
           ["InternationalSimCards", InternationalSimCards],
-          ["Guardian_Ship", Guardian_Ship],
+          ["Guardian-Ship", Guardian_Ship],
           ["ForexCards", ForexCards],
           ["ISIC", ISIC],
           ["Travel_Support", ComingSoon],
         ].map(([pathName, Component]) => (
           <Route
             key={pathName}
-            path={`/pages/white-link/Student_Essentials/${pathName}`}
+            path={`/student-essentials/${pathName}`}
             element={
               <WhiteLinkLayout>
                 <Component />
                 {pathName === "Money_Transfer" && <StudyAbroadPromo />}
                 <StudentEssFrom />
-                <EssentialsCards />
+                <EssentialsCards style={{ margin: "2rem 0" }} />
                 <ServicesSection />
               </WhiteLinkLayout>
             }
@@ -349,6 +582,14 @@ export default function App() {
           }
         />
 
+        {/* 🌏 Find Us by Country Page (Dynamic) */}
+        <Route
+          path="/find-us/:country"
+          element={
+            <WhiteLinkLayout>
+              <FindCountryPage />
+            </WhiteLinkLayout>}
+        />
 
         {/* ❌ 404 Page */}
         <Route

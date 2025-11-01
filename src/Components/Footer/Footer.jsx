@@ -21,9 +21,9 @@ const Footer = () => {
         <div className="footer-column">
           <h2>Useful Links</h2>
           <ul>
-            <li><Link to="/pages/white-link/Find1">Find a course</Link></li>
-            <li><Link to="/coming-soon">Find scholarships</Link></li>
-            <li><Link to="/pages/white-link/StudyDestinations/StudyDs">Find a university</Link></li>
+            <li><Link to="/find-a-course">Find a course</Link></li>
+            <li><Link to="/find-scholarships">Find scholarships</Link></li>
+            <li><Link to="/find-universities">Find a university</Link></li>
             <li><Link to="/coming-soon">Ask IDP</Link></li>
             <li><Link to="/coming-soon">Cost of living</Link></li>
             <li><Link to="/coming-soon">Statement of Purpose</Link></li>
@@ -33,10 +33,10 @@ const Footer = () => {
         <div className="footer-column">
           <h2>IELTS</h2>
           <ul>
-            <li><Link to="/pages/white-link/IELTS">What is IELTS?</Link></li>
-            <li><Link to="/pages/white-link/IELTS">Why take IELTS with IDP?</Link></li>
-            <li><Link to="/pages/white-link/IELTS">IELTS Preparation</Link></li>
-            <li><Link to="/pages/white-link/IELTS">Book a test</Link></li>
+            <li><Link to="/IELTS/What_is_IELTS/What">What is IELTS?</Link></li>
+            <li><Link to="/ielts/what-is-ielts">Why take IELTS with IDP?</Link></li>
+            <li><Link to="/ielts/IELTS_prep/Prep">IELTS Preparation</Link></li>
+            <li><Link to="/ielts/book-ielts">Book a test</Link></li>
           </ul>
         </div>
         <div className="footer-column">
@@ -51,15 +51,31 @@ const Footer = () => {
       </div>
       <div className="footer-row">
         <ul>
-          <li><Link to="/coming-soon"><FontAwesomeIcon icon={faFacebook} /></Link></li>
-          <li><Link to="/coming-soon"><FontAwesomeIcon icon={faTwitter} /></Link></li>
-          <li><Link to="/coming-soon"><FontAwesomeIcon icon={faInstagram} /></Link></li>
-          <li><Link to="/coming-soon"><FontAwesomeIcon icon={faLinkedin} /></Link></li>
+          <li>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/IDP_Education" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/idpeducation/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/idp-education/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+          </li>
         </ul>
       </div>
 
       <div className="footer-bottom">
-        <p>© 2023 IDP Education</p>
+        <p>© 2025 IDP Education</p>
         <p>IELTS is jointly owned by IDP: IELTS Australia, British Council and Cambridge English.</p>
         <p>Cambridge English is part of Cambridge University Press & Assessment.</p>
       </div>

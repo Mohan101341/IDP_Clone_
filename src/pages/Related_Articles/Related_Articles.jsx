@@ -1,9 +1,7 @@
 import React, { useRef } from "react";
 import "./Related.css";
 
-// ✅ use images from the public folder
-// In React (Vite or CRA), you should reference images placed in `public/assets`
-// directly using `/assets/...` paths — no need for import or absolute file paths
+
 
 const articles = [
   {
@@ -58,7 +56,7 @@ const Related_Articles = ({ className = "" }) => {
 
   return (
     <div className={`related-container ${className}`}>
-      <h2 className="heading">Related Articles</h2>
+      <h2 className="heading" style={{ textAlign: "center" }}>Related Articles</h2>
 
       <div className="carousel-wrapper">
         <div className="related-articles" ref={trackRef}>
@@ -71,7 +69,7 @@ const Related_Articles = ({ className = "" }) => {
           ))}
         </div>
 
-        <div className="nav-buttons">
+        <div className="nav-buttons" >
           <button className="btn2" onClick={() => scrollBy("left")}>
             &#8249;
           </button>

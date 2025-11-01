@@ -36,12 +36,14 @@
   transition: box-shadow .2s ease, transform .2s ease;
   display: flex;
   gap: 1rem;
+  border: 1px solid rgb(236, 236, 236);
   align-items: flex-start;
 }
 
 .service-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(48, 172, 255, 0.15);
   transform: translateY(-4px);
+  border:1px solid #98b4ff;
 }
 
 .service-icon {

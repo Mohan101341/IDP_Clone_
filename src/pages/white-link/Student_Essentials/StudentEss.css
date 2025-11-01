@@ -9,7 +9,7 @@
 .breadcrumb {
  background-image: url(assets/YouTube.png);
  background-size: cover;
- height:150px;
+ height: 500px;;
  width: 100%;
  color:black;
 }
@@ -146,6 +146,10 @@
   .essentials-container {
     padding: 20px;
   }
+.breadcrumb{
+  height: 200px;
+}
+
   
   .essentials-grid {
     grid-template-columns: 1fr;

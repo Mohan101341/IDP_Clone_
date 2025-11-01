@@ -1,0 +1,245 @@
+.Scholar-container {
+    
+    background-image: url('/public/assets/scholarship.jpg');
+    background-size: 550px;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 300px;
+    background-color: rgb(7, 7, 46);
+}
+.Scholar-button{
+    background-color:blue;
+    color:white;
+    margin-bottom: 20px;
+    padding:10px 20px;
+    font-weight: bold;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+.l1 {
+    color:white;
+    padding-left: 120px;
+    padding-top: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+   
+}
+.head {
+    color:white;
+    font-size: 43px;
+    padding-top: 20px;
+    margin-right:200px;
+    padding-left: 100px;
+    margin-right: 680px;
+}
+.Scholar-button {
+    margin-left: 120px;
+    margin-top: 1px;
+    border-radius: 8px;
+    font-size: bold;
+}
+.Scholar-button:hover {
+    background-color: rgb(26, 26, 105);
+}
+.Scholar-matter {
+    background-color: rgb(232, 232, 232);
+}
+.l2 {
+    padding: 50px;
+    font-size: 20px;
+    line-height: 1.46;
+    padding-left: 120px;
+    padding-right: 160px;
+}
+.Scholar-browse {
+    padding: 50px;
+    margin-left: 80px;
+    background-size: 800px;
+}
+.head2 {
+    font-size: 35px;
+    font-weight: bold;
+}
+.ul {
+    text-decoration: underline 6px solid orange;
+}
+.l3 {
+    font-size: 20px;
+    padding-left: 40px;
+    font-size: 27px;
+    margin-bottom: -10px;
+    font-weight: bold;
+    line-height: 1.46;
+    padding-top: 40px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  gap: 15px;
+  padding: 2px;
+}
+
+.card {
+  background: white;
+  padding: 25px 20px 16px 30px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border: 1px solid rgb(25, 109, 220);
+  box-shadow: 0 4px 9px rgba(28, 253, 241, 0.1);
+}
+
+.arrow {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.l4 {
+    font-size: 20px;
+    padding-left: 170px;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 1.46;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.link {
+    font-size: 20px;
+    color: rgb(116, 116, 116);
+    padding-left:170px;
+  padding-bottom :40px;
+    padding-top:30px;
+    cursor: pointer;
+}
+.link:hover {
+    color: rgb(59, 108, 234);
+    text-decoration: underline 1px solid rgb(143, 143, 143);
+}
+.arrow1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-left: 5px;
+}
+.head3 {
+    font-size: 35px;
+    font-weight: bold;
+    padding-left: 160px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.bg {
+    background-color: aliceblue;
+    padding: 30px 0 60px 0;
+}
+
+.scholarship-cards-container {
+    position: relative;
+    padding: 0 160px;
+}
+
+.scholarship-cards-wrapper {
+    display: flex;
+    gap: 25px;
+    padding: 30px 0;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+}
+
+.scholarship-cards-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.scholarship-card {
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 29px 24px 20px 20px;
+    width: 320px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.scholarship-card:hover {
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(27, 141, 255, 0.15);
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    line-height: 1.5;
+    color: #5a5a5a;
+}
+
+.card-university {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 15px 0;
+}
+
+.card-divider {
+    height: 1px;
+    background-color: #c7c7c7;
+    margin: 15px 0;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.detail-icon {
+    font-size: 16px;
+}
+
+.card-navigation {
+    display: flex;
+    justify-content:center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.nav-arrow {
+    width: 40px;
+    height: 50px;
+    border: 2px solid #c7c7c7;
+    border-radius: 100%;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #000000;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-arrow:hover {
+    border-color: #007bff;
+    color: #007bff;
+    background: #f8f9fa;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.nav-arrow:active {
+    transform: scale(0.95);
+}

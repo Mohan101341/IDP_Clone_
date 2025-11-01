@@ -1,0 +1,68 @@
+.Qs-container {
+  padding-top: 30px;
+  padding-left: 80px;
+  background-image: url("/public/assets/ranking.jpg");
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-position: right;
+  height: 350px;
+  background-color: rgba(238, 218, 191);
+  box-shadow: 1px 5px 7px rgb(236, 236, 236);
+
+}
+.p1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 40px;
+}
+.h1 {
+    font-weight: bold;
+    font-size: 38px;
+    padding-right: 580px;
+    line-height: 4.5rem;
+}   
+.Qs-container2 h2{
+    padding-left: 160px;
+    padding-top: 20px;
+    line-height: 2.5rem;
+}
+.Qs-container2 p{
+    padding-left: 160px;
+    padding-top: 10px;
+    line-height: 1.8rem;
+    font-size: 18px;
+    padding-right: 180px;
+}
+.mat {
+    padding-left: 140px;
+    padding-top: 40px;
+    line-height: 1.8rem;
+    font-size: 34px;
+}
+
+.qs-table {
+    width: 80%;
+    margin: 30px 0 60px 160px; 
+    border-collapse: collapse;
+    background-color: #f7f7f7; 
+}
+
+.qs-table th,
+.qs-table td {
+    padding: 14px 16px;
+    border: 1.5px solid #5e5e5e;
+    text-align: left;
+    color: #000;
+}
+
+.qs-table thead th {
+    font-weight: 700;
+    padding-left: 280px;
+}
+.thead {
+    padding-left: 160px;
+    padding-top: 40px;
+    font-size: 24px;
+    font-weight: 600;
+}
