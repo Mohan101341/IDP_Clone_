@@ -1,0 +1,84 @@
+/* ====== Container ====== */
+.idp-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ====== Title ====== */
+.office-list-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #004f8c;
+  /* IDP blue tone */
+  margin-bottom: 25px;
+}
+
+/* ====== Search Input ====== */
+.search-container {
+  margin-bottom: 20px;
+}
+
+.office-search-input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.office-search-input:focus {
+  outline: none;
+  border-color: #0073e6;
+  box-shadow: 0 0 0 3px rgba(0, 115, 230, 0.1);
+}
+
+/* ====== Office List ====== */
+.office-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.office-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.office-item:hover {
+  background: #e8f1fa;
+  border: 1px solid #c6e0ff;
+  transform: translateY(-2px);
+}
+
+.office-item a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.office-item a:hover {
+  color: #0073e6;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  color: #0073e6;
+  font-weight: bold;
+}

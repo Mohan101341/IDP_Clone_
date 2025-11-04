@@ -12,7 +12,7 @@ const WhereStdhero = () => {
       <div className={`stdab-left${animate ? ' slide-in-left' : ''}`}>
         <h1> Where to study abroad – Top destinations for international students</h1>
         <h3>We're here to help you navigate through your study abroad options with ease. From choosing a destination through to course advice
-Contact IDP</h3>
+        Contact IDP</h3>
         <button className='stdy-btn'> contact IDP</button>
       </div> 
       <div className={`stdab-right${animate ? ' slide-in-right' : ''}`}>

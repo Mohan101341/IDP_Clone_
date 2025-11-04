@@ -1,0 +1,19 @@
+.essentials-grid4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card4 {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  text-align: center;
+  padding: 25px 15px;
+  background: #fff;
+  transition: 0.3s ease;
+}
+
+.card4:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}

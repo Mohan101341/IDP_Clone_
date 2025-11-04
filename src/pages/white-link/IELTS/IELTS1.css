@@ -1,0 +1,40 @@
+.ma{
+    background-image: url(/public/assets/ielts1.jpg);
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: right;
+    margin-top: 30px;
+    height: 270px;
+    opacity: 0.8;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 5px 9px rgb(219, 219, 219);
+}
+.pa{
+    padding-left: 130px;
+    padding-top: 20px;
+    color: black;
+}
+.la{
+    padding-left: 110px;
+    padding-top: 10px;
+}
+.aa .p1{
+    color: black;
+}
+.b1{
+    margin-left: -760px;
+    font-size: bold;
+    border-radius: 8px;
+}
+.mt{
+    size: 24px;
+    height: 219px;
+    margin-top: 40px;
+    margin-left: 80px;
+    line-height: 1.9;
+    margin-right: 50px;
+
+}
+.lr{
+    background-color: aliceblue;
+}

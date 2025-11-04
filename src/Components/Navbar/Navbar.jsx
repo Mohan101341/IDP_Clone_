@@ -255,7 +255,7 @@ const Navbar = () => {
               <Link
                 to={items.path}
                 style={styles.navButton}
-                onClick={(e) => {
+                onClick={() => {
                   toggleDropdown(key);
                 }}
                 aria-haspopup="true"

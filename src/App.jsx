@@ -83,6 +83,7 @@ import StdyUsahero from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsa
 import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndcnt.jsx";
 import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
 import StdyUsacnt from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsacnt.jsx";
+import SignupForm from "./pages/white-link/Sign_In/SignupForm";
 
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
@@ -501,6 +502,7 @@ export default function App() {
         <Route path="/pages/white-link/Student" element={<WhiteLinkLayout><Student /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/Avail" element={<WhiteLinkLayout><Avail /></WhiteLinkLayout>} />
         <Route path="/pages/white-link/SignIN" element={<WhiteLinkLayout><SignIN /></WhiteLinkLayout>} />
+        <Route path="/signup" element={<WhiteLinkLayout><SignupForm /></WhiteLinkLayout>} />
 
         {/* 404 Page */}
         <Route

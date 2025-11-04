@@ -1,17 +1,11 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import React, { useState } from 'react';
+import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore"; 
-import { getFirestore } from "firebase/firestore";
-import img from '../Assets/signupp.png';
-import './Signup.css';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore, doc, setDoc } from "firebase/firestore"; 
+import { Link, useNavigate } from "react-router-dom";
+
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyB5ULRDn3ZMWn1shouoH--MA8OJrFmK1aI", //TODO: Add your api key
   authDomain: "idp-clone.firebaseapp.com",
@@ -22,9 +16,9 @@ const firebaseConfig = {
   measurementId: "G-5P0N2Q3KQE"
 };
 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
@@ -33,6 +27,7 @@ function SignupForm() {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault(); 
@@ -41,8 +36,8 @@ function SignupForm() {
             const userCredential = await createUserWithEmailAndPassword(
                 auth,
                 email, 
-                password,
-            );{/*auth is the instance object for Firebase Authentication.*/}
+                password
+            );
             const user = userCredential.user;
 
             await setDoc(doc(db, "Idp_Users", user.uid), {
@@ -52,65 +47,57 @@ function SignupForm() {
                 password: password,
             });
 
-            alert("Account created successfully!");
+            navigate('/');
             
             setName('');
             setEmail('');
             setPhone('');
             setPassword('');
 
-        } catch (error) {
+        } catch (error) {s
             alert(`Error: ${error.message}`);
         }
     };
 
-    
-
     return (
-
         <div className="signup-form">
-           
-       
+            <form onSubmit={handleSubmit}>
+                <h2>Create an Account !</h2>
+                
+                <label>Name</label>
+                <input 
+                    type="text" 
+                    value={name} 
+                    onChange={(e) => setName(e.target.value)} 
+                    required 
+                />
+                <label>Email</label>
+                <input 
+                    type="email" 
+                    value={email} 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    required 
+                />
+                <label>Phone</label>
+                <input 
+                    type="tel" 
+                    value={phone} 
+                    onChange={(e) => setPhone(e.target.value)} 
+                    required 
+                />
+                <label>Password</label>
+                <input 
+                    type="password" 
+                    value={password} 
+                    onChange={(e) => setPassword(e.target.value)} 
+                    required 
+                />
 
-        <form onSubmit={handleSubmit}>
-            <h2>Create an Account !</h2>
-            
-            <label>Name</label>
-            <input 
-                type="text" 
-                value={name} 
-                onChange={(e) => setName(e.target.value)} 
-                required 
-            />
-            <label>Email</label>
-            <input 
-                type="email" 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
-                required 
-            />
-            <label>Phone</label>
-            <input 
-                type="tel" 
-                value={phone} 
-                onChange={(e) => setPhone(e.target.value)} 
-                required 
-            />
-            <label>Password</label>
-            <input 
-                type="password" 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)} 
-                required 
-            />
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <Link to="/pages/white-link/SignIN">Sign In</Link></p>
+            </form>
 
-            {/* ... other inputs ... */}
 
-            <button type="submit">Sign Up</button>
-            <p>already have an account?</p><a href="">signin</a>
-        </form>
-        
-         
         </div>
     );
 }
