@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ Import navigate hook
 
 const StdyUsacnt = () => {
+  const navigate = useNavigate(); // ✅ Initialize navigation
   const mainContainerStyle = {
     fontFamily: 'Arial, sans-serif',
     width:'100%',
@@ -102,7 +104,12 @@ const StdyUsacnt = () => {
           <li>Life science courses</li>
           <li>Business management courses</li>
         </ul>
-       <button>Avail Free councling</button>
+  <button
+  
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Avail free councling
+    </button>
       </section>
 
       <section style={sectionStyle}>
@@ -136,7 +143,12 @@ const StdyUsacnt = () => {
             <strong>Summer:</strong> Available for limited programs and colleges, the Summer intake usually starts around May
           </li>
         </ul>
-         <button>Avail For Free councling</button>
+          <button
+     
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Avail free councling
+    </button>
       </section>
 
       <section style={sectionStyle}>
@@ -174,7 +186,12 @@ const StdyUsacnt = () => {
           </tbody>
         </table>
         <p>*Please note: An MBA degree can cost significantly more, as can professional programs such as law, medicine, dentistry, some design programs, etc. Most doctoral degrees are 100% funded through research/teaching assistantships, research aid and bursaries.</p>
-        <button>Avail For Free councling</button>
+         <button
+      className="stdy-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Avail free councling
+    </button>
       </section>
 
       <section style={sectionStyle}>
@@ -218,7 +235,12 @@ const StdyUsacnt = () => {
           </tbody>
         </table>
         <p>If you want to bring down your educational expenses, it is best to apply to various U.S scholarships available for Indian students.</p>
-        <button>Avail Free councling</button>
+         <button
+      
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+     Avail free councling
+    </button>
       </section>
     </div>
   );

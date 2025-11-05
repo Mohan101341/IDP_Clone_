@@ -532,6 +532,18 @@ export default function App() {
        </WhiteLinkLayout>
       }
       />
+
+      <Route
+         path="/pages/white-link/SignUp"
+         element={
+          <>
+          <signupForm />
+          <Footer />
+          </>
+      
+      }
+      />
+      
         
 
 

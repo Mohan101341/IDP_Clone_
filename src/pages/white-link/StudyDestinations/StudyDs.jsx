@@ -1,7 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import "./StudyDs.css"
 
 const StudyDs = () => {
+  const navigate = useNavigate();
   return (
     <div>
     <div className="stdy-dest-bg">
@@ -11,7 +13,13 @@ const StudyDs = () => {
         <div className="stdy-dest-breadcrumb">/ Study Abroad</div>
         <h3>Study Abroad Programs - Apply For 2025 Intake | Free Counselling</h3>
         <p>Learn more about exciting places where you can study abroad</p>
-        <button className="stdy-dest-btn">Get Free Expert Advice</button>
+        
+        <button
+      className="stdy-dest-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Get Free Expert Advice
+    </button>
       </div>
       </div>
 
