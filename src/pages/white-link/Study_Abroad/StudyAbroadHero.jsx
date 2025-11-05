@@ -16,7 +16,12 @@ const StudyAbroadHero = ({ title, subtitle, imageUrl, imageAlt }) => {
             <div className={`stdab-left${animate ? ' slide-in-left' : ''}`}>
                 <h1>{title}</h1>
                 <h3>{subtitle}</h3>
-                <button className='stdy-btn'>contact IDP</button>
+               <button
+      className="stdy-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Contact IDP
+    </button>
             </div>
             <div className={`stdab-right${animate ? ' slide-in-right' : ''}`}>
                 <img src={imageUrl} alt={imageAlt} className="stdab-img" />

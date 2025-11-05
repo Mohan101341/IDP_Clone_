@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './Arriveandthrivehero.css'
 const Arriveandthrivehero = () => {
   const [animate, setAnimate] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => setAnimate(true), 100); // slight delay for animation trigger
   }, []);
@@ -14,7 +15,12 @@ const Arriveandthrivehero = () => {
         <h3>Learn how to make the most of your study abroad experience
 Contact IDP</h3>
        
-        <button className='stdy-btn'> contact IDP</button>
+       <button
+      className="stdy-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Contact IDP
+    </button>
       </div>
       <div className={`stdab-right${animate ? ' slide-in-right' : ''}`}>
          <img

@@ -12,39 +12,39 @@ const Footer = () => {
         <div className="footer-column">
           <h2>About IDP</h2>
           <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Study abroad counselling</a></li>
-            <li><a href="#">IDP Careers</a></li>
+            <li><a href="/">About us</a></li>
+            <li><a href="/pages/white-link/Avail">Study abroad counselling</a></li>
+            <li><a href="/pages/NewAndA">IDP Careers</a></li>
           </ul>
         </div>
         <div className="footer-column">
           <h2>Useful Links</h2>
           <ul>
-            <li><a href="#">Find a course</a></li>
-            <li><a href="#">Find scholarships</a></li>
-            <li><a href="#">Find a university</a></li>
-            <li><a href="#">Ask IDP</a></li>
-            <li><a href="#">Cost of living</a></li>
-            <li><a href="#">Statement of Purpose</a></li>
-            <li><a href="#">Letter of Recommendation</a></li>
+            <li><a href="/pages/CourseA">Find a course</a></li>
+            <li><a href="/pages/Scholar">Find scholarships</a></li>
+            <li><a href="/pages/FindU">Find a university</a></li>
+            <li><a href="/pages/white-link/Study_Abroad/AskIdp/Askidp">Ask IDP</a></li>
+            <li><a href="/pages/NewAndA">Cost of living</a></li>
+            <li><a href="/pages/NewAndA">Statement of Purpose</a></li>
+            <li><a href="/pages/NewAndA">Letter of Recommendation</a></li>
           </ul>
         </div>
         <div className="footer-column">
           <h2>IELTS</h2>
           <ul>
-            <li><a href="#">What is IELTS?</a></li>
-            <li><a href="#">Why take IELTS with IDP?</a></li>
-            <li><a href="#">IELTS Preparation</a></li>
-            <li><a href="#">Book a test</a></li>
+            <li><a href="/pages/What">What is IELTS?</a></li>
+            <li><a href="/pages/Prep">Why take IELTS with IDP?</a></li>
+            <li><a href="/pages/Prep">IELTS Preparation</a></li>
+            <li><a href="/pages/Book">Book a test</a></li>
           </ul>
         </div>
         <div className="footer-column">
           <h2>Connect with IDP</h2>
           <ul>
-            <li><a href="#">IDP Events</a></li>
-            <li><a href="#">Corporate responsibility</a></li>
-            <li><a href="#">Our offices</a></li>
-            <li><a href="#">Customer Grievances</a></li>
+            <li><a href="/pages/Events">IDP Events</a></li>
+            <li><a href="/pages/NewAndA">Corporate responsibility</a></li>
+            <li><a href="/pages/Find">Our offices</a></li>
+            <li><a href="/pages/NewAndA">Customer Grievances</a></li>
           </ul>
         </div>
       </div>

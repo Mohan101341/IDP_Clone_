@@ -107,7 +107,7 @@ const dropdownData = {
     path: "/pages/white-link/IELTS",
     items: [
       { label: "Book an IELTS Test", path: "/pages/Book" },
-      { label: "What is IELTS?", path: "/pages/what" },
+      { label: "What is IELTS?", path: "/pages/What" },
       { label: "IELTS Preparation", path: "/pages/Prep" },
       { label: "Test Dates", path: "/pages/white-link/IELTS" },
     ],

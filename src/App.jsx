@@ -84,7 +84,10 @@ import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/St
 import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
 import StdyUsacnt from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsacnt.jsx";
 import SignupForm from "./pages/white-link/Sign_In/SignupForm";
-
+import What_is_stdnghero from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying/What_is_stdnghero.jsx";
+import What_isstdngcnt from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying/What_isstdngcnt.jsx";
+import Reasons_for_stdy from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Reasons_for_stdy_abrd/Reasons_for_stdy.jsx";
+import Benefits from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Benefits/Benefits.jsx";
 // Layout wrapper for white-link pages
 const WhiteLinkLayout = ({ children }) => (
   <>
@@ -490,11 +493,47 @@ export default function App() {
           </>
         } />
 
+         
+      <Route
+         path="/contact"
+         element={
+         <WhiteLinkLayout>
+         <Contact />
+       </WhiteLinkLayout>
+      }
+      />
+
+      <Route
+         path="/pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying"
+         element={
+         <WhiteLinkLayout>
+         <What_is_stdnghero />
+         <What_isstdngcnt />
+         <Contact />
+       </WhiteLinkLayout>
+      }
+      />
+      <Route
+         path="/pages/white-link/Study_Abroad/WhyStudyAbrd/Reasons_for_stdy_abrd"
+         element={
+          <WhiteLinkLayout>
+            <Reasons_for_stdy />
+            <Contact />
+       </WhiteLinkLayout>
+      }
+      />
+
+      <Route
+         path="/pages/white-link/Study_Abroad/WhyStudyAbrd/Benefits"
+         element={
+          <WhiteLinkLayout>
+          <Benefits />
+          <Contact />
+       </WhiteLinkLayout>
+      }
+      />
         
 
-      
-
-        
 
         <Route path="/pages/white-link/Find1" element={<WhiteLinkLayout></WhiteLinkLayout>} />
         <Route path="/pages/white-link/IELTS" element={<WhiteLinkLayout><ComingSoon /></WhiteLinkLayout>} />

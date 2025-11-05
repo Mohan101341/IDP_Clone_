@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./StdyAbcnt.css";
 function StdyAbcnt() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="stdyabcnt-container">
       <p>
@@ -74,7 +78,12 @@ What's more, you'll have weekends and holidays to explore places beyond your hos
       <h2>Discover how to study abroad </h2>
 
       <p>When you study in another country, you broaden your worldview and boost your job prospects. It combines personal growth with career benefits. You might aim for better grades, learn about new cultures, or discover more about yourself. Whatever your goal, the benefits of studying abroad are substantial. As you try to discover how studying abroad could significantly impact your life, we are here to guide you in every step, from selecting courses and settling in your new home. Whether you want us to help with your study application, open a student bank account, or book accommodation, our counsellors are here to guide you for free. Register today for free counselling to get expert advice from our experienced counsellors.</p>
-      <button>AvailFree Councling</button>
+      <button
+      className="stdy-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Avail Free Councling
+    </button>
       
     </div>
   );

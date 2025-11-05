@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Howtoapplycnt.css";
 function Howdoapplycnt() {
+  const navigate = useNavigate();
   return (
     <div>
       {/* Section 1: Key Steps */}
@@ -20,7 +22,12 @@ function Howdoapplycnt() {
             <br />
             If English isn’t your first language, start preparing for the IELTS early. Understand the test format, practice with sample questions, and focus on areas where you need to improve. You can use free IELTS preparation materials from IDP to improve your score.
             <br />
-            <button className="apply-btn">Book IELTS Test Now</button>
+            <button
+      className="stdy-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Book IELTS Now
+    </button>
           </li>
           <li>
             <strong>Arrange Strong Recommendation Letters:</strong> Recommendation letters highlight your skills and strengths from people who know your academic or work background. Choose professors, teachers, or supervisors who know your work well, can vouch for your fit for the program and share real examples of your achievements.
@@ -125,7 +132,12 @@ function Howdoapplycnt() {
           For courses under 3 months, you’ll need a Short Stay 'C' visa. For longer courses, apply for a Long Stay 'D' visa, and register for an Irish Residence Permit (IRP) after arrival. Visit the Irish Immigration Service site for the latest visa requirements.
         </p>
 
-        <button className="apply-btn">Explore Destination Countries</button>
+       <button
+      className="stdy-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Explore Destination Counties
+    </button>
 
         <h3>Conclusion</h3>
         <p>
