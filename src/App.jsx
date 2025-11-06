@@ -88,6 +88,8 @@ import StdyIrlndhero from "./pages/white-link/StudyDestinations/StudyInIreland/S
 import StdyUsahero from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsahero.jsx";
 import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndcnt.jsx";
 import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
+import Toefl from "./pages/white-link/EnglishTests/Toefl/Toefl.jsx";
+import Duolingo from "./pages/white-link/EnglishTests/Duolingo/Duolingo.jsx";
 
 
 // ✅ Layout for white-link pages
@@ -358,7 +360,30 @@ export default function App() {
               <Footer />
             </>
           }
+           />
+            <Route
+          path="/pages/Toefl"
+          element={
+            <>
+              <Navbar />
+              <Toefl />
+              <Contact />
+              <Footer />
+            </>
+          }
           />
+            <Route
+          path="/pages/Duolingo"
+          element={
+            <>
+              <Navbar />
+              <Duolingo />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+          
             <Route
           path="/pages/EnglishT"
           element={

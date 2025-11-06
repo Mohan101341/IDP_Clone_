@@ -1,5 +1,6 @@
 import React from 'react';
 import './IELTS1.css';
+import { Link } from 'react-router-dom';
 export default function IELTSPage() {
     return (
         <div>
@@ -10,25 +11,78 @@ export default function IELTSPage() {
                 <button className='b1'>BOOK NOW</button>
             </div>
             <div className='mt'>The International English Language Testing System (IELTS) is a vital English proficiency test required globally for individuals seeking international education, professional registration, or migration. The test is designed to measure proficiency across all four core skills: Listening, Reading, Writing, and Speaking. While the Listening and Speaking sections are the same for everyone, the Reading and Writing content differs based on the chosen module: Academic or General Training. The Academic module presents complex, university-level texts and requires the description of graphs or data in the Writing section, preparing test-takers for higher education. In contrast, the General Training module features texts related to everyday social and workplace survival and includes letter writing in the Writing section, making it suitable for work or immigration purposes. Regardless of the module, the final result is presented on a comprehensive 9-Band Scale, offering a clear and accepted measure of a candidate's readiness for life in an English-speaking country.</div>
-      
+           <div className="ielts_container">
+      <h2 className="ielts_heading">IELTS – International English Language Testing System </h2>
+
+      <div className="ielts_table_wrapper">
+        <table className="ielts_table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Full Form</td>
+              <td>International English Language Testing System</td>
+            </tr>
+            <tr>
+              <td>Purpose</td>
+              <td>To assess English language proficiency for education, migration, or work abroad.</td>
+            </tr>
+            <tr>
+              <td>Accepted By</td>
+              <td>10,000+ organizations including universities, governments, and employers.</td>
+            </tr>
+            <tr>
+              <td>Mode of Test</td>
+              <td>Computer-based and Paper-based</td>
+            </tr>
+            <tr>
+              <td>Skills Tested</td>
+              <td>Listening, Reading, Writing, and Speaking</td>
+            </tr>
+            <tr>
+              <td>Duration</td>
+              <td>2 hours 45 minutes</td>
+            </tr>
+            <tr>
+              <td>Score Range</td>
+              <td>Band scale from 1 (lowest) to 9 (highest)</td>
+            </tr>
+            <tr>
+              <td>Test Frequency</td>
+              <td>Available up to 4 times a month worldwide</td>
+            </tr>
+            <tr>
+              <td>Results Validity</td>
+              <td>2 years</td>
+            </tr>
+            <tr>
+              <td>Official Website</td>
+              <td>
+                <a
+                  href="https://www.ielts.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit IELTS Official Site
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
         <div className='lr'>
                <h1 className="h2"><span className="ul">L</span>earn more</h1>
         <div className="box-container">
-        <p className="box">Why take IELTS with IDP?</p>
-        <p className="box">How to Prepare for IELTS</p>
-        <p className="box">Book an IELTS test</p>
-        </div>
-        <h1 className="h2"><span className="ul">R</span>elated articles</h1>
-        <div className="cards-grid">
-          <div className="card">
-            <h3 className="card-title">IELTS vs other English language proficiency tests</h3>
-            <p className="card-desc">Planning to take your English proficiency test? There are a number of factors you need to consider. Let’s look into them in detail.</p>
-          </div>
-          <div className="card">
-            <h3 className="card-title">Minimum IELTS score requirements for UK universities</h3>
-            <p className="card-desc">Minimum IELTS band score requirements for the UK. Check the required IELTS score for UK universities, courses, and student visa.</p>
-          </div>
-        </div>
+       <Link to="https://ieltsidpindia.com/?utm_term=www.ieltsidpindia.com&utm_content=Brand%20Gold%20Standard&msclkid=312fa7a26ece113da714ceabaa265e4c&utm_medium=cpc&utm_source=bing&utm_campaign=Pmax_Bing"><p className="box">Why take IELTS with IDP?</p></Link>
+       <Link to="/pages/Prep"><p className="box">How to Prepare for IELTS</p></Link>
+      <Link to="/pages/Book"><p className="box">Book an IELTS test</p></Link>
+    </div>
          
             </div>  </div>
     );

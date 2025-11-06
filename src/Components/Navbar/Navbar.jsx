@@ -121,8 +121,8 @@ const dropdownData = {
   "English Tests": {
     path: "/pages/EnglishT",
     items: [
-      {label: "Toefl", path: "/pages" },
-      { label: "duolingo", path: "/pages" },
+      {label: "TOEFL", path: "/pages/Toefl" },
+      { label: "DUOLINGO", path: "/pages/Duolingo" },
       { label: "IELTS", path: "/pages/IELTSPage" },
     ],
   },

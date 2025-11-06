@@ -165,6 +165,6 @@
 }
 .Courseof-btn:hover {
     border:1px solid #6bb5ff;
-    color: #000000;
-    
+    color: #ffffff;
+    background-color: rgb(101, 119, 255);
 }
