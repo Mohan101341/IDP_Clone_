@@ -25,9 +25,30 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    try {
+      const response = await fetch("http://127.0.0.1:8000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Form submitted successfully:", result);
+        alert("Form submitted successfully!");
+      } else {
+        const error = await response.json();
+        console.error("Error submitting form:", error);
+        alert(`Error: ${error.error}`);
+      }
+    } catch (error) {
+      console.error("There was an error submitting the form:", error);
+      alert("There was an error submitting the form.");
+    }
   };
 
   return (

@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faAngleDown, faBars, faTimes, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGlobe,
+  faAngleDown,
+  faBars,
+  faTimes,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import { faHeart as faRegularHeart } from "@fortawesome/free-regular-svg-icons";
 
-// Inline styles for dropdowns and nav elements
 const styles = {
   navButton: {
     background: "none",
@@ -52,7 +57,9 @@ const styles = {
     height: "100%",
   },
 };
-const balckDropworn ={"Find-us": {
+
+const balckDropworn = {
+  "Find-us": {
     path: "/pages/Find",
     items: [
       { label: "Our Office", path: "/pages/Find" },
@@ -66,9 +73,9 @@ const balckDropworn ={"Find-us": {
       { label: "Book Appointment", path: "/pages/Find" },
       { label: "Support Center", path: "/pages/Find" },
     ],
-    },}
+  },
+};
 
-// Corrected dropdown paths matching App.js routes
 const dropdownData = {
   "Study-abroad-steps": {
     path: "/pages/white-link/StudyAb",
@@ -123,7 +130,6 @@ const dropdownData = {
   },
 };
 
-// Second-level submenu for specific items
 const submenuData = {
   "University Rankings - THE": [
     { label: "QS World University Rankings", path: "/pages/Qsworld" },
@@ -135,8 +141,23 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openSecondLevel, setOpenSecondLevel] = useState(null);
   const [dropdownHeight, setDropdownHeight] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const dropdownRef = React.useRef(null);
+  const navigate = useNavigate();
+
+  // Check if user is logged in
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) setLoggedIn(true);
+  }, []);
+
+  // Handle logout
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setLoggedIn(false);
+    navigate("/");
+  };
 
   const toggleDropdown = (key) => {
     setOpenDropdown((prev) => (prev === key ? null : key));
@@ -153,14 +174,8 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "unset";
+    return () => (document.body.style.overflow = "unset");
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
@@ -173,77 +188,70 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top Black Bar with quick links */}
-     
-     {/* Top Black Bar with quick links */}
-<div className="black-container" style={{ position: "relative",  zIndex: 9999 }}>
-  <ul className="black-links" style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
-    <li className="black-li">
-      <Link to="/pages/NewAndA">News and articles</Link>
-    </li>
-    <li className="black-li">
-      <Link to="/pages/Events">Events</Link>
-    </li>
+      {/* Top Black Bar */}
+      <div className="black-container" style={{ position: "relative", zIndex: 9999 }}>
+        <ul className="black-links" style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
+          <li className="black-li">
+            <Link to="/pages/NewAndA">News and articles</Link>
+          </li>
+          <li className="black-li">
+            <Link to="/pages/Events">Events</Link>
+          </li>
 
-    {/*  Black Bar Find-us Dropdown */}
-    <li
-      className="black-li1"
-      style={{ position: "relative" }}
-      onMouseEnter={() => setOpenDropdown("Find-us-black")}
-      onMouseLeave={closeDropdown}
-    >
-      <button
-        style={{ ...styles.navButton, fontSize: "1rem" }}
-        onClick={() => toggleDropdown("Find-us-black")}
-      >
-        Find us <FontAwesomeIcon icon={faAngleDown} />
-      </button>
+          <li
+            className="black-li1"
+            style={{ position: "relative" }}
+            onMouseEnter={() => setOpenDropdown("Find-us-black")}
+            onMouseLeave={closeDropdown}
+          >
+            <button
+              style={{ ...styles.navButton, fontSize: "1rem" }}
+              onClick={() => toggleDropdown("Find-us-black")}
+            >
+              Find us <FontAwesomeIcon icon={faAngleDown} />
+            </button>
 
-      {openDropdown === "Find-us-black" && (
-        <ul
-          style={{
-            ...styles.dropdownMenu,
-            top: "100%",
-            left: 0,
-            minWidth: 220,
-            backgroundColor: "#222", 
-            
-            color: "#fff",
-            zIndex: 10000, 
-          }}
-        >
-          {balckDropworn["Find-us"].items.map((item, idx) => (
-            <li key={idx} style={{ ...styles.dropdownItem, color: "#fff" }}>
-              <Link
-                to={item.path}
-                onClick={closeDropdown}
-                style={{ color: "#fff", textDecoration: "none" }}
+            {openDropdown === "Find-us-black" && (
+              <ul
+                style={{
+                  ...styles.dropdownMenu,
+                  top: "100%",
+                  left: 0,
+                  minWidth: 220,
+                  backgroundColor: "#222",
+                  color: "#fff",
+                  zIndex: 10000,
+                }}
               >
-                {item.label}
-              </Link>
-            </li>
-          ))}
+                {balckDropworn["Find-us"].items.map((item, idx) => (
+                  <li key={idx} style={{ ...styles.dropdownItem, color: "#fff" }}>
+                    <Link
+                      to={item.path}
+                      onClick={closeDropdown}
+                      style={{ color: "#fff", textDecoration: "none" }}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+
+          <li className="black-li1">
+            <Link to="/pages/English">
+              <FontAwesomeIcon icon={faGlobe} /> English
+            </Link>
+          </li>
         </ul>
-      )}
-    </li>
+      </div>
 
-    <li className="black-li1">
-      <Link to="/pages/English">
-        <FontAwesomeIcon icon={faGlobe} /> English
-      </Link>
-    </li>
-  </ul>
-</div>
-
-          
-      {/* Main Navigation Bar */}
+      {/* Main Navbar */}
       <nav className="main-navbar">
-        {/* Logo */}
         <Link to="/">
           <img src="/assets/idp-logo.svg" alt="Logo" className="logo" />
         </Link>
 
-        {/* Desktop Navigation with Dropdowns */}
         <ul className="nav-links">
           {Object.entries(dropdownData).map(([key, items]) => (
             <li
@@ -255,11 +263,7 @@ const Navbar = () => {
               <Link
                 to={items.path}
                 style={styles.navButton}
-                onClick={() => {
-                  toggleDropdown(key);
-                }}
-                aria-haspopup="true"
-                aria-expanded={openDropdown === key}
+                onClick={() => toggleDropdown(key)}
               >
                 {key
                   .split("-")
@@ -286,10 +290,12 @@ const Navbar = () => {
                       </Link>
 
                       {submenuData[item.label] && openSecondLevel === item.label && (
-                        <ul style={{
-                          ...styles.secondLevelMenu,
-                          height: dropdownHeight ? dropdownHeight : styles.secondLevelMenu.height,
-                        }}>
+                        <ul
+                          style={{
+                            ...styles.secondLevelMenu,
+                            height: dropdownHeight ? dropdownHeight : styles.secondLevelMenu.height,
+                          }}
+                        >
                           {submenuData[item.label].map((sub, sIdx) => (
                             <li key={sIdx} style={styles.dropdownItem}>
                               <Link
@@ -311,17 +317,23 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Desktop Buttons */}
+        {/* Right Buttons */}
         <div className="nav-buttons">
           <Link to="/pages/white-link/Avail">
             <button className="login-btn">Avail Free counselling</button>
           </Link>
-          <Link to="/pages/white-link/SignIN">
-            <button className="signup-btn">Sign in</button>
-          </Link>
+
+          {loggedIn ? (
+            <button className="signup-btn" onClick={handleLogout}>
+              Logout
+            </button>
+          ) : (
+            <Link to="/pages/white-link/SignIN">
+              <button className="signup-btn">Sign in</button>
+            </Link>
+          )}
         </div>
 
-        {/* Right Icons */}
         <div className="right-icons">
           <Link to="#" className="icon-btn heart">
             <FontAwesomeIcon icon={faRegularHeart} />
@@ -329,7 +341,6 @@ const Navbar = () => {
           <Link to="#" className="icon-btn account">
             <FontAwesomeIcon icon={faUser} />
           </Link>
-
           <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
             <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
           </button>
@@ -356,16 +367,21 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/pages/white-link/SignIN">
-                <button className="signup-btn" onClick={toggleMobileMenu}>
-                  Sign in
+              {loggedIn ? (
+                <button className="signup-btn" onClick={handleLogout}>
+                  Logout
                 </button>
-              </Link>
+              ) : (
+                <Link to="/pages/white-link/SignIN">
+                  <button className="signup-btn" onClick={toggleMobileMenu}>
+                    Sign in
+                  </button>
+                </Link>
+              )}
             </li>
           </ul>
         </div>
 
-        {/* Overlay */}
         {isMobileMenuOpen && (
           <div
             className="mobile-menu-overlay"

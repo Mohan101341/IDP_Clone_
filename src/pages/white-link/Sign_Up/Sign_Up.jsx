@@ -13,11 +13,13 @@ const Sign_Up = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    alert("Submitting form...");
     e.preventDefault();
 
     const { fullName, email, password, confirmPassword } = formData;
 
+    // 🧩 Basic validation
     if (!fullName || !email || !password || !confirmPassword) {
       alert("Please fill all fields!");
       return;
@@ -28,9 +30,27 @@ const Sign_Up = () => {
       return;
     }
 
-    // Save to localStorage or send to backend API
-    localStorage.setItem("user", JSON.stringify({ fullName, email, password }));
-    alert("Account created successfully!");
+    try {
+      const response = await fetch("http://localhost:8000/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fullName, email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message || "Account created successfully!");
+        setFormData({ fullName: "", email: "", password: "", confirmPassword: "" });
+      } else if (response.status === 409) {
+        alert(data.message || "Email already in use!");
+      } else {
+        alert(data.message || "Something went wrong!");
+      }
+    } catch (error) {
+      console.error("❌ Error:", error);
+      alert("Something went wrong!");
+    }
   };
 
   return (

@@ -1,23 +1,6 @@
 import React, { useState } from "react";
 import "./SignIN.css";
-import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
-
-// ✅ Firebase Configuration (same as Signup)
-const firebaseConfig = {
-  apiKey: "AIzaSyB5ULRDn3ZMWn1shouoH--MA8OJrFmK1aI", //TODO: Add your api key
-  authDomain: "idp-clone.firebaseapp.com",
-  projectId: "idp-clone",
-  storageBucket: "idp-clone.firebasestorage.app",
-  messagingSenderId: "704275243689",
-  appId: "1:704275243689:web:2b7a906388961fc8c6ffb8",
-  measurementId: "G-5P0N2Q3KQE"
-};
-
-// ✅ Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 
 const SignIN = () => {
   const [email, setEmail] = useState("");
@@ -27,17 +10,36 @@ const SignIN = () => {
   const handleSignin = async (e) => {
     e.preventDefault();
 
+    if (!email || !password) {
+      alert("Please fill in all fields!");
+      return;
+    }
+
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const response = await fetch("http://localhost:8000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
 
-      alert("Login successful!");
-      navigate('/');
-      
-      setEmail("");
-      setPassword("");
+      const data = await response.json();
 
+      if (response.ok) {
+        alert(data.message || "Login successful!");
+        console.log("✅ Logged in user:", data.user);
+
+        // Optionally store user info in localStorage
+        localStorage.setItem("user", JSON.stringify(data.user));
+
+        setEmail("");
+        setPassword("");
+        navigate("/"); // Redirect to homepage
+      } else {
+        alert(data.message || "Invalid credentials!");
+      }
     } catch (error) {
-      alert(`Error: ${error.message}`);
+      console.error("❌ Error:", error);
+      alert("Something went wrong while logging in!");
     }
   };
 
