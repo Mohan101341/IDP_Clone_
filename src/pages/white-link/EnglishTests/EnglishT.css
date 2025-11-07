@@ -1,6 +1,65 @@
-.mai{
+.MK{
+   padding-left: 130px;
+   padding-top: 20px;
+   height: 260px;
+   background-image: url("/public/assets/englishT.jpg");
+   background-size: 620px;
+   background-position: right;
+   background-repeat: no-repeat;
+   opacity: 0.8;
+   box-shadow:2px 2px 8px rgb(126, 126, 126) ;
+}
+.si:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.he{
+    font-weight: bold;
+    font-size: 33px;
+    color: black;
+    
+}
+.me{
+    padding-top:26px;
+    padding-right: 570px;
     color: black;
 }
-.si{
-    margin-left: 50px;
+.bd{
+    padding-left: 170px;
+    padding-top: 30px;
+    background-color: aliceblue;
+}
+.ee{
+    font-size: 17px;
+    color: black;
+    padding-right: 200px;
+}
+.to{
+    font-weight: bold;
+    font-size: 26px;
+    color: black;
+}
+.Li{
+    font-size: 17px;
+    padding-top: 14px;
+}
+.bu{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-left: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.bu:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 144, 255);
+    transform: translateY(-2px);
+}
+.ml{
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    padding:40px 150px;
+    line-height:35px ;
+    word-spacing: 2px;
 }

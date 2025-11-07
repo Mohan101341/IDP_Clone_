@@ -1,12 +1,12 @@
 .Sabroad-container {
     padding: 20px;
     padding-left: 100px;
-    background-image: url('/public/assets/Subject-listing-banner.jpg');
-    background-size: 1400px;
-    background-color: aliceblue;
+    background-image: url('/public/assets/abroad.jpg');
+    background-size:320px;
+    background-color: rgb(255, 255, 255);
     background-repeat: no-repeat;
     background-position: right;
-    height: 350px;
+    height: 320px;
     opacity: 2;
    
 }
@@ -51,6 +51,7 @@
     display: inline-block;
     vertical-align: top;
     width: 58%;
+    padding-top: 20px;
 }
 .FindC-search-icon {
     position: absolute; 
@@ -61,7 +62,7 @@
     z-index: 2; 
 }
 .Sabroad-mat {
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
     padding-bottom: 30px;
