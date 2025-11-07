@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Studydestcnt.css";
 
 
 function Studydestcnt() {
+  const navigate = useNavigate();
   return (
     <div className="studydestcnt-container">
       <h2>Start Your Study Abroad Journey Today!</h2>
@@ -74,7 +76,12 @@ function Studydestcnt() {
       <p>
         If you’re considering a study abroad program, now is the perfect time to begin. A study abroad journey not only enhances your education but also transforms your future, giving you global exposure, lifelong friendships, and unmatched career opportunities. With IDP by your side, your study abroad dream is easier to achieve than ever.
       </p>
-      <button className="studydestcnt-btn">Help me study abroad</button>
+      <button
+      className="studydestcnt-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Help me study abroad
+    </button>
       <div className="studydestcnt-cards">
       <div className="card1" >
         <h2>Cost of living calculator
@@ -85,7 +92,12 @@ function Studydestcnt() {
 
       <div className="card2"><h2>Can’t decide where to study?
       </h2><p>Answer 5 quick questions to get personalised content and course recommendations</p>
-      <button>Let us Guide you</button></div>
+      <button
+      
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      let Us Guide you
+    </button></div>
 
       </div>
     </div>

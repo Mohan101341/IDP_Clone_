@@ -1,35 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import "./StudySteps.css";
 
 const STEPS = [
-  {
-    title: "Why study abroad?",
-    path: "/study-abroad/why-study-abroad",
-  },
-  {
-    title: "Where and what to study?",
-    path: "/study-abroad/where-to-study",
-  },
-  {
-    title: "How do I apply?",
-    path: "/study-abroad/how-to-apply",
-  },
-  {
-    title: "After receiving an offer",
-    path: "/study-abroad/after-offer",
-  },
-  {
-    title: "Prepare to depart",
-    path: "/study-abroad/prepare-to-depart",
-  },
-  {
-    title: "Arrive and thrive",
-    path: "/study-abroad/arrive-and-thrive",
-  },
+  { title: "Why study abroad?" },
+  { title: "Where and what to study?" },
+  { title: "How do I apply?" },
+  { title: "After receiving an offer" },
+  { title: "Prepare to depart" },
+  { title: "Arrive and thrive" },
 ];
 
 export default function StudySteps() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleIndex = (idx) => {
+    setActiveIndex((prev) => (prev === idx ? null : idx));
+  };
 
   return (
     <section className="study-steps-sec">
@@ -46,10 +32,11 @@ export default function StudySteps() {
 
           <div className="steps-list" role="list">
             {STEPS.map((step, idx) => (
-              <Link
+              <button
                 key={step.title}
-                to={step.path}
-                className="step-item"
+                className={`step-item ${activeIndex === idx ? "active" : ""}`}
+                onClick={() => toggleIndex(idx)}
+                aria-expanded={activeIndex === idx}
               >
                 <span>{step.title}</span>
                 <svg
@@ -66,7 +53,7 @@ export default function StudySteps() {
                     fill="currentColor"
                   />
                 </svg>
-              </Link>
+              </button>
             ))}
           </div>
         </div>
@@ -74,3 +61,5 @@ export default function StudySteps() {
     </section>
   );
 }
+
+

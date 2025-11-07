@@ -1,60 +1,76 @@
-
-
 import React, { useState } from "react";
-import "./SignIn.css";
-import { Link } from "react-router-dom";
+import "./SignIN.css";
+import { Link, useNavigate } from "react-router-dom";
 
-const SignIn = () => {
+const SignIN = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSignin = async (e) => {
     e.preventDefault();
 
-    // Simple login check (replace with real authentication logic)
-    if (email === "admin@example.com" && password === "12345") {
-      alert("Login Successful!");
-    } else {
-      alert("Invalid credentials. Try again.");
+    if (!email || !password) {
+      alert("Please fill in all fields!");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:8000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message || "Login successful!");
+        console.log("✅ Logged in user:", data.user);
+
+        // Optionally store user info in localStorage
+        localStorage.setItem("user", JSON.stringify(data.user));
+
+        setEmail("");
+        setPassword("");
+        navigate("/"); // Redirect to homepage
+      } else {
+        alert(data.message || "Invalid credentials!");
+      }
+    } catch (error) {
+      console.error("❌ Error:", error);
+      alert("Something went wrong while logging in!");
     }
   };
 
   return (
-    <div className="signin-container">
-      <div className="signin-card">
+    <div className="signup-form">
+      <form onSubmit={handleSignin}>
         <h2>Sign In</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="input-group">
-            <label>Email</label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
 
-          <div className="input-group">
-            <label>Password</label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
+        <label>Email</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
 
-          <button type="submit" className="signin-btn">Sign In</button>
+        <label>Password</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
 
-          <p className="signup-link">
-            Don’t have an account? <Link to="/pages/white-link/Sign_Up">Sign Up</Link>
-          </p>
-        </form>
-      </div>
+        <button type="submit">Sign In</button>
+
+        <p>Don’t have an account?</p>
+        <Link to="/signup">Create Account</Link>
+      </form>
     </div>
   );
 };
 
-export default SignIn;
+export default SignIN;

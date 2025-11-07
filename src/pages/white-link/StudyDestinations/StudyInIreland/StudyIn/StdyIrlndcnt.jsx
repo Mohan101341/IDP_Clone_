@@ -1,8 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ Import navigate hook
 import './StdyIrlndcnt.css';
 const  StdyIrlndcnt = () => {
 
-
+    const navigate = useNavigate(); // ✅ Initialize navigation
     const renderUniversityTable = () => (
         <table>
             <thead>
@@ -310,7 +311,12 @@ const  StdyIrlndcnt = () => {
                 <h3>6. Can I study in Ireland backlog?</h3>
                 <p>Irish institutions typically consider applications with a maximum of **four to five backlogs**, although some may accept a maximum of two to three backlogs</p>
                 
-                <p><button>Help me study in Ireland</button></p>
+                <p> <button
+     
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Help me study in ireland 
+    </button></p>
             </section>
 
             <section>

@@ -1,102 +1,48 @@
 /* ============================= */
 /* Top Black Bar */
 /* ============================= */
-.black-container,
-.black-containera {
-  background-color: #292929;
-  color: white;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 25px;
-  padding: 0.2px 29px;
-  position: sticky;
-  top: 0;
-  border-bottom: 1px solid rgb(65, 65, 65);
-  z-index: 9999;
-  position: relative; 
-  
+.black-container {
+  background-color: #444444;
+  padding: 17px 25px;
+  position:relative;
 }
 
-.black-links,
-.black-linksa {
+.black-links {
   display: flex;
-  align-items: center;
-  gap: 25px;
+  justify-content: flex-end; 
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.black-links li,
-.black-linksa li {
-
-  color: #f5f5f5;
-  text-decoration: none;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-
-}
-
-.black-li a,
-.black-lia a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 1px;
-  border-radius: 12px;
-}
-.black-li a:hover,
-.black-lia a:hover { text-decoration: underline; }
-
-.black-li1 > button, .nav-button {
-  padding: 6px 10px;
-  border-radius: 12px;
-  background: none;
-  border: none;
+.black-links li {
+  margin-left: 20px;
+  color: #ffffff;
+  font-size: 14px;
   cursor: pointer;
-  font: inherit;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.black-li1 > button { color: #00802f; }
-.nav-button { color: #b83939; text-decoration: none; }
-.nav-button:hover { color: rgb(46, 119, 192); }
-.black-li1 > button:hover {
-  background-color: rgb(35, 75, 255);
-  color: #fafafa;
- margin-top: 1px;
- 
+  transition: color 0.3s;
 }
 
-.black-li2 a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
-  border-radius: 12px;
+.black-li:hover {
+  text-decoration: underline;
 }
-.black-li2 a:hover {
+
+.black-li1:hover {
   background-color: rgb(25, 16, 122);
   color: #fff;
+  border-radius: 4px;
+  padding: 5px 10px;
 }
 
-.black-links>li:not(:last-child)::after,
-.black-linksa>li:not(:last-child)::after {
+.black-links li:not(:last-child)::after {
   content: "|";
-  display: inline-block;
-  margin-left: 12px;
-  color: #ffffff;
-  opacity: 0.9;
+  margin-left: 10px;
+  color: white;
 }
 
 /* Hide top black bar on mobile */
 @media (max-width: 768px) {
-  .black-container,
-  .black-containera {
+  .black-container {
     display: none;
   }
 }
@@ -110,44 +56,35 @@
   justify-content: space-between;
   padding: 20px 30px;
   background-color: #fff;
-  color: black;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   position: sticky;
-  top: 0%;
-  height: 80px;
+  top:0%;
+  height:80px;
   width: 100%;
-  z-index: 1003;
+  z-index: 1003; /* Higher than mobile sidebar to stay on top */
 }
 
 .logo {
-  height: 40px;
+  height: 30px;
   cursor: pointer;
-}
-
-/* Hide icons in the white navbar */
-.main-navbar .icon-btn {
-  display: none;
 }
 
 /* ============================= */
 /* Nav Links */
 /* ============================= */
 .nav-links {
-  color: black;
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 1rem;
   flex: 1;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
+  justify-content: space-evenly;
 }
 
 .nav-links li {
-  margin-top: 0;
-  padding: 6px 8px;
-  font-size: 16px;
+  margin-top: 13px;
+  font-size: 20px;
   font-weight: 500;
   color: #333;
   cursor: pointer;
@@ -175,8 +112,7 @@
   color: #333;
   cursor: pointer;
   padding: 8px;
-  z-index: 1004;
-  /* Higher than navbar to ensure it's clickable */
+  z-index: 1004; /* Higher than navbar to ensure it's clickable */
 }
 
 .mobile-menu-btn:hover {
@@ -196,7 +132,6 @@
   z-index: 999;
   display: none;
 }
-
 /* Mobile links styled as boxes */
 .mobile-links {
   list-style: none;
@@ -269,12 +204,11 @@
   width: 100%;
   height: 100vh;
   background: #fff;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: -2px 0 8px rgba(0,0,0,0.2);
   transition: right 0.3s ease-in-out;
   z-index: 1000;
   padding: 80px 20px 20px;
-  display: none;
-  /* Hidden by default on desktop */
+  display: none; /* Hidden by default on desktop */ 
   flex-direction: column;
 }
 
@@ -282,144 +216,10 @@
   right: 0;
 }
 
-.find-us-dropdown {
-  max-height: 300px;
-  overflow-y: auto;
-  background: #222;
-  color: #fff;
-  position: absolute;
-  left: 50%;
-  right: auto;
-  top: 100%;
-  min-width: 240px;
-  width: max-content;           /* lean width */
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(18, 2, 2, 0.1);
-  padding: 0;
-  margin: 0;
-  z-index: 10000;
-  transform: translateX(-50%);
-  text-align: left;
-}
-.nav-item { position: relative; }
-.black-li1.has-dropdown { position: relative; }
 
-.find-us-dropdown li {
-  padding: 8px 20px;
-  white-space: nowrap;
-  cursor: pointer;
-  text-align: left;
-}
 
-.find-us-dropdown li:hover,
-.find-us-dropdown li a:hover {
-  background: #352d2d;
-  color: #fff;
-}
 
-.find-us-dropdown li a {
-  display: block;
-  width: 100%;
-  color: #fff;
-  text-decoration: none;
-  padding: 0;
-}
 
-/* Remove vertical line from dropdown items */
-.find-us-dropdown li::after {
-  content: none !important;
-}
-
-/* Standardize dropdown menu box */
-.find-us-dropdown,
-.english-dropdown {
-  min-width: 240px;
-  padding: 0;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(18, 2, 2, 0.1);
-  /* Add any other shared styles */
-}
-
-/* Standardize dropdown items */
-.find-us-dropdown li,
-.english-dropdown li {
-  padding: 10px 24px;
-  white-space: nowrap;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 1.5;
-  transition: background 0.2s, color 0.2s;
-  box-sizing: border-box;
-}
-
-/* Equal gap between items */
-.find-us-dropdown li:not(:last-child),
-.english-dropdown li:not(:last-child) {
-  margin-bottom: 4px;
-}
-
-/* Hover styles */
-.find-us-dropdown li:hover,
-.find-us-dropdown li a:hover {
-  background: #352d2d;
-  color: #fff;
-}
-
-.english-dropdown li:hover,
-.english-dropdown li a:hover {
-  background: #294b80ff;
-  color: #fff;
-}
-
-/* ============================= */
-/* White main navbar dropdown */
-/* ============================= */
-.white-dropdown {
-  max-height: 360px;       
-  overflow-y: auto;
-  background: #ffffff;
-  color: #222;
-  position: absolute;
-  left: 50%;
-  right: auto;
-  top: 100%;
-  min-width: 260px;
-  width: max-content;          /* lean width */
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  padding: 8px 0;
-  margin: 6px 0 0 0;
-  transform: translateX(-50%);
-  text-align: left;
-}
-
-.white-dropdown-item {
-  padding: 10px 18px;
-  color: #222;               /* ensure visible by default */
-  text-align: left;
-}
-
-.white-dropdown-item a {
-  display: block;
-  color: #222 !important;    /* override any inherited white */
-  text-decoration: none;
-  text-align: left;
-}
-
-/* Ensure visibility in all link states before hover */
-.white-dropdown-item a:link,
-.white-dropdown-item a:visited,
-.white-dropdown-item a:active,
-.white-dropdown-item a:focus {
-  color: #222 !important;
-}
-
-.white-dropdown-item:hover,
-.white-dropdown-item:hover a,
-.white-dropdown-item a:hover {
-  background: #f3f6fb;      /* light hover effect */
-  color: #111 !important;
-}
 
 @media (max-width: 768px) {
   .mobile-menu-overlay {
@@ -431,25 +231,21 @@
 /* Buttons */
 /* ============================= */
 .nav-buttons {
-  justify-items: center;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   gap: 10px;
 }
 
 .nav-buttons button {
-  padding: 10px 50px;
+  padding: 15px 16px;
   font-size: 14px;
   font-weight: 550;
-  border-radius: 30px;
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 .login-btn {
   border: none;
-  margin-top: 30px;
   background-color: rgb(6 132 104 / 1);
   color: #fff;
 }
@@ -459,7 +255,6 @@
 }
 
 .signup-btn {
-  margin-top: 30px;
   background-color: #fff;
   color: #333;
 }
@@ -469,14 +264,12 @@
   color: #fff;
 }
 
-
 /* ============================= */
 /* Heart Icon */
 /* ============================= */
 .icon-btn.heart {
   display: inline-flex;
   font-size: 22px;
-  margin-left: 10px;
   color: red;
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -493,19 +286,6 @@
 @media (min-width: 769px) {
   .icon-btn.account {
     display: none;
-  }
-}
-
-/* Show account icon only on mobile/tablet */
-@media (max-width: 1024px) {
-  .icon-btn.account {
-    display: inline-flex !important;
-  }
-}
-
-@media (min-width: 1025px) {
-  .icon-btn.account {
-    display: none !important;
   }
 }
 
@@ -583,33 +363,9 @@
   }
 
 
-
-
-}
-
-
-
-
-/* Show icons only on mobile/tablet */
-@media (max-width: 1024px) {
-  .right-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-}
-
-/* Ensure nav-links wrapper does not break flex layout */
-.nav-links-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-
-
-.nav-links {
-  gap: 0.5rem;
   
   
 }
+
+
+

@@ -1,9 +1,9 @@
 .badge {
-    background: #63ff3c;
-    color: #000000;
+    background: #e84141;
+    color: #fff;
     border-radius: 8px;
     padding: 6px 10px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .brand {
@@ -18,21 +18,21 @@
     padding: 0 18px;
     border-radius: 10px;
     border: none;
-    background: #00ff62;
-    color: #000000;
+    background: #f24646;
+    color: #fff;
     font-weight: 700;
 }
 
 .btn-primary {
-    background: linear-gradient(90deg, #45ff1f, #17ecff);
-    color: #000000;
+    background: linear-gradient(90deg, #ff0606, #ff4bb4);
+    color: #fff;
     border: none;
     border-radius: 8px;
     padding: 10px 16px;
     font-weight: 700;
 }
 .btn-primary:hover{
-    color: rgb(255, 255, 255);
+    color: black;
 
 }
 .chev {
@@ -60,13 +60,13 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #00ff5e;
+    background: #3ecf8e;
     display: inline-block;
 }
 
 .logo-split {
     margin-left: 6px;
-    background: linear-gradient(90deg, #14ff7e, #15e4ff);
+    background: linear-gradient(90deg, #ff3e3e, #ff15d8);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -119,9 +119,9 @@
 }
 
 .register-title {
-    background: linear-gradient(90deg, #2aff1b, #18ecff);
+    background: linear-gradient(90deg, #ff0000, #ff45b5);
     border: 1px solid #e7e7e7;
-    color: #373737;
+    color: #fff;
     border-radius: 12px;
     padding: 26px 24px;
     font-weight: 800;
@@ -177,7 +177,7 @@
     margin-bottom: 20px;
 }
 .cl {
-   background: linear-gradient(90deg, #00ff73, #0febff);
+   background: linear-gradient(90deg, #ff3030, #d50ab3);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -185,7 +185,7 @@
     text-decoration: none;
 }
 .cl:hover {
-    text-decoration: underline rgb(31, 255, 27) ease-in-out;
+    text-decoration: underline red ease-in-out;
 }
 .line {
     padding-left: 260px;

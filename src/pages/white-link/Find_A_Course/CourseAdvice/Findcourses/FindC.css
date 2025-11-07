@@ -1,31 +1,22 @@
 .FindC-1 {
-    background-color: #ffffff;
-    height: 300px;
-   box-shadow: 1px 5px 9px rgb(227, 227, 227);
-   background-image: url('/public/assets/findcourse.jpg');
-   background-repeat: no-repeat;
-   background-position: right;
-   background-size: 320px;
-
+    background-color: #d4f5ff;
+    height: 220px;
+    border-bottom: #ececec 6px solid;
 }
 .FindC-div {
-    padding-left: 180px;
+    padding-left: 80px;
     font-size: 19px;
-    padding-top: 15px;
-    cursor: pointer;
 }
 .FindC-get {
-    margin-left: 180px;
+    margin-left: 80px;
     margin-top: 30px;
-    font-size: 900;
+    font-size: 800;
 }
 .FindC-a {
-    padding-left: 160px;
-    font-size: 40px;
+    padding-left: 60px;
 }
 .FindC-button {
-    margin-left: 170px;
-    border-radius: 25px;
+    margin-left: 70px;
     margin-top: 20px;
     font-weight: 600;
 }
@@ -34,13 +25,9 @@
     color: rgb(0, 0, 0);
     transition: all 0.2s ease;
 }
-.aa{
-    color: white;
-    font-weight: bold;
-}
 .FindC-b1 {
     padding: 40px 60px 40px 90px;
-    background-color: #0016a3;
+    background-color: #3322f1;
     margin: 25px;
     color: rgb(255, 255, 255);
     border-radius: 20px;
@@ -49,20 +36,18 @@
 }
 .FindC-img {
     position: relative;
-    margin-top: -236px;
-    margin-left: 1120px;
+    margin-top: -197px;
+    margin-left: 1200px;
     margin-right: auto;
-    padding-right: 90px;
     display: block;
-    width: 430px;
-    height: 290px;
+    width: 400px;
+    height: 200px;
     z-index: 1;
 }
 
 .see {
-    margin-top: 10px;
-    margin-bottom: 18px;
-    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 .FindC-button1 {
     background-color: white;
@@ -73,13 +58,11 @@
     border: none;
     padding-top: 4px;
     cursor: pointer;
-    text-decoration: none;
 }
 .FindC-button1:hover {
     background-color: #2b478e;
     color: white;
     transition: all 0.3s ease;
-    text-decoration: none;
 }
 .FindC-boxes {
     margin: 20px auto;

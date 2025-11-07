@@ -103,6 +103,7 @@ export default function Courseof() {
 
         </div>
 
+        {/* Additional 3-card row  */}
         <div className="Courseof-boxes">
 
         <div className="Courseof-box1">
@@ -202,5 +203,9 @@ export default function Courseof() {
          
          
     </div>
+
+
+
+
     );
 }

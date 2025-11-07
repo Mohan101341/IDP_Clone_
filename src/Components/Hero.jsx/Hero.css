@@ -1,0 +1,138 @@
+.hero {
+  position: relative;
+  min-height: 420px;
+  background-image: url("../../assets/hero-bg.jpg"); /* fallback in case inline style fails */
+  background-repeat: no-repeat;
+  background-size:contain;       /* ensures it covers fully */
+  background-position: center center;  /* more balanced across devices */
+  background-attachment: fixed;        /* adds a subtle parallax effect on large screens */
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+.hero-content {
+  max-width: 580px;
+  margin-left: 3vw;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+  letter-spacing: -1px;
+  line-height: 1.15;
+}
+
+.hero-subheading {
+  font-size: 1.25rem;
+  margin-bottom: 1.6rem;
+  color: #444;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #1977f3;
+  color: #fff;
+  height: 52px;
+  border-radius: 26px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 2.2rem;
+  box-shadow: 0 2px 8px rgba(25, 119, 243, 0.07);
+  transition: background 0.17s;
+  line-height: 52px;
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background: #125fd4;
+}
+
+.hero-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-left: 0.8em;
+}
+
+.hero-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  background: #e0e0e0;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-dot.active {
+  background: #222;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero {
+    min-height: 340px;
+    background-position: center top; /* keeps focus on upper part */
+    background-attachment: scroll;   /* avoid issues on mobile safari */
+  }
+
+  .hero-overlay {
+    min-height: 340px;
+  }
+
+  .hero-content {
+    max-width: 90vw;
+    margin-left: 2vw;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 250px;
+    background-position: center; /* center focus on small screens */
+  }
+
+  .hero-overlay {
+    min-height: 250px;
+  }
+
+  .hero-content {
+    max-width: 99vw;
+    margin-left: 1vw;
+  }
+
+  .hero h1 {
+    font-size: 1.35rem;
+  }
+
+  .hero-subheading {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    font-size: 0.96rem;
+    height: 42px;
+    line-height: 42px;
+  }
+}
+
+

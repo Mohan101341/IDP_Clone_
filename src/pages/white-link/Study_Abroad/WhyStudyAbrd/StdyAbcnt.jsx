@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./StdyAbcnt.css";
 function StdyAbcnt() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="stdyabcnt-container">
       <p>
@@ -39,7 +43,48 @@ function StdyAbcnt() {
       <p>
         Immersing yourself in a new culture strengthens confidence and decision-making abilities. Exploring unfamiliar places and connecting with diverse people fosters adaptability and autonomy. By embracing new experiences and taking risks, you become a stronger, more capable individual, prepared for future challenges both in and beyond the classroom.
       </p>
-      <button>Signup</button>
+
+      <h1>Other reasons to study abroad </h1>
+      <p>Apart from offering numerous advantages in academics and career prospects, studying in a foreign country adds depth to your life. You might discover new passions and learn more about yourself as you embrace the unfamiliar and remain open to fresh experiences.  </p>
+      <h2>Discover new places </h2>
+      <p>One of the top reasons to study abroad is to travel and discover new places. Imagine yourself visiting the UK, Australia, Ireland, USA, New Zealand, or Canada and experiencing new cultures and creating lifelong memories. 
+
+Studying abroad gives you amazing travel opportunities. You can immerse yourself in the everyday life of your host country. You can check out famous landmarks and uncover hidden gems. 
+
+What's more, you'll have weekends and holidays to explore places beyond your host country. Let's say you study in London, UK. You can take trains to Paris or Edinburgh to enjoy their breathtaking views and local delicacies. </p>
+     <h2>Hone your English skills</h2>
+     
+     <p>One of the top benefits of studying abroad is the chance to master a new language. Immersing yourself in the English language works wonders to boost your speaking abilities and to grasp the culture more. 
+
+       Don't fret if you're not yet fluent in English. We offer official preparation materials, practice tests, pathway programs and expert guidance to help students prepare for the IELTS test. Connect with our experts anytime to get personalised support and improve your skills and confidence for the exam. 
+
+      Imagine ordering coffee without hesitation, riding public transport, and talking to locals–all in their language. Learning a new language is a present you give to yourself. It leads to deeper cultural insights and aids in personal development. </p>
+      
+      <h2>Experience a new culture </h2>
+      <p>When you study abroad, you get to experience the everyday life, customs, and traditions of the country hosting you. You sample new cuisines, take part in local celebrations, and understand social norms. Each day feels like a new adventure. You start to see and value different perspectives and lifestyles. 
+
+          Grab the opportunity to connect with locals, pose questions, and join cultural activities. By immersing yourself in the local culture, you create lasting memories and return home with a broader outlook. </p>
+      
+      <h2>Find new interests </h2>
+      <p>Studying abroad allows you to learn more about yourself. You get the opportunity and liberty to explore activities you may not have considered and uncover a passion you never knew existed once you step out of your comfort zone. 
+
+          Picture yourself learning to ride waves on an Australian beach, learning bodhrán or tin whistle in Ireland, or mastering the sport of skiing in Canada. Exploring new hobbies or rediscovering yourself are other worthy reasons to study abroad. </p>
+      
+      <h2>Make new friends </h2>
+      <p>ne of the best things about studying abroad is the chance to make new friends for life. Your classmates will be your travel buddies, study pals, and close friends as you deal with the good and challenging parts of studying abroad together. We can help you find accommodation where you can stay with students from around the world. What a better way to make friends! 
+
+         These connections help enrich your life while enabling you to build a network for the future. As you all go different ways and grow in your careers, you'll have friends and contacts all around the world. This will bring new ideas and opportunities to work together.</p>
+      
+      <h2>Discover how to study abroad </h2>
+
+      <p>When you study in another country, you broaden your worldview and boost your job prospects. It combines personal growth with career benefits. You might aim for better grades, learn about new cultures, or discover more about yourself. Whatever your goal, the benefits of studying abroad are substantial. As you try to discover how studying abroad could significantly impact your life, we are here to guide you in every step, from selecting courses and settling in your new home. Whether you want us to help with your study application, open a student bank account, or book accommodation, our counsellors are here to guide you for free. Register today for free counselling to get expert advice from our experienced counsellors.</p>
+      <button
+      className="stdy-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Avail Free Councling
+    </button>
+      
     </div>
   );
 }

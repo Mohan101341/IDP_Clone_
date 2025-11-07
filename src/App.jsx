@@ -1,73 +1,37 @@
 import React from "react";
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
 
-// Common Components
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
+import Hero from "./Components/Hero.jsx/Hero";
 import Contact from "./Components/Contact/Contact";
-import Services from "./Components/Services/Services";
+import Services from "./Components/services/Services";
 import Destinations from "./Components/Destination/Destinations";
-import Hero from "./Components/Hero/Hero";
-import Testimonials from "./Components/Testimonials/Testimonials";
-import Import from "./Components/Implinks/Import";
+import English from "./pages/black-link/English";
+import Events from "./pages/black-link/Events";
+import Find from "./pages/black-link/Find";
 import Fastlane from "./Components/Fastlane/Fastlane";
 import IDP from "./Components/IdpStudents/IDP";
 import Essentials from "./Components/Essentials/Essentials";
 import Aboutidp from "./Components/IDP-P/Aboutidp";
 import StudySteps from "./Components/StudySteps/StudySteps";
-import BlueNav from "./Components/bLUE-nav/BlueNav";
-
-// Black-Link Pages
-import English from "./pages/black-link/English";
-import Events from "./pages/black-link/Events";
-import Find from "./pages/black-link/Find/Find";
-import NewAndA from "./pages/black-link/NewAndA";
+import Testimonials from "./Components/Testimonials/Testimonials";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
+import StudyAb from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAb";
+import StudyDs from "./pages/white-link/StudyDestinations/StudyDs";
 
-// White-Link Pages
-import EnglishT from "./pages/white-link/EnglishTests/EnglishT.jsx";
-import Avail from "./pages/white-link/Avail_Free/Avail";
-import IELTSPage from "./pages/white-link/IELTS/IELTS1.jsx";
-import SignIN from "./pages/white-link/Sign_In/SignIN";
-import Sign_Up from "./pages/white-link/Sign_Up/Sign_Up";
-
-// Study Abroad
-import WhyStudyAbroadPage from "./pages/white-link/Study_Abroad/WhyStudyAbroadPage";
-import AfterOfferPage from "./pages/white-link/Study_Abroad/AfterOfferPage";
-import HowToApplyPage from "./pages/white-link/Study_Abroad/HowToApplyPage";
-import WhereToStudyPage from "./pages/white-link/Study_Abroad/WhereToStudyPage";
-import PrepareToDepartPage from "./pages/white-link/Study_Abroad/PrepareToDepartPage";
-import ArriveAndThrivePage from "./pages/white-link/Study_Abroad/ArriveAndThrivePage";
-import StudyAbNavbar from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAbNavbar";
-
-// Student Essentials
-import Student from "./pages/white-link/Student_Essentials/Student";
-import StudentEssFrom from "./pages/white-link/Student_Essentials/StudentEssFrom/StudentEssFrom";
-import Accommodation from "./pages/white-link/Student_Essentials/StudentEs-Types/Accommodation";
-import EducationLoan from "./pages/white-link/Student_Essentials/StudentEs-Types/Education_loan";
-import HealthInsurance from "./pages/white-link/Student_Essentials/StudentEs-Types/Health_Insurance";
-import StudentBanking from "./pages/white-link/Student_Essentials/StudentEs-Types/Student_banking";
-import ForexCards from "./pages/white-link/Student_Essentials/StudentEs-Types/Forex_Cards";
-import Guardian_Ship from "./pages/white-link/Student_Essentials/StudentEs-Types/Guardian_Ship";
-import ISIC from "./pages/white-link/Student_Essentials/StudentEs-Types/ISIC";
-import InternationalSimCards from "./pages/white-link/Student_Essentials/StudentEs-Types/International_SIM_Cards";
-import ServicesSection from "./pages/white-link/Student_Essentials/StudentEssFrom/ServiceSection";
-import EssentialsCards from "./pages/white-link/Student_Essentials/StudentEssFrom/EssentialsCards";
-import MoneyTransfer from "./pages/white-link/Student_Essentials/StudentEs-Types/Money_transfer";
-import StudyAbroadPromo from "./pages/white-link/Student_Essentials/StudentEssFrom/StudyAdroadPromo";
-import ShortList from "./Components/ShortList/ShortList";
-import Related_Articles from "./pages/Related_Articles/Related_Articles";
-import FindH from "./pages/black-link/Find/FindH";
-import FindCountryPage from "./pages/black-link/Find/FindCountryPage";
-import InfoSection from "./pages/black-link/Find/InfoSection";
-//Find a course and IELTS 
-
+import Student from "./pages/white-link/Student_Essentials/Student.jsx";
+import Avail from "./pages/white-link/Avail_Free/Avail.jsx";
+import SignIN from "./pages/white-link/Sign_In/SignIN.jsx";
+import Import from "./Components/Implinks/Import";
+import BlueNav from "./Components/bLUE-nav/BlueNav";
+import NewAndA from "./pages/black-link/NewAndA";
 import CourseA from "./pages/white-link/Find_A_Course/CourseAdvice/CourseAdvice";
 import FindC from "./pages/white-link/Find_A_Course/CourseAdvice/Findcourses/FindC";
 import Courseof from "./pages/white-link/Find_A_Course/Courseinstant/Courseof";
 import Sabroad from "./pages/white-link/Find_A_Course/Study_Abroad/Sabroad";
-import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar"
-import FindU from "./pages/white-link/Find_A_Course/Find_Universities/FindU";
+import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar";
+
 import Oneac from "./Components/On_signin_banner/Oneac";
 import Uranking from "./pages/white-link/Find_A_Course/University_Ranking/Uranking";
 import Qsworld from "./pages/white-link/Find_A_Course/University_Ranking/Qs_World/Qsworld";
@@ -75,7 +39,37 @@ import Cug from "./pages/white-link/Find_A_Course/C_U_G/Cug";
 import Book from "./pages/white-link/IELTS/Book_IELTS/Book";
 import What from "./pages/white-link/IELTS/What_is_IELTS/What";
 import Prep from "./pages/white-link/IELTS/IELTS_prep/Prep";
-// Study Destinations
+
+
+
+import StudyAbNavbar from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAbNavbar";
+import StdyAbVid from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StdyAbVid";
+import StdyAbcnt from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StdyAbcnt";
+import WhereStdhero from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereStdhero";
+import WhereStdyVid from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereStdyvid";
+import WhereStdyAbcnt from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereStdycnt";
+import HowtoApplyhero from "./pages/white-link/Study_Abroad/how_do_i_apply/HowtoApplyhero";
+import HowDoApplyVid from "./pages/white-link/Study_Abroad/how_do_i_apply/howdoaplyvid";
+import Howdoapplycnt from "./pages/white-link/Study_Abroad/how_do_i_apply/Howdoapplycnt";
+import AfterOfferhero from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferhero";
+import AfterOfferVid from "./pages/white-link/Study_Abroad/AfterOffe/AfterOffervid";
+
+import Preparetodeparthero from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetodeparthero";
+import Preparetodepartvid from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetodepartvid";
+
+import Arriveandthrivehero from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arriveandthrivehero";
+import Arriveandthrivevid from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arriveandthrivevid";
+import StdAbhlp from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StdAbhlp";
+import FrequentlyAskedQuestions from "./pages/white-link/Study_Abroad/FrequentlyAskedQuestions/FrequentlyAskedQuestions";
+import StdyabroadOptions from "./pages/white-link/Study_Abroad/Where_to_study_abroad/StdyabroadOptions";
+import HowToApplyHelp from "./pages/white-link/Study_Abroad/how_do_i_apply/HowToApplyHelp";
+import HowToApplyFAQ from "./pages/white-link/Study_Abroad/how_do_i_apply/HowToApplyFAQ";
+import AfterOfferHelp from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferHelp";
+import AfterOfferFAQ from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferFAQ";
+import Preparetohlp from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetohlp";
+import PrepareFAQ from "./pages/white-link/Study_Abroad/Prepare_to_depart/PrepareFAQ";
+import Arrivethrivehlp from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arrivethrivehlp";
+import ArrivethriveFAQ from "./pages/white-link/Study_Abroad/Arrive_and_thrive/ArrivethriveFAQ";
 import Askidp from "./pages/white-link/Study_Abroad/AskIdp/Askidp";
 import ExploreAbroadPrgms from "./pages/white-link/StudyDestinations/ExploreAbroadPrgms";
 import Studydestcnt from "./pages/white-link/StudyDestinations/Studydestcnt";
@@ -88,6 +82,13 @@ import StdyIrlndhero from "./pages/white-link/StudyDestinations/StudyInIreland/S
 import StdyUsahero from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsahero.jsx";
 import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndcnt.jsx";
 import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
+import StdyUsacnt from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsacnt.jsx";
+import SignupForm from "./pages/white-link/Sign_In/SignupForm";
+import What_is_stdnghero from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying/What_is_stdnghero.jsx";
+import What_isstdngcnt from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying/What_isstdngcnt.jsx";
+import Reasons_for_stdy from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Reasons_for_stdy_abrd/Reasons_for_stdy.jsx";
+import Benefits from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Benefits/Benefits.jsx";
+// Layout wrapper for white-link pages
 import Toefl from "./pages/white-link/EnglishTests/Toefl/Toefl.jsx";
 import Duolingo from "./pages/white-link/EnglishTests/Duolingo/Duolingo.jsx";
 
@@ -105,7 +106,7 @@ export default function App() {
   return (
     <HashRouter>
       <Routes>
-        {/* 🏠 Home Page */}
+        {/* Home Page */}
         <Route
           path="/"
           element={
@@ -127,207 +128,18 @@ export default function App() {
           }
         />
 
-        {/* ⚙️ Services Page */}
-        <Route
-          path="/services"
-          element={
-            <WhiteLinkLayout>
-              <Services />
-            </WhiteLinkLayout>
-          }
-        />
-
-        {/* 📚 Study Details - Generic and Specific */}
+        {/* Study Detail Page */}
         <Route
           path="/study/:slug"
           element={
-            <WhiteLinkLayout>
+            <>
+              <Navbar />
               <ComingSoon />
-            </WhiteLinkLayout>
-          }
-        />
-
-        {/* ⚫ Black-Link Pages */}
-        <Route
-          path="/pages/Events"
-          element={
-            <>
-              <Navbar />
-              <BlueNav />
-              <Events />
-              <Contact />
               <Footer />
             </>
           }
         />
         <Route
-          path="/pages/NewAndA"
-          element={
-            <>
-              <Navbar />
-              <BlueNav />
-              <NewAndA />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/pages/English"
-          element={
-            <>
-              <Navbar />
-              <BlueNav />
-              <English />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/pages/black-link/Find/Find"
-          element={
-            <>
-              <Navbar />
-              <BlueNav />
-              <FindH />
-              <InfoSection />
-              <Find />
-              <Footer />
-            </>
-          }
-        />
-
-        {/* ⚪ White-Link Pages */}
-        <Route
-          path="/study-abroad/why-study-abroad"
-          element={
-            <WhiteLinkLayout>
-              <StudyAbNavbar />
-              <WhyStudyAbroadPage />
-              <NewAndA />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/study-abroad/how-to-apply"
-          element={
-            <WhiteLinkLayout>
-              <StudyAbNavbar />
-              <HowToApplyPage />
-              <NewAndA />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/study-abroad/where-to-study"
-          element={
-            <WhiteLinkLayout>
-              <StudyAbNavbar />
-              <WhereToStudyPage />
-              <NewAndA />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/study-abroad/after-offer"
-          element={
-            <WhiteLinkLayout>
-              <StudyAbNavbar />
-              <AfterOfferPage />
-              <NewAndA />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/study-abroad/prepare-to-depart"
-          element={
-            <WhiteLinkLayout>
-              <StudyAbNavbar />
-              <PrepareToDepartPage />
-              <NewAndA />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/study-abroad/arrive-and-thrive"
-          element={
-            <WhiteLinkLayout>
-              <StudyAbNavbar />
-              <ArriveAndThrivePage />
-              <NewAndA />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-
-        <Route
-          path="/study-destinations"
-          element={
-            <WhiteLinkLayout>
-              {/* <StudyDs /> This component was not provided */}
-              <ExploreAbroadPrgms />
-              <Studydestcnt />
-              <Askidp />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/study-destinations/australia"
-          element={
-            <WhiteLinkLayout>
-              <StdyAushero />
-              <StdyAustcnt />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/study-destinations/canada"
-          element={
-            <WhiteLinkLayout>
-              <Stdycanhero />
-              <Stdycancnt />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/study-destinations/ireland"
-          element={
-            <WhiteLinkLayout>
-              <StdyIrlndhero />
-              <StdyIrlndcnt />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/study-destinations/uk"
-          element={
-            <WhiteLinkLayout>
-              <StdyUkhero />
-              <Stdyinukcnt />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-        <Route
-          path="/study-destinations/usa"
-          element={
-            <WhiteLinkLayout>
-              <StdyUsahero />
-              <Contact />
-            </WhiteLinkLayout>
-          }
-        />
-        
-        {/* Find A course */}
-          <Route
           path="/pages/CourseA"
           element={
             <>
@@ -385,22 +197,11 @@ export default function App() {
           />
           
             <Route
-          path="/pages/EnglishT"
-          element={
-            <>
-              <Navbar />
-              <EnglishT />
-              <Contact />
-              <Footer />
-            </>
-          }
-          />
-            <Route
           path="/pages/FindU"
           element={
             <>
               <Navbar />
-              <FindU/>
+              
               <Oneac />
               <Fastlane />
               <Footer />
@@ -443,17 +244,6 @@ export default function App() {
               <Footer />
             </>
           }
-          />
-          <Route
-          path="/pages/IELTSPage"
-          element={
-            <>
-              <Navbar />
-              <IELTSPage/>
-              <Contact />
-              <Footer />
-            </>
-          }
            />
           <Route
           path="/pages/Qsworld"
@@ -477,10 +267,8 @@ export default function App() {
               <Footer />
             </>
           }
-          />
-
-        {/* IELTS Page */}
-       <Route
+           />
+          <Route
           path="/pages/What"
           element={
             <>
@@ -512,111 +300,290 @@ export default function App() {
             </>
           }
           />
-
-
-        {/* 🎓 Student Essentials */}
+        {/* Black-link Pages */}
         <Route
-          path="/student-essentials"
+          path="/pages/Events"
           element={
-            <WhiteLinkLayout>
-              <Student />
-            </WhiteLinkLayout>
+            <>
+              <Navbar />
+              <BlueNav />
+              <Events/>
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/pages/NewAndA"
+          element={
+            <>
+              <Navbar />
+              <BlueNav />
+              <NewAndA />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/pages/English"
+          element={
+            <>
+              <Navbar />
+    
+              <BlueNav />
+              <English />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/pages/Find"
+          element={
+            <>
+              <Navbar />
+              <BlueNav />
+              <Find />
+              <Footer />
+            </>
+          }
+        />
+        
+        {/* White-link Pages (use layout) */}
+        <Route path="/pages/white-link/StudyAb" element={
+          <>
+            <Navbar />
+            <StudyAbNavbar />
+            <StudyAb />
+            <StdyAbVid/>
+            <StdyAbcnt />
+            <StdAbhlp />
+            <Askidp/>
+            <FrequentlyAskedQuestions />
+            <NewAndA />
+            <Contact />
+            <Footer />
+          </>
+        } />
+
+
+        
+        <Route
+          path="/pages/white-link/where-to-study-abroad"
+          element={
+            <>
+              <Navbar />
+              <StudyAbNavbar />
+              <WhereStdhero />
+              <WhereStdyVid/>
+              <WhereStdyAbcnt/>
+              <StdyabroadOptions />
+                <Askidp/>
+              <NewAndA />
+              <Contact />
+              <Footer />
+            </>
           }
         />
 
-        {[
-          ["EducationLoan", EducationLoan],
-          ["HealthInsurance", HealthInsurance],
-          ["Money_Transfer", MoneyTransfer],
-          ["StudentBanking", StudentBanking],
-          ["Accommodation", Accommodation],
-          ["InternationalSimCards", InternationalSimCards],
-          ["Guardian-Ship", Guardian_Ship],
-          ["ForexCards", ForexCards],
-          ["ISIC", ISIC],
-          ["Travel_Support", ComingSoon],
-        ].map(([pathName, Component]) => (
-          <Route
-            key={pathName}
-            path={`/student-essentials/${pathName}`}
-            element={
-              <WhiteLinkLayout>
-                <Component />
-                {pathName === "Money_Transfer" && <StudyAbroadPromo />}
-                <StudentEssFrom />
-                <EssentialsCards style={{ margin: "2rem 0" }} />
-                <ServicesSection />
-              </WhiteLinkLayout>
-            }
-          />
-        ))}
-
         <Route
-          path="/pages/white-link/Avail"
+          path="/pages/white-link/how-to-apply"
           element={
-            <WhiteLinkLayout>
-              <Avail />
-            </WhiteLinkLayout>
+            <>
+              <Navbar />
+              <StudyAbNavbar />
+              <HowtoApplyhero />
+              <HowDoApplyVid />
+              <Howdoapplycnt />
+              <HowToApplyHelp/>
+                <Askidp/>
+              <HowToApplyFAQ/>
+              <NewAndA />
+              <Contact />
+              <Footer />
+            </>
           }
         />
-
         <Route
-          path="/pages/Related_Articles"
+          path="/pages/white-link/after-offer"
           element={
-            <WhiteLinkLayout>
-              <Related_Articles />
-            </WhiteLinkLayout>
+            <>
+              <Navbar />
+              <StudyAbNavbar />
+              <AfterOfferhero />
+              <AfterOfferVid />
+              <AfterOfferHelp />
+                <Askidp/>
+              <AfterOfferFAQ/>
+              <NewAndA />
+              <Contact />
+              <Footer />
+            </>
           }
         />
-
-
         <Route
-          path="/pages/white-link/SignIN"
+          path="/pages/white-link/prepare-to-depart"
           element={
-            <WhiteLinkLayout>
-              <SignIN />
-            </WhiteLinkLayout>
+            <>
+              <Navbar />
+              <StudyAbNavbar />
+              <Preparetodeparthero />
+              <Preparetodepartvid />
+              <Preparetohlp/>
+                <Askidp/>
+              <PrepareFAQ/>
+              <NewAndA />
+              <Contact />
+              <Footer />
+            </>
           }
         />
-
         <Route
-          path="/pages/white-link/Sign_Up"
+          path="/pages/white-link/arrive-and-thrive"
           element={
-            <WhiteLinkLayout>
-              <Sign_Up />
-            </WhiteLinkLayout>
+            <>
+              <Navbar />
+              <StudyAbNavbar />
+              <Arriveandthrivehero />
+              <Arriveandthrivevid />
+              <Arrivethrivehlp/>
+                <Askidp/>
+              <ArrivethriveFAQ />
+              <NewAndA />
+              <Contact />
+              <Footer />
+            </>
           }
         />
+        
 
-        <Route
-          path="/ShortList"
-          element={
-            <WhiteLinkLayout>
-              <ShortList />
-            </WhiteLinkLayout>
-          }
-        />
 
-        {/* 🚧 Coming Soon Page */}
-        <Route
-          path="/coming-soon"
-          element={
-            <WhiteLinkLayout>
-              <ComingSoon />
-            </WhiteLinkLayout>
-          }
-        />
+        <Route path="/pages/white-link/StudyDs" element={
+          <>
+            <Navbar />
+            <StudyDs />
+            <ExploreAbroadPrgms />
+            <Studydestcnt />
+            <Askidp/>
+            <Contact />
+            <Footer />
+            
+            </>
+          } />
+        <Route path="/pages/white-link/StudyDestinations/StudyInAustralia" element={
+          <>
+            <Navbar />
+            <StdyAushero />
+            <StdyAustcnt />
+            <Contact />
+            <Footer />
+          </>
+        } />
+        
+        <Route path="/pages/white-link/StudyDestinations/StudyInCanada" element={
+          <>
+            <Navbar />
+            <Stdycanhero />
+            <Stdycancnt />
+            <Contact />
+            <Footer />
+          </>
+        } />
+      
 
-        {/* 🌏 Find Us by Country Page (Dynamic) */}
-        <Route
-          path="/find-us/:country"
-          element={
-            <WhiteLinkLayout>
-              <FindCountryPage />
-            </WhiteLinkLayout>}
-        />
+         <Route path="/pages/white-link/StudyDestinations/StudyInIreland" element={
+          <>
+            <Navbar />
+           <StdyIrlndhero />
+            <StdyIrlndcnt />
+            <Contact />
+            <Footer />
+          </>
+        } />
 
-        {/* ❌ 404 Page */}
+        
+         <Route path="/pages/white-link/StudyDestinations/StudyInUk" element={
+          <>
+            <Navbar />
+           <StdyUkhero />
+           <Stdyinukcnt/>
+            <Contact />
+            <Footer />
+          </>
+        } />
+
+        <Route path="/pages/white-link/StudyDestinations/StudyInUsa" element={
+          <>
+            <Navbar />
+          <StdyUsahero />
+           <StdyUsacnt/>
+            <Contact />
+            <Footer />
+          </>
+        } />
+
+         
+      <Route
+         path="/contact"
+         element={
+         <WhiteLinkLayout>
+         <Contact />
+       </WhiteLinkLayout>
+      }
+      />
+
+      <Route
+         path="/pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying"
+         element={
+         <WhiteLinkLayout>
+         <What_is_stdnghero />
+         <What_isstdngcnt />
+         <Contact />
+       </WhiteLinkLayout>
+      }
+      />
+      <Route
+         path="/pages/white-link/Study_Abroad/WhyStudyAbrd/Reasons_for_stdy_abrd"
+         element={
+          <WhiteLinkLayout>
+            <Reasons_for_stdy />
+            <Contact />
+       </WhiteLinkLayout>
+      }
+      />
+
+      <Route
+         path="/pages/white-link/Study_Abroad/WhyStudyAbrd/Benefits"
+         element={
+          <WhiteLinkLayout>
+          <Benefits />
+          <Contact />
+       </WhiteLinkLayout>
+      }
+      />
+
+      <Route
+         path="/pages/white-link/SignUp"
+         element={
+          <>
+          <signupForm />
+          <Footer />
+          </>
+      
+      }
+      />
+      
+        
+
+
+        <Route path="/pages/white-link/Find1" element={<WhiteLinkLayout></WhiteLinkLayout>} />
+        <Route path="/pages/white-link/IELTS" element={<WhiteLinkLayout><ComingSoon /></WhiteLinkLayout>} />
+
+        <Route path="/pages/white-link/Student" element={<WhiteLinkLayout><Student /></WhiteLinkLayout>} />
+        <Route path="/pages/white-link/Avail" element={<WhiteLinkLayout><Avail /></WhiteLinkLayout>} />
+        <Route path="/pages/white-link/SignIN" element={<WhiteLinkLayout><SignIN /></WhiteLinkLayout>} />
+        <Route path="/signup" element={<WhiteLinkLayout><SignupForm /></WhiteLinkLayout>} />
+
+        {/* 404 Page */}
         <Route
           path="*"
           element={

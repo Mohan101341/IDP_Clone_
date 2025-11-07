@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'; // ✅ Import navigate hook
 import './HowtoApplyhero.css'
 const HowtoApplyhero = () => {
   const [animate, setAnimate] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => setAnimate(true), 100); // slight delay for animation trigger
   }, []);
@@ -12,7 +13,12 @@ const HowtoApplyhero = () => {
       <div className={`stdab-left${animate ? ' slide-in-left' : ''}`}>
         <h1> How to apply to universities abroad</h1>
         <h3>IDP can support you through the application process</h3>
-        <button className='stdy-btn'> contact IDP</button>
+        <button
+      className="stdy-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Contact IDP
+    </button>
       </div> 
       <div className={`stdab-right${animate ? ' slide-in-right' : ''}`}>
          <img

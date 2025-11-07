@@ -5,8 +5,6 @@ export default function Prep() {
         <div>
         <div className="prep">
            <p className="p1"> IDP india/Prepare for IELTS</p>
-           <br />
-           <br />
             <h1 className="h1">Prepare for IELTS</h1>
             <p className="p2">IDP provides a comprehensive set of resources to facilitate your IELTS preparation, ensuring a smooth journey towards success.</p>
             <button className="btn">IELTS preparation</button>

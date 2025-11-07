@@ -6,7 +6,7 @@ export default function CourseAdvice() {
     <div>
       <section className="course-banner">
         <div className="course-banner-content">
-          <p className="ula">IDP india/Course Advice for students....</p>
+          <p>IDP india/Course Advice for students....</p>
           <h1>Course Advice For Students Planning To
             Study Abroad</h1>
           <p>From navigating language barriers to understanding credit transfers, here's some course advice to make the most of your international education journey.</p>

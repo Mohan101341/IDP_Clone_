@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Destinations.css";
@@ -28,13 +29,13 @@ const DESTINATIONS = [
     info: "Stunning landscapes, research focus and student friendly cities.",
   },
   {
-    slug: "uk",
+    slug: "united-kingdom",
     name: "United Kingdom",
     img: "https://tse2.mm.bing.net/th/id/OIP.aqXrnWXh3IZI7ode4D_p1QHaE7?pid=Api&P=0&h=180",
     info: "World-class unis, shorter degrees and strong global recognition.",
   },
   {
-    slug: "usa",
+    slug: "united-states",
     name: "United States",
     img: "https://a.cdn-hotels.com/gdcs/production79/d567/927124e0-6bc6-4123-b007-e2b235afab1a.jpg",
     info: "Cutting-edge research, diverse campuses and vast course options.",
@@ -62,7 +63,7 @@ export default function Destinations() {
               {/* Shown on hover/focus */}
               <div className="dest-hover">
                 <p>{d.info}</p>
-                <Link className="dest-btn" to={`/study-destinations/${d.slug.toLowerCase().replace(/ /g, "-")}`}>
+                <Link className="dest-btn" to={`/study/${d.slug}`}>
                   Discover
                 </Link>
               </div>

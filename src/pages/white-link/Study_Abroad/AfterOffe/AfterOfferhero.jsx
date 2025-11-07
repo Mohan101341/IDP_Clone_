@@ -1,9 +1,10 @@
 
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './AfterOfferhero.css'
 const AfterOfferhero = () => {
   const [animate, setAnimate] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => setAnimate(true), 100); // slight delay for animation trigger
   }, []);
@@ -14,12 +15,16 @@ const AfterOfferhero = () => {
         <h1>After receiving an offer</h1>
         <h3>Here are the steps to take from accepting an offer through to planning for your trip to make your study abroad dream a reality</h3>
        
-        <button className='stdy-btn'> contact IDP</button>
+       <button
+      className="stdy-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Contact IDP
+    </button>
       </div>
       <div className={`stdab-right${animate ? ' slide-in-right' : ''}`}>
          <img
-          src="https://www.idp.com/medias/Student-holding-an-offer-letter-from-a-university-web.jpg?context=bWFzdGVyfGltYWdlc3w1MzYyOXxpbWFnZS9qcGVnfGg1MS9oZTAvODg0NDI4OTk4MjQ5NC9TdHVkZW50IGhvbGRpbmcgYW4gb2ZmZXIgbGV0dGVyIGZyb20gYSB1bml2ZXJzaXR5IHdlYi5qcGd8ZDEzYzJkYjU4ODg1OWY5YjJkYmI3ZDU2MjA0YjU5ZGM4YjYyYjJkYjYyYjYyYjYyYjYyYjYyYjYyYjY"
-          alt="Student holding an offer letter"
+         src="https://tse3.mm.bing.net/th/id/OIP.LTkGshUbm5gaBmtjd0zs_AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
           className="stdab-img"
         />
 
