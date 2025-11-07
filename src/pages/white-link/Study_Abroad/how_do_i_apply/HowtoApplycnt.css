@@ -1,5 +1,7 @@
+
+
 .apply-section {
-  padding: 2rem 1.5rem;
+  padding: 2rem 4rem;
   margin: 4rem;
   border-radius: 12px;
   max-width: 100%;
@@ -10,6 +12,7 @@
 
 .apply-section-steps {
   background: #f1f5fa;
+  padding:3rem 2rem;
 }
 
 .apply-section-country {

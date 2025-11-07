@@ -7,27 +7,21 @@ export default function What() {
         <div className="what-container">
         <p className="wp">IDP india/What is IELTS?</p>
         <h1 className="wh">What is IELTS?</h1>
-        <p className="wr">The world’s leading test of English for international higher education and migration.</p>
+        <p className="wp">The world’s leading test of English for international higher education and migration.</p>
         <button className="wb">Book an IELTS Test</button>
         </div>
-        <div className="mm">
         <div className="matter">
             <p>
-                The International English Language Testing System (IELTS) is the world's most popular high-stakes English language proficiency test.
+         <br/>   The International English Language Testing System (IELTS) is the world’s most popular high-stakes English language proficiency test.  
+
+<br/>IELTS is applicable for study, work and migration, with more than 3.5 million tests taken in the past year.  
+
+<br/>IELTS results are recognised by more than 12,000 organisations, including educational institutions, employers, professional associations and governments, in 150 countries around the world and test centres available in 140 countries. 
+
+<br/>IELTS test content is developed by an international team of experts and undergoes extensive research to ensure the test remains fair and unbiased.  
+
+<br/>This promises every candidate a fair chance, regardless of factors like nationality, background, gender, lifestyle or location. You can take IELTS Academic or IELTS General Training, depending on the organisation you are applying to and your plans for the future. 
             </p>
-            <p>
-                IELTS is applicable for study, work and migration, with more than 3.5 million tests taken in the past year.
-            </p>
-            <p>
-                IELTS results are recognised by more than 12,000 organisations, including educational institutions, employers, professional associations and governments, in 150 countries around the world and test centres available in 140 countries.
-            </p>
-            <p>
-                IELTS test content is developed by an international team of experts and undergoes extensive research to ensure the test remains fair and unbiased.
-            </p>
-            <p>
-                This promises every candidate a fair chance, regardless of factors like nationality, background, gender, lifestyle or location. You can take IELTS Academic or IELTS General Training, depending on the organisation you are applying to and your plans for the future.
-            </p>
-        </div>
         </div>
     <div>
         <h1 className="h2"><span className="ul">L</span>earn more</h1>
@@ -48,6 +42,25 @@ export default function What() {
           </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </div>
     );

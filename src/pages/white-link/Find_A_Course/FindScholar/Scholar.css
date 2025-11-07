@@ -4,15 +4,13 @@
     background-size: 550px;
     background-position: right;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 280px;
     background-color: rgb(7, 7, 46);
 }
 .Scholar-button{
     background-color:blue;
     color:white;
-    margin-bottom: 20px;
     padding:10px 20px;
-    font-weight: bold;
     border:none;
     border-radius:5px;
     cursor:pointer;
@@ -22,14 +20,12 @@
     padding-left: 120px;
     padding-top: 30px;
     font-size: 1.2rem;
-    cursor: pointer;
-   
 }
 .head {
     color:white;
     font-size: 43px;
     padding-top: 20px;
-    margin-right:200px;
+    margin-right:490px;
     padding-left: 100px;
     margin-right: 680px;
 }
@@ -66,9 +62,8 @@
 }
 .l3 {
     font-size: 20px;
-    padding-left: 40px;
+    padding-left: 140px;
     font-size: 27px;
-    margin-bottom: -10px;
     font-weight: bold;
     line-height: 1.46;
     padding-top: 40px;
@@ -103,7 +98,7 @@
 }
 .l4 {
     font-size: 20px;
-    padding-left: 170px;
+    padding-left: 245px;
     font-size: 27px;
     font-weight: bold;
     line-height: 1.46;
@@ -113,14 +108,14 @@
 .link {
     font-size: 20px;
     color: rgb(116, 116, 116);
-    padding-left:170px;
-  padding-bottom :40px;
-    padding-top:30px;
+    margin-left: 255px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     cursor: pointer;
 }
 .link:hover {
     color: rgb(59, 108, 234);
-    text-decoration: underline 1px solid rgb(143, 143, 143);
+    text-decoration: underline 2px solid rgb(59, 108, 234);
 }
 .arrow1 {
     font-size: 22px;

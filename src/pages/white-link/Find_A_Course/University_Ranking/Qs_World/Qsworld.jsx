@@ -1,4 +1,4 @@
-import react from 'react';
+
 import './Qsworld.css';
 export default function Qsworld() {
   return (

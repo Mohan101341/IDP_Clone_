@@ -1,20 +1,11 @@
 .cug {
-    background-color: #ffffff;
+    background-color: #f1f1f1;
     padding: 40px 0 80px 0;
-    background-image: url(/public/assets/UK.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 440px;
-    height: 400px;
-    box-shadow: 1px 6px 7px rgb(225, 225, 225);
+    
 }
 .p1 {
     font-size: 18px;
     padding-left: 126px;
-}
-.p1:hover{
-    text-decoration: underline;
-    cursor: pointer;
 }
 .h1 {
     font-weight: bold;
@@ -65,7 +56,6 @@
 .search-btn {
     height: 56px;
     padding: 0 28px;
-    margin-top: 10px;
     background-color: #1e80ff;
     color: #ffffff;
     border: rgb(177, 177, 177);
@@ -84,7 +74,7 @@
     font-size: 18px;
 }
 
-
+/* Rankings list */
 .rankings {
     max-width: 1200px;
     margin: 19px auto 70px auto;

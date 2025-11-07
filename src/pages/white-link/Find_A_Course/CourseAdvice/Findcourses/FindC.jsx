@@ -16,12 +16,12 @@ export default function FindC() {
         <p className="FindC-div">Get instant offer for FastLane labelled courses within minutes!  How Does It Work?</p>
         </div>
         <div className="FindC-b1">
-            <h3 className="aa">Not seeing the perfect Course?</h3>
+            <h3>Not seeing the perfect Course?</h3>
             <p className="see">Complete 4 easy questions to unlock course matches designed just for you!</p>
            <Link className="FindC-button1">See my matches</Link>
             </div>
         <div className="FindC-img">
-            <img src="/assets/Guideimg.png" alt="Student" />
+            <img src="/assets/guide image.png" alt="Student" />
        </div>
        
        

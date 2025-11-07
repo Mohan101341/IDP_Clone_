@@ -1,41 +1,34 @@
 .prep {
     padding-left: 90px;
     padding-top: 20px;
-    background-image: url("/public/assets/prepie.jpg");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 380px;
-    height: 380px;
-    background-color: black;
-    box-shadow: 7px 6px 15px rgb(65, 65, 65);
-
-}
-.p1{
-    color: white;
+    background-image: url("/public/assets/prepa.jpg");
+    background-repeat: repeat-x;
+    background-size: 980px;
+    height: 340px;
+    border-bottom: 4px solid rgb(235, 235, 235);
 }
 .prep h1 {
     font-size: 40px;
-    color: #ffffff;
+    color: #1a1a1a;
     font-weight: 700;
     margin-top: -50px;
     margin-bottom: 10px;
 }
 .p2 {
-    margin-top: -30px;
-    color: white;
+    margin-top: -35px;
 }
 .btn {
-    margin-left: 110px;
-    margin-top: 15px;
+    margin-left: 150px;
+    margin-top: 40px;
     border-radius: 30px;
     font-weight: bold;
-
-    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(237, 237, 237);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 .btn:hover {
-    background-color: #1528ff85;
+    background-color: #1a1a1a;
     color: white;
-   
+    border: 1px solid rgb(237, 237, 237);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 .prep1 {

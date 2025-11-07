@@ -1,16 +1,16 @@
 .services-section {
   padding: 3rem 0 4rem;
-  background:#fdfdfe; 
+  background:#f4f4f9; /* match Destinations bg */
 }
 
 .services-container {
-  max-width: 1200px; 
+  max-width: 1200px; /* match Destinations width */
   margin: 0 auto;
-  padding: 0 1.25rem; 
+  padding: 0 1.25rem; /* match Destinations padding */
 }
 
 .services-title {
-  font-size: 1.9rem; 
+  font-size: 1.9rem; /* match Destinations size */
   font-weight: 800;
   margin-bottom: 1.25rem;
   color: #1f2937;
@@ -30,26 +30,26 @@
 }
 
 .service-card {
+  background: #fff;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.06);
   transition: box-shadow .2s ease, transform .2s ease;
+  border: 1px solid #e5e7eb;
   display: flex;
   gap: 1rem;
-  border: 1px solid rgb(236, 236, 236);
   align-items: flex-start;
 }
 
 .service-card:hover {
-  box-shadow: 0 4px 12px rgba(48, 172, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(-4px);
-  border:1px solid #98b4ff;
 }
 
 .service-icon {
   display: flex;
   align-items: flex-start;
-  color: #4079f3;
+  color: #2563eb;
 }
 
 .service-content {

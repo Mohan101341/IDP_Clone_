@@ -4,6 +4,8 @@ import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faAngleDown, faBars, faTimes, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as faRegularHeart } from "@fortawesome/free-regular-svg-icons";
+
+// Inline styles for dropdowns and nav elements
 const styles = {
   navButton: {
     background: "none",
@@ -50,64 +52,47 @@ const styles = {
     height: "100%",
   },
 };
-// Black bar dropdown data
-const balckDropworn = {
-  "Find-us": {
-    path: "/pages/black-link/Find",
+const balckDropworn ={"Find-us": {
+    path: "/pages/Find",
     items: [
-      { label: "IDP Australia", path: "/find-us/australia" },
-      { label: "IDP Bahrain", path: "/find-us/bahrain" },
-      { label: "IDP Bangladesh", path: "/find-us/bangladesh" },
-      { label: "IDP Cambodia", path: "/find-us/cambodia" },
-      { label: "IDP Canada", path: "/find-us/canada" },
-      { label: "IDP China", path: "/find-us/china" },
-      { label: "IDP Egypt", path: "/find-us/egypt" },
-      { label: "IDP Ghana", path: "/find-us/ghana" },
-      { label: "IDP Hong Kong", path: "/find-us/hong-kong" },
-      { label: "IDP Indonesia", path: "/find-us/indonesia" },
-      { label: "IDP Iran", path: "/find-us/iran" },
-      { label: "IDP Jordan", path: "/find-us/jordan" },
-      { label: "IDP Kenya", path: "/find-us/kenya" },
-      { label: "IDP Korea", path: "/find-us/korea" },
-      { label: "IDP Kuwait", path: "/find-us/kuwait" },
-      { label: "IDP Lebanon", path: "/find-us/lebanon" },
-      { label: "IDP Malaysia", path: "/find-us/malaysia" },
-      { label: "IDP Mauritius", path: "/find-us/mauritius" },
-      { label: "IDP Middle East", path: "/find-us/middle-east" },
-      { label: "IDP Nepal", path: "/find-us/nepal" },
+      { label: "Our Office", path: "/pages/Find" },
+      { label: "Office Hours", path: "/pages/Find" },
+      { label: "Phone & Email", path: "/pages/Find" },
+      { label: "Facebook", path: "/pages/Find" },
+      { label: "Instagram", path: "/pages/Find" },
+      { label: "LinkedIn", path: "/pages/Find" },
+      { label: "YouTube", path: "/pages/Find" },
+      { label: "Map Location", path: "/pages/Find" },
+      { label: "Book Appointment", path: "/pages/Find" },
+      { label: "Support Center", path: "/pages/Find" },
     ],
-  },
-};
+    },}
 
-
-
+// Corrected dropdown paths matching App.js routes
 const dropdownData = {
   "Study-abroad-steps": {
-    path: "/study-abroad/why-study-abroad",
+    path: "/pages/white-link/StudyAb",
     items: [
-      { label: "Why study abroad?", path: "/study-abroad/why-study-abroad" },
-      { label: "Where and what to study?", path: "/study-abroad/where-to-study" },
-      { label: "How do I apply?", path: "/study-abroad/how-to-apply" },
-      { label: "After receiving an offer", path: "/study-abroad/after-offer" },
-      { label: "Prepare to depart", path: "/study-abroad/prepare-to-depart" },
-      { label: "Arrive and thrive", path: "/study-abroad/arrive-and-thrive" },
+      { label: "Why study abroad?", path: "/pages/white-link/StudyAb" },
+      { label: "Where and what to study?", path: "/pages/white-link/where-to-study-abroad" },
+      { label: "How do I apply?", path: "/pages/white-link/how-to-apply" },
+      { label: "After receiving an offer", path: "/pages/white-link/StudyAb" },
+      { label: "Prepare to depart", path: "/pages/white-link/StudyAb" },
+      { label: "Arrive and thrive", path: "/pages/white-link/StudyAb" },
     ],
   },
-
-
   "Study-destinations": {
-    path: "/study-destinations",
+    path: "/pages/white-link/StudyDs",
     items: [
-      { label: "Study in Australia", path: "/study-destinations/australia" },
-      { label: "Study in Canada", path: "/study-destinations/canada" },
-      { label: "Study in Ireland", path: "/study-destinations/ireland" },
-      { label: "Study in UK", path: "/study-destinations/uk" },
-      { label: "Study in USA", path: "/study-destinations/usa" },
+      { label: "Study in Australia", path: "/pages/white-link/StudyDestinations/StudyInAustralia" },
+      { label: "Study in Canada", path: "/pages/white-link/StudyDestinations/StudyInCanada" },
+      { label: "Study in Ireland", path: "/pages/white-link/StudyDestinations/StudyInIreland" },
+      { label: "Study in UK", path: "/pages/white-link/StudyDestinations/StudyInUk" },
+      { label: "Study in USA", path: "/pages/white-link/StudyDestinations/StudyInUsa" },
     ],
   },
-
   "Find-a-course": {
-    path: "/pages/FindC",
+    path: "/pages/white-link/Find1",
     items: [
       { label: "Course Advice", path: "/pages/CourseA" },
       { label: "Courses with Instant Offer", path: "/pages/Courseof" },
@@ -118,42 +103,30 @@ const dropdownData = {
       { label: "Complete University Guide (CUG)", path: "/pages/Cug" },
     ],
   },
-  "English Tests": {
-    path: "/pages/EnglishT",
+  "IELTS": {
+    path: "/pages/white-link/IELTS",
     items: [
-      {label: "TOEFL", path: "/pages/Toefl" },
-      { label: "DUOLINGO", path: "/pages/Duolingo" },
-      { label: "IELTS", path: "/pages/IELTSPage" },
+      { label: "Book an IELTS Test", path: "/pages/Book" },
+      { label: "What is IELTS?", path: "/pages/What" },
+      { label: "IELTS Preparation", path: "/pages/Prep" },
+      { label: "Test Dates", path: "/pages/white-link/IELTS" },
     ],
   },
-
   "Student-essentials": {
-    path: "/student-essentials",
+    path: "/pages/white-link/Student",
     items: [
-      { label: "Education Loan", path: "/student-essentials/EducationLoan" },
-      { label: "Money Transfer", path: "/student-essentials/Money_Transfer" },
-      { label: "Health Insurance", path: "/student-essentials/HealthInsurance" },
-      { label: "Student Banking", path: "/student-essentials/StudentBanking" },
-      { label: "Accommodation", path: "/student-essentials/Accommodation" },
-      { label: "International SIM Cards", path: "/student-essentials/InternationalSimCards" },
-      { label: "Guardian Ship", path: "/student-essentials/Guardian-Ship" },
-      { label: "Forex Cards", path: "/student-essentials/ForexCards" },
-      { label: "ISIC", path: "/student-essentials/ISIC" },
-      { label: "Student Travel Support", path: "/student-essentials/Travel_Support" },
+      { label: "Accommodation", path: "/pages/white-link/Student" },
+      { label: "Health Insurance", path: "/pages/white-link/Student" },
+      { label: "Student Visa", path: "/pages/white-link/Student" },
+      { label: "Travel Tips", path: "/pages/white-link/Student" },
     ],
   },
-
-
 };
 
+// Second-level submenu for specific items
 const submenuData = {
   "University Rankings - THE": [
-    { label: "QS World University Rankings", path: "/pages/Qsworld" }
-  ],
-  "IELTS": [
-    { label: "Book an IELTS Test", path: "/pages/Book" },
-    { label: "What is IELTS?", path: "/pages/what" },
-    { label: "IELTS Preparation", path: "/pages/Prep" }
+    { label: "QS World University Rankings", path: "/pages/Qsworld" },
   ],
 };
 
@@ -162,9 +135,9 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openSecondLevel, setOpenSecondLevel] = useState(null);
   const [dropdownHeight, setDropdownHeight] = useState(null);
- 
+
   const dropdownRef = React.useRef(null);
-  
+
   const toggleDropdown = (key) => {
     setOpenDropdown((prev) => (prev === key ? null : key));
   };
@@ -189,99 +162,113 @@ const Navbar = () => {
       document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
-   useEffect(() => {
+
+  useEffect(() => {
     if (openDropdown && dropdownRef.current) {
       setDropdownHeight(dropdownRef.current.clientHeight);
     } else {
       setDropdownHeight(null);
     }
   }, [openDropdown]);
+
   return (
     <>
-      <div className="black-containera">
-        <ul className="black-linksa">
-          <li className="black-lia">
-            <Link to="/pages/NewAndA">News and articles</Link>
-          </li>
-          <li className="black-lia">
-            <Link to="/pages/Events">Events</Link>
-          </li>
+      {/* Top Black Bar with quick links */}
+     
+     {/* Top Black Bar with quick links */}
+<div className="black-container" style={{ position: "relative",  zIndex: 9999 }}>
+  <ul className="black-links" style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
+    <li className="black-li">
+      <Link to="/pages/NewAndA">News and articles</Link>
+    </li>
+    <li className="black-li">
+      <Link to="/pages/Events">Events</Link>
+    </li>
 
-          {/* Find-us Dropdown */}
-          <li
-            className="black-li1 has-dropdown"
-            onMouseEnter={() => setOpenDropdown("Find-us-black")}
-            onMouseLeave={closeDropdown}
-          >
-            <button className="nav-button" onClick={() => toggleDropdown("Find-us-black")}>
-              Find us <FontAwesomeIcon icon={faAngleDown} />
-            </button>
+    {/*  Black Bar Find-us Dropdown */}
+    <li
+      className="black-li1"
+      style={{ position: "relative" }}
+      onMouseEnter={() => setOpenDropdown("Find-us-black")}
+      onMouseLeave={closeDropdown}
+    >
+      <button
+        style={{ ...styles.navButton, fontSize: "1rem" }}
+        onClick={() => toggleDropdown("Find-us-black")}
+      >
+        Find us <FontAwesomeIcon icon={faAngleDown} />
+      </button>
 
-            {openDropdown === "Find-us-black" && (
-              <ul
-                className="find-us-dropdown"
-                onMouseEnter={() => setOpenDropdown("Find-us-black")}
-                onMouseLeave={closeDropdown}
+      {openDropdown === "Find-us-black" && (
+        <ul
+          style={{
+            ...styles.dropdownMenu,
+            top: "100%",
+            left: 0,
+            minWidth: 220,
+            backgroundColor: "#222", 
+            
+            color: "#fff",
+            zIndex: 10000, 
+          }}
+        >
+          {balckDropworn["Find-us"].items.map((item, idx) => (
+            <li key={idx} style={{ ...styles.dropdownItem, color: "#fff" }}>
+              <Link
+                to={item.path}
+                onClick={closeDropdown}
+                style={{ color: "#fff", textDecoration: "none" }}
               >
-                {/* Special Button on Top */}
-                <li >
-                  <Link to="/pages/black-link/Find/Find" style={{ textDecoration: "none" }}>
-                    <button
-
-                    >
-                      Find nearest IDP Offices
-                    </button>
-                  </Link>
-                </li>
-
-                {/* Office Links */}
-                {balckDropworn["Find-us"].items.map((item, idx) => (
-                  <li key={idx}>
-                    <Link to={item.path} onClick={closeDropdown} style={{ color: "#fff", textDecoration: "none" }}>
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-
-          <li className="black-li2">
-            <Link to="/pages/English">
-              <FontAwesomeIcon icon={faGlobe} /> English
-            </Link>
-          </li>
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
-      </div>
+      )}
+    </li>
 
-      {/* Main Navbar */}
+    <li className="black-li1">
+      <Link to="/pages/English">
+        <FontAwesomeIcon icon={faGlobe} /> English
+      </Link>
+    </li>
+  </ul>
+</div>
+
+          
+      {/* Main Navigation Bar */}
       <nav className="main-navbar">
+        {/* Logo */}
         <Link to="/">
           <img src="/assets/idp-logo.svg" alt="Logo" className="logo" />
         </Link>
 
-        <div className="nav-links-wrapper">
-          <ul className="nav-links">
-            {Object.entries(dropdownData).map(([key, items]) => (
-              <li
-                key={key}
-                className="nav-item"
-                onMouseEnter={() => setOpenDropdown(key)}
-                onMouseLeave={closeDropdown}
+        {/* Desktop Navigation with Dropdowns */}
+        <ul className="nav-links">
+          {Object.entries(dropdownData).map(([key, items]) => (
+            <li
+              key={key}
+              style={styles.navItem}
+              onMouseEnter={() => setOpenDropdown(key)}
+              onMouseLeave={closeDropdown}
+            >
+              <Link
+                to={items.path}
+                style={styles.navButton}
+                onClick={() => {
+                  toggleDropdown(key);
+                }}
+                aria-haspopup="true"
+                aria-expanded={openDropdown === key}
               >
-                <Link
-                  to={items.path}
-                  className="nav-button"
-                  aria-haspopup="true"
-                  aria-expanded={openDropdown === key}
-                >
-                  {key
-                    .split("-")
-                    .map((w) => w[0].toUpperCase() + w.slice(1))
-                    .join(" ")}
-                </Link>
+                {key
+                  .split("-")
+                  .map((w) => w[0].toUpperCase() + w.slice(1))
+                  .join(" ")}{" "}
+                <FontAwesomeIcon icon={faAngleDown} />
+              </Link>
 
-                {openDropdown === key && (
+              {openDropdown === key && (
                 <ul style={styles.dropdownMenu} ref={dropdownRef}>
                   {items.items.map((item, idx) => (
                     <li
@@ -320,11 +307,11 @@ const Navbar = () => {
                   ))}
                 </ul>
               )}
-              </li>
-            ))}
-          </ul>
-        </div>
+            </li>
+          ))}
+        </ul>
 
+        {/* Desktop Buttons */}
         <div className="nav-buttons">
           <Link to="/pages/white-link/Avail">
             <button className="login-btn">Avail Free counselling</button>
@@ -334,15 +321,15 @@ const Navbar = () => {
           </Link>
         </div>
 
+        {/* Right Icons */}
         <div className="right-icons">
-
-          <Link to="/ShortList" className="icon-btn heart">
+          <Link to="#" className="icon-btn heart">
             <FontAwesomeIcon icon={faRegularHeart} />
           </Link>
-
-          <Link to="/pages/white-link/SignIN" className="icon-btn account">
+          <Link to="#" className="icon-btn account">
             <FontAwesomeIcon icon={faUser} />
           </Link>
+
           <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
             <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
           </button>
@@ -354,7 +341,10 @@ const Navbar = () => {
             {Object.entries(dropdownData).map(([key, items]) => (
               <li key={key}>
                 <Link to={items.path} onClick={toggleMobileMenu}>
-                  {key.split("-").map((w) => w[0].toUpperCase() + w.slice(1)).join(" ")}
+                  {key
+                    .split("-")
+                    .map((w) => w[0].toUpperCase() + w.slice(1))
+                    .join(" ")}
                 </Link>
               </li>
             ))}
@@ -375,7 +365,13 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {isMobileMenuOpen && <div className="mobile-menu-overlay" onClick={() => setIsMobileMenuOpen(false)} />}
+        {/* Overlay */}
+        {isMobileMenuOpen && (
+          <div
+            className="mobile-menu-overlay"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        )}
       </nav>
     </>
   );

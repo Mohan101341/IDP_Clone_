@@ -19,9 +19,9 @@ export default function Uranking() {
             </div>
             <button className="search-btn">Search</button>
         </div>
-        <div className="nua"> 
-          <p className="line">346 Universities, showing 1-20 below</p>
-        </div>
+        <p className="line">346 Universities, showing 1-20 below</p>
+
+        {/* Rankings list */}
         <div className="rankings">
           {[
             { name: "University of Oxford", country: "United Kingdom" },

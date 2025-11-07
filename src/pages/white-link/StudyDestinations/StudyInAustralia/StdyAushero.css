@@ -4,36 +4,17 @@
   background-color: aliceblue;
   display: flex;
   align-items: center;
-
+ 
 }
 
 .aush-hero-content {
-  background-color: aliceblue;
+ background-color: aliceblue;
   color: #000000;
   padding: 2.5rem 2rem;
   border-radius: 18px;
   text-align: justify;
   max-width: 600px;
   width: 90%;
-
+  
 }
 
-.aush-hero-content .hero-btn-like {
-  display: inline-block;
-  background-color: #1977f3;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 26px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  margin-top: 1rem;
-  transition: background-color 0.2s;
-}
-
-.aush-hero-content .hero-btn-like:hover {
-  background-color: #125fd4;
-}

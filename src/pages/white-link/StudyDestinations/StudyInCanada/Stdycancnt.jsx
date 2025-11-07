@@ -1,7 +1,8 @@
 import React from "react"
+import { useNavigate } from 'react-router-dom'
 import "./Stdycanct.css"
 function Stdycancnt() {
-
+   const navigate = useNavigate();
     return(
         <div className="std-can-container">
 <div className="study-canada">
@@ -22,7 +23,12 @@ function Stdycancnt() {
 
      Help me study in Canada  </p>
 
-     <button>Help Me Study In Canada</button>
+      <button
+      
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+     Help me study in canada
+    </button>
 
    
 
@@ -38,7 +44,12 @@ function Stdycancnt() {
 
     </p>
 
-    <button>Avail Free Councling</button>
+     <button
+      
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Avail Free councling
+    </button>
     </div>
 
     <div >
@@ -165,7 +176,12 @@ function Stdycancnt() {
      
     
  
-<button>Avail free counselling</button>
+ <button
+      
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+     Avail free councling
+    </button>
 </div>
 <div className="visa-requirements">
   <h1>Cost to study in Canada</h1>
@@ -217,7 +233,12 @@ function Stdycancnt() {
       </tr>
     </tbody>
   </table>
-  <button>Avail free councling</button>
+   <button
+      
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+     Avail Free councling
+    </button>
 </div>
 
 <div>
