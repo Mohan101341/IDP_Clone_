@@ -51,6 +51,7 @@
     display: inline-block;
     vertical-align: top;
     width: 58%;
+    padding-top: 20px;
 }
 .FindC-search-icon {
     position: absolute; 
@@ -61,7 +62,7 @@
     z-index: 2; 
 }
 .Sabroad-mat {
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
     padding-bottom: 30px;

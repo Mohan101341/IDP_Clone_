@@ -3,7 +3,7 @@ import { HashRouter, Routes, Route, Link } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
-import Hero from "./Components/Hero.jsx/Hero";
+import Hero from "./Components/Hero/Hero";
 import Contact from "./Components/Contact/Contact";
 import Services from "./Components/services/Services";
 import Destinations from "./Components/Destination/Destinations";
@@ -31,6 +31,8 @@ import FindC from "./pages/white-link/Find_A_Course/CourseAdvice/Findcourses/Fin
 import Courseof from "./pages/white-link/Find_A_Course/Courseinstant/Courseof";
 import Sabroad from "./pages/white-link/Find_A_Course/Study_Abroad/Sabroad";
 import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar";
+import Toefl from "./pages/white-link/EnglishTests/Toefl/Toefl.jsx";
+import Duolingo from "./pages/white-link/EnglishTests/Duolingo/Duolingo.jsx";
 
 import Oneac from "./Components/On_signin_banner/Oneac";
 import Uranking from "./pages/white-link/Find_A_Course/University_Ranking/Uranking";
@@ -167,7 +169,30 @@ export default function App() {
               <Footer />
             </>
           }
+           />
+            <Route
+          path="/pages/Toefl"
+          element={
+            <>
+              <Navbar />
+              <Toefl />
+              <Contact />
+              <Footer />
+            </>
+          }
           />
+            <Route
+          path="/pages/Duolingo"
+          element={
+            <>
+              <Navbar />
+              <Duolingo />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+          
             <Route
           path="/pages/FindU"
           element={
@@ -537,7 +562,7 @@ export default function App() {
          path="/pages/white-link/SignUp"
          element={
           <>
-          <signupForm />
+          <SignupForm />
           <Footer />
           </>
       

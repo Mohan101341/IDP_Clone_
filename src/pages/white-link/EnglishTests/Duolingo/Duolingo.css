@@ -1,0 +1,81 @@
+.Duolingo-bas{
+    height: 246px;
+    padding-top:20px;
+    padding-left: 190px;
+    background-image: url("/public/assets/bg2.jpg");
+    box-shadow: 1px 2px 9px rgb(135, 132, 132);
+}
+.side-head{
+    padding-top: 10px;
+}
+.side-head:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.Duolingo-head{
+    font-size: 35px;
+    padding-top: 17px;
+    margin-left: -3px;
+}
+.Duolingo-mat{
+    font-size: 16px;
+    padding-right: 250px;
+}
+.Duolingo-body{
+    padding:30px 150px;
+    font-size: 18px;
+
+}
+.duolingo-container {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 50px auto;
+  border: 1px solid #58e6ff;
+}
+
+.duolingo-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #58cc02;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.duolingo-table-wrapper {
+  overflow-x: auto;
+}
+
+.duolingo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
+}
+
+.duolingo-table thead {
+  background-color: #58cc02;
+  color: #fff;
+}
+
+.duolingo-table th,
+.duolingo-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.duolingo-table tbody tr:hover {
+  background-color: #fafff5;
+}
+
+.duolingo-table a {
+  color: #58cc02;
+  text-decoration: none;
+}
+
+.duolingo-table a:hover {
+  text-decoration: underline;
+}
