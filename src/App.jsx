@@ -90,12 +90,7 @@ import What_is_stdnghero from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What
 import What_isstdngcnt from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying/What_isstdngcnt.jsx";
 import Reasons_for_stdy from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Reasons_for_stdy_abrd/Reasons_for_stdy.jsx";
 import Benefits from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Benefits/Benefits.jsx";
-// Layout wrapper for white-link pages
-import Toefl from "./pages/white-link/EnglishTests/Toefl/Toefl.jsx";
-import Duolingo from "./pages/white-link/EnglishTests/Duolingo/Duolingo.jsx";
-
-
-// Layout wrapper for white-link pages
+const WhiteLinkLayout = ({ children }) => (
   <>
     <Navbar />
     {children}
