@@ -91,7 +91,11 @@ import What_isstdngcnt from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_i
 import Reasons_for_stdy from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Reasons_for_stdy_abrd/Reasons_for_stdy.jsx";
 import Benefits from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Benefits/Benefits.jsx";
 // Layout wrapper for white-link pages
-const WhiteLinkLayout = ({ children }) => (
+import Toefl from "./pages/white-link/EnglishTests/Toefl/Toefl.jsx";
+import Duolingo from "./pages/white-link/EnglishTests/Duolingo/Duolingo.jsx";
+
+
+// Layout wrapper for white-link pages
   <>
     <Navbar />
     {children}

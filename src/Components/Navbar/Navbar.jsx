@@ -113,11 +113,12 @@ const dropdownData = {
   "IELTS": {
     path: "/pages/white-link/IELTS",
     items: [
+      {label: "TOEFL", path: "/pages/Toefl" },
+      { label: "DUOLINGO", path: "/pages/Duolingo" },
       { label: "Book an IELTS Test", path: "/pages/Book" },
       { label: "What is IELTS?", path: "/pages/What" },
       { label: "IELTS Preparation", path: "/pages/Prep" },
       { label: "Test Dates", path: "/pages/white-link/IELTS" },
-    ],
   },
   "Student-essentials": {
     path: "/pages/white-link/Student",
