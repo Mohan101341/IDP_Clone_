@@ -1,10 +1,6 @@
 import React from "react";
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
-<<<<<<< HEAD
-
-=======
 // Common Components
->>>>>>> origin/Mohan
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Hero from "./Components/Hero/Hero";
@@ -37,7 +33,12 @@ import Sabroad from "./pages/white-link/Find_A_Course/Study_Abroad/Sabroad";
 import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar";
 import Toefl from "./pages/white-link/EnglishTests/Toefl/Toefl.jsx";
 import Duolingo from "./pages/white-link/EnglishTests/Duolingo/Duolingo.jsx";
-
+import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
+import StdyUsacnt from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsacnt.jsx";
+import SignupForm from "./pages/white-link/Sign_In/SignupForm.jsx"
+import What_is_stdnghero from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying/What_is_stdnghero";
+import What_isstdngcnt from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying/What_isstdngcnt";
+import Reasons_for_stdy from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Reasons_for_stdy_abrd/Reasons_for_stdy";;
 import Oneac from "./Components/On_signin_banner/Oneac";
 import Uranking from "./pages/white-link/Find_A_Course/University_Ranking/Uranking";
 import Qsworld from "./pages/white-link/Find_A_Course/University_Ranking/Qs_World/Qsworld";
@@ -61,7 +62,7 @@ import AfterOfferVid from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferv
 
 import Preparetodeparthero from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetodeparthero";
 import Preparetodepartvid from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetodepartvid";
-
+import TopUniversities from "./pages/white-link/StudyDestinations/Top universities/TopUniversities.jsx";
 import Arriveandthrivehero from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arriveandthrivehero";
 import Arriveandthrivevid from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arriveandthrivevid";
 import StdAbhlp from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StdAbhlp";
@@ -86,16 +87,17 @@ import StdyUkhero from "./pages/white-link/StudyDestinations/StudyInUk/StdyUkher
 import StdyIrlndhero from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndhero.jsx";
 import StdyUsahero from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsahero.jsx";
 import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndcnt.jsx";
-import StdyUsacnt from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsacnt.jsx";
-import SignupForm from "./pages/white-link/Sign_In/SignupForm";
-import What_is_stdnghero from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying/What_is_stdnghero.jsx";
-import What_isstdngcnt from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying/What_isstdngcnt.jsx";
-import Reasons_for_stdy from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Reasons_for_stdy_abrd/Reasons_for_stdy.jsx";
-import Benefits from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Benefits/Benefits.jsx";
-import TopUniversities from "./pages/white-link/StudyDestinations/Top universities/TopUniversities.jsx";
 import CourseDetails from "./pages/CourseDetails";
 import FindScholar from "./pages/white-link/Find_A_Course/FindScholar/findsc/findscholar.jsx";
 
+// ✅ Layout for white-link pages
+const WhiteLinkLayout = ({ children }) => (
+  <>
+    <Navbar />
+    {children}
+    <Footer />
+  </>
+);
 
 export default function App() {
   return (
@@ -207,7 +209,7 @@ export default function App() {
           element={
             <>
               <Navbar />
-              <EnglishT />
+              <English />
               <Contact />
               <Footer />
             </>
@@ -286,6 +288,7 @@ export default function App() {
             </>
           }
            />
+           
           <Route
           path="/pages/Cug"
           element={
@@ -571,7 +574,9 @@ export default function App() {
        </WhiteLinkLayout>
       }
       />
-
+      
+      {/*
+    
       <Route
          path="/pages/white-link/Study_Abroad/WhyStudyAbrd/Benefits"
          element={
@@ -581,6 +586,8 @@ export default function App() {
        </WhiteLinkLayout>
       }
       />
+
+      */}
 
       <Route
          path="/pages/white-link/SignUp"
