@@ -1,6 +1,5 @@
 import React from "react";
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
-
 // Common Components
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
@@ -72,7 +71,6 @@ import Oneac from "./Components/On_signin_banner/Oneac";
 import Uranking from "./pages/white-link/Find_A_Course/University_Ranking/Uranking";
 import Qsworld from "./pages/white-link/Find_A_Course/University_Ranking/Qs_World/Qsworld";
 import Cug from "./pages/white-link/Find_A_Course/C_U_G/Cug";
-import Book from "./pages/white-link/IELTS/Book_IELTS/Book";
 import What from "./pages/white-link/IELTS/What_is_IELTS/What";
 import Prep from "./pages/white-link/IELTS/IELTS_prep/Prep";
 // Study Destinations
@@ -90,7 +88,8 @@ import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/St
 import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
 import Toefl from "./pages/white-link/EnglishTests/Toefl/Toefl.jsx";
 import Duolingo from "./pages/white-link/EnglishTests/Duolingo/Duolingo.jsx";
-
+import CourseDetails from "./pages/CourseDetails";
+import FindScholar from "./pages/white-link/Find_A_Course/FindScholar/findsc/findscholar.jsx";
 
 // ✅ Layout for white-link pages
 const WhiteLinkLayout = ({ children }) => (
@@ -362,6 +361,17 @@ export default function App() {
           }
            />
             <Route
+          path="/pages/FindScholar"
+          element={
+            <>
+              <Navbar />
+              <FindScholar/>
+              <Oneac />
+              <Contact />
+              <Footer />
+            </>
+          }/>
+            <Route
           path="/pages/Toefl"
           element={
             <>
@@ -390,6 +400,19 @@ export default function App() {
             <>
               <Navbar />
               <EnglishT />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+          {/* backend files for view details of Corses*/}
+          
+            <Route
+          path="/pages/course/:name"
+          element={
+            <>
+              <Navbar />
+              <CourseDetails />
               <Contact />
               <Footer />
             </>
@@ -487,16 +510,6 @@ export default function App() {
               <Navbar />
               <What/>
               <Contact />
-              <Footer />
-            </>
-          }
-            />
-          <Route
-          path="/pages/Book"
-          element={
-            <>
-
-              <Book/>
               <Footer />
             </>
           }

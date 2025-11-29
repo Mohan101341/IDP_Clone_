@@ -1,12 +1,20 @@
+// Import React to build the component.
 import react from 'react';
+// Import the corresponding CSS file for styling.
 import './Qsworld.css';
+
+// This is the main component for the QS World University Rankings page.
 export default function Qsworld() {
   return (
     <div>
+        {/* This is the main banner section for the page. */}
         <div className='Qs-container'>
-            <p className='p1'>IDP india/QS World University Ranking...</p>
+            {/* Breadcrumb navigation. */}
+            <p className='p1'>JRAMSYS OVERSEASE/QS World University Ranking...</p>
+            {/* Main heading. */}
             <h1 className='h1'>QS World University Rankings 2025: Top global universities</h1>            </div>
             <h1 className='mat'><span className='ul'>C</span>heck the ranking of your university on the world map</h1>
+        {/* This container holds the main informational content about the QS rankings. */}
         <div className='Qs-container2'>
             <p>It can be quite challenging to decide which university or institution you want to study in. Given there are many factors you need to consider before deciding where you want to pursue your higher education, it’s a wise step to refer to the QS Rankings of your desired institution.</p>
             <h2>What is QS World University Rankings?</h2>            
@@ -18,6 +26,7 @@ export default function Qsworld() {
             <p>The 20th edition of QS ranking includes 1,400+ world’s best institutions across the world and most of the institutions that took the top spots were from Europe, Asia, and North America. The next QS World University Ranking is expected to come out in June 2025.</p>
         </div>
             <h3 className='thead'>World's top 12 universities as per QS World University Rankings:</h3>
+            {/* This table displays the top universities according to the QS rankings. */}
             <table className='qs-table'>
                 <thead>
                     <tr>

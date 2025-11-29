@@ -9,12 +9,11 @@
   justify-content: flex-end;
   align-items: center;
   gap: 25px;
-  padding: 0.2px 29px;
-  position: sticky;
-  top: 0;
+  padding: 4px 29px;
+  position: relative;
   border-bottom: 1px solid rgb(65, 65, 65);
   z-index: 9999;
-  position: relative; 
+   
   
 }
 
@@ -288,10 +287,10 @@
   background: #222;
   color: #fff;
   position: absolute;
-  left: 50%;
+  left: 50%; 
   right: auto;
   top: 100%;
-  min-width: 240px;
+  min-width: 210px;
   width: max-content;           /* lean width */
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(18, 2, 2, 0.1);
