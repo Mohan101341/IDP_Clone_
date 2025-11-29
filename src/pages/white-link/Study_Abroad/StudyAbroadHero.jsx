@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './StudyAbroadHero.css';
 
 const StudyAbroadHero = ({ title, subtitle, imageUrl, imageAlt }) => {
     const [animate, setAnimate] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         // Set animate to false on prop change to re-trigger animation

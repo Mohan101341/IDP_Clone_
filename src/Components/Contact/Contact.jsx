@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./Contact.css";
 import contactImg from "../../assets/girl-Img.jpg";
 
+// This component is a contact page with a form to get free counselling.
 export default function ContactPage() {
+  // State to manage the form data
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -17,6 +19,7 @@ export default function ContactPage() {
     agreeTerms: false,
   });
 
+  // Handles changes in the form inputs
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
@@ -25,9 +28,11 @@ export default function ContactPage() {
     }));
   };
 
+  // Handles the form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Sends a POST request to the backend with the form data
       const response = await fetch("http://127.0.0.1:8000/contact", {
         method: "POST",
         headers: {
@@ -36,16 +41,19 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
+      // If the request is successful, show a success message
       if (response.ok) {
         const result = await response.json();
         console.log("Form submitted successfully:", result);
         alert("Form submitted successfully!");
       } else {
+        // If there is an error, show an error message
         const error = await response.json();
         console.error("Error submitting form:", error);
         alert(`Error: ${error.error}`);
       }
     } catch (error) {
+      // If there is an error with the request, show an error message
       console.error("There was an error submitting the form:", error);
       alert("There was an error submitting the form.");
     }
@@ -54,7 +62,7 @@ export default function ContactPage() {
   return (
     <div className="contact-page">
       <div className="contact-container">
-        {/* LEFT SIDE */}
+        {/* LEFT SIDE - Contains the contact form */}
         <div className="contact-left">
           <div className="contact-header">
             <h1>
@@ -258,7 +266,7 @@ export default function ContactPage() {
           </form>
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT SIDE - Contains an image and background shapes */}
         <div className="contact-right">
           <div className="image-container">
             <div className="background-shapes">

@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Destinations.css";
 
+// This array holds the data for each study destination.
 const DESTINATIONS = [
   {
     slug: "australia",
@@ -42,6 +43,7 @@ const DESTINATIONS = [
   },
 ];
 
+// This component displays a grid of study destinations.
 export default function Destinations() {
   return (
     <section className="destinations-sec">
@@ -49,6 +51,7 @@ export default function Destinations() {
         <h2 className="dest-title">Know your destination</h2>
 
         <div className="dest-grid">
+          {/* Map over the DESTINATIONS array to create a card for each destination */}
           {DESTINATIONS.map((d) => (
             <div
               key={d.slug}

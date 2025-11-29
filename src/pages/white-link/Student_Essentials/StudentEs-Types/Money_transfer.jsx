@@ -4,15 +4,7 @@ import Related_Articles from '../../../Related_Articles/Related_Articles';
 
 
 
-const destinations = [
-  'All destinations',
-  'USA',
-  'UK',
-  'Canada',
-  'Australia',
-  'Germany',
-  'Japan',
-];
+
 
 const  Money_transfer = () => {
   const [destination, setDestination] = useState('All destinations');

@@ -90,6 +90,7 @@ import What_is_stdnghero from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What
 import What_isstdngcnt from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying/What_isstdngcnt.jsx";
 import Reasons_for_stdy from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Reasons_for_stdy_abrd/Reasons_for_stdy.jsx";
 import Benefits from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Benefits/Benefits.jsx";
+import TopUniversities from "./pages/white-link/StudyDestinations/Top universities/TopUniversities.jsx";
 const WhiteLinkLayout = ({ children }) => (
   <>
     <Navbar />
@@ -470,6 +471,7 @@ export default function App() {
             <Navbar />
             <StdyAushero />
             <StdyAustcnt />
+            <TopUniversities />
             <Contact />
             <Footer />
           </>

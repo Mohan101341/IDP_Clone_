@@ -1,7 +1,9 @@
 import React from "react";
 import "./Essentials.css";
 
+// This component displays a grid of student essential services.
 const Essentials = () => {
+  // This array holds the data for each essential service.
   const essentials = [
     {
       title: "Education Loan",
@@ -61,8 +63,14 @@ const Essentials = () => {
       <div className="essentials-container">
         <h2 className="essentials-title">Student Essentials Services</h2>
         <div className="essentials-grid">
+          {/* Map over the essentials array to create a card for each service */}
           {essentials.map((essential, index) => (
             <div key={index} className="essential-card">
+              {/* 
+                The dangerouslySetInnerHTML attribute is used here to render the SVG icon from a string.
+                This is generally not recommended as it can expose the application to cross-site scripting (XSS) attacks.
+                However, in this case, the SVG strings are hardcoded and controlled by the developer, so it is safe.
+              */}
               <div
                 className="essential-icon"
                 dangerouslySetInnerHTML={{ __html: essential.icon }}

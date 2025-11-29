@@ -68,7 +68,7 @@ const partners = [{
 
 const Education_loan = () => {
 
-  const [destination, setDestination] = useState("All destinations");
+
   const [selectedDestination, setSelectedDestination] = useState("All");
 
   const filteredPartners =
@@ -97,8 +97,8 @@ const Education_loan = () => {
           <p>Discover recommended products for your study destination.</p>
           <select
             className="destination-dropdown"
-            value={destination}
-            onChange={(e) => setDestination(e.target.value)}
+            value={selectedDestination}
+            onChange={(e) => setSelectedDestination(e.target.value)}
           >
             <option>All destinations</option>
             <option>Australia</option>

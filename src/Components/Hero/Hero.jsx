@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Hero.css";
 import heroImg from "../../assets/hero-bg.jpg"; 
 
+// This array holds the data for each slide in the hero section.
 const heroData = [
   {
     heading: "Your Study Abroad Journey Begins Here",
@@ -23,12 +24,17 @@ const heroData = [
   
 ];
 
+// The interval for auto-sliding in milliseconds.
 const AUTO_SLIDE_INTERVAL = 5000;
 
+// This component is the hero section of the website with an auto-sliding carousel.
 export default function Hero() {
+  // State to keep track of the current slide index.
   const [page, setPage] = useState(0);
+  // Ref to store the interval ID for auto-sliding.
   const intervalRef = useRef(null);
 
+  // Effect to set up and clear the auto-sliding interval.
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       setPage(prev => (prev + 1) % heroData.length);
@@ -36,14 +42,17 @@ export default function Hero() {
     return () => clearInterval(intervalRef.current);
   }, []);
 
+  // Function to go to a specific slide.
   const goToPage = idx => {
     setPage(idx);
+    // Reset the auto-sliding interval when a dot is clicked.
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setPage(prev => (prev + 1) % heroData.length);
     }, AUTO_SLIDE_INTERVAL);
   };
 
+  // Get the data for the current slide.
   const { heading, subheading, button } = heroData[page];
 
   return (
@@ -56,7 +65,7 @@ export default function Hero() {
           <h1>{heading}</h1>
           <p className="hero-subheading">{subheading}</p>
 
-          {/* ✅ Fixed Link paths */}
+          {/* Link to the specified page for the button. */}
           <Link
             to={button.link}
             className="hero-btn"
@@ -65,6 +74,7 @@ export default function Hero() {
             {button.label}
           </Link>
 
+          {/* Dots for navigating between slides. */}
           <div className="hero-dots">
             {heroData.map((_, idx) => (
               <button

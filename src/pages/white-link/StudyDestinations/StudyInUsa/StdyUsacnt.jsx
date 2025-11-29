@@ -44,15 +44,7 @@ const StdyUsacnt = () => {
     textAlign: 'left'
   };
 
-  const callToActionStyle = {
-    textAlign: 'center',
-    marginTop: '20px',
-    padding: '10px',
-    backgroundColor: '#ffc107',
-    borderRadius: '5px',
-    fontWeight: 'bold',
-    cursor: 'pointer'
-  };
+
 
   return (
     <div style={mainContainerStyle}>

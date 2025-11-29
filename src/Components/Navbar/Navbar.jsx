@@ -158,6 +158,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem("user");
     setLoggedIn(false);
+    alert("log out successful");
     navigate("/");
   };
 

@@ -5,10 +5,13 @@ import { faFacebook, faTwitter, faInstagram, faLinkedin } from "@fortawesome/fre
 
 import './Footer.css'; // Import external CSS
 
+// This component is the footer of the website.
 const Footer = () => {
   return (
     <footer className="footer">
+      {/* The main sections of the footer with links */}
       <div className="footer-sections">
+        {/* "About IDP" section */}
         <div className="footer-column">
           <h2>About IDP</h2>
           <ul>
@@ -17,6 +20,7 @@ const Footer = () => {
             <li><a href="/pages/NewAndA">IDP Careers</a></li>
           </ul>
         </div>
+        {/* "Useful Links" section */}
         <div className="footer-column">
           <h2>Useful Links</h2>
           <ul>
@@ -29,6 +33,7 @@ const Footer = () => {
             <li><a href="/pages/NewAndA">Letter of Recommendation</a></li>
           </ul>
         </div>
+        {/* "IELTS" section */}
         <div className="footer-column">
           <h2>IELTS</h2>
           <ul>
@@ -38,6 +43,7 @@ const Footer = () => {
             <li><a href="/pages/Book">Book a test</a></li>
           </ul>
         </div>
+        {/* "Connect with IDP" section */}
         <div className="footer-column">
           <h2>Connect with IDP</h2>
           <ul>
@@ -48,6 +54,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      {/* Social media links */}
 <div className="footer-row">
   <ul>
     <li><a href="#"><FontAwesomeIcon icon={faFacebook} /></a></li>
@@ -57,11 +64,13 @@ const Footer = () => {
   </ul>
 </div>
 
+      {/* The bottom section of the footer with copyright and legal information */}
       <div className="footer-bottom">
         <p>© 2023 IDP Education</p>
         <p>IELTS is jointly owned by IDP: IELTS Australia, British Council and Cambridge English.</p>
         <p>Cambridge English is part of Cambridge University Press & Assessment.</p>
       </div>
+      {/* Additional links in the footer */}
       <div className="footer-row">
       
           <ul>

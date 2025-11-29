@@ -1,9 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ Import navigate hook
 import './Stdyinukcnt.css';
 // Main React Component for the UK Study Guide
 const Stdyinukcnt = () => {
-    const navigate = useNavigate(); // ✅ Initialize navigation
+
 
     // Helper function for the table structure (Top Universities)
     const renderUniversityTable = () => (

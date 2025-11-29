@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const FindH = () => {
-    const [destination, setDestination] = useState('All destinations');
+
 
     return (
         <div className="insurance-container">
