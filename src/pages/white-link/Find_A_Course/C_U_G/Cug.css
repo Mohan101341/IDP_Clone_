@@ -1,18 +1,31 @@
+/* Styling for the main banner section of the CUG page. */
 .cug {
     background-color: #f1f1f1;
     padding: 40px 0 80px 0;
     
 }
+
+/* Styling for the breadcrumb text in the banner. */
 .p1 {
     font-size: 18px;
     padding-left: 126px;
 }
+
+/* Hover effect for the breadcrumb text. */
+.p1:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Styling for the main heading in the banner. */
 .h1 {
     font-weight: bold;
     font-size: 45px;
     padding-top: 16px;
     padding-left: 99px;
 }
+
+/* Styling for the descriptive paragraph in the banner. */
 .p2 {
     padding-left: 120px;
     font-size: 20px;
@@ -20,6 +33,8 @@
     line-height: 30px;
     padding-top: 21px;
 }
+
+/* Styling for the container that holds the search input fields and button. */
 .search-bars {
     max-width: 1100px;
     color: black;
@@ -34,10 +49,12 @@
     gap: 24px;
 }
 
+/* Styling for the individual field containers within the search bar. */
 .field {
     flex: 1;
 }
 
+/* Styling for the text input fields. */
 .input {
     width: 100%;
     height: 56px;
@@ -48,11 +65,13 @@
     background-color: #fbfbfb;
 }
 
+/* Styling for the "or" text between the search fields. */
 .or {
     color: #343639;
     font-weight: 600;
 }
 
+/* Styling for the search button. */
 .search-btn {
     height: 56px;
     padding: 0 28px;
@@ -63,18 +82,24 @@
     font-size: 18px;
     cursor: pointer;
 }
+
+/* Hover effect for the search button. */
 .search-btn:hover {
     background-color: #020d1d;
     color: white;
 }
+
+/* Styling for the line of text that displays the number of universities found. */
 .line {
     padding-left: 240px;
+    text-align: center;
+    justify-content: center;
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 18px;
 }
 
-/* Rankings list */
+/* Container for the list of university ranking cards. */
 .rankings {
     max-width: 1200px;
     margin: 19px auto 70px auto;
@@ -83,6 +108,7 @@
     gap: 14px;
 }
 
+/* Styling for a single university ranking card. */
 .rank-card {
     background: #ffffff;
     border: 1px solid #e8e8e8;
@@ -93,17 +119,22 @@
     align-items: center;
     box-shadow: 0 6px 18px rgba(20, 165, 255, 0.06);
 }
+
+/* Hover effect for the ranking card. */
 .rank-card:hover {
     border: 1px solid #1e80ff;
     transform: translate(0, -2px);
     box-shadow: 0 8px 24px rgba(30, 128, 255, 0.2);
 }
+
+/* Wrapper for the rank number element. */
 .rank-num-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Styling for the rank number element itself. */
 .rank-num {
     width: 40px;
     height: 40px;
@@ -117,15 +148,23 @@
     font-size: 18px;
     border: 1px solid #dbe4ff;
 }
+
+/* Hover effect for the rank number wrapper. */
 .rank-num-wrap:hover {
     cursor: pointer;
 }
+
+/* Container for the university's name and country. */
 .rank-info {
     padding: 0 10px;
 }
+
+/* Hover effect for the info section. */
 .rank-info:hover {
     cursor: pointer;
 }
+
+/* Styling for the university name. */
 .uni-name {
     margin: 0;
     font-size: 20px;
@@ -133,17 +172,20 @@
     color: #171717;
 }
 
+/* Styling for the university's country. */
 .uni-country {
     margin: 6px 0 0 0;
     color: #5b5e6a;
     font-size: 14px;
 }
 
+/* Container for the action buttons (e.g., "View details"). */
 .rank-actions {
     display: flex;
     align-items: center;
 }
 
+/* Styling for the "View details" button. */
 .details-btn {
     padding: 10px 18px;
     border-radius: 22px;
@@ -153,10 +195,14 @@
     font-weight: 600;
     cursor: pointer;
 }
+
+/* Hover effect for the "View details" button. */
 .details-btn:hover {
     background: #17337a;
     color: #ffffff;
 }
+
+/* Styling for the university's rank text. */
 .uni-rank {
     margin: 6px 0 0 0;
     color: #4a4c51;

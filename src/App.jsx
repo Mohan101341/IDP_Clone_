@@ -1,6 +1,10 @@
 import React from "react";
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
+<<<<<<< HEAD
 
+=======
+// Common Components
+>>>>>>> origin/Mohan
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Hero from "./Components/Hero/Hero";
@@ -38,7 +42,6 @@ import Oneac from "./Components/On_signin_banner/Oneac";
 import Uranking from "./pages/white-link/Find_A_Course/University_Ranking/Uranking";
 import Qsworld from "./pages/white-link/Find_A_Course/University_Ranking/Qs_World/Qsworld";
 import Cug from "./pages/white-link/Find_A_Course/C_U_G/Cug";
-import Book from "./pages/white-link/IELTS/Book_IELTS/Book";
 import What from "./pages/white-link/IELTS/What_is_IELTS/What";
 import Prep from "./pages/white-link/IELTS/IELTS_prep/Prep";
 
@@ -83,7 +86,6 @@ import StdyUkhero from "./pages/white-link/StudyDestinations/StudyInUk/StdyUkher
 import StdyIrlndhero from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndhero.jsx";
 import StdyUsahero from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsahero.jsx";
 import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndcnt.jsx";
-import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
 import StdyUsacnt from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsacnt.jsx";
 import SignupForm from "./pages/white-link/Sign_In/SignupForm";
 import What_is_stdnghero from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying/What_is_stdnghero.jsx";
@@ -91,13 +93,9 @@ import What_isstdngcnt from "./pages/white-link/Study_Abroad/WhyStudyAbrd/What_i
 import Reasons_for_stdy from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Reasons_for_stdy_abrd/Reasons_for_stdy.jsx";
 import Benefits from "./pages/white-link/Study_Abroad/WhyStudyAbrd/Benefits/Benefits.jsx";
 import TopUniversities from "./pages/white-link/StudyDestinations/Top universities/TopUniversities.jsx";
-const WhiteLinkLayout = ({ children }) => (
-  <>
-    <Navbar />
-    {children}
-    <Footer />
-  </>
-);
+import CourseDetails from "./pages/CourseDetails";
+import FindScholar from "./pages/white-link/Find_A_Course/FindScholar/findsc/findscholar.jsx";
+
 
 export default function App() {
   return (
@@ -171,6 +169,17 @@ export default function App() {
           }
            />
             <Route
+          path="/pages/FindScholar"
+          element={
+            <>
+              <Navbar />
+              <FindScholar/>
+              <Oneac />
+              <Contact />
+              <Footer />
+            </>
+          }/>
+            <Route
           path="/pages/Toefl"
           element={
             <>
@@ -193,6 +202,30 @@ export default function App() {
           }
           />
           
+            <Route
+          path="/pages/EnglishT"
+          element={
+            <>
+              <Navbar />
+              <EnglishT />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+          {/* backend files for view details of Corses*/}
+          
+            <Route
+          path="/pages/course/:name"
+          element={
+            <>
+              <Navbar />
+              <CourseDetails />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
             <Route
           path="/pages/FindU"
           element={
@@ -272,16 +305,6 @@ export default function App() {
               <Navbar />
               <What/>
               <Contact />
-              <Footer />
-            </>
-          }
-            />
-          <Route
-          path="/pages/Book"
-          element={
-            <>
-
-              <Book/>
               <Footer />
             </>
           }

@@ -1,68 +1,73 @@
 .oneac-container {
-    background-color: #cfeffff7;
-    height: 200px;
-    width: 80%;
-    padding-top: 20px;
-    margin-top: 40px;
-    margin-left:170px;
+    background-color: #f0f8ff; 
+    max-width: 1200px;
+    margin: 40px auto; 
+    padding: 30px 50px;
     border-radius: 10px;
-    border:1px solid #f0f0f0;
-    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
+
+.oneac-content {
+    flex: 1;
+}
+
 .head1 {
     font-size: 24px;
     font-weight: bold;
-    margin-top: 20px;
-    padding-left: 100px;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0; 
+    padding: 0;
+    color: #1a237e; 
 }
-.oneac-mat {
+
+.oneac-para {
+    font-size: 16px; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    max-width: 600px; 
+}
+
+.oneac-actions {
     display: flex;
     align-items: center;
-    padding-left: 110px;
-    margin-bottom: 20px;
+    gap: 15px; 
 }
-.oneac-para {
-    font-size: 19px;
-    color: #000000;
-    margin-left: 10px;
-}
+
 .oneac-btn {
     background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border: 1px solid #e2e2e2;
-    padding-right:40px;
-    margin-top: -30px;
-    height: 50px;
-    margin-left: 50px;
-    width: 160px;
+    color: #007bff; 
+    border: 1px solid #007bff;
+    padding: 12px 30px;
     font-weight: bold;
-    font-size: 11px;
-    margin-right: 50px;
+    font-size: 14px;
     cursor: pointer;
-    border-radius: 23px;
+    border-radius: 25px; 
+    transition: all 0.3s ease;
 }
+
 .oneac-btn:hover {
-    background-color: #235aff;
+    background-color: #007bff;
     color: #ffffff;
-    border: 1px solid #e2e2e2;
 }
+
 .oneac-btn1 {
-    background-color: #235aff;
+    background-color: #007bff;
     color: #ffffff;
-    border: 1px solid #235aff;
-    padding-right:30px;
-    margin-top: -30px;
-    height: 50px;
-    margin-right: 180px;
-    width: 140px;
+    border: 1px solid #007bff;
+    padding: 12px 30px;
     font-weight: bold;
-    font-size: 11px;
+    font-size: 14px;
     cursor: pointer;
-    border-radius: 23px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
+
 .oneac-btn1:hover {
-    background-color: #140d79;
+    background-color: #0056b3; 
     color: #ffffff;
-    border: 1px solid #dcdcdc;
+    border-color: #0056b3;
 }

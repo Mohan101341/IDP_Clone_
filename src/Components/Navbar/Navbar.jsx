@@ -42,20 +42,22 @@ const styles = {
     cursor: "pointer",
     position: "relative",
   },
-  secondLevelMenu: {
-    position: "absolute",
-    top: 0,
-    left: "100%",
-    backgroundColor: "#f5f5f5",
-    boxShadow: "0 4px 8px rgba(18, 2, 2, 0.1)",
-    listStyle: "none",
-    padding: "10px 0",
-    marginTop: 0,
-    borderRadius: "4px",
-    zIndex: 1001,
-    minWidth: 260,
-    height: "100%",
-  },
+ secondLevelMenu: {
+  left: "calc(100% - 2px)",
+  backgroundColor: "#f5f5f5",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  listStyle: "none",
+  top: -110,
+  position: "absolute",
+  padding: "10px 0",
+  marginTop: 0,
+  marginLeft: "2px",
+  borderRadius: "4px",
+  zIndex: 1001,
+  minWidth: "200px",
+  height: "40%",
+}
+
 };
 
 const balckDropworn = {
@@ -134,7 +136,11 @@ const dropdownData = {
 
 const submenuData = {
   "University Rankings - THE": [
-    { label: "QS World University Rankings", path: "/pages/Qsworld" },
+    { label: "QS World University Rankings", path: "/pages/Qsworld" }
+  ],
+  "IELTS": [
+    { label: "What is IELTS?", path: "/pages/what" },
+    { label: "IELTS Preparation", path: "/pages/Prep" }
   ],
 };
 
@@ -280,7 +286,10 @@ const Navbar = () => {
                   {items.items.map((item, idx) => (
                     <li
                       key={idx}
-                      style={styles.dropdownItem}
+                      style={{
+                        ...styles.dropdownItem,
+                        position: "relative", // Needed for submenu positioning
+                      }}
                       onMouseEnter={() => setOpenSecondLevel(item.label)}
                       onMouseLeave={() => setOpenSecondLevel(null)}
                     >

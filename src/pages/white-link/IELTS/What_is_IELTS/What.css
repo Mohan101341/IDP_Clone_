@@ -1,3 +1,4 @@
+/* Styling for the main banner container. */
 .what-container {
     padding-left: 150px;
     padding-top: 30px;
@@ -8,27 +9,64 @@
     height: 290px;
     border-bottom: 1px solid rgb(241, 241, 241);
 }
+
+/* Styling for the breadcrumb text in the banner. */
 .wp {
-    padding-left: 20px;
-    font-size:20px;
+    margin-left: -12px;
+    font-size: 18px;
+    margin-bottom: 13px;
+    color: rgb(255, 255, 255);
 }
+
+/* Hover effect for the breadcrumb text. */
+.wp:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Styling for the secondary text in the banner. */
+.wr{
+     margin-left: -12px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 13px;
+}
+
+/* Styling for the main heading in the banner. */
 .wh {
     font-size: 35px;
     font-weight: bold;
     padding-bottom: 10px;
     
 }
+
+/* Styling for the button in the banner. */
 .wb {
     margin-top: 20px;
     margin-left: 13px;
     border-radius: 12px;
     font-weight: bold;
 }
+
+/* Hover effect for the banner button. */
 .wb:hover {
     background-color: #0f1c2a;
     color: white;
     transition: 0.3s;
 }
+
+/* Container for the main content area below the banner. */
+.mm{
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    background-color: aliceblue;
+}
+
+/* Styling for the text content within the main area. */
 .matter {
     padding-left: 150px;
     padding-right: 150px;
@@ -39,10 +77,14 @@
     line-height: 1.8;
     background-color: rgb(234, 255, 255);
 }
+
+/* Styling for subheadings on the page. */
 .h2 {
     padding-left: 140px;
     font-size: 34px;
 }
+
+/* Flex container for the "Learn more" navigation boxes. */
 .box-container {
     display: flex;
     justify-content: space-between;
@@ -51,23 +93,31 @@
     padding-top: 30px;
     padding-bottom: 50px;
 }
+
+/* Styling for a single navigation box. */
 .box {
     width: 30%;
     background-color: white;
     border: 1px solid rgb(238, 238, 238);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 8px;
+    padding: 24px 16px;
+    padding: 40px 20px;
     text-align: center;
     cursor: pointer;
     font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
 }
+
+/* Hover effect for the navigation boxes. */
 .box:hover {
     box-shadow: rgb(199, 253, 255) 0px 0px 10px 2px;
     color: rgb(0, 0, 0);
     border: 1px solid rgb(50, 151, 252);
     transform: translateY(-3px);
 }
+
 .box-container1 {
     display: flex;
     gap:250px;
@@ -93,6 +143,7 @@
     padding-bottom: 50px;
 }
 
+/* Styling for a single article card. */
 .card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -103,18 +154,21 @@
     transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 
+/* Hover effect for the article cards. */
 .card:hover {
     box-shadow: rgb(199, 253, 255) 0px 0px 10px 2px;
     border-color: rgb(50, 151, 252);
     transform: translateY(-3px);
 }
 
+/* Styling for the title within an article card. */
 .card-title {
     font-weight: bold;
     font-size: 17px;
     margin: 0 0 8px 0;
 }
 
+/* Styling for the description within an article card. */
 .card-desc {
     font-size: 17px;
     line-height: 1.8;

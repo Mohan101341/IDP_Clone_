@@ -1,29 +1,65 @@
+/* Styling for the main banner container. */
 .Courseof-container {
     padding: 35px;
     padding-left: 90px;
-    background-color: rgb(230, 248, 255);
-    border-bottom: 4px solid rgb(238, 238, 238);
+    background-color: rgba(1, 116, 123);
+    background-image: url('/public/assets/career.jpg');
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 235px;
+    height: 280px;
+    box-shadow: 1px 6px 9px rgb(175, 175, 175);
 }
+
+/* Styling for the breadcrumb text in the banner. */
 .h {
     padding-left: 40px;
 }
+
+/* Styling for the main heading in the banner. */
 .Courseof-t {
     font-weight: bold;
     font-size: 40px;
     padding-left: 20px;
 }
+
+/* Styling for the filter and reset buttons. */
 .Courseof-button {
-    margin-left: 40px;
-    margin-top: 10px;
-    border-radius: 8px;
-    padding: 21px 38px;
-    font-weight: bold;
+    border-radius: 28px;
+    padding: 17px 27px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
 }
+
+/* Hover effect for the filter button. */
 .Courseof-button:hover {
     background-color: #29aae6;
     color: rgb(0, 0, 0);
     border: none;
 }
+
+.Courseof-reset-button {
+    border-radius: 28px;
+    padding: 17px 27px;
+    margin-top: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #d3d3d3;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.2s;
+}
+
+.Courseof-reset-button:hover {
+    background-color: #e44;
+    color: white;
+    border-color: #d33;
+
+}
+
+/* Styling for a button (seems to be an older or unused class). */
 .Courseof-b1 {
     color: rgb(0, 0, 0);
     padding: 20px 40px;
@@ -35,20 +71,28 @@
     font-weight: bold;
     font-size: 14px;
 }
+
+/* Hover effect for the unused button class. */
 .Courseof-b1:hover {
        background-color: rgb(20, 50, 172);
        color: rgb(255, 255, 255);
 
 }
+
+/* Styling for the "View All Courses" link within a card. */
 .Courseof-detail {
     color :black;
     text-decoration: underline;
     font-weight: bold;
 }
+
+/* Hover effect for the "View All Courses" link. */
 .Courseof-detail:hover {
     color: blue;
     cursor: pointer;
 }
+
+/* Grid container for the university cards. */
 .Courseof-boxes {
     margin: 30px auto;
     padding: 50px 20px;
@@ -62,6 +106,8 @@
     max-width: 1200px;
     
 }
+
+/* Styling for a single university card. */
 .Courseof-box1 {
     margin: 0;
     height: auto;
@@ -76,31 +122,42 @@
     box-shadow: 0 4px 12px rgba(130, 199, 255, 0.1);
     padding: 23px;
 }
+
+/* Hover effect for the university card. */
 .Courseof-box1:hover {
     box-shadow: 5px 10px 20px rgba(11, 112, 244, 0.15);
     transform: translateY(-3px);
     transition: all 0.3s ease;
     border:1px solid #2248d1;
 }
+
+/* Header section of the card, containing the heart icon. */
 .Courseof-card-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 15px;
 }
+
+/* Styling for the heart icon. */
 .Courseof-heart-icon {
     font-size: 27px;
     color: #dd1f1f;
     cursor: pointer;
     margin-top: 8px;
 }
+
+/* Hover effect for the heart icon. */
 .Courseof-heart-icon:hover {
     color: #440505;
 }
+
 .Courseof-University-logo {
     
     margin-bottom: 10px;
 }
+
+/* Styling for the university name displayed as a logo. */
 .Courseof-logo-m {
     background-color: rgb(255, 255, 255);
     color: #000000;
@@ -114,6 +171,8 @@
     width: 100%;
     box-sizing: border-box;
 }
+
+/* Styling for the university country text. */
 .Courseof-University-name {
     font-size: 13px;
     color: #050303;
@@ -122,10 +181,14 @@
     margin: 0 0 20px 0;
     font-weight: 600;
 }
+
+/* Container for the list of program details. */
 .Courseof-program-details {
    margin: 20px 7px;
    flex-grow: 1;
 }
+
+/* Styling for a single detail item. */
 .Course-detail-item {
     display: flex;
     align-items: center;
@@ -133,18 +196,24 @@
     font-size: 14px;
     color: #000000;
 }
+
+/* Styling for the icon next to each detail item. */
 .Course-detail-icon {
      margin-right: 10px;
     font-size: 16px;
     width: 20px;
     text-align: center;
 }
+
+/* Container for the action buttons at the bottom of the card. */
 .Courseof-action-buttons {
     margin-top: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
+/* Styling for the "View details" button. */
 .Courseof-btn {
     background-color: rgb(255, 255, 255);
     color: #000000;
@@ -156,8 +225,97 @@
     cursor: pointer;
     transition: all 0.3s;
 }
+
+/* Hover effect for the "View details" button. */
 .Courseof-btn:hover {
     border:1px solid #6bb5ff;
     color: #ffffff;
     background-color: rgb(101, 119, 255);
+}
+
+/* --- Filter Section --- */
+/* Container for the filter dropdowns and buttons. */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #f0f4f7;
+    border-top: 1px solid #ddd;
+    align-items: center; /* Align items vertically */
+}
+
+/* Container for the filter buttons. */
+.Courseof-filter-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Styling for a group containing a label and a select dropdown. */
+.filter-group {
+    display: flex;
+    align-items: center; /* Align label and select horizontally */
+    gap: 10px; /* Space between label and select */
+}
+
+/* Styling for the filter labels. */
+.filter-group label {
+    font-weight: 500;
+    font-size: 15px;
+    color: #333;
+}
+
+.filter-group select {
+    /* Styling for the select dropdowns. */
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 220px;
+    font-size: 14px;
+}
+
+/* Container for the pagination controls. */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 40px 0;
+}
+
+/* Styling for the pagination buttons. */
+.pagination-container button {
+    background-color: #ededed;
+    border: 1px solid #e6e6e6;
+    color: #000000;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+/* Styling for disabled pagination buttons. */
+.pagination-container button:disabled {
+    background-color: #e7e7e7;
+    color: #000000;
+    cursor: not-allowed;
+    border-color: #e8e8e8;
+}
+
+/* Hover effect for pagination buttons. */
+.pagination-container button:hover:not(:disabled) {
+    background-color: #daf3ff;
+    color: #000000;
+    border: none;
+}
+
+.pagination-container span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    padding: 0 10px;
+    margin-top:-30px;
 }

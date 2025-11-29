@@ -1,3 +1,4 @@
+/* Styling for the main banner section. */
 .course-banner {
     background-image: url('/public/assets/self.jpg');
     background-size: 1700px;
@@ -5,7 +6,18 @@
     height: 350px;
     display: flex;
     opacity: 2;
+    text-decoration: none;
+    box-shadow: 1px 6px 7px rgb(146, 146, 146);
 }
+
+/* Hover effect for the breadcrumb link. */
+.ula:hover{
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+/* Styling for the paragraph text in the banner (seems to have a typo, should be .ula). */
 .course-banner p1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #ffffff;
@@ -13,6 +25,8 @@
     padding-left: 90px;
     margin-top: 50px;
 }
+
+/* Styling for the main heading in the banner. */
 .course-banner h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #ffffff;
@@ -22,6 +36,8 @@
     padding-top: 50px;
     padding-left: 80px;
 }
+
+/* Styling for the descriptive paragraph in the banner. */
 .course-banner p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #ffffff;
@@ -32,6 +48,8 @@
     padding-left: 80px;
 
 }
+
+/* Styling for the "Find Course" button in the banner. */
 .course-banner-button {
     background-color: #1f82df;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -49,9 +67,12 @@
     padding-right: 20px;
     align-items: center;
 }
+
+/* Hover effect for the banner button. */
 .course-banner-button:hover {
     background-color: #2b6bb4;
 }
+
 .course-banner-text {
     background-color: white;       
     color: #000000;                
@@ -62,18 +83,26 @@
     padding-left: 80px;
     font-size: 18px;
 }
+
+/* Styling for the list of advice points. */
 .course-banner-list {
     padding-left: 50px;
     font-size: 19px;
 }
+
+/* Styling for the main paragraph in the content section. */
 .course-banner-para {
     font-size: 19px;
     padding-left: 50px;
 }
+
+/* Styling for other paragraphs in the content section. */
 .para {
     font-size: 19px;
     padding-left: 50px;
 }
+
+/* Styling for the "You may also like" link box. */
 .course-banner-box {
     border: 1.5px solid #000000;
     border-radius: 9px;
@@ -87,6 +116,8 @@
     padding-left: 20px;
     margin-top: 20px;
 }
+
+/* Styling for the orange underline on headings. */
 .course-banner-line {
     text-decoration: underline;
   text-underline-position: under;

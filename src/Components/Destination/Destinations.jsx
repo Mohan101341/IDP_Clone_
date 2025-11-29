@@ -58,12 +58,12 @@ export default function Destinations() {
               className="dest-card"
               style={{ backgroundImage: `url(${d.img})` }}
             >
-              {/* Always-visible label */}
+             
               <div className="dest-label">
                 <span>{d.name}</span>
               </div>
 
-              {/* Shown on hover/focus */}
+             
               <div className="dest-hover">
                 <p>{d.info}</p>
                 <Link className="dest-btn" to={`/study/${d.slug}`}>

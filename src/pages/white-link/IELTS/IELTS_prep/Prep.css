@@ -1,12 +1,23 @@
+/* Styling for the main banner section. */
 .prep {
     padding-left: 90px;
     padding-top: 20px;
-    background-image: url("/public/assets/prepa.jpg");
-    background-repeat: repeat-x;
-    background-size: 980px;
-    height: 340px;
-    border-bottom: 4px solid rgb(235, 235, 235);
+    background-image: url("/public/assets/prepie.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 380px;
+    height: 380px;
+    background-color: black;
+    box-shadow: 7px 6px 15px rgb(65, 65, 65);
+
 }
+
+/* Styling for the breadcrumb text in the banner. */
+.p1{
+    color: white;
+}
+
+/* Styling for the main heading in the banner. */
 .prep h1 {
     font-size: 40px;
     color: #1a1a1a;
@@ -14,9 +25,13 @@
     margin-top: -50px;
     margin-bottom: 10px;
 }
+
+/* Styling for the introductory paragraph in the banner. */
 .p2 {
     margin-top: -35px;
 }
+
+/* Styling for the primary button in the banner. */
 .btn {
     margin-left: 150px;
     margin-top: 40px;
@@ -25,12 +40,16 @@
     border: 1px solid rgb(237, 237, 237);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* Hover effect for the primary button. */
 .btn:hover {
     background-color: #1a1a1a;
     color: white;
     border: 1px solid rgb(237, 237, 237);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* Styling for the main content area below the banner. */
 .prep1 {
     padding-left: 190px;
     padding-top: 20px;
@@ -39,27 +58,37 @@
     font-size: 18px;
     border-bottom: 2px solid rgb(231, 231, 231);
 }
+
+/* Styling for the main introductory paragraph in the content area. */
 .p3 {
     margin-top: 20px;
     margin-bottom: 20px;
     line-height: 1.8;
     padding-right: 130px;
 }
+
+/* Styling for a specific line of text. */
 .line {
     margin-left: -240px;
     margin-bottom: -20px;
 }
+
+/* Styling for the unordered list of preparation materials. */
 .list {
     line-height: 2.5;
     padding-bottom: 30px;
     padding-left: 30px;
 }
+
+/* Styling for other paragraph text in the content area. */
 .line1 {
     margin-left:7px;
     line-height: 1.9;
     margin-bottom: 20px;
     margin-right: 200px;
 }
+
+/* Styling for the secondary button at the bottom of the page. */
 .btn1 {
     margin-left: 7px;
     margin-top: 10px;

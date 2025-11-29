@@ -1,10 +1,21 @@
 /* ============================= */
 /* Top Black Bar */
 /* ============================= */
-.black-container {
-  background-color: #444444;
-  padding: 17px 25px;
-  position:relative;
+<<<<<<< HEAD
+.black-container,
+.black-containera {
+  background-color: #292929;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  padding: 4px 29px;
+  position: relative;
+  border-bottom: 1px solid rgb(65, 65, 65);
+  z-index: 9999;
+   
+  
 }
 
 .black-links {
@@ -216,6 +227,27 @@
   right: 0;
 }
 
+.find-us-dropdown {
+  max-height: 300px;
+  overflow-y: auto;
+  background: #222;
+  color: #fff;
+  position: absolute;
+  left: 50%; 
+  right: auto;
+  top: 100%;
+  min-width: 210px;
+  width: max-content;           /* lean width */
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(18, 2, 2, 0.1);
+  padding: 0;
+  margin: 0;
+  z-index: 10000;
+  transform: translateX(-50%);
+  text-align: left;
+}
+.nav-item { position: relative; }
+.black-li1.has-dropdown { position: relative; }
 
 
 
