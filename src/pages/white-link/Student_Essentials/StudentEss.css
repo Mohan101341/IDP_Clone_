@@ -1,174 +1,300 @@
+
+
+
 .essentials-container {
-  font-family: "Poppins", sans-serif;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+/* ---------- container ---------- */
+.essentials-hero{
+  position: relative;
   width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  
-}
-
-.breadcrumb {
- background-image: url(assets/YouTube.png);
- background-size: cover;
- height: 500px;;
- width: 100%;
- color:black;
-}
-
-.heading {
-  font-size: 28px;
-  margin: 15px 0;
-  font-weight: 700;
-}
-
-.recommend-section {
-  
-  background: #fff;
+  height: 20rem;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.destination-select {
-
-
-  border: 1px solid #ccc;
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.essentials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 100%;
-}
-
-.card {
-  width: 100%;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  text-align: center;
-  padding: 25px 15px;
-  background: #fff;
-  transition: 0.3s ease;
-  box-sizing: border-box;
-}
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
-} 
-
-.icon {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.card p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 12px;
-}
-
-.learn-btn {
-  background: none;
-  border: none;
-  color: #0078d4;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.bottom-banner {
-  display: flex;
-  margin-top: 50px;
-  background: #eef6ff;
-  border-radius: 16px;
   overflow: hidden;
-  width: 100%;
-  max-width: 100%;
+  align-items: center;
+  background-color: #548aa4; 
+}
+/* text styles */
+.breadcrumb-text{
+  margin-top: 10px;
+  font-size: 14px;
+ 
 }
 
-.banner-left {
-  flex: 1;
+
+.hero-subtext{
+  margin: 0 0 18px;
+  font-size: 16px;
+  color: rgba(255,255,255,0.92);
 }
 
-.banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit:fill;
-}
 
-.banner-right {
-  flex: 1;
-  padding: 40px;
+.hero-cta{
+  margin-top: 5rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.banner-right h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.banner-right p {
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.free-btn {
-  background: #00a859;
+/* primary button */
+.free-btn{
+  background: var(--accent);
   color: #fff;
   border: none;
-  padding: 10px 16px;
+  padding: 11px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(39,122,241,0.14);
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 120ms ease;
+}
+
+
+/* ---------- BUTTONS ---------- */
+.free-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  transition: 0.3s ease;
+}
+.free-btn:hover { opacity: 0.95; transform: translateY(-1px); }
+
+/* ---------- RECOMMEND / FILTER ---------- */
+.recommend-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin: 18px 0 30px;
+  border: 1px solid #eee;
+}
+.destination-select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e9ef;
+  background: #fff;
 }
 
-.free-btn:hover {
-  background: #007f45;
+/* small wrapper for right-side actions */
+.recommend-actions { display:flex; align-items:center; gap:12px; }
+.contact-scroll-btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
 }
 
-/* Responsive Design */
+
+
+
+/* ---------- FEATURES SECTION (Enhanced) ---------- */
+
+.features-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* GRID */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.feature-card {
+  background: #ffffff;
+  padding: 28px 22px;
+  border-radius: 14px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transition: transform 0.28s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ICON */
+.feature-icon {
+  font-size: 38px;
+  margin:10px 115px;
+  color: #277af1;
+}
+
+/* TEXT */
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f4ebb;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Hover Animation */
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  border-color: #dce6ff;}
+
+
+
+/* ---------- HOW IT WORKS ---------- */
+.how-it-works { padding: 28px 0; }
+.how-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+
+/* ---------- TESTIMONIALS SECTION ---------- */
+
+.testimonials-section {
+  margin: 10px 120px ;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #222;
+}
+
+/* Grid layout */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: #ffffff;
+  padding: 24px 22px;
+  border-radius: 14px;
+  border: 1px solid #ececec;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Quote text */
+.testimonial-card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Author */
+.testimonial-author {
+  display: block;
+  margin-top: 14px;
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+  font-weight: 600;
+}
+
+/* Hover effect */
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  border-color: #dbe6ff;
+}
+
+
+
+
+/* ---------- FAQ ---------- */
+.faq-section { margin: 40px 0; }
+.faq-item { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+.faq-question { padding: 14px 16px; display:flex; justify-content: space-between; cursor: pointer; background: #f8f8f8; }
+.faq-answer { padding: 14px 16px; background: #fff; color: #444; font-size: 15px; }
+
+/* ---------- NEWSLETTER ---------- */
+.newsletter { margin: 40px 0; background-color: #277af1; color: #dbe6ff; padding: 30px; border-radius: 10px; }
+.newsletter-inner { display:flex; justify-content: space-between; align-items:center; gap: 20px; }
+.newsletter-form { display:flex; gap: 10px; }
+.newsletter-form input {  margin-top: 30px; border-radius: 6px; width: 300px; height: 40px; }
+
+.free-btn1{
+ margin-top: 30px;
+ padding: 10px;
+ border-radius: 10px;
+}
+
+
+/* ---------- Responsive --------- */
+@media (max-width: 1024px) {
+  .features-grid, .how-grid, .testimonials-grid { grid-template-columns: repeat(2,1fr); }
+  .hero-heading { font-size: 34px; }
+   .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+    .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
 @media (max-width: 768px) {
-  .essentials-container {
-    padding: 20px;
-  }
-.breadcrumb{
-  height: 200px;
-}
-
-  
-  .essentials-grid {
+  .features-grid, .how-grid, .testimonials-grid { grid-template-columns: 1fr; }
+  .newsletter-inner { flex-direction: column; align-items: flex-start; }
+  .destination-select { width: 160px; }
+  .footer-inner { flex-direction: column; gap: 8px; }
+   .features-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
   }
-  
-  .recommend-section {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
+
+  .features-section h1 {
+    font-size: 22px;
   }
-  
-  .bottom-banner {
-    flex-direction: column;
+   .testimonials-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .banner-right {
+
+  .testimonials-section h2 {
+    font-size: 24px;
+  }
+
+  .testimonial-card {
     padding: 20px;
   }
+    .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-title {
+    font-size: 26px;
+  }
+
+  .feature-card {
+    padding: 24px 20px;
+  }
 }
-
-

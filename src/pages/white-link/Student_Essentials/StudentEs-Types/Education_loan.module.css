@@ -1,0 +1,222 @@
+
+/* Education_loan.module.css
+   Clean, responsive styles for Education_loan component
+*/
+
+:root {
+  --accent: #277af1;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --max-width: 1200px;
+  --radius: 12px;
+}
+
+/* Container */
+.insuranceContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+ 
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  box-sizing: border-box;
+}
+.healthContainer {
+   background-image: url("/assets/YouTube.png"); /* light blue, change as needed */
+  padding: 60px;
+  border-radius: 8px;
+}
+.partner{
+  margin-top: 50px;
+
+}
+
+.heroSection {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+}
+
+/* background image element (kept separate for layering & accessibility) */
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/YouTube.png"); /* replace if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.02);
+  z-index: 0;
+  filter: contrast(0.95);
+  will-change: transform;
+  transition: transform 700ms ease;
+}
+
+
+/* Top area */
+.healthContainer {
+  margin-bottom: 18px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.mainHeading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #16325c;
+  margin: 6px 0 18px;
+}
+
+/* Partner grid */
+.partnerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 16px;
+}
+
+/* Partner card */
+.partnerCard {
+  background: var(--card-bg);
+  border: 1px solid #eef2f6;
+  border-radius: var(--radius);
+  padding: 18px;
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(11,20,40,0.04);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+/* Card header: bank name + logo */
+.partnerCard > div:first-child {
+  margin-bottom: 12px;
+}
+
+.partnerCard h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+  color: #16325c;
+  font-weight: 700;
+}
+
+/* Logo style */
+.partnerCard img {
+  height: 44px;
+  object-fit: contain;
+  display: inline-block;
+  margin-top: 6px;
+  /* keep logos from stretching card height */
+  max-width: 100%;
+}
+
+/* Features list */
+.partnerCard ul {
+  margin: 10px 0;
+  padding-left: 18px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.partnerCard li {
+  margin-bottom: 6px;
+  list-style: none;
+}
+
+/* Destinations text */
+.partnerCard p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* Buttons */
+.buttonGroup {
+  display: flex;
+  gap: 30px;
+margin: 40px;
+  align-items: center;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  padding: 9px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  font-size: 14px;
+}
+
+/* Primary (accent) */
+.buttonPrimary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(39,122,241,0.12);
+}
+.buttonPrimary:hover { transform: translateY(-2px); }
+
+/* Secondary (outline) */
+.buttonSecondary {
+  background: transparent;
+  color: #16325c;
+  border: 1px solid #dbe9ff;
+}
+.buttonSecondary:hover {
+  background: #f5fbff;
+  transform: translateY(-2px);
+}
+
+/* Card hover */
+.partnerCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(11,20,40,0.08);
+}
+
+/* Utility helpers (optional: used in earlier examples if needed) */
+.flexRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .partnerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .partnerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .partnerCard {
+    padding: 14px;
+  }
+
+  .partnerCard img {
+    height: 40px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 100%;
+  }
+}

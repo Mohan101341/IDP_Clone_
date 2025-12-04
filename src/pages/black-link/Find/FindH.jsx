@@ -1,26 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './FindH.css';
 
 const FindH = () => {
-    const [destination, setDestination] = useState('All destinations');
-
     return (
-        <div className="insurance-container">
-            <div className="health-container">
+        <div className="find-h-container">
+            <div className="find-h-content">
                 {/* Breadcrumb */}
-                <p className="breadcrumb">
-                    Home / Find an IDP office
+                <p className="breadcrumb2">
+                    Home / Find an Jramsys office
                 </p>
 
                 {/* Heading */}
-                <h1 className="main-heading">
-                    Find an IDP office near you
-                </h1>
-                <p>
-                    Our counsellors are ready to help you on your study abroad journey.
-                </p>
+                <div className="header-section">
+                    <h1 className="main-heading">
+                        Find  Jramsys office near you
+                    </h1>
+                    <p className="sub-heading">
+                        Our counsellors are ready to help you on your study abroad journey.
+                    </p>
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default FindH
+export default FindH;

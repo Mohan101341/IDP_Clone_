@@ -8,7 +8,7 @@ const WhereToStudyPage = () => {
             <StudyAbroadHero
                 title="Where and what to study?"
                 subtitle="Find the perfect country, university and course with our expert guidance."
-                imageUrl="https://www.idp.com/medias/Where-to-study-banner-mob.jpg?context=bWFzdGVyfGltYWdlc3w0NjU0NnxpbWFnZS9qcGVnfGg0MC9oZWYvODg0NDI4OTM5MDYyMi9XaGVyZSB0byBzdHVkeSBiYW5uZXIgbW9iLmpwZ3w1YjYyYjYyYjYyYjYyYjYyYjYyYjYyYjYyYjYyYjYyYjYyYjYyYjYyYjYyYjYyYjY"
+                  imageUrl="https://tse3.mm.bing.net/th/id/OIP.LTkGshUbm5gaBmtjd0zs_AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
                 imageAlt="Globe with graduation cap"
             />
             <WhereToStudyCnt />

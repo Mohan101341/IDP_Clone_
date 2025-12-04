@@ -8,7 +8,7 @@ const ArriveAndThrivePage = () => {
             <StudyAbroadHero
                 title="Arrive and thrive"
                 subtitle="Settle into your new home with our arrival support services."
-                imageUrl="https://www.idp.com/medias/Student-friends-in-a-new-city.jpg?context=bWFzdGVyfGltYWdlc3w4MjU3MHxpbWFnZS9qcGVnfGg3NC9oZDMvODg0NDI4OTI1OTU1MC9TdHVkZW50IGZyaWVuZHMgaW4gYSBuZXcgY2l0eS5qcGd8ZDYzYjY3YjY3YjY3YjY3YjY3YjY3YjY3YjY3YjY3YjY3YjY3YjY3YjY3YjY3YjY"
+                                imageUrl="https://tse3.mm.bing.net/th/id/OIP.LTkGshUbm5gaBmtjd0zs_AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
                 imageAlt="Students in a new city"
             />
             <ArriveAndThriveCnt />

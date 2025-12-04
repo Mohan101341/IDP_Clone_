@@ -1,0 +1,179 @@
+/* Money_transfer.module.css
+   Consistent design with all other Student Essentials pages
+*/
+
+:root {
+    --accent: #277af1;
+    --muted: #6b7280;
+    --card-bg: #ffffff;
+    --radius: 12px;
+    --max-width: 1200px;
+}
+
+/* Main container */
+.insuranceContainer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+/* Top section */
+
+.healthContainer {
+   background-image: url("/assets/YouTube.png"); /* light blue, change as needed */
+  padding: 60px;
+  border-radius: 8px;
+}
+
+
+.breadcrumb {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+.mainHeading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #15355f;
+    margin-bottom: 12px;
+}
+
+/* ---------------- MONEY TRANSFER BANNER ---------------- */
+
+.insuranceBanner {
+    position: relative;
+    color: white;
+    padding: 40px 28px;
+    border-radius: var(--radius);
+    text-align: center;
+    margin: 28px 0;
+    box-shadow: 0 12px 35px rgba(39, 122, 241, 0.22);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.insuranceBanner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Replace with your image path */
+    background-image: url('/assets/money-transfer-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Dark overlay for text readability */
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    z-index: -1;
+}
+
+.insuranceBanner h1 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.insuranceBanner p {
+    max-width: 720px;
+    margin: 0 auto 18px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.ctaBtn {
+    background: white;
+    color: #277af1;
+    padding: 11px 22px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.ctaBtn:hover {
+    background: #eef4ff;
+    transform: translateY(-3px);
+}
+
+/* ---------------- OPTIONS SECTION ---------------- */
+
+.insuranceOptions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 32px 0;
+}
+
+.optionCard {
+    background: var(--card-bg);
+    padding: 22px;
+    border-radius: var(--radius);
+    border: 1px solid #e8eef6;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+    transition: 0.25s ease;
+}
+
+.optionCard h2 {
+    font-size: 20px;
+    color: #123254;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.optionCard p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.optionCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.08);
+    border-color: #d7e6ff;
+}
+
+.optionBtn {
+    background: var(--accent);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.optionBtn:hover {
+    background: #1f5eb8;
+    transform: translateY(-2px);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 900px) {
+    .insuranceOptions {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .insuranceBanner h1 {
+        font-size: 22px;
+    }
+
+    .insuranceBanner p {
+        font-size: 14px;
+    }
+
+    .ctaBtn {
+        width: 100%;
+    }
+
+    .optionBtn {
+        width: 100%;
+    }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 const contactImg1 = "/assets/form-banner3.webp";
+import axios from "axios";
 import './StudentEssForm.css'
 export default function StudentEssFrom() {
   const [formData, setFormData] = useState({
@@ -12,8 +13,14 @@ export default function StudentEssFrom() {
     office: "",
     studyLevel: "",
     funding: "",
-    agreeTerms: false,
+    agreeToTerms: false,
+    agreeToContact: false,
+    agreeToUpdates: false,
   });
+
+  const [statusMessage, setStatusMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -23,9 +30,45 @@ export default function StudentEssFrom() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    if (!formData.agreeToTerms) {
+      setStatusMessage("You must agree to the Terms and Conditions and Privacy Policy.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setStatusMessage("Submitting...");
+
+    try {
+      const response = await axios.post( // Use relative path to leverage Vite proxy
+        "/api/students/student-essentials",
+        formData
+      );
+
+      setStatusMessage("Thank you! Your form has been submitted successfully.");
+      console.log("Server response:", response.data);
+      // Reset form on success
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        destination: "",
+        startTime: "",
+        office: "",
+        studyLevel: "",
+        funding: "",
+        agreeToTerms: false,
+        agreeToContact: false,
+        agreeToUpdates: false,
+      });
+    } catch (error) {
+      setStatusMessage("An error occurred. Please try again later.");
+      console.error("Submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -38,7 +81,7 @@ export default function StudentEssFrom() {
               <span className="g-accent">G</span>et support with your student essentials
             </h1>
             <p className="contact-subtitle">
-           Tell us what you need, and we’ll help you get it sorted
+              Tell us what you need, and we’ll help you get it sorted
             </p>
           </div>
 
@@ -123,7 +166,7 @@ export default function StudentEssFrom() {
                   <option value="ireland">Ireland</option>
                 </select>
               </div>
-              
+
               <div className="form-field">
                 <label>When would you like to start?*</label>
                 <select
@@ -142,7 +185,7 @@ export default function StudentEssFrom() {
             {/* OFFICE + MODE */}
             <div className="form-row">
               <div className="form-field">
-                <label>Nearest IDP Office*</label>
+                <label>Nearest Jaramsys Office*</label>
                 <select
                   name="office"
                   value={formData.office}
@@ -196,55 +239,66 @@ export default function StudentEssFrom() {
 
             {/* TERMS */}
             <div className="form-checkbox">
+              <input
+                type="checkbox"
+                id="agreeToTerms"
+                name="agreeToTerms"
+                checked={formData.agreeToTerms}
+                onChange={handleInputChange}
+                required
+              />
+            <label htmlFor="agreeToTerms" className="checkbox-label">
+  I agree to Jaramsys {" "}
+  <a
+    href="/terms-of-use"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="link"
+  >
+    Terms and Conditions
+  </a>{" "}
+  and{" "}
+  <a
+    href="/privacy-policy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="link"
+  >
+    Privacy Policy
+  </a>
+  *
+</label>
+ 
+            </div>
+            <div className="form-checkbox">
               <label className="checkbox-label">
                 <input
                   type="checkbox"
-                  name="agreeTerms"
-                  checked={formData.agreeTerms}
+                  name="agreeToContact"
+                  checked={formData.agreeToContact}
                   onChange={handleInputChange}
-                  required
                 />
-                I agree to IDP{" "}
-                <a href="#" className="link">
-                  Terms and Conditions 
-                </a>{" "}
-                and{" "}
-                <a href="#" className="link">
-                  Privacy Policy
-                </a>{" "}
-                *
+                Please contact me by phone, email or SMS to assist with my enquiry
               </label>
             </div>
-             <div className="form-checkbox">
+            <div className="form-checkbox">
               <label className="checkbox-label">
                 <input
                   type="checkbox"
-                  name="agreeTerms"
-                  checked={formData.agreeTerms}
+                  name="agreeToUpdates"
+                  checked={formData.agreeToUpdates}
                   onChange={handleInputChange}
-                  required
                 />
-              Please contact me by phone, email or SMS to assist with my enquiry
-              </label>
-            </div>
-             <div className="form-checkbox">
-              <label className="checkbox-label">
-                <input
-                  type="checkbox"
-                  name="agreeTerms"
-                  checked={formData.agreeTerms}
-                  onChange={handleInputChange}
-                  required
-                />
-               I would like to receive updates and offers from IDP
-               
+                I would like to receive updates and offers from Jaramsys
+
               </label>
             </div>
 
-            <button type="submit" className="submit-button">
-            
-            Enquire now
+            <button type="submit" className="submit-button" disabled={isSubmitting}>
+              {isSubmitting ? "Enquiring..." : "Enquire now"}
             </button>
+
+            {statusMessage && <p className="status-message">{statusMessage}</p>}
           </form>
         </div>
 

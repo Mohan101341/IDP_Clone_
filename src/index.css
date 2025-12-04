@@ -1,7 +1,53 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* 🎨 Theme Variables */
+:root {
+    --transition-speed: 0.3s;
+    --font-primary: 'Poppins', sans-serif;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+}
+
+body.light-theme {
+    --background-color: #f9fafc;
+    --background-color-offset: #ffffff;
+    /* For cards, headers, etc. */
+    --text-color: #212529;
+    --text-color-secondary: #6b7280;
+    --navbar-bg: #ffffff;
+    --navbar-text: #000;
+    --button-bg: #007bff;
+    --button-bg-hover: #0056b3;
+    --button-text: #ffffff;
+    --card-bg: #ffffff;
+    --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    --border-color: #e5e7eb;
+    --accent-color: #2563eb;
+    --danger-color: #ef4444;
+    --danger-color-hover: #dc2626;
+}
+
+body.dark-theme {
+    --background-color: #121212;
+    --background-color-offset: #1f2937;
+    /* For cards, headers, etc. */
+    --text-color: #e9ecef;
+    --text-color-secondary: #9ca3af;
+    --navbar-bg: #1f2937;
+    --navbar-text: #fff;
+    --button-bg: #2563eb;
+    --button-bg-hover: #1d4ed8;
+    --button-text: #ffffff;
+    --card-bg: #1f2937;
+    --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    --border-color: #374151;
+    --accent-color: #3b82f6;
+    --danger-color: #ef4444;
+    --danger-color-hover: #b91c1c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -9,25 +55,43 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: var(--font-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     overflow-x: hidden;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
-a{
+a {
     text-decoration: none;
-    color: inherit;
+    color: var(--accent-color);
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0 0 1rem 0;
     font-weight: 600;
     line-height: 1.2;
+    color: var(--text-color);
 }
+
+/* Ensure sections and articles also adopt the theme */
+main,
+section,
+header,
+footer,
+article {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
 
 /* Global responsive utilities */
 .container {
@@ -48,18 +112,32 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 100vh;
 }
 
-/* Button base styles */
+/* --- Global Button Styles --- */
 button {
     cursor: pointer;
     border: none;
     outline: none;
     font-family: inherit;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+}
+
+/* A primary button utility class */
+.btn-primary {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius-md);
+}
+
+.btn-primary:hover {
+    background-color: var(--button-bg-hover);
 }
 
 /* Focus styles for accessibility */
 button:focus-visible,
 a:focus-visible {
-    outline: 2px solid #2563eb;
+    outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
 
@@ -70,7 +148,10 @@ img {
 }
 
 /* Smooth transitions for interactive elements */
-button, a, .service-card, .dest-card {
+button,
+a,
+.service-card,
+.dest-card {
     transition: all 0.3s ease;
 }
 

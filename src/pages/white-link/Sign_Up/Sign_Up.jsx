@@ -1,51 +1,77 @@
 import React, { useState } from "react";
-import "./Sign_Up.css";
+import { Link, useNavigate } from "react-router-dom";
+import "./SignUp.css"; // You'll need to create a corresponding CSS file
 
-const Sign_Up = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
+const API_BASE = "http://127.0.0.1:5000";
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+const SignUp = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
+    setError(""); // Clear previous errors
 
-    const { fullName, email, password, confirmPassword } = formData;
-
-    if (!fullName || !email || !password || !confirmPassword) {
-      alert("Please fill all fields!");
+    // Validate password length
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long.");
       return;
     }
 
-    if (password !== confirmPassword) {
-      alert("Passwords do not match!");
-      return;
+    try {
+      console.log("Attempting signup to:", `${API_BASE}/api/auth/signup`);
+      
+      const res = await fetch(`${API_BASE}/api/auth/signup`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ fullName, email, password }),
+      });
+      
+      console.log("Response status:", res.status);
+      
+      let data = {};
+      try {
+        data = await res.json();
+        console.log("Response data:", data);
+      } catch (parseError) {
+        console.error("Failed to parse response:", parseError);
+        setError("Invalid response from server. Please try again.");
+        return;
+      }
+      
+      if (res.ok && data.success) {
+        alert("Account created successfully! Please log in.");
+        navigate("/pages/white-link/Sign_In"); // Redirect to login page
+      } else {
+        setError(data.message || "Failed to create account. Please try again.");
+      }
+    } catch (err) {
+      console.error("Signup error:", err);
+      if (err.message.includes("Failed to fetch") || err.message.includes("NetworkError")) {
+        setError("Cannot connect to server. Make sure the backend is running on http://127.0.0.1:5000");
+      } else {
+        setError(err.message || "Failed to connect to the server. Please try again later.");
+      }
     }
-
-    // Save to localStorage or send to backend API
-    localStorage.setItem("user", JSON.stringify({ fullName, email, password }));
-    alert("Account created successfully!");
-  };
+  }
 
   return (
     <div className="signup-container">
       <div className="signup-card">
         <h2>Create Account</h2>
         <form onSubmit={handleSubmit}>
+          {error && <p className="error-message">{error}</p>}
           <div className="input-group">
             <label>Full Name</label>
             <input
               type="text"
-              name="fullName"
-              placeholder="Enter your name"
-              value={formData.fullName}
-              onChange={handleChange}
+              placeholder="Enter your full name"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
               required
             />
           </div>
@@ -54,10 +80,9 @@ const Sign_Up = () => {
             <label>Email</label>
             <input
               type="email"
-              name="email"
               placeholder="Enter your email"
-              value={formData.email}
-              onChange={handleChange}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -66,22 +91,9 @@ const Sign_Up = () => {
             <label>Password</label>
             <input
               type="password"
-              name="password"
               placeholder="Create a password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="input-group">
-            <label>Confirm Password</label>
-            <input
-              type="password"
-              name="confirmPassword"
-              placeholder="Confirm your password"
-              value={formData.confirmPassword}
-              onChange={handleChange}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
@@ -90,8 +102,8 @@ const Sign_Up = () => {
             Sign Up
           </button>
 
-          <p className="signin-link">
-            Already have an account? <a href="/signin">Sign In</a>
+          <p className="login-link">
+            Already have an account? <Link to="/pages/white-link/Sign_In">Login</Link>
           </p>
         </form>
       </div>
@@ -99,4 +111,4 @@ const Sign_Up = () => {
   );
 };
 
-export default Sign_Up;
+export default SignUp;

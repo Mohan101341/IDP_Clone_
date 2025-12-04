@@ -73,5 +73,8 @@
 }
 
 .stdy-btn {
-    background-color: rgb(28, 203, 127);
+    background-color: rgb(8, 32, 245);
+    color: #f4f6f8;
+    padding: 15px 20px;
+    border-radius: 1rem;
 }

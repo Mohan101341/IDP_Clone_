@@ -1,11 +1,11 @@
 import React from "react";
 import "./News.css";
 
-// Different article data
 const articles = [
   {
     img: "/assets/Ai.jpg",
-    countries: "New Zealand, United States, Canada, Ireland, United Kingdom, Australia",
+    countries:
+      "New Zealand, United States, Canada, Ireland, United Kingdom, Australia",
     title: "AI-powered support for your study-abroad journey",
   },
   {
@@ -33,7 +33,6 @@ const articles = [
     countries: "Ireland",
     title: "Top universities in Ireland for international students",
   },
- 
   {
     img: "/assets/Medical_School.webp",
     countries: "Global",
@@ -49,42 +48,47 @@ const articles = [
     countries: "United States, United Kingdom, Australia",
     title: "Building your career abroad: A student guide",
   },
-   {
-    img: "/assets/ses-article-5-banner.webp",
-    countries: "New Zealand",
-    title: "Explore world-class education in New Zealand",
-  },
- 
-  
 ];
 
-const NewAndA = () => {
+const NewsAndA = () => {
   return (
-    <div>
-      {/* Header Section */}
-      <div className="News2con">
+    <div className="news-section">
+      <div className="news-container">
         <p>IDP India</p>
-        <h1>746 news and articles</h1>
-        <button>Filter articles</button>
-        <button>Sort by: Publish date (new to old)</button>
-      </div>
+        <h1 className="news-title underline-green">746 News and Articles</h1>
 
-      <p>Showing 1-12 of 746 results</p>
+        <div className="news-buttons">
+          <button>Filter articles</button>
+          <button>Sort by: Publish date</button>
+        </div>
 
-      {/* Cards Grid */}
-      <div className="card1-grid">
-        {articles.map((article, index) => (
-          <div className="card1" key={index}>
-            <div>
-              <img src={article.img} alt={article.title} />
+        <p className="result-count">Showing 1–10 of 746 results</p>
+
+        <div className="news-grid">
+          {articles.map((article, index) => (
+            <div key={index} className="news-card">
+              <div className="news-img-wrapper">
+                <img
+                  src={article.img}
+                  alt={article.title}
+                  className="news-img"
+                />
+              </div>
+
+              <div className="news-content">
+                <p className="article-country">{article.countries}</p>
+                <h4 className="article-title">{article.title}</h4>
+
+                <a href="#" className="news-link">
+                  Read More <span className="news-chevron">→</span>
+                </a>
+              </div>
             </div>
-            <p>{article.countries}</p>
-            <h4>{article.title}</h4>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default NewAndA;
+export default NewsAndA;

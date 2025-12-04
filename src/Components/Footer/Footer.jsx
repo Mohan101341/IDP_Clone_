@@ -15,7 +15,7 @@ const Footer = () => {
           <ul>
             <li><Link to="/">About us</Link></li>
             <li><Link to="/study-abroad/why-study-abroad">Study abroad counselling</Link></li>
-            <li><Link to="/coming-soon">IDP Careers</Link></li>
+            <li><Link to="/idp-careers">IDP Careers</Link></li>
           </ul>
         </div>
         <div className="footer-column">
@@ -24,10 +24,10 @@ const Footer = () => {
             <li><Link to="/find-a-course">Find a course</Link></li>
             <li><Link to="/find-scholarships">Find scholarships</Link></li>
             <li><Link to="/find-universities">Find a university</Link></li>
-            <li><Link to="/coming-soon">Ask IDP</Link></li>
-            <li><Link to="/coming-soon">Cost of living</Link></li>
-            <li><Link to="/coming-soon">Statement of Purpose</Link></li>
-            <li><Link to="/coming-soon">Letter of Recommendation</Link></li>
+            <li><Link to="/ask-idp">Ask IDP</Link></li>
+            <li><Link to="/cost-of-living">Cost of living</Link></li>
+            <li><Link to="/statement-of-purpose">Statement of Purpose</Link></li>
+            <li><Link to="/letter-of-recommendation">Letter of Recommendation</Link></li>
           </ul>
         </div>
         <div className="footer-column">
@@ -43,9 +43,9 @@ const Footer = () => {
           <h2>Connect with IDP</h2>
           <ul>
             <li><Link to="/pages/Events">Events</Link></li>
-            <li><Link to="/coming-soon">Corporate responsibility</Link></li>
+            <li><Link to="/corporate-responsibility">Corporate responsibility</Link></li>
             <li><Link to="/pages/black-link/Find/Find">Our offices</Link></li>
-            <li><Link to="/coming-soon">Customer Grievances</Link></li>
+            <li><Link to="/customer-grievances">Customer Grievances</Link></li>
           </ul>
         </div>
       </div>
@@ -82,10 +82,10 @@ const Footer = () => {
       <div className="footer-row">
 
         <ul>
-          <li><Link to="/coming-soon">Investors</Link></li>
-          <li><Link to="/coming-soon">Terms of use</Link></li>
-          <li><Link to="/coming-soon">Privacy policy</Link></li>
-          <li><Link to="/coming-soon">Diclaimer</Link></li>
+          <li><Link to="/investors">Investors</Link></li>
+          <li><Link to="/terms-of-use">Terms of use</Link></li>
+          <li><Link to="/privacy-policy">Privacy policy</Link></li>
+          <li><Link to="/disclaimer">Disclaimer</Link></li>
         </ul>
       </div>
     </footer>

@@ -1,37 +1,29 @@
 import { useState } from "react";
-import React from 'react'
+import React from 'react';
+import { useNavigate } from "react-router-dom";
 import Related_Articles from "../../../Related_Articles/Related_Articles";
+import "../StudentEss.css";
+import styles from "./Forex_Cards.module.css";
+
 
 const Forex_Cards = () => {
   const [destination, setDestination] = useState("All destinations");
+  const navigate = useNavigate();
   return (
-    <div className="insurance-container">
-      <div className="health-container">
+    <div className={`essentials-container ${styles.insuranceContainer}`}>
+      <div className={styles.healthContainer}>
         {/* Breadcrumb */}
-        <p className="breadcrumb">
+        <p className={styles.breadcrumb}>
           Study Abroad, Overseas Education... / Student Essentials / Forex Cards
         </p>
 
         {/* Heading */}
-        <h1 className="main-heading">
+        <h1 className={styles.mainHeading}>
           Forex Card services for International Students
         </h1>
 
-        {/* Recommendation Section */}
-        <div className="recommend-box">
-          <p>Discover recommended products for your study destination.</p>
-          <select
-            className="destination-dropdown"
-            value={destination}
-            onChange={(e) => setDestination(e.target.value)}
-          >
-            <option>All destinations</option>
-            <option>Australia</option>
-            <option>UK</option>
-            <option>Canada</option>
-            <option>USA</option>
-          </select>
-        </div>
+       
+     
 
        
        
@@ -40,35 +32,48 @@ const Forex_Cards = () => {
       </div>
 
       {/* Top Banner */}
-      <section className="insurance-banner">
+      <section className={styles.insuranceBanner}>
         <h1>Forex Cards for International Students</h1>
         <p>
           Ensure peace of mind while studying abroad. Get coverage for doctor visits,
           hospital stays, emergency ambulance services, and prescription medicine.
         </p>
-        <button className="cta-btn">
+        <button
+          className={styles.ctaBtn}
+          onClick={() => navigate("/student-essentials/ForexCards/details")}
+        >
           Apply for Student Visa Forex Card
         </button>
       </section>
 
       {/* Options Section */}
-      <section className="insurance-options">
-        <div className="option-card">
+      <section className={styles.insuranceOptions}>
+        <div className={styles.optionCard}>
           <h2>Compare and choose what’s right for you</h2>
           <p>
             Explore plans from trusted providers that meet the strict conditions of
             registered health funds. Find the coverage that fits your needs.
           </p>
-          <button className="option-btn">Buy Plans</button>
+          <button
+            className={styles.optionBtn}
+            onClick={() => navigate("/student-essentials/ForexCards/details")}
+          >
+            Buy Plans
+          </button>
         </div>
 
-        <div className="option-card">
+        <div className={styles.optionCard}>
           <h2>Apply online for a quick turnaround</h2>
           <p>
             Get insured fast with our streamlined online application. No paperwork,
             no hassle—just protection when you need it most.
           </p>
-          <button className="option-btn">Apply Now</button>
+          <button
+            className={styles.optionBtn}
+            onClick={() => navigate("/student-essentials/ForexCards/details")}
+          >
+            Apply Now
+          </button>
         </div>
       </section>
       <Related_Articles/>
@@ -76,4 +81,4 @@ const Forex_Cards = () => {
   )
 }
 
-export default Forex_Cards
+export default Forex_Cards;

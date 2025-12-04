@@ -26,6 +26,8 @@ import ComingSoon from "./pages/ComingSoon/ComingSoon";
 
 // White-Link Pages
 import EnglishT from "./pages/white-link/EnglishTests/EnglishT.jsx";
+import Toefl from "./pages/white-link/EnglishTests/Toefl/Toefl.jsx";
+import Duolingo from "./pages/white-link/EnglishTests/Duolingo/Duolingo.jsx";
 import Avail from "./pages/white-link/Avail_Free/Avail";
 import IELTSPage from "./pages/white-link/IELTS/IELTS1.jsx";
 import SignIN from "./pages/white-link/Sign_In/SignIN";
@@ -42,6 +44,7 @@ import StudyAbNavbar from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAbN
 
 // Student Essentials
 import Student from "./pages/white-link/Student_Essentials/Student";
+import HowItWorks from "./pages/white-link/Student_Essentials/HowItWorks";
 import StudentEssFrom from "./pages/white-link/Student_Essentials/StudentEssFrom/StudentEssFrom";
 import Accommodation from "./pages/white-link/Student_Essentials/StudentEs-Types/Accommodation";
 import EducationLoan from "./pages/white-link/Student_Essentials/StudentEs-Types/Education_loan";
@@ -51,12 +54,27 @@ import ForexCards from "./pages/white-link/Student_Essentials/StudentEs-Types/Fo
 import Guardian_Ship from "./pages/white-link/Student_Essentials/StudentEs-Types/Guardian_Ship";
 import ISIC from "./pages/white-link/Student_Essentials/StudentEs-Types/ISIC";
 import InternationalSimCards from "./pages/white-link/Student_Essentials/StudentEs-Types/International_SIM_Cards";
+import EducationLoanDetails from "./pages/white-link/Student_Essentials/StudentEs-Types/EducationLoanDetails";
+import * as EducationLoanApplyModule from "./pages/white-link/Student_Essentials/StudentEs-Types/EducationLoanApply";
+import AccommodationDetails from "./pages/white-link/Student_Essentials/StudentEs-Types/AccommodationDetails";
+import AccommodationApply from "./pages/white-link/Student_Essentials/StudentEs-Types/AccommodationApply";
+import HealthInsuranceDetails from "./pages/white-link/Student_Essentials/StudentEs-Types/HealthInsuranceDetails";
+import StudentBankingDetails from "./pages/white-link/Student_Essentials/StudentEs-Types/StudentBankingDetails";
+import MoneyTransferDetails from "./pages/white-link/Student_Essentials/StudentEs-Types/MoneyTransferDetails";
+import ForexCardsDetails from "./pages/white-link/Student_Essentials/StudentEs-Types/ForexCardsDetails";
+import GuardianShipDetails from "./pages/white-link/Student_Essentials/StudentEs-Types/GuardianShipDetails";
+import InternationalSimDetails from "./pages/white-link/Student_Essentials/StudentEs-Types/InternationalSimDetails";
+import ISICDetails from "./pages/white-link/Student_Essentials/StudentEs-Types/ISICDetails";
+import HealthInsuranceApply from "./pages/white-link/Student_Essentials/StudentEs-Types/HealthInsuranceApply";
+import StudentBankingApply from "./pages/white-link/Student_Essentials/StudentEs-Types/StudentBankingApply";
+import MoneyTransferApply from "./pages/white-link/Student_Essentials/StudentEs-Types/MoneyTransferApply";
 import ServicesSection from "./pages/white-link/Student_Essentials/StudentEssFrom/ServiceSection";
 import EssentialsCards from "./pages/white-link/Student_Essentials/StudentEssFrom/EssentialsCards";
 import MoneyTransfer from "./pages/white-link/Student_Essentials/StudentEs-Types/Money_transfer";
 import StudyAbroadPromo from "./pages/white-link/Student_Essentials/StudentEssFrom/StudyAdroadPromo";
 import ShortList from "./Components/ShortList/ShortList";
 import Related_Articles from "./pages/Related_Articles/Related_Articles";
+import ArticleDetail from "./pages/Related_Articles/ArticleDetail";
 import FindH from "./pages/black-link/Find/FindH";
 import FindCountryPage from "./pages/black-link/Find/FindCountryPage";
 import InfoSection from "./pages/black-link/Find/InfoSection";
@@ -88,6 +106,20 @@ import StdyIrlndhero from "./pages/white-link/StudyDestinations/StudyInIreland/S
 import StdyUsahero from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsahero.jsx";
 import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndcnt.jsx";
 import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
+
+// Footer Pages
+import IDPCareers from "./pages/white-link/FooterPages/IDPCareers";
+import AskIDP from "./pages/white-link/FooterPages/AskIDP";
+import CostOfLiving from "./pages/white-link/FooterPages/CostOfLiving";
+import StatementOfPurpose from "./pages/white-link/FooterPages/StatementOfPurpose";
+import LetterOfRecommendation from "./pages/white-link/FooterPages/LetterOfRecommendation";
+import CorporateResponsibility from "./pages/white-link/FooterPages/CorporateResponsibility";
+import CustomerGrievances from "./pages/white-link/FooterPages/CustomerGrievances";
+import Investors from "./pages/white-link/FooterPages/Investors";
+import TermsOfUse from "./pages/white-link/FooterPages/TermsOfUse";
+import PrivacyPolicy from "./pages/white-link/FooterPages/PrivacyPolicy";
+import Disclaimer from "./pages/white-link/FooterPages/Disclaimer";
+import PaymentPage from "./paymentgetway/Ui_paymentget.jsx";
 
 
 // ✅ Layout for white-link pages
@@ -419,6 +451,7 @@ export default function App() {
             </>
           }
           />
+
           <Route
           path="/pages/IELTSPage"
           element={
@@ -430,6 +463,30 @@ export default function App() {
             </>
           }
            />
+           
+           <Route
+          path="/pages/Toefl"
+          element={
+            <>
+              <Navbar />
+              <Toefl />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+          <Route
+          path="/pages/Duolingo"
+          element={
+            <>
+              <Navbar />
+              <Duolingo />
+              <Contact />
+              <Footer />
+            </>
+          }
+          />
+
           <Route
           path="/pages/Qsworld"
           element={
@@ -498,6 +555,127 @@ export default function App() {
             </WhiteLinkLayout>
           }
         />
+        {/* Student Essentials detail pages for individual buttons */}
+        <Route
+          path="/student-essentials/EducationLoan/details"
+          element={
+            <WhiteLinkLayout>
+              <EducationLoanDetails />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/EducationLoan/apply"
+          element={
+            <WhiteLinkLayout>
+              <EducationLoanApplyModule.default />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/Accommodation/details"
+          element={
+            <WhiteLinkLayout>
+              <AccommodationDetails />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/Accommodation/apply"
+          element={
+            <WhiteLinkLayout>
+              <AccommodationApply />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/HealthInsurance/details"
+          element={
+            <WhiteLinkLayout>
+              <HealthInsuranceDetails />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/HealthInsurance/apply"
+          element={
+            <WhiteLinkLayout>
+              <HealthInsuranceApply />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/StudentBanking/details"
+          element={
+            <WhiteLinkLayout>
+              <StudentBankingDetails />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/StudentBanking/apply"
+          element={
+            <WhiteLinkLayout>
+              <StudentBankingApply />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/Money_Transfer/details"
+          element={
+            <WhiteLinkLayout>
+              <MoneyTransferDetails />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/Money_Transfer/apply"
+          element={
+            <WhiteLinkLayout>
+              <MoneyTransferApply />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/ForexCards/details"
+          element={
+            <WhiteLinkLayout>
+              <ForexCardsDetails />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/Guardian-Ship/details"
+          element={
+            <WhiteLinkLayout>
+              <GuardianShipDetails />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/InternationalSimCards/details"
+          element={
+            <WhiteLinkLayout>
+              <InternationalSimDetails />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/ISIC/details"
+          element={
+            <WhiteLinkLayout>
+              <ISICDetails />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/student-essentials/how-it-works"
+          element={
+            <WhiteLinkLayout>
+              <HowItWorks />
+            </WhiteLinkLayout>
+          }
+        />
 
         {[
           ["EducationLoan", EducationLoan],
@@ -519,7 +697,7 @@ export default function App() {
                 <Component />
                 {pathName === "Money_Transfer" && <StudyAbroadPromo />}
                 <StudentEssFrom />
-                <EssentialsCards style={{ margin: "2rem 0" }} />
+                {/* <EssentialsCards style={{ margin: "2rem 0" }} /> */}
                 <ServicesSection />
               </WhiteLinkLayout>
             }
@@ -542,6 +720,22 @@ export default function App() {
               <Related_Articles />
             </WhiteLinkLayout>
           }
+        />
+        <Route
+          path="/articles/:id"
+          element={
+            <WhiteLinkLayout>
+              <ArticleDetail />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+        path="/pages/paymentgetway"
+        element={
+          <WhiteLinkLayout> 
+              <PaymentPage />         
+          </WhiteLinkLayout> 
+        }
         />
 
 
@@ -582,6 +776,96 @@ export default function App() {
           }
         />
 
+        {/* 📄 Footer Pages */}
+        <Route
+          path="/idp-careers"
+          element={
+            <WhiteLinkLayout>
+              <IDPCareers />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/ask-idp"
+          element={
+            <WhiteLinkLayout>
+              <AskIDP />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/cost-of-living"
+          element={
+            <WhiteLinkLayout>
+              <CostOfLiving />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/statement-of-purpose"
+          element={
+            <WhiteLinkLayout>
+              <StatementOfPurpose />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/letter-of-recommendation"
+          element={
+            <WhiteLinkLayout>
+              <LetterOfRecommendation />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/corporate-responsibility"
+          element={
+            <WhiteLinkLayout>
+              <CorporateResponsibility />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/customer-grievances"
+          element={
+            <WhiteLinkLayout>
+              <CustomerGrievances />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/investors"
+          element={
+            <WhiteLinkLayout>
+              <Investors />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/terms-of-use"
+          element={
+            <WhiteLinkLayout>
+              <TermsOfUse />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/privacy-policy"
+          element={
+            <WhiteLinkLayout>
+              <PrivacyPolicy />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/disclaimer"
+          element={
+            <WhiteLinkLayout>
+              <Disclaimer />
+            </WhiteLinkLayout>
+          }
+        />
+
         {/* 🌏 Find Us by Country Page (Dynamic) */}
         <Route
           path="/find-us/:country"
@@ -589,6 +873,74 @@ export default function App() {
             <WhiteLinkLayout>
               <FindCountryPage />
             </WhiteLinkLayout>}
+        />
+
+        {/* 🔗 Footer Links Routes */}
+        <Route
+          path="/find-a-course"
+          element={
+            <WhiteLinkLayout>
+              <FindC />
+              <Oneac />
+              <Fastlane />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/find-scholarships"
+          element={
+            <WhiteLinkLayout>
+              <Scholar />
+              <IDP />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/find-universities"
+          element={
+            <WhiteLinkLayout>
+              <FindU />
+              <Oneac />
+              <Fastlane />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/IELTS/What_is_IELTS/What"
+          element={
+            <WhiteLinkLayout>
+              <What />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/ielts/what-is-ielts"
+          element={
+            <WhiteLinkLayout>
+              <IELTSPage />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/ielts/IELTS_prep/Prep"
+          element={
+            <WhiteLinkLayout>
+              <Prep />
+              <Contact />
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/ielts/book-ielts"
+          element={
+            <WhiteLinkLayout>
+              <Book />
+            </WhiteLinkLayout>
+          }
         />
 
         {/* ❌ 404 Page */}

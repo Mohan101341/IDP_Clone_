@@ -1,35 +1,36 @@
 import React from "react";
 import "./WhyIDPCounsellors.css";
+import { FaGlobe, FaGraduationCap, FaHeart, FaHandshake, FaTags, FaStar } from "react-icons/fa";
 
 const WhyIDPCounsellors = () => {
   const counsellorData = [
     {
-      icon: "🌍",
+      icon: <FaGlobe />,
       title: "Connect globally",
-      desc: "Get one-to-one access to more than 2,200 expert education counsellors across 190 IDP offices in 35 countries.",
+      desc: "Get one-to-one access to more than 1,000 expert education counsellors across 190 Jramsys offices in 35 countries.",
     },
     {
-      icon: "🎓",
+      icon: <FaGraduationCap />,
       title: "Experts in their field",
       desc: "Our counsellors are highly trained to support you to find and apply to courses matching your interest and aptitude.",
     },
     {
-      icon: "💙",
+      icon: <FaHeart />,
       title: "An unbeatable track record",
       desc: "To-date, we have helped more than half a million students achieve their dream of studying abroad.",
     },
     {
-      icon: "🤝",
+      icon: <FaHandshake />,
       title: "Friendly and approachable",
-      desc: "Many IDP counsellors were once international students too. You'll always find them ready to go the extra mile.",
+      desc: "Many Jramsys counsellors were once international students too. You'll always find them ready to go the extra mile.",
     },
     {
-      icon: "💰",
+      icon: <FaTags />,
       title: "Zero commission",
-      desc: "IDP doesn’t charge you for its services. Many universities also waive their application fees when you apply through us.",
+      desc: "Jramsys doesn’t charge you for its services. Many universities also waive their application fees when you apply through us.",
     },
     {
-      icon: "⭐",
+      icon: <FaStar />,
       title: "Putting you first",
       desc: "All our services are designed to enhance your experience and ensure that you achieve your study abroad goals.",
     },
@@ -38,7 +39,7 @@ const WhyIDPCounsellors = () => {
   return (
     <section className="why-idp-section">
       <h2 className="why-idp-title">
-        Why <span>IDP Counsellors?</span>
+        Why <span>Jramsys Counsellors?</span>
       </h2>
 
       <div className="why-idp-grid">

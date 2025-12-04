@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Related.css";
 
-
-
-const articles = [
+export const articles = [
   {
     id: 1,
     title: "Study Abroad | Student Loans Vs Scholarships To Fund Your Dream Degree",
@@ -43,6 +42,7 @@ const articles = [
 
 const Related_Articles = ({ className = "" }) => {
   const trackRef = useRef(null);
+  const navigate = useNavigate();
 
   const scrollBy = (dir = "left") => {
     const node = trackRef.current;
@@ -61,11 +61,16 @@ const Related_Articles = ({ className = "" }) => {
       <div className="carousel-wrapper">
         <div className="related-articles" ref={trackRef}>
           {articles.map((article) => (
-            <div key={article.id} className="article">
+            <button
+              key={article.id}
+              className="article"
+              type="button"
+              onClick={() => navigate(`/articles/${article.id}`)}
+            >
               <img src={article.image} alt={article.title} />
               <h3>{article.title}</h3>
               <p>{article.excerpt}</p>
-            </div>
+            </button>
           ))}
         </div>
 

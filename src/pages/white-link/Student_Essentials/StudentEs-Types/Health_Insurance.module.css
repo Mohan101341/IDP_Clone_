@@ -1,0 +1,184 @@
+/* Health_Insurance.module.css */
+/* Clean, modern UI for Student Essentials pages */
+
+:root {
+    --accent: #277af1;
+    --muted: #6b7280;
+    --card: #ffffff;
+    --radius: 12px;
+    --max-width: 1200px;
+}
+
+/* Main container */
+.insuranceContainer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+/* Top breadcrumb + heading section */
+.healthContainer {
+    margin-bottom: 25px;
+}
+.healthContainer {
+   background-image: url("/assets/YouTube.png"); /* light blue, change as needed */
+  padding: 60px;
+  border-radius: 8px;
+}
+.breadcrumb {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+.mainHeading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #13345a;
+    margin-bottom: 10px;
+}
+
+/* ---------------- HERO BANNER ---------------- */
+
+.insuranceBanner {
+    position: relative;
+    color: #fff;
+    padding: 45px 30px;
+    border-radius: var(--radius);
+    margin: 28px 0;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(20, 60, 120, 0.15);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.insuranceBanner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Replace with your image path */
+    background-image: url('/assets/health-insurance-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Dark overlay for text readability */
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    z-index: -1;
+}
+
+.insuranceBanner h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.insuranceBanner p {
+    max-width: 700px;
+    margin: 0 auto 18px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* CTA button */
+.ctaBtn {
+    background: #fff;
+    color: #277af1;
+    padding: 11px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+.ctaBtn:hover {
+    background: #f1f7ff;
+    transform: translateY(-2px);
+}
+
+/* ---------------- OPTIONS SECTION ---------------- */
+
+.insuranceOptions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 30px 0;
+}
+
+/* Option Cards */
+.optionCard {
+    background: var(--card);
+    padding: 22px;
+    border-radius: var(--radius);
+    border: 1px solid #e7ebf0;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+    transition: 0.25s ease;
+}
+
+.optionCard h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #123254;
+}
+
+.optionCard p {
+    margin-bottom: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.optionCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.1);
+}
+
+/* Option Button */
+.optionBtn {
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+.optionBtn:hover {
+    background: #1d5fc1;
+    transform: translateY(-2px);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 900px) {
+    .insuranceOptions {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .insuranceBanner h1 {
+        font-size: 22px;
+    }
+
+    .insuranceBanner p {
+        font-size: 14px;
+    }
+
+    .ctaBtn {
+        width: 100%;
+    }
+
+    .optionCard {
+        padding: 18px;
+    }
+
+    .optionBtn {
+        width: 100%;
+    }
+}

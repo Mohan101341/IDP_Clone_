@@ -21,7 +21,7 @@ const ShortList = () => {
             <strong>Save your shortlists to compare later</strong>
           </p>
           <p className="save-link">
-            <a href="#">Create an account today</a> to access your favourites on any device.
+            <a href="/pages/white-link/Sign_Up">Create an account today</a> to access your favourites on any device.
           </p>
         </div>
       </div>

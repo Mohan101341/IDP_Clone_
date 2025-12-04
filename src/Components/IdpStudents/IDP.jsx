@@ -52,7 +52,7 @@ const IDP = () => {
   return (
     <section className="idp-section1">
       <div className="idp-container1">
-        <h2 className="headi">IDP students succeeding globally</h2>
+        <h2 className="headi">Jramsys students succeeding globally</h2>
         <p>
           There’s nothing more rewarding than seeing our students achieve their dreams
           and share their success stories with us.

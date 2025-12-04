@@ -1,76 +1,83 @@
-import React from 'react';
-import Related_Articles from '../../../Related_Articles/Related_Articles';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Related_Articles from "../../../Related_Articles/Related_Articles";
+import "../StudentEss.css";
+import styles from "./Accommodation.module.css";
 
 const Accommodation = () => {
-  const [destination, setDestination] = React.useState("All destinations");
+  const [destination, setDestination] = useState("All destinations");
+  const navigate = useNavigate();
+
   return (
-     <div className="insurance-container">
-      <div className="health-container">
-        {/* Breadcrumb */}
-        <p className="breadcrumb">
+    <div className={`essentials-container ${styles.container}`}>
+
+      {/* HERO SECTION */}
+      <div className={styles.heroSection}>
+        <div className={styles.overlay}>
+
+        <p className={styles.breadcrumb}>
           Study Abroad, Overseas Education... / Student Essentials / Student Accommodation
         </p>
 
-        {/* Heading */}
-        <h1 className="main-heading">
-          Accommodation services for International Students
-        </h1>
+        <h1 className={styles.heroTitle}>Accommodation Services for International Students</h1>
 
-        {/* Recommendation Section */}
-        <div className="recommend-box">
-          <p>Discover recommended products for your study destination.</p>
-          <select
-            className="destination-dropdown"
-            value={destination}
-            onChange={(e) => setDestination(e.target.value)}
-          >
-            <option>All destinations</option>
-            <option>Australia</option>
-            <option>UK</option>
-            <option>Canada</option>
-            <option>USA</option>
-          </select>
-        </div>
-       
-       
+        <p className={styles.heroText}>
+          Find the best, safe, and budget-friendly accommodation options to make your study abroad journey smooth.
+        </p>
+      </div>
       </div>
 
-      {/* Top Banner */}
-      <section className="insurance-banner">
-        <h1>Health Insurance for International Students</h1>
-        <p>
+      {/* TOP BANNER */}
+      <section className={styles.banner}>
+        <h1 className={styles.bannerHeading}>Health Insurance for International Students</h1>
+        <p className={styles.bannerText}>
           Ensure peace of mind while studying abroad. Get coverage for doctor visits,
           hospital stays, emergency ambulance services, and prescription medicine.
         </p>
-        <button className="cta-btn">
+        <button
+          className={styles.bannerBtn}
+          onClick={() => navigate("/student-essentials/Accommodation/apply")}
+        >
           Apply for Student Visa Health Insurance
         </button>
       </section>
 
-      {/* Options Section */}
-      <section className="insurance-options">
-        <div className="option-card">
-          <h2>Compare and choose what’s right for you</h2>
-          <p>
+      {/* OPTIONS SECTION */}
+      <section id="options" className={styles.optionsSection}>
+        <div className={styles.optionCard}>
+          <h2 className={styles.optionTitle}>Compare and choose what’s right for you</h2>
+          <p className={styles.optionDesc}>
             Explore plans from trusted providers that meet the strict conditions of
             registered health funds. Find the coverage that fits your needs.
           </p>
-          <button className="option-btn">Compare Plans</button>
+          <button
+            className={styles.optionBtn}
+            onClick={() => navigate("/student-essentials/Accommodation/details")}
+          >
+            Compare Plans
+          </button>
         </div>
 
-        <div className="option-card">
-          <h2>Apply online for a quick turnaround</h2>
-          <p>
+        <div className={styles.optionCard}>
+          <h2 className={styles.optionTitle}>Apply online for a quick turnaround</h2>
+          <p className={styles.optionDesc}>
             Get insured fast with our streamlined online application. No paperwork,
             no hassle—just protection when you need it most.
           </p>
-          <button className="option-btn">Apply Now</button>
+          <button
+            className={styles.optionBtn}
+            onClick={() => navigate("/student-essentials/Accommodation/apply")}
+          >
+            Apply Now
+          </button>
         </div>
       </section>
-      <Related_Articles/>
+
+      {/* ARTICLES */}
+      <Related_Articles />
     </div>
-   
   );
 };
 
 export default Accommodation;
+

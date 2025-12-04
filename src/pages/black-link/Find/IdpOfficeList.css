@@ -1,47 +1,37 @@
-/* ====== Container ====== */
 .idp-container {
-  max-width: 600px;
-  margin: 60px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  font-family: "Poppins", sans-serif;
-  transition: all 0.3s ease-in-out;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Roboto, sans-serif;
 }
 
-/* ====== Title ====== */
 .office-list-title {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #004f8c;
-  /* IDP blue tone */
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
   margin-bottom: 25px;
+  text-align: center;
 }
 
-/* ====== Search Input ====== */
 .search-container {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .office-search-input {
   width: 100%;
   padding: 12px 15px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
   box-sizing: border-box;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s;
 }
 
 .office-search-input:focus {
   outline: none;
-  border-color: #0073e6;
-  box-shadow: 0 0 0 3px rgba(0, 115, 230, 0.1);
+  border-color: #2563eb;
 }
 
-/* ====== Office List ====== */
 .office-list {
   list-style: none;
   padding: 0;
@@ -51,34 +41,90 @@
 .office-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: #f8fafc;
-  padding: 12px 18px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  align-items: flex-start;
+  padding: 20px 15px;
+  border-bottom: 1px solid #e5e7eb;
+  transition: all 0.2s;
   cursor: pointer;
-  transition: all 0.25s ease;
-  border: 1px solid transparent;
+  background-color: #fff;
 }
 
 .office-item:hover {
-  background: #e8f1fa;
-  border: 1px solid #c6e0ff;
-  transform: translateY(-2px);
+  background-color: #f9fafb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.office-item a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
+.office-item-content {
+  flex: 1;
 }
 
-.office-item a:hover {
-  color: #0073e6;
+.office-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
 }
 
-.arrow {
-  font-size: 1.2rem;
-  color: #0073e6;
-  font-weight: bold;
+.office-address {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.office-details {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.office-contact {
+  font-size: 14px;
+  color: #4b5563;
+  margin: 6px 0;
+}
+
+.office-item .arrow {
+  font-size: 20px;
+  color: #2563eb;
+  transition: transform 0.2s;
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+
+.office-item:hover .arrow {
+  transform: translateX(5px);
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding: 10px 0;
+}
+
+.nav-buttons button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-buttons button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.nav-buttons button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.nav-buttons span {
+  font-size: 15px;
+  color: #4b5563;
 }

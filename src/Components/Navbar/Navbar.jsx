@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faAngleDown, faBars, faTimes, faUser } from "@fortawesome/free-solid-svg-icons";
@@ -55,26 +56,26 @@ const balckDropworn = {
   "Find-us": {
     path: "/pages/black-link/Find",
     items: [
-      { label: "IDP Australia", path: "/find-us/australia" },
-      { label: "IDP Bahrain", path: "/find-us/bahrain" },
-      { label: "IDP Bangladesh", path: "/find-us/bangladesh" },
-      { label: "IDP Cambodia", path: "/find-us/cambodia" },
-      { label: "IDP Canada", path: "/find-us/canada" },
-      { label: "IDP China", path: "/find-us/china" },
-      { label: "IDP Egypt", path: "/find-us/egypt" },
-      { label: "IDP Ghana", path: "/find-us/ghana" },
-      { label: "IDP Hong Kong", path: "/find-us/hong-kong" },
-      { label: "IDP Indonesia", path: "/find-us/indonesia" },
-      { label: "IDP Iran", path: "/find-us/iran" },
-      { label: "IDP Jordan", path: "/find-us/jordan" },
-      { label: "IDP Kenya", path: "/find-us/kenya" },
-      { label: "IDP Korea", path: "/find-us/korea" },
-      { label: "IDP Kuwait", path: "/find-us/kuwait" },
-      { label: "IDP Lebanon", path: "/find-us/lebanon" },
-      { label: "IDP Malaysia", path: "/find-us/malaysia" },
-      { label: "IDP Mauritius", path: "/find-us/mauritius" },
-      { label: "IDP Middle East", path: "/find-us/middle-east" },
-      { label: "IDP Nepal", path: "/find-us/nepal" },
+      { label: "Jramsys Australia", path: "/find-us/australia" },
+      { label: "Jramsys Bahrain", path: "/find-us/bahrain" },
+      { label: "Jramsys Bangladesh", path: "/find-us/bangladesh" },
+      { label: "Jramsys Cambodia", path: "/find-us/cambodia" },
+      { label: "Jramsys Canada", path: "/find-us/canada" },
+      { label: "Jramsys China", path: "/find-us/china" },
+      { label: "Jramsys Egypt", path: "/find-us/egypt" },
+      { label: "Jramsys Ghana", path: "/find-us/ghana" },
+      { label: "Jramsys Hong Kong", path: "/find-us/hong-kong" },
+      { label: "Jramsys Indonesia", path: "/find-us/indonesia" },
+      { label: "Jramsys Iran", path: "/find-us/iran" },
+      { label: "Jramsys Jordan", path: "/find-us/jordan" },
+      { label: "Jramsys Kenya", path: "/find-us/kenya" },
+      { label: "Jramsys Korea", path: "/find-us/korea" },
+      { label: "Jramsys Kuwait", path: "/find-us/kuwait" },
+      { label: "Jramsys Lebanon", path: "/find-us/lebanon" },
+      { label: "Jramsys Malaysia", path: "/find-us/malaysia" },
+      { label: "Jramsys Mauritius", path: "/find-us/mauritius" },
+      { label: "Jramsys Middle East", path: "/find-us/middle-east" },
+      { label: "Jramsys Nepal", path: "/find-us/nepal" },
     ],
   },
 };
@@ -121,8 +122,8 @@ const dropdownData = {
   "English Tests": {
     path: "/pages/EnglishT",
     items: [
-      {label: "Toefl", path: "/pages" },
-      { label: "duolingo", path: "/pages" },
+      { label: "Toefl", path: "/pages/Toefl" },
+      { label: "duolingo", path: "/pages/Duolingo" },
       { label: "IELTS", path: "/pages/IELTSPage" },
     ],
   },
@@ -162,12 +163,7 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openSecondLevel, setOpenSecondLevel] = useState(null);
   const [dropdownHeight, setDropdownHeight] = useState(null);
- 
   const dropdownRef = React.useRef(null);
-  
-  const toggleDropdown = (key) => {
-    setOpenDropdown((prev) => (prev === key ? null : key));
-  };
 
   const closeDropdown = () => {
     setOpenDropdown(null);
@@ -189,7 +185,7 @@ const Navbar = () => {
       document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
-   useEffect(() => {
+  useEffect(() => {
     if (openDropdown && dropdownRef.current) {
       setDropdownHeight(dropdownRef.current.clientHeight);
     } else {
@@ -213,7 +209,7 @@ const Navbar = () => {
             onMouseEnter={() => setOpenDropdown("Find-us-black")}
             onMouseLeave={closeDropdown}
           >
-            <button className="nav-button" onClick={() => toggleDropdown("Find-us-black")}>
+            <button className="nav-button" onClick={() => setOpenDropdown(prev => prev === "Find-us-black" ? null : "Find-us-black")}>
               Find us <FontAwesomeIcon icon={faAngleDown} />
             </button>
 
@@ -229,7 +225,7 @@ const Navbar = () => {
                     <button
 
                     >
-                      Find nearest IDP Offices
+                      Find nearest Jramsys Offices
                     </button>
                   </Link>
                 </li>
@@ -282,70 +278,70 @@ const Navbar = () => {
                 </Link>
 
                 {openDropdown === key && (
-                <ul style={styles.dropdownMenu} ref={dropdownRef}>
-                  {items.items.map((item, idx) => (
-                    <li
-                      key={idx}
-                      style={styles.dropdownItem}
-                      onMouseEnter={() => setOpenSecondLevel(item.label)}
-                      onMouseLeave={() => setOpenSecondLevel(null)}
-                    >
-                      <Link
-                        to={item.path}
-                        onClick={closeDropdown}
-                        style={{ color: "#161111ff", textDecoration: "none" }}
+                  <ul style={styles.dropdownMenu} ref={dropdownRef}>
+                    {items.items.map((item, idx) => (
+                      <li
+                        key={idx}
+                        style={styles.dropdownItem}
+                        onMouseEnter={() => setOpenSecondLevel(item.label)}
+                        onMouseLeave={() => setOpenSecondLevel(null)}
                       >
-                        {item.label}
-                      </Link>
+                        <Link
+                          to={item.path}
+                          onClick={closeDropdown}
+                          style={{ color: "#161111ff", textDecoration: "none" }}
+                        >
+                          {item.label}
+                        </Link>
 
-                      {submenuData[item.label] && openSecondLevel === item.label && (
-                        <ul style={{
-                          ...styles.secondLevelMenu,
-                          height: dropdownHeight ? dropdownHeight : styles.secondLevelMenu.height,
-                        }}>
-                          {submenuData[item.label].map((sub, sIdx) => (
-                            <li key={sIdx} style={styles.dropdownItem}>
-                              <Link
-                                to={sub.path}
-                                onClick={closeDropdown}
-                                style={{ color: "#161111ff", textDecoration: "none" }}
-                              >
-                                {sub.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              )}
+                        {submenuData[item.label] && openSecondLevel === item.label && (
+                          <ul style={{
+                            ...styles.secondLevelMenu,
+                            height: dropdownHeight ? dropdownHeight : styles.secondLevelMenu.height,
+                          }}>
+                            {submenuData[item.label].map((sub, sIdx) => (
+                              <li key={sIdx} style={styles.dropdownItem}>
+                                <Link
+                                  to={sub.path}
+                                  onClick={closeDropdown}
+                                  style={{ color: "#161111ff", textDecoration: "none" }}
+                                >
+                                  {sub.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="nav-buttons">
-          <Link to="/pages/white-link/Avail">
-            <button className="login-btn">Avail Free counselling</button>
-          </Link>
-          <Link to="/pages/white-link/SignIN">
-            <button className="signup-btn">Sign in</button>
-          </Link>
-        </div>
+        <div className="navbar-right">
+          <div className="nav-buttons">
+            <Link to="/pages/white-link/Avail">
+              <button className="login-btn">Avail Free counselling</button>
+            </Link>
+            <Link to="/pages/white-link/SignIN">
+              <button className="signup-btn">Login</button>
+            </Link>
+          </div>
 
-        <div className="right-icons">
-
-          <Link to="/ShortList" className="icon-btn heart">
-            <FontAwesomeIcon icon={faRegularHeart} />
-          </Link>
-
-          <Link to="/pages/white-link/SignIN" className="icon-btn account">
-            <FontAwesomeIcon icon={faUser} />
-          </Link>
-          <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
-            <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
-          </button>
+          <div className="right-icons">
+            <Link to="/ShortList" className="icon-btn heart">
+              <FontAwesomeIcon icon={faRegularHeart} />
+            </Link>
+            <Link to="/pages/white-link/SignIN" className="icon-btn account">
+              <FontAwesomeIcon icon={faUser} />
+            </Link>
+            <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
+              <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
+            </button>
+          </div>
         </div>
 
         {/* Mobile Sidebar */}
@@ -368,7 +364,7 @@ const Navbar = () => {
             <li>
               <Link to="/pages/white-link/SignIN">
                 <button className="signup-btn" onClick={toggleMobileMenu}>
-                  Sign in
+                  Login
                 </button>
               </Link>
             </li>

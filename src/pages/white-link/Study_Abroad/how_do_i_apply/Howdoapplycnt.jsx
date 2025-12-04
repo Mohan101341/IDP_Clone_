@@ -1,5 +1,6 @@
 import React from "react";
 import "./Howtoapplycnt.css";
+
 function Howdoapplycnt() {
   return (
     <div>

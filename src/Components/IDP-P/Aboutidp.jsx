@@ -30,12 +30,12 @@ const Aboutidp = () => {
                     <article className="aboutidp-card">
                         <h4>Why Students Trust IDP</h4>
                         <ul className="aboutidp-list">
-                            <li><strong>Highest Visa Success Rate:</strong> Our deep expertise in student visas improves your chances of approval.</li>
-                            <li><strong>Free Services:</strong> We provide all our services at no cost to you.</li>
-                            <li><strong>Global Presence:</strong> With 200+ offices in 30+ countries, we’re always nearby.</li>
-                            <li><strong>University Partnerships:</strong> We have strong relationships with 800+ top universities worldwide.</li>
-                            <li><strong>Personalized Support:</strong> One-on-one guidance tailored to your needs.</li>
-                            <li><strong>Experienced Counsellors:</strong> Our experts have helped 600,000+ students globally.</li>
+                            <li ><strong>Highest Visa Success Rate:</strong> Our deep expertise in student visas improves your chances of approval.</li>
+                            <li ><strong>Free Services:</strong> We provide all our services at no cost to you.</li>
+                            <li ><strong>Global Presence:</strong> With 200+ offices in 30+ countries, we’re always nearby.</li>
+                            <li ><strong>University Partnerships:</strong> We have strong relationships with 800+ top universities worldwide.</li>
+                            <li ><strong>Personalized Support:</strong> One-on-one guidance tailored to your needs.</li>
+                            <li ><strong>Experienced Counsellors:</strong> Our experts have helped 600,000+ students globally.</li>
                         </ul>
                     </article>
 
@@ -89,11 +89,11 @@ const Aboutidp = () => {
 
                     <article className="aboutidp-card">
                         <h4>Frequently Asked Questions</h4>
-                        <p><strong>1.</strong> IDP provides all its services free of charge.</p>
-                        <p><strong>2.</strong> We assist with the UK, USA, Canada, Australia, and New Zealand.</p>
-                        <p><strong>3.</strong> 600,000+ students guided globally by experienced counsellors.</p>
-                        <p><strong>4.</strong> We have one of the highest visa success rates in the industry.</p>
-                        <p><strong>5.</strong> Pre-departure and post-arrival support included.</p>
+                        <p><strong></strong> IDP provides all its services free of charge.</p>
+                        <p><strong></strong> We assist with the UK, USA, Canada, Australia, and New Zealand.</p>
+                        <p><strong></strong> 600,000+ students guided globally by experienced counsellors.</p>
+                        <p><strong></strong> We have one of the highest visa success rates in the industry.</p>
+                        <p><strong></strong> Pre-departure and post-arrival support included.</p>
                     </article>
                 </div>
             </div>

@@ -9,7 +9,7 @@ const AfterOfferPage = () => {
             <StudyAbroadHero
                 title="After receiving an offer"
                 subtitle="Here are the steps to take from accepting an offer through to planning for your trip to make your study abroad dream a reality"
-                imageUrl="https://www.idp.com/medias/Student-holding-an-offer-letter-from-a-university-web.jpg?context=bWFzdGVyfGltYWdlc3w1MzYyOXxpbWFnZS9qcGVnfGg1MS9oZTAvODg0NDI4OTk4MjQ5NC9TdHVkZW50IGhvbGRpbmcgYW4gb2ZmZXIgbGV0dGVyIGZyb20gYSB1bml2ZXJzaXR5IHdlYi5qcGd8ZDEzYzJkYjU4ODg1OWY5YjJkYmI3ZDU2MjA0YjU5ZGM4YjYyYjJkYjYyYjYyYjYyYjYyYjYyYjYyYjY"
+                  imageUrl="https://tse3.mm.bing.net/th/id/OIP.LTkGshUbm5gaBmtjd0zs_AHaE8?rs=1&pid=ImgDetMain&o=7&rm=4"
                 imageAlt="Student holding an offer letter"
             />
             <AfterOfferVid />
