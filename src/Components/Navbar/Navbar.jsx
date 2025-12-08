@@ -253,7 +253,7 @@ const Navbar = () => {
       {/* Main Navbar */}
       <nav className="main-navbar">
         <Link to="/">
-          <img src="/assets/idp-logo.svg" alt="Logo" className="logo" />
+          <img src="/assets/jramsys_infotech_pvt_ltd_logo.jpg" alt="Logo" className="logo" />
         </Link>
 
         <div className="nav-links-wrapper">

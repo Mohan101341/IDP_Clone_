@@ -7,18 +7,18 @@ const heroData = [
   {
     heading: "Your Study Abroad Journey Begins Here",
     subheading:
-      "1,13,000+ students achieved their study abroad dreams with IDP in one year",
+      "1,13,000+ students achieved their study abroad dreams with Jramsys in one year",
     button: { label: "Avail FREE counselling", link: "/pages/white-link/Avail", width: 230 },
   },
   {
     heading:
-      "IDP Guided 28,000+ students to the UK in just one year. Your future starts here!",
-    subheading: "Attend IDP’s Biggest Study Abroad Expo in your city",
+      "Jramsys Guided 28,000+ students to the UK in just one year. Your future starts here!",
+    subheading: "Attend Jramsys’s Biggest Study Abroad Expo in your city",
     button: { label: "Sign In", link: "/pages/white-link/SignIN", width: 148 },
   },
   {
     heading:
-      "60+ Universities, up to 100% Scholarships – Attend IDP’s Biggest Education Fair",
+      "60+ Universities, up to 100% Scholarships – Attend Jramsys’s Biggest Education Fair",
     subheading: "Australia | New Zealand",
     button: { label: "Sign Up", link: "/pages/white-link/Sign_Up", width: 180 },
   },

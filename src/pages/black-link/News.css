@@ -11,7 +11,19 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
+}.news-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
 }
+
+.news-controls select,
+.news-controls input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
 
 .news-title {
   font-size: 1.9rem;

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Event.css";
+import { useNavigate } from "react-router-dom";
 
 const Events = () => {
   const events = [
@@ -25,6 +26,7 @@ const Events = () => {
         "Meet career counselors and explore job opportunities."
     }
   ];
+  const navigate = useNavigate();
 
   return (
     <div className="events-container">
@@ -42,7 +44,12 @@ const Events = () => {
             <p><strong>Date:</strong> {event.date}</p>
             <p><strong>Location:</strong> {event.location}</p>
             <p className="event-desc">{event.description}</p>
-            <button className="register-btn">Register Now</button>
+            <button
+              className="register-btn"
+              onClick={() => navigate(`/pages/Events/Register`)}
+            >
+              Register Now
+            </button>
           </div>
         ))}
       </div>

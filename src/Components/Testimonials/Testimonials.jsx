@@ -3,23 +3,23 @@ import "./Testimonials.css";
 
 const testimonials = [
   {
-    quote: "My experience with IDP was really great! The guidance provided by Ms. Sujata Thaman really helped me through the application process to various universities in Canada as well as my VISA application!.",
+    quote: "My experience with Jramsys was really great! The guidance provided by Ms. Sujata Thaman really helped me through the application process to various universities in Canada as well as my VISA application!.",
     details: "The staff were really easy to contact and responded very quickly to any problem I had with their experience and knowledge. I would definitely recommend and would be able to study at University of Waterloo in Canada",
-    student: "IDP Student India, Aashay Singh",
+    student: "Jramsys Student India, Aashay Singh",
     role: "Student",
     colorClass: "green-quote"
   },
   {
-    quote: "The guidance from the IDP was more than helpful. I wouldn’t have successfully completed my application process without their kind service.",
-    details:"It is 100% safe and secure to connect with them for any needs for anyone’s abroad dream. Thank you to IDP Education - Study Abroad Consultants in Kochi for your help in making my goal success!",
-    student: "IDP Student India, Amin Abdul Lathaf",
+    quote: "The guidance from the Jramsys was more than helpful. I wouldn’t have successfully completed my application process without their kind service.",
+    details:"It is 100% safe and secure to connect with them for any needs for anyone’s abroad dream. Thank you to Jramsys Education - Study Abroad Consultants in Kochi for your help in making my goal success!",
+    student: "Jramsys Student India, Amin Abdul Lathaf",
     role: "Student",
     colorClass: "blue-quote"
   },
   {
-     quote:"IDP is Best! They turned my dream of studying abroad into a reality.",
+     quote:"Jramsys is Best! They turned my dream of studying abroad into a reality.",
     details: "From selecting the right university to guiding me through the VISA process, support was exceptional. I felt confident and well-prepared at every step. I’m truly grateful for their expert guidance and genuine care.",
-    student: "IDP Student India, Nakin Barhana",
+    student: "Jramsys Student India, Nakin Barhana",
     role: "Student",
     colorClass: "orange-quote"
   }
@@ -28,10 +28,10 @@ const testimonials = [
 const Testimonials = () => (
   <section className="testimonials-section">
     <h2>
-      <span className="underline-green">W</span>hy students trust IDP
+      <span className="underline-green">W</span>hy students trust Jramsys
     </h2>
     <p className="subtitle">
-      Hear from students who chose and trusted IDP to guide their study abroad journey.
+      Hear from students who chose and trusted Jramsys to guide their study abroad journey.
     </p>
     <div className="testimonials-row">
       {testimonials.map((item, idx) => (

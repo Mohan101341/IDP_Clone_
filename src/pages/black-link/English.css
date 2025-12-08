@@ -1,20 +1,14 @@
 .english-container {
   font-family: "Poppins", sans-serif;
   padding: 2.5rem;
-  background: linear-gradient(180deg, #f7faff 0%, #ffffff 100%);
   border-radius: 16px;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 3rem auto;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   line-height: 1.7;
   color: #222;
   transition: all 0.3s ease-in-out;
 }
 
-.english-container:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
-}
 
 /* Headings */
 .english-container h1 {
@@ -30,13 +24,16 @@
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
-  border-left: 4px solid #1560bd;
+  
   padding-left: 0.5rem;
 }
 
 /* Lists */
 .english-container ul,
 .english-container ol {
+  text-decoration: none;
+  
+  list-style: none;
   margin-left: 2rem;
   margin-bottom: 1.5rem;
 }

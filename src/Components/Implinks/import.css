@@ -2,7 +2,6 @@
   padding: 3rem 0 4rem;
   background:#fdfdfe; 
 }
-
 .services-container {
   max-width: 1200px; 
   margin: 0 auto;
@@ -69,14 +68,7 @@
   line-height: 1.6;
 }
 
-.underline-green {
-  text-decoration: underline;
-  text-underline-position: under;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #e65100;
-  font-family: inherit;
-  font-weight: inherit;
-}
+
 .service-link {
   display: inline-flex;
   align-items: center;

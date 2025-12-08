@@ -9,17 +9,17 @@ const Aboutidp = () => {
                 {/* Section Header */}
                 <header className="aboutidp-header">
                     <h1 id="aboutidp-heading">
-                        <span className="aboutidp-color">I</span>DP – Your study abroad partner every step of the way
+                        <span className="aboutidp-color">J</span>ramsys – Your study abroad partner every step of the way
                     </h1>
                     <p className="aboutidp-lead">
                         Finding the right university, securing funding, and navigating visa
                         requirements can feel like a lot to handle — but what if you had an
-                        IDP study abroad consultant to take care of it with you? That’s where
-                        IDP steps in. With 55+ years of experience, we’ve helped 113,000+
+                        Jramsys study abroad consultant to take care of it with you? That’s where
+                        Jramsys steps in. With 55+ years of experience, we’ve helped 113,000+
                         students in 2023 alone get into top universities across the world.
                         From choosing the right universities and courses to securing funding,
                         getting your visa, and settling in — we handle everything, so you can
-                        focus on your future. With IDP, you don’t have to worry about a thing.
+                        focus on your future. With Jramsys, you don’t have to worry about a thing.
                         Let’s make your study abroad journey smooth, stress-free, and
                         successful.
                     </p>
@@ -28,7 +28,7 @@ const Aboutidp = () => {
                 {/* Content Grid */}
                 <div className="aboutidp-grid">
                     <article className="aboutidp-card">
-                        <h4>Why Students Trust IDP</h4>
+                        <h4>Why Students Trust Jramsys</h4>
                         <ul className="aboutidp-list">
                             <li ><strong>Highest Visa Success Rate:</strong> Our deep expertise in student visas improves your chances of approval.</li>
                             <li ><strong>Free Services:</strong> We provide all our services at no cost to you.</li>
@@ -40,7 +40,7 @@ const Aboutidp = () => {
                     </article>
 
                     <article className="aboutidp-card">
-                        <h4>IDP’s Services – We Handle It All</h4>
+                        <h4>Jramsys’s Services – We Handle It All</h4>
                         <ul>
                             <li><strong>Application Support:</strong> Complete guidance through the entire process.</li>
                             <li><strong>Document Preparation:</strong> Help with gathering and organizing documents.</li>
@@ -69,7 +69,7 @@ const Aboutidp = () => {
 
                     <article className="aboutidp-card">
                         <h4>Study in UK – A World-Class Education & Strong Job Market</h4>
-                        <p>The UK hosts prestigious universities with strong job markets and high graduate demand. IDP supports you every step of the way.</p>
+                        <p>The UK hosts prestigious universities with strong job markets and high graduate demand. Jramsys supports you every step of the way.</p>
                     </article>
 
                     <article className="aboutidp-card">
@@ -89,7 +89,7 @@ const Aboutidp = () => {
 
                     <article className="aboutidp-card">
                         <h4>Frequently Asked Questions</h4>
-                        <p><strong></strong> IDP provides all its services free of charge.</p>
+                        <p><strong></strong> Jramsys provides all its services free of charge.</p>
                         <p><strong></strong> We assist with the UK, USA, Canada, Australia, and New Zealand.</p>
                         <p><strong></strong> 600,000+ students guided globally by experienced counsellors.</p>
                         <p><strong></strong> We have one of the highest visa success rates in the industry.</p>

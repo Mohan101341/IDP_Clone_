@@ -33,8 +33,8 @@ const Import = () => {
     },
     {
       icon: <FaMobileAlt />,
-      title: "IDP Live app",
-      desc: "Download the IDP Live app to browse and shortlist courses, track your applications and much more.",
+      title: "Jramsys Live app",
+      desc: "Download the Jramsys Live app to browse and shortlist courses, track your applications and much more.",
     },
     {
       icon: <FaCalculator />,

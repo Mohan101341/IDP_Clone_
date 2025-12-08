@@ -20,6 +20,8 @@ import BlueNav from "./Components/bLUE-nav/BlueNav";
 // Black-Link Pages
 import English from "./pages/black-link/English";
 import Events from "./pages/black-link/Events";
+import EventRegistration from "./pages/black-link/EventRegistration.jsx";
+import EnglishPrograms from "./pages/black-link/EnglishProgramPage.jsx";
 import Find from "./pages/black-link/Find/Find";
 import NewAndA from "./pages/black-link/NewAndA";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
@@ -122,6 +124,7 @@ import Disclaimer from "./pages/white-link/FooterPages/Disclaimer";
 import PaymentPage from "./paymentgetway/Ui_paymentget.jsx";
 
 
+
 // ✅ Layout for white-link pages
 const WhiteLinkLayout = ({ children }) => (
   <>
@@ -185,11 +188,23 @@ export default function App() {
               <Navbar />
               <BlueNav />
               <Events />
-              <Contact />
               <Footer />
             </>
           }
         />
+
+        <Route
+          path="/pages/Events/Register"
+          element={
+            <>
+              <Navbar />
+              <BlueNav />
+              <EventRegistration />
+              <Footer />
+            </>
+          }
+        />
+
         <Route
           path="/pages/NewAndA"
           element={
@@ -212,6 +227,18 @@ export default function App() {
             </>
           }
         />
+        <Route
+          path="/english/programs"
+          element={
+            <>
+              <Navbar />
+              <BlueNav />
+              <EnglishPrograms /> 
+              <Footer />
+            </>
+          }
+        />
+
         <Route
           path="/pages/black-link/Find/Find"
           element={
@@ -355,32 +382,32 @@ export default function App() {
             </WhiteLinkLayout>
           }
         />
-        
+
         {/* Find A course */}
-          <Route
+        <Route
           path="/pages/CourseA"
           element={
             <>
               <Navbar />
-              <CourseA/>
+              <CourseA />
               <Contact />
               <Footer />
             </>
           }
-          />
-          <Route
+        />
+        <Route
           path="/pages/Scholar"
           element={
             <>
               <Navbar />
-              <Scholar/>
+              <Scholar />
               <IDP />
               <Contact />
               <Footer />
             </>
           }
-          />
-            <Route
+        />
+        <Route
           path="/pages/Sabroad"
           element={
             <>
@@ -390,8 +417,8 @@ export default function App() {
               <Footer />
             </>
           }
-          />
-            <Route
+        />
+        <Route
           path="/pages/EnglishT"
           element={
             <>
@@ -401,20 +428,20 @@ export default function App() {
               <Footer />
             </>
           }
-          />
-            <Route
+        />
+        <Route
           path="/pages/FindU"
           element={
             <>
               <Navbar />
-              <FindU/>
+              <FindU />
               <Oneac />
               <Fastlane />
               <Footer />
             </>
           }
-          />
-            <Route
+        />
+        <Route
           path="/pages/Courseof"
           element={
             <>
@@ -425,46 +452,46 @@ export default function App() {
               <Footer />
             </>
           }
-          />
-          <Route
+        />
+        <Route
           path="/pages/FindC"
           element={
             <>
               <Navbar />
-              <FindC/>
+              <FindC />
               <Oneac />
               <Fastlane />
               <Contact />
               <Footer />
             </>
           }
-          />
-          <Route
+        />
+        <Route
           path="/pages/Uranking"
           element={
             <>
               <Navbar />
-              <Uranking/>
-              <Oneac/>
+              <Uranking />
+              <Oneac />
               <Contact />
               <Footer />
             </>
           }
-          />
+        />
 
-          <Route
+        <Route
           path="/pages/IELTSPage"
           element={
             <>
               <Navbar />
-              <IELTSPage/>
+              <IELTSPage />
               <Contact />
               <Footer />
             </>
           }
-           />
-           
-           <Route
+        />
+
+        <Route
           path="/pages/Toefl"
           element={
             <>
@@ -474,8 +501,8 @@ export default function App() {
               <Footer />
             </>
           }
-          />
-          <Route
+        />
+        <Route
           path="/pages/Duolingo"
           element={
             <>
@@ -485,65 +512,65 @@ export default function App() {
               <Footer />
             </>
           }
-          />
+        />
 
-          <Route
+        <Route
           path="/pages/Qsworld"
           element={
             <>
               <Navbar />
-              <Qsworld/>
+              <Qsworld />
               <Contact />
               <Footer />
             </>
           }
-           />
-          <Route
+        />
+        <Route
           path="/pages/Cug"
           element={
             <>
               <Navbar />
-              <Cug/>
-              <Oneac/>
+              <Cug />
+              <Oneac />
               <Contact />
               <Footer />
             </>
           }
-          />
+        />
 
         {/* IELTS Page */}
-       <Route
+        <Route
           path="/pages/What"
           element={
             <>
               <Navbar />
-              <What/>
+              <What />
               <Contact />
               <Footer />
             </>
           }
-            />
-          <Route
+        />
+        <Route
           path="/pages/Book"
           element={
             <>
 
-              <Book/>
+              <Book />
               <Footer />
             </>
           }
-            />
-          <Route
+        />
+        <Route
           path="/pages/Prep"
           element={
             <>
               <Navbar />
-              <Prep/>
+              <Prep />
               <Contact />
               <Footer />
             </>
           }
-          />
+        />
 
 
         {/* 🎓 Student Essentials */}
@@ -730,12 +757,12 @@ export default function App() {
           }
         />
         <Route
-        path="/pages/paymentgetway"
-        element={
-          <WhiteLinkLayout> 
-              <PaymentPage />         
-          </WhiteLinkLayout> 
-        }
+          path="/pages/paymentgetway"
+          element={
+            <WhiteLinkLayout>
+              <PaymentPage />
+            </WhiteLinkLayout>
+          }
         />
 
 

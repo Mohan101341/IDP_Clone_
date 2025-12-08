@@ -1,7 +1,14 @@
 import React from "react";
 import "./English.css";
+import { useNavigate } from "react-router-dom";
 
 const English = () => {
+  const navigate = useNavigate();
+
+ const handleExploreClick = () => {
+  navigate("/english/programs");
+};
+
   return (
     <div className="english-container">
       {/* Header */}
@@ -95,7 +102,7 @@ const English = () => {
         <p>
           Start your journey to mastering English today and unlock a world of possibilities!
         </p>
-        <button className="cta-button">Explore English Programs</button>
+        <button className="cta-button" onClick={handleExploreClick}>Explore English Programs</button>
       </div>
     </div>
   );

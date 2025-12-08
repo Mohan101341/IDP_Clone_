@@ -144,7 +144,7 @@ export default function ContactPage() {
             {/* OFFICE + MODE */}
             <div className="form-row">
               <div className="form-field">
-                <label>Nearest IDP Office*</label>
+                <label>Nearest Jramsys Office*</label>
                 <select
                   name="office"
                   value={formData.office}
@@ -219,7 +219,7 @@ export default function ContactPage() {
                   onChange={handleInputChange}
                   required
                 />
-                I agree to IDP{" "}
+                I agree to Jramsys{" "}
                 <a href="#" className="link">
                   Terms
                 </a>{" "}
