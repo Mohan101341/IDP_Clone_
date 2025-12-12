@@ -1,0 +1,82 @@
+.Toefl-bas{
+    height: 246px;
+    padding-top:20px;
+    padding-left: 150px;
+    background-image: url("/public/assets/bg1.jpg");
+    box-shadow: 1px 2px 9px rgb(135, 132, 132);
+}
+.sa{
+    padding-top: 20px;
+}
+.sa:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.Toefl-head{
+    font-size: 35px;
+    padding-top: 17px;
+    margin-left: -3px;
+}
+.Toefl-mat{
+    font-size: 19px;
+    padding-right: 190px;
+ 
+}
+.Toefl-body{
+    padding:30px 150px;
+    font-size: 18px;
+  
+}
+
+.Toefl-container {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 50px auto;
+  border: 1px solid #cbf6ff;
+}
+.Toefl-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.Toefl-table-wrapper {
+  overflow-x: auto;
+}
+
+.Toefl-table {
+  width: 100%;
+ 
+  font-family: "Poppins", sans-serif;
+}
+
+.Toefl-table thead {
+  background-color: #004aad;
+  color: #fff;
+}
+
+.Toefl-table th,
+.Toefl-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+.Toefl-table tbody tr:hover {
+  background-color: #f7fbff;
+}
+
+.Toefl-table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.Toefl-table a:hover {
+  text-decoration: underline;
+}

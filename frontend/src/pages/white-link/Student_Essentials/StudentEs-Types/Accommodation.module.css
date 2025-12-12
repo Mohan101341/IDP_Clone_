@@ -1,0 +1,168 @@
+:root {
+  --accent: #277af1;
+  --text: #222;
+  --muted: #555;
+  --light-bg: #f7f8fc;
+  --radius: 12px;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.overlay{
+ 
+    justify-items: center;
+    padding: 60px;
+  background-image: url("/assets/YouTube.png");
+  border-radius: 5px;
+}
+/* Text */
+.breadcrumb {
+
+  color: #adb7df;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+ 
+ 
+}
+
+.heroTitle {
+  position: relative;
+  color: #222;
+  font-size: 36px;
+  font-weight: 700;
+  max-width: 650px;
+  line-height: 1.2;
+}
+
+.heroText {
+  position: relative;
+  color: #eaeaea;
+  font-size: 16px;
+  max-width: 550px;
+  margin: 12px 0 20px;
+ 
+}
+
+/* Buttons */
+.heroButtons {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.heroBtn {
+  background: var(--accent);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.heroBtn:hover {
+  background: #1e63c4;
+}
+
+.heroLink {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE HERO */
+@media (max-width: 768px) {
+  .heroSection {
+    height: auto;
+    padding: 40px 20px;
+  }
+  .heroTitle { font-size: 26px; }
+}
+
+/* ---------------- BANNER ---------------- */
+.banner {
+  margin: 40px 0;
+  background: var(--light-bg);
+  padding: 30px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.bannerHeading {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.bannerText {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 750px;
+  margin: 10px auto 20px;
+}
+
+.bannerBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ---------------- OPTIONS SECTION ---------------- */
+.optionsSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 50px 0;
+}
+
+.optionCard {
+  background: #fff;
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid #eaeaea;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.optionTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.optionDesc {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.optionBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* RESPONSIVE OPTIONS */
+@media (max-width: 768px) {
+  .optionsSection {
+    grid-template-columns: 1fr;
+  }
+}

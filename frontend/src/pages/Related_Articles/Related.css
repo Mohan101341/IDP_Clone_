@@ -1,0 +1,140 @@
+/* =============================== */
+/* Related Articles Section Styles */
+/* =============================== */
+
+.related-container {
+  width: 100%;
+  padding: 50px 20px;
+  background: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* =============================== */
+/* Scrollable Carousel */
+/* =============================== */
+.related-articles {
+  display: flex;
+  overflow-x: auto;
+  gap: 24px;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+
+.related-articles::-webkit-scrollbar {
+  display: none;
+}
+
+/* =============================== */
+/* Individual Article Card */
+/* =============================== */
+.article {
+  min-width: 280px;
+  max-width: 300px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  flex: 0 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.article:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.article img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.article:hover img {
+  transform: scale(1.05);
+}
+
+.article h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 16px 16px 8px;
+  line-height: 1.4;
+}
+
+.article p {
+  font-size: 0.9rem;
+  color: #475569;
+  margin: 0 16px 20px;
+  line-height: 1.6;
+}
+
+/* =============================== */
+/* Scroll Buttons */
+/* =============================== */
+.btn2 {
+  background: #0f172a;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn2:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+/* =============================== */
+/* Responsive Design */
+/* =============================== */
+@media (max-width: 1024px) {
+  .related-container {
+    padding: 40px 16px;
+  }
+  .heading {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .article {
+    min-width: 240px;
+  }
+  .article img {
+    height: 150px;
+  }
+  .heading {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .article {
+    min-width: 220px;
+  }
+  .article h3 {
+    font-size: 0.95rem;
+  }
+  .article p {
+    font-size: 0.85rem;
+  }
+}

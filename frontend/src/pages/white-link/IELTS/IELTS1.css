@@ -1,0 +1,121 @@
+/* Styling for the main banner section. */
+.ma{
+    background-image: url(/public/assets/ielts1.jpg);
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: right;
+    margin-top: 30px;
+    height: 230px;
+    opacity: 0.8;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 5px 9px rgb(219, 219, 219);
+}
+
+/* Styling for the breadcrumb text in the banner. */
+.pa{
+    padding-left: 130px;
+    padding-top: 20px;
+    color: black;
+}
+
+/* Styling for the main heading in the banner. */
+.la{
+    padding-left: 110px;
+    padding-top: 10px;
+}
+
+/* Styling for the paragraph text in the banner. */
+.aa .p1{
+    color: black;
+}
+
+/* Styling for the button in the banner. */
+.b1{
+    margin-left: -760px;
+    font-size: bold;
+    border-radius: 8px;
+}
+
+/* Styling for the main text block below the banner. */
+.mt{
+    size: 24px;
+    height: 219px;
+    margin-top: 40px;
+    margin-left: 80px;
+    line-height: 1.9;
+    margin-right: 50px;
+
+}
+
+/* Styling for the "Learn more" section container. */
+.lr{
+    background-color: aliceblue;
+}
+
+/* Container for the IELTS details table. */
+.ielts_container {
+  padding: 20px;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading for the IELTS table. */
+.ielts_heading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2b2b2b;
+}
+
+/* Wrapper to make the table responsive (scrollable on small screens). */
+.ielts_table_wrapper {
+  overflow-x: auto;
+}
+
+/* Main styling for the IELTS details table. */
+.ielts_table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+}
+
+/* Styling for table cells (header and data). */
+.ielts_table th,
+.ielts_table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Styling specifically for table header cells. */
+.ielts_table th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Hover effect for table rows. */
+.ielts_table tr:hover {
+  background-color: #ecfdff;
+}
+
+/* Styling for links within the table. */
+.ielts_table a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.ielts_table a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the navigation boxes (reused class). */
+.box{
+    text-decoration: none;
+}
+
+.box:hover{
+    text-decoration: none;
+}

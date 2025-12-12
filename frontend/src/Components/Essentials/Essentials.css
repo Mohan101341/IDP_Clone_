@@ -1,0 +1,196 @@
+.essentials-section {
+  padding: 4rem 2rem;
+  background: #f9fafb;
+}
+
+.essentials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.essentials-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.essentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.essential-card {
+  background: #ffffff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+}
+
+.essential-card:hover {
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+  transform: translateY(-5px);
+  text-decoration: none;
+  border-color: #2563eb;
+  background: #f8fafc;
+}
+
+.essential-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2563eb;
+  margin-bottom: 1rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: #eff6ff;
+  transition: all 0.3s ease;
+}
+
+.essential-card:hover .essential-icon {
+  background: #dbeafe;
+  transform: scale(1.1);
+}
+
+.essential-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2;
+}
+
+.essential-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+/* Tablet view */
+@media (max-width: 1024px) {
+  .essentials-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .essentials-container {
+    padding: 0 1rem;
+  }
+
+  .essentials-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .essentials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .essential-card {
+    padding: 1.75rem 1.25rem;
+    max-width: 100%;
+  }
+
+  .essential-text {
+    font-size: 1rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .essentials-section {
+    padding: 3rem 1rem;
+  }
+
+  .essentials-container {
+    padding: 0 1rem;
+  }
+  
+  .essentials-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .essentials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .essential-card {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+  }
+
+  .essential-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.75rem;
+  }
+
+  .essential-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .essential-text {
+    font-size: 1rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .essentials-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .essentials-container {
+    padding: 0 0.75rem;
+  }
+
+  .essentials-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .essentials-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .essential-card {
+    padding: 1.25rem 1rem;
+    max-width: 100%;
+  }
+
+  .essential-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.75rem;
+  }
+
+  .essential-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .essential-text {
+    font-size: 0.95rem;
+  }
+}

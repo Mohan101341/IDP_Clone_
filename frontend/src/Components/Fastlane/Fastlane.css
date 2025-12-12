@@ -1,0 +1,90 @@
+.fastlane-section{
+    padding: 60px 20px;
+    background-color: #fefcfce9;
+}
+.fastlane-container{
+  padding: 40px 50px;
+   background-color:white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    gap:40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(223, 217, 217, 0.1);
+}
+.fastlane-text{
+    flex: 1;
+}
+.fastlane-text h2{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+.fastlane-desc{
+    font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #4a5568;}
+  .fastlane-button{  
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+    
+  }
+  .fastlane-button:hover{
+    background-color: #1e40af;
+  }
+
+    .fastlane-image img{
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;      
+
+    }
+    /* responsive */
+
+@media (max-width: 1024px) {
+  .fastlane-container {
+    max-width: 100%;
+    padding: 30px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fastlane-section {
+    padding: 40px 15px;
+  }
+
+  .fastlane-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .fastlane-image img {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .fastlane-section {
+    padding: 30px 10px;
+  }
+
+  .fastlane-container {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+}

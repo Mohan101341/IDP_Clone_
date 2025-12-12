@@ -1,0 +1,641 @@
+/* ============================= */
+/* Top Black Bar */
+/* ============================= */
+.black-container,
+.black-containera {
+  background-color: #292929;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  padding: 8px 29px;
+  position: relative;
+  top: 0;
+  border-bottom: 1px solid rgb(65, 65, 65);
+  z-index: 9999;
+}
+
+.black-links,
+.black-linksa {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.black-links li,
+.black-linksa li {
+  color: #e9dddd;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.black-li a,
+.black-lia a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  color: #e9dddd;
+  text-decoration: none;
+}
+
+.black-li a:hover,
+.black-lia a:hover {
+  text-decoration: underline;
+}
+
+.black-li1 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.black-li1>button,
+.nav-button {
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #e9dddd;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.black-li1>button {
+  color: #e9dddd;
+}
+
+.nav-button {
+  color: #b83939;
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  color: rgb(46, 119, 192);
+}
+
+.black-li1>button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.black-li2 a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  color: #e9dddd;
+  text-decoration: none;
+}
+
+.black-li2 a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.black-links>li.nav-separator:not(:last-child)::after,
+.black-linksa>li.nav-separator:not(:last-child)::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 12px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* Hide top black bar on mobile */
+@media (max-width: 768px) {
+  .black-container,
+  .black-containera {
+    display: none;
+  }
+}
+
+/* ============================= */
+/* Main Navbar */
+/* ============================= */
+.main-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  z-index: 1003;
+  gap: 20px;
+}
+
+.logo {
+  height: 70px;
+  width:80px ;
+  cursor: pointer;
+}
+
+/* Hide icons in the white navbar */
+.main-navbar .icon-btn {
+  display: none;
+}
+
+/* ============================= */
+/* Nav Links */
+/* ============================= */
+.nav-links {
+  color: black;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-links li {
+  margin-top: 0;
+  padding: 6px 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #2a4866ff;
+}
+
+/* Wrapper for right-side elements */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ============================= */
+/* Mobile Menu Button */
+/* ============================= */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  padding: 8px;
+  margin: 0;
+  transition: color 0.2s ease-in-out;
+  z-index: 1004;
+  /* Higher than navbar to ensure it's clickable */
+}
+
+.mobile-menu-btn:hover {
+  color: #294b80ff;
+  /* Use a consistent hover color */
+  background-color: transparent !important;
+  /* Prevent other hover styles from applying */
+}
+
+/* ============================= */
+/* Mobile Menu Overlay */
+/* ============================= */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+/* Mobile links styled as boxes */
+.mobile-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.mobile-links li {
+  margin-bottom: 15px;
+}
+
+.mobile-links li a {
+  display: block;
+  padding: 14px 18px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.mobile-links li a:hover {
+  background: #e0e0e0;
+}
+
+.mobile-links li button {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.mobile-links li .login-btn {
+  background-color: rgb(6 132 104 / 1);
+  color: #fff;
+}
+
+.mobile-links li .login-btn:hover {
+  background-color: rgba(44, 150, 125, 1);
+}
+
+.mobile-links li .signup-btn {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.mobile-links li .signup-btn:hover {
+  background-color: #294b80ff;
+  color: #fff;
+}
+
+/* ============================= */
+/* Mobile Sidebar */
+/* ============================= */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 80px 20px 20px;
+  display: none;
+  flex-direction: column;
+}
+
+.mobile-sidebar.open {
+  right: 0;
+}
+
+.find-us-dropdown,
+.english-dropdown {
+  max-height: 300px;
+  overflow-y: auto;
+  background: #222;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  right: auto;
+  top: 100%;
+  min-width: 240px;
+  width: max-content;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(18, 2, 2, 0.1);
+  padding: 0;
+  margin: 0;
+  z-index: 10000;
+  transform: translateX(-50%);
+  text-align: left;
+}
+
+.find-us-dropdown button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  margin: 8px;
+  width: calc(100% - 16px);
+}
+
+.find-us-dropdown button:hover {
+  background-color: #0056b3;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.black-li1.has-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.find-us-dropdown li,
+.english-dropdown li {
+  padding: 10px 24px;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: left;
+  list-style: none;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: background 0.2s, color 0.2s;
+  box-sizing: border-box;
+}
+
+.find-us-dropdown li:not(:last-child),
+.english-dropdown li:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.find-us-dropdown li:hover,
+.find-us-dropdown li a:hover {
+  background: #352d2d;
+  color: #fff;
+}
+
+.find-us-dropdown li a {
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  padding: 0;
+}
+
+.find-us-dropdown li::after {
+  content: none !important;
+}
+
+.english-dropdown li:hover,
+.english-dropdown li a:hover {
+  background: #294b80ff;
+  color: #fff;
+}
+
+/* ============================= */
+/* White main navbar dropdown */
+/* ============================= */
+.white-dropdown {
+  max-height: 360px;
+  overflow-y: auto;
+  background: #ffffff;
+  color: #222;
+  position: absolute;
+  left: 50%;
+  right: auto;
+  top: 100%;
+  min-width: 260px;
+  width: max-content;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  margin: 6px 0 0 0;
+  transform: translateX(-50%);
+  text-align: left;
+}
+
+.white-dropdown-item {
+  padding: 10px 18px;
+  color: #222; 
+  text-align: left;
+}
+
+.white-dropdown-item a {
+  display: block;
+  color: #222 !important;
+  text-decoration: none;
+  text-align: left;
+}
+
+.white-dropdown-item a:link,
+.white-dropdown-item a:visited,
+.white-dropdown-item a:active,
+.white-dropdown-item a:focus {
+  color: #222 !important;
+}
+
+.white-dropdown-item:hover,
+.white-dropdown-item:hover a,
+.white-dropdown-item a:hover {
+  background: #f3f6fb;
+  color: #111 !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-overlay {
+    display: block;
+  }
+}
+
+/* ============================= */
+/* Buttons */
+/* ============================= */
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-buttons button {
+  padding: 10px 25px;
+  font-size: 14px;
+  font-weight: 550;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.login-btn {
+  border: none;
+  background-color: rgb(6 132 104 / 1);
+  color: #fff;
+}
+
+.login-btn:hover {
+  background-color: rgba(44, 150, 125, 1);
+}
+
+.signup-btn {
+  background-color: #fff;
+  color: #333;
+}
+
+.signup-btn:hover {
+  background-color: #294b80ff;
+  color: #fff;
+}
+
+
+/* ============================= */
+/* Heart Icon */
+/* ============================= */
+.icon-btn.heart {
+  display: inline-flex;
+  font-size: 22px;
+  margin-left: 10px;
+  color: red;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-btn.heart:hover {
+  transform: scale(1.2);
+  color: darkred;
+}
+
+/* ============================= */
+/* Account Icon */
+/* ============================= */
+
+@media (min-width: 769px) {
+  .icon-btn.account {
+    display: none;
+  }
+}
+
+
+/* ============================= */
+/* Right-side icons wrapper */
+/* ============================= */
+.right-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon-btn {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* ============================= */
+/* Responsive Breakpoints */
+/* ============================= */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .nav-links li {
+    font-size: 18px;
+  }
+
+  .nav-buttons button {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .right-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .icon-btn.account {
+    display: inline-flex !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .icon-btn.account {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-navbar {
+    padding: 15px 20px;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-buttons {
+    display: none !important;
+  }
+
+  .nav-buttons button {
+    display: none !important;
+  }
+
+  .mobile-sidebar {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-navbar {
+    padding: 12px 15px;
+  }
+
+  .logo {
+    height: 25px;
+  }
+
+  .nav-links {
+    padding-top: 70px;
+  }
+
+  .nav-links li {
+    font-size: 16px;
+  }
+}
+
+.nav-links-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

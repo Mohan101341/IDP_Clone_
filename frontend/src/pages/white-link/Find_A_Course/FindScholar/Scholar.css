@@ -1,0 +1,314 @@
+
+/* Styling for the main banner container on the scholarship page. */
+.Scholar-container {
+    
+    background-image: url('/public/assets/scholarship.jpg');
+    background-size: 550px;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 300px;
+    background-color: rgb(7, 7, 46);
+}
+
+/* Styling for the breadcrumb text in the banner. */
+.l1 {
+    color:white;
+    padding-left: 120px;
+    padding-top: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+   
+}
+
+/* Styling for the main heading in the banner. */
+.head {
+    color:white;
+    font-size: 43px;
+    padding-top: 20px;
+    margin-right:200px;
+    padding-left: 100px;
+    margin-right: 680px;
+}
+
+/* Container for the introductory paragraph below the banner. */
+.Scholar-matter {
+    background-color: rgb(232, 232, 232);
+}
+
+/* Styling for the introductory paragraph text. */
+.l2 {
+    padding: 50px;
+    font-size: 20px;
+    line-height: 1.46;
+    padding-left: 120px;
+    padding-right: 160px;
+}
+
+/* Container for the "Browse scholarships" section. */
+.Scholar-browse {
+    padding: 50px;
+    margin-left: 80px;
+    background-size: 800px;
+}
+
+/* Styling for the heading of the browse section. */
+.head2 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Creates the orange underline effect for headings. */
+.ul {
+    text-decoration: underline 6px solid orange;
+}
+
+.l3 {
+    font-size: 20px;
+    padding-left: 40px;
+    font-size: 27px;
+    margin-bottom: -10px;
+    font-weight: bold;
+    line-height: 1.46;
+    padding-top: 40px;
+}
+
+/* Grid container for the category and destination cards. */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  gap: 15px;
+  padding: 2px;
+}
+
+/* Styling for individual category/destination cards. */
+.card {
+  background: white;
+  padding: 25px 20px 16px 30px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Hover effect for the cards. */
+.card:hover {
+  border: 1px solid rgb(25, 109, 220);
+  box-shadow: 0 4px 9px rgba(28, 253, 241, 0.1);
+}
+
+/* Styling for the arrow icon in the cards. */
+.arrow {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.l4 {
+    font-size: 20px;
+    padding-left: 170px;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 1.46;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* Styling for the "View all scholarships" link. */
+.link {
+    font-size: 20px;
+    color: rgb(116, 116, 116);
+    padding-left:170px;
+  padding-bottom :40px;
+    padding-top:30px;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: rgb(59, 108, 234);
+    text-decoration: underline 1px solid rgb(143, 143, 143);
+}
+
+.arrow1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-left: 5px;
+}
+.head3 {
+
+/* Styling for the "Popular scholarships" heading. */
+    font-size: 35px;
+    font-weight: bold;
+    padding-left: 160px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.bg {
+
+/* Background for the popular scholarships section. */
+    background-color: aliceblue;
+    padding: 30px 0 60px 0;
+}
+
+/* Container for the scholarship card carousel. */
+.scholarship-cards-container {
+    position: relative;
+    padding: 0 160px;
+}
+
+/* Wrapper for the horizontally scrolling cards. */
+.scholarship-cards-wrapper {
+    display: flex;
+    gap: 25px;
+    padding: 30px 0;
+    overflow-x: auto;
+    -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Hides scrollbar in Chrome, Safari, and Opera. */
+.scholarship-cards-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Styling for a single card in the carousel. */
+.scholarship-card {
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 29px 24px 20px 20px;
+    width: 320px;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.scholarship-card:hover {
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(27, 141, 255, 0.15);
+}
+
+/* Styling for the title within a scholarship card. */
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    line-height: 1.5;
+    color: #5a5a5a;
+}
+
+/* Styling for the university name within a scholarship card. */
+.card-university {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 15px 0;
+}
+
+/* A visual divider line in the card. */
+.card-divider {
+    height: 1px;
+    background-color: #c7c7c7;
+    margin: 15px 0;
+}
+
+/* Container for the scholarship details (location, level, etc.). */
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Styling for each detail item (e.g., "📍 Australia"). */
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Styling for the emoji icons in the details. */
+.detail-icon {
+    font-size: 16px;
+}
+
+/* Styling for the "View more info" link at the bottom of the card. */
+.view-more-link {
+    margin-top: auto;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #5b5b5b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.view-more-link:hover {
+    text-decoration: underline;
+}
+
+/* Container for the carousel navigation arrows. */
+.card-navigation {
+    display: flex;
+    justify-content:center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Styling for the navigation arrow buttons. */
+.nav-arrow {
+    width: 40px;
+    height: 50px;
+    border: 2px solid #c7c7c7;
+    border-radius: 100%;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #000000;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hover effect for the navigation arrows. */
+.nav-arrow:hover {
+    border-color: #007bff;
+    color: #007bff;
+    background: #f8f9fa;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Active (on-click) effect for the navigation arrows. */
+.nav-arrow:active {
+    transform: scale(0.95);
+}
+
+/* Styling to remove underline from links wrapping the cards. */
+.category-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Styling for the "Find Scholarships" button in the banner. */
+.find-scholar-btn {
+    background-color: #ff7f00;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 100px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the "Find Scholarships" button. */
+.find-scholar-btn:hover {
+    background-color: #e67300;
+}
