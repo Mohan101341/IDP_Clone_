@@ -31,6 +31,14 @@
   justify-content: space-between;
 }
 
+.shorts-video {
+  width: 515px;
+  height: 560px;
+  border-radius: 10px;
+  border: none;
+  overflow: hidden;
+}
+
 /* Video styling */
 .hero-image video {
   width: 100%;

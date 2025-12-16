@@ -16,14 +16,15 @@ function AfterOfferVid() {
 
       <div className="vid">
         <div style={{ margin: "2rem 0" }}>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/video2"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+         <iframe
+  width="315"
+  height="560"
+  src="https://www.youtube.com/embed/1kfugHv60ag"
+  title="YouTube Shorts player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
         </div>
         <div className="vid-txt">
           <h2>One account for all your study abroad needs</h2>

@@ -7,7 +7,7 @@ const StudyDs = () => {
     <div className="stdy-dest-bg">
       <div className="stdy-dest-content">
         <h1>study abroad</h1>
-        <h2>IDP india</h2>
+        <h2>Jramsys india</h2>
         <div className="stdy-dest-breadcrumb">/ Study Abroad</div>
         <h3>Study Abroad Programs - Apply For 2025 Intake | Free Counselling</h3>
         <p>Learn more about exciting places where you can study abroad</p>

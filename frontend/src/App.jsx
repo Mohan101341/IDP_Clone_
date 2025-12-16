@@ -170,6 +170,14 @@ export default function App() {
             </WhiteLinkLayout>
           }
         />
+         <Route
+          path="/contact"
+          element={
+            <WhiteLinkLayout>
+            <Contact/>
+            </WhiteLinkLayout>
+          }
+        />
 
         {/* 📚 Study Details - Generic and Specific */}
         <Route

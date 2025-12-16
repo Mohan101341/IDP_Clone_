@@ -1,180 +1,140 @@
-.services-section {
+.implik-section {
   padding: 3rem 0 4rem;
-  background:#fdfdfe; 
-}
-.services-container {
-  max-width: 1200px; 
-  margin: 0 auto;
-  padding: 0 1.25rem; 
+  background: #fdfdfe;
 }
 
-.services-title {
-  font-size: 1.9rem; 
+.implik-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.implik-title {
+  font-size: 1.9rem;
   font-weight: 800;
   margin-bottom: 1.25rem;
   color: #1f2937;
 }
 
-.services-grid {
+.implik-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px; /* align spacing */
+  gap: 18px;
 }
 
-/* Desktop: exact 3 columns */
+/* Desktop: 3 columns */
 @media (min-width: 1024px) {
-  .services-grid {
+  .implik-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.service-card {
+.implik-card {
   padding: 1.5rem;
   border-radius: 12px;
+  border: 1px solid rgb(236, 236, 236);
   box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.06);
-  transition: box-shadow .2s ease, transform .2s ease;
   display: flex;
   gap: 1rem;
-  border: 1px solid rgb(236, 236, 236);
   align-items: flex-start;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.service-card:hover {
-  box-shadow: 0 4px 12px rgba(48, 172, 255, 0.15);
+.implik-card:hover {
   transform: translateY(-4px);
-  border:1px solid #98b4ff;
+  box-shadow: 0 4px 12px rgba(48, 172, 255, 0.15);
+  border-color: #98b4ff;
 }
 
-.service-icon {
-  display: flex;
-  align-items: flex-start;
-  color: #4079f3;
-}
-
-.service-content {
-  margin-top: 0.25rem;
+.implik-content {
   flex: 1;
 }
 
-.service-text {
+.implik-text {
   font-size: 1.1rem;
   font-weight: 600;
   color: #111827;
 }
 
-.service-desc {
+.implik-desc {
   margin-top: 0.5rem;
   color: #374151;
   line-height: 1.6;
 }
 
-
-.service-link {
+.implik-link {
+  margin-top: 0.75rem;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 0.75rem;
-  color: #1d4ed8;
   font-weight: 600;
+  color: #1d4ed8;
   text-decoration: none;
 }
 
-.service-link:hover { text-decoration: underline; }
-.service-chevron { color: #1d4ed8; margin-top: 2px; flex-shrink: 0; }
+.implik-link:hover {
+  text-decoration: underline;
+}
 
-/* Tablet view */
+.implik-chevron {
+  margin-top: 2px;
+}
+
+/* Tablet */
 @media (max-width: 1024px) {
-  .services-container {
-    padding: 0 1rem;
-  }
-  
-  .services-title {
+  .implik-title {
     font-size: 1.8rem;
     margin-bottom: 2.5rem;
   }
-  
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .service-card {
+
+  .implik-card {
     padding: 1.25rem;
   }
-  
-  .service-text {
+
+  .implik-text {
     font-size: 1rem;
   }
 }
 
-/* Mobile view → improved layout */
+/* Mobile */
 @media (max-width: 768px) {
-  .services-section {
-    padding: 3rem 0;
-  }
-  
-  .services-container {
-    padding: 0 1rem;
-  }
-  
-  .services-title { font-size: 1.6rem; margin-bottom: 1rem; }
-  
-  .services-grid {
-    display: grid;
+  .implik-grid {
     grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .service-card {
-    padding: 14px 16px;
-    border-radius: 12px;
+  .implik-card {
     align-items: center;
+    padding: 14px 16px;
   }
-  
-  .service-card:hover { transform: none; }
 
-  .service-icon { margin: 0; }
-  
-  .service-icon svg {
+  .implik-card:hover {
+    transform: none;
+  }
+
+  .implik-icon svg {
     width: 28px;
     height: 28px;
   }
 
-  .service-text { font-size: 1rem; color: #111827; }
-  .service-desc { display: none; }
-  .service-link { display: none; }
+  .implik-desc,
+  .implik-link {
+    display: none;
+  }
 }
 
-/* Small mobile devices */
+/* Small mobile */
 @media (max-width: 480px) {
-  .services-section {
-    padding: 2rem 0;
-  }
-  
-  .services-container {
-    padding: 0 0.75rem;
-  }
-  
-  .services-title {
+  .implik-title {
     font-size: 1.4rem;
-    margin-bottom: 1.5rem;
   }
-  
-  .service-card {
-    padding: 0.875rem;
-    border-radius: 10px;
-  }
-  
-  .service-icon {
-    margin: 0 0.75rem 0 0;
-  }
-  
-  .service-icon svg {
+
+  .implik-icon svg {
     width: 20px;
     height: 20px;
   }
-  
-  .service-text {
+
+  .implik-text {
     font-size: 0.9rem;
   }
 }

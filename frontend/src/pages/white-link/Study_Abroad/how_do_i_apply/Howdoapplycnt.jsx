@@ -107,7 +107,7 @@ function Howdoapplycnt() {
 
         <h3>Applying to Canadian Universities</h3>
         <p>
-          Since each province has its own system in Canada, it’s important to research universities and programs that fit your goals. If applying without the assistance of IDP, students will typically apply online through the university’s website or portal. Submit your application form, transcripts, test scores (if needed), IELTS results, statement of purpose, recommendation letters, and any additional documents. Canadian universities value strong academics and genuine interest in your field. Some programs may ask for extra materials like portfolios or writing samples.
+          Since each province has its own system in Canada, it’s important to research universities and programs that fit your goals. If applying without the assistance of jramsys, students will typically apply online through the university’s website or portal. Submit your application form, transcripts, test scores (if needed), IELTS results, statement of purpose, recommendation letters, and any additional documents. Canadian universities value strong academics and genuine interest in your field. Some programs may ask for extra materials like portfolios or writing samples.
           <br />
           Most international students now need a Provincial Attestation Letter (PAL) before applying for a Study Permit. Applying without it may lead to your application being returned.
         </p>
@@ -133,7 +133,7 @@ function Howdoapplycnt() {
           Applying to foreign universities needs thorough research and careful planning. From choosing the right program and understanding admission requirements to tracking deadlines and submitting documents in the correct formats—it can feel overwhelming. But why take on all that pressure alone when you can get support from experts with decades of experience in international student admissions?
         </p>
         <p>
-          Once you contact IDP, you’ll be assigned a dedicated counsellor who will guide you through every step—from selecting the right course and university to applying for your visa and arranging accommodation. And the support doesn’t end once you’ve landed in the foreign country. IDP is here for you even after your classes begin.
+          Once you contact Jramsys, you’ll be assigned a dedicated counsellor who will guide you through every step—from selecting the right course and university to applying for your visa and arranging accommodation. And the support doesn’t end once you’ve landed in the foreign country. Jramsys is here for you even after your classes begin.
         </p>
         <p>
           <strong>Start your study abroad journey with expert support today! Contact us now for free counselling.</strong>

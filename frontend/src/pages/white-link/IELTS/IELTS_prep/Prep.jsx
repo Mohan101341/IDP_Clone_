@@ -15,9 +15,8 @@ export default function Prep() {
            <br />
             {/* Main heading and introductory text. */}
             <h1 className="h1">Prepare for IELTS</h1>
-            <p className="p2">IDP provides a comprehensive set of resources to facilitate your IELTS preparation, ensuring a smooth journey towards success.</p>
-            {/* A call-to-action button. */}
-            <button className="btn">IELTS preparation</button>
+            <p className="p2">Jramsys provides a comprehensive set of resources to facilitate your IELTS preparation, ensuring a smooth journey towards success.</p>
+
         </div>
         {/* This section contains the detailed content about IELTS preparation. */}
         <div className="prep1">
@@ -30,7 +29,7 @@ export default function Prep() {
                 <li>Free Self assessment tool to check English level</li>
                 <li>70+ IELTS Practice Tests</li>
                 <li>Free IELTS Masterclass</li>
-                <li>IELTS by IDP App</li>
+                <li>IELTS by Jramsys App</li>
                 <li>Familiarisation test for IELTS on Computer</li>
                 <li>IELTS Preparation Guide</li>
                 <li>Section-Wise IELTS test preparation</li>

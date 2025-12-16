@@ -1,8 +1,8 @@
 
 .testimonials-section {
-  padding: 48px 24px;
+  padding: 20px 24px;
   background: #fff;
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -39,17 +39,15 @@ h2 {
 }
 
 .testimonial-card {
-  background: #fff;
+  background: #faf6f6;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  padding: 48px 24px 32px 24px;
-  flex: 1 1 280px;
-  min-width: 280px;
-  max-width: 340px;
-  position: relative;
+  max-width: 340px; /* Default max-width for larger screens */
+  max-height: 560px;
+  position: relative; /* Changed from 'fixed' to 'relative' for correct layout behavior */
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  margin: 16px;
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
@@ -63,7 +61,6 @@ h2 {
   align-items: center;
   justify-content: center;
   border-radius: 15px 0px 15px 0px;
-     
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
@@ -86,7 +83,7 @@ display: flex;
  
 .quote{
    font-size: 1.00rem;
-   margin-bottom: 25px;
+   margin: 20px 0px;
    line-height: 1.5;
 }
 
@@ -117,4 +114,35 @@ display: flex;
   color: #999;
   font-family: 'Segoe UI', Arial, sans-serif;
   margin-top: 2px;
+}
+
+/* ============================= */
+/* Responsive Adjustments for Testimonials */
+/* ============================= */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 15px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .testimonials-row {
+    gap: 16px; /* Keep gap for spacing between cards in the scroll view */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    justify-content: flex-start; /* Align cards to the start for scrolling */
+    flex-wrap: nowrap; /* Ensure cards stay in a single row for scrolling */
+    padding-bottom: 10px; /* Add some padding at the bottom for scrollbar */
+  }
+
+  .testimonials-row::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for a cleaner look */
+  }
+
+  .testimonial-card {
+    min-width: calc(100% - 32px); /* Ensure card takes full visible width, accounting for margins */
+    max-width: calc(100% - 32px); /* Ensure card takes full visible width, accounting for margins */
+    margin: 0 16px; /* Add horizontal margins for spacing within the scroll view */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    scroll-snap-align: start; /* Snap to the start of each card */
+  }
 }

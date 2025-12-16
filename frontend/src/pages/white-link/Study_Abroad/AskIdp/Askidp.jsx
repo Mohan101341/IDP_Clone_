@@ -3,11 +3,12 @@ import "./Askidp.css";
 
 function Askidp() {
   const videos = [
-    "https://youtube.com/shorts/QCBiRJB7dzA?si=opIn1FnBNNGua46k",
-    "https://youtube.com/shorts/EzpAwxspRFQ?si=_4lAX4H9FM7mFSkK",
-    "https://youtube.com/shorts/sZLsDZVRbs0?si=mB8Hk7yijTy10D9D",
-    "https://youtube.com/shorts/h_Q7DlmGQiw?si=G1Vv4ufvZco8FP8N",
-  ];
+  "https://www.youtube.com/embed/1kfugHv60ag",
+  "https://www.youtube.com/embed/xC0j2T7h1KQ",
+  "https://www.youtube.com/embed/0zM3nApSvMg",
+  "https://www.youtube.com/embed/9bZkp7q19f0",
+];
+
 
   // Convert shorts URLs to embeddable format
   const getEmbedUrl = (url) => {

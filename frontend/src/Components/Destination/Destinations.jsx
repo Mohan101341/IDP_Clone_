@@ -45,7 +45,7 @@ export default function Destinations() {
   return (
     <section className="destinations-sec">
       <div className="destinations-wrap">
-        <h2 className="dest-title">Know your destination</h2>
+        <h2 className="dest-title"><span className="underline-green ">K</span>now your destination</h2>
 
         <div className="dest-grid">
           {DESTINATIONS.map((d) => (

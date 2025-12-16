@@ -51,7 +51,7 @@ const Services = () => {
     {
       title: "Visa Preparation",
       desc:
-        "We assist you with document preparation and conduct thorough checks to ensure everything is accurate for your visa submission. By the way, IDP has the highest student visa success rate",
+        "We assist you with document preparation and conduct thorough checks to ensure everything is accurate for your visa submission. By the way, Jramsys has the highest student visa success rate",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <rect x="3" y="2" width="18" height="20" rx="2"></rect>

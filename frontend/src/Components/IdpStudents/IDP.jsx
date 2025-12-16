@@ -1,37 +1,45 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./IDP.css";
-
 const videos = [
-  { src: "/videos/videoplayback01.mp4", title: "Business and Creative Arts" },
-  { src: "/videos/videoplayback02.mp4", title: "Left Them Back Home #USA" },
-  { src: "/videos/videoplayback03.mp4", title: "The Culture, or Even the Climate" },
-  { src: "/videos/videoplayback04.mp4", title: "Students Exploring New Opportunities" },
-  { src: "/videos/videoplayback05.mp4", title: "Learning Beyond Borders" },
-  { src: "/videos/videoplayback06.mp4", title: "Journey to Global Success" },
-  { src: "/videos/videoplayback07.mp4", title: "From Dreams to Reality" },
-  { src: "/videos/videoplayback08.mp4", title: "Embracing New Cultures" },
-  { src: "/videos/videoplayback09.mp4", title: "Academic Excellence Abroad" },
-
+  { id: "kJQP7kiw5Fk", title: "Spanish – Despacito" },
+  { id: "JGwWNGJdvx8", title: "English – Shape of You" },
+  { id: "RgKAFK5djSk", title: "English – See You Again" },
+  { id: "YQHsXMglC9A", title: "English – Hello (Adele)" },
+  { id: "UceaB4D0jpo", title: "Korean – Gangnam Style" },
+  { id: "OPf0YbXqDm0", title: "English – Uptown Funk" },
+  { id: "hT_nvWreIhg", title: "English – Counting Stars" },
+  { id: "e-ORhEE9VVg", title: "English – Blank Space" },
 ];
+
+const visibleCount = 4;
 
 const IDP = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const visibleCount = 4;
-  const videoRefs = useRef([]);
+  const playersRef = useRef({});
 
-  const pauseAllVideos = () => {
-    videoRefs.current.forEach((video) => {
-      if (video) video.pause();
+  // Load YouTube API once
+  useEffect(() => {
+    if (!window.YT) {
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.body.appendChild(tag);
+    }
+  }, []);
+
+  // Pause all videos
+  const pauseAll = () => {
+    Object.values(playersRef.current).forEach((player) => {
+      if (player?.pauseVideo) player.pauseVideo();
     });
   };
 
   const prevSlide = () => {
-    pauseAllVideos();
-    setStartIndex((prev) => (prev - visibleCount < 0 ? 0 : prev - visibleCount));
+    pauseAll();
+    setStartIndex((prev) => Math.max(prev - visibleCount, 0));
   };
 
   const nextSlide = () => {
-    pauseAllVideos();
+    pauseAll();
     setStartIndex((prev) =>
       prev + visibleCount >= videos.length ? prev : prev + visibleCount
     );
@@ -39,36 +47,37 @@ const IDP = () => {
 
   const visibleVideos = videos.slice(startIndex, startIndex + visibleCount);
 
-  const handlePlay = (currentIndex) => {
-    videoRefs.current.forEach((video, index) => {
-      if (video && index !== currentIndex) video.pause();
-    });
-  };
-
-  useEffect(() => {
-    return () => pauseAllVideos();
-  }, [startIndex]);
-
   return (
     <section className="idp-section1">
       <div className="idp-container1">
         <h2 className="headi">Jramsys students succeeding globally</h2>
-        <p>
-          There’s nothing more rewarding than seeing our students achieve their dreams
-          and share their success stories with us.
-        </p>
+        <p>Enjoy popular songs from different languages and cultures.</p>
 
         <div className="idp-carousel1">
           {visibleVideos.map((video, index) => (
-            <div className="video-card1" key={startIndex + index}>
-              <video
-                ref={(el) => (videoRefs.current[index] = el)} // cleaner ref mapping
-                controls
-                onPlay={() => handlePlay(index)}
-              >
-                <source src={video.src} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            <div className="video-card1" key={video.id}>
+              <div className="iframe-wrapper">
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}?enablejsapi=1`}
+                  title={video.title}
+                  ref={(el) => {
+                    if (el && window.YT?.Player && !playersRef.current[video.id]) {
+                      playersRef.current[video.id] = new window.YT.Player(el, {
+                        events: {
+                          onStateChange: (e) => {
+                            if (e.data === window.YT.PlayerState.PLAYING) {
+                              pauseAll();
+                              playersRef.current[video.id].playVideo();
+                            }
+                          },
+                        },
+                      });
+                    }
+                  }}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
               <p>{video.title}</p>
             </div>
           ))}

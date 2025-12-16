@@ -15,8 +15,7 @@ export default function IELTSPage() {
                 {/* Main heading and introductory text. */}
                 <h1 className='la'>IELTS - one test, countless opportunities</h1>
                 <p className='aa'>IELTS is trusted by over 12,000 organisations as a true indicator of one's real-world English communication capabilities</p>
-                {/* A call-to-action button. */}
-                <button className='b1'>BOOK NOW</button>
+                
             </div>
             {/* This section contains a detailed paragraph explaining what IELTS is. */}
             <div className='mt'>The International English Language Testing System (IELTS) is a vital English proficiency test required globally for individuals seeking international education, professional registration, or migration. The test is designed to measure proficiency across all four core skills: Listening, Reading, Writing, and Speaking. While the Listening and Speaking sections are the same for everyone, the Reading and Writing content differs based on the chosen module: Academic or General Training. The Academic module presents complex, university-level texts and requires the description of graphs or data in the Writing section, preparing test-takers for higher education. In contrast, the General Training module features texts related to everyday social and workplace survival and includes letter writing in the Writing section, making it suitable for work or immigration purposes. Regardless of the module, the final result is presented on a comprehensive 9-Band Scale, offering a clear and accepted measure of a candidate's readiness for life in an English-speaking country.</div>

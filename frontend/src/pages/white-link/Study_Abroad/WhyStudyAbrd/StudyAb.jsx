@@ -12,7 +12,7 @@ const StudyAb = () => {
       <div className={`stdab-left${animate ? ' slide-in-left' : ''}`}>
         <h1> Why Study Abroad</h1>
         <h3>Learn how studying abroad opens a world of opportunities</h3>
-        <button className='stdy-btn'> contact IDP</button>
+        <button className='stdy-btn'> contact Jramsys</button>
       </div>
       <div className={`stdab-right${animate ? ' slide-in-right' : ''}`}>
          <img

@@ -39,7 +39,7 @@ export default function StudySteps() {
         <div className="steps-grid">
           <div className="steps-visual">
             <img
-              src="/assets/steps-bannerr.webp"
+              src="/assets/Getty.jpg"
               alt="Smiling student holding books"
             />
           </div>

@@ -80,15 +80,17 @@ function StdyAustcnt() {
   </p>
 
   <div className="video-container">
-    <iframe
-      width="600"
-      height="300"
-      src="https://www.youtube.com/embed/sFssu8gCAbg"
-      title="Australia Education Update 2025"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
+<iframe
+  width="515"
+  height="560"
+  src="https://www.youtube.com/embed/1kfugHv60ag"
+  title="YouTube Shorts video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+
 
   </div>
 </div>

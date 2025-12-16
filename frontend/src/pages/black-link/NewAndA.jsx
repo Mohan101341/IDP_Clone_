@@ -34,7 +34,7 @@ const articlesData = [
     publishedAt: "2025-01-05",
   },
   {
-    img: "/assets/ses-article-4-banner.webp",
+    img: "/assets/Ielts banner.jpg",
     countries: "Ireland",
     title: "Top universities in Ireland for international students",
     publishedAt: "2025-01-03",
@@ -52,7 +52,7 @@ const articlesData = [
     publishedAt: "2024-12-20",
   },
   {
-    img: "/assets/steps-bannerr.webp",
+    img: "/assets/Am.jpg",
     countries: "United States, United Kingdom, Australia",
     title: "Building your career abroad: A student guide",
     publishedAt: "2024-12-10",
@@ -92,7 +92,7 @@ const NewsAndA = () => {
       <div className="news-container">
         <p>Jramsys India</p>
 
-        <h1 className="news-title underline-green">746 News and Articles</h1>
+        <h1 className="news-title "><span className="underline-green">764</span> News and Articles</h1>
 
         {/* FILTER & SORT UI */}
         <div className="news-controls">

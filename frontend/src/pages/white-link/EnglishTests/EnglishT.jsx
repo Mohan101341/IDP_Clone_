@@ -9,11 +9,7 @@ export default function EnglishT() {
       <div className="MK">
         <p className="si">JRAMSYS OVERSEASE / ENGLISH Tests</p>
         <p className="he">English Tests</p>
-        <p className="me">
-          These global English proficiency tests evaluate reading, writing,
-          speaking, and listening skills, helping you qualify for study or work
-          abroad. They are key for meeting international language requirements.
-        </p>
+       
       </div>
 
       {/* Body Section */}

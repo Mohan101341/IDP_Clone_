@@ -14,7 +14,7 @@ const Preparetodeparthero = () => {
         <h3>We're here to help set you up for your study abroad adventure</h3>
 
        
-        <button className='stdy-btn'> contact IDP</button>
+        <button className='stdy-btn'> contact Jramsys</button>
       </div>
       <div className={`stdab-right${animate ? ' slide-in-right' : ''}`}>
          <img

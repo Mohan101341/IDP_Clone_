@@ -15,10 +15,20 @@ const StudyAbroadPromo = () => {
       <div className="promo-hero">
         <div className="hero-image">
           {/* Replace with actual image or component */}
-          <video controls>
-            <source src="/videos/From India to Australia _ Life Abroad _ IDP India - Study Abroad Expert.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+  <iframe
+  width="515"
+  height="560"
+  class="shorts-video"
+  src="https://www.youtube.com/embed/1kfugHv60ag"
+  title="YouTube Shorts video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+  
+
+         
         </div>
         <div className="hero-text">
           <h2>Simplifying your study abroad experience.</h2>
