@@ -6,6 +6,12 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 body {
@@ -16,7 +22,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
     color: #333;
-    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 a{
@@ -97,3 +108,15 @@ li{
     text-decoration: none;
     list-style: none;
 }
+.scroll-container {
+  overflow: auto;          /* or scroll */
+  
+  /* Hide scrollbar - Chrome, Edge, Safari */
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE & old Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
