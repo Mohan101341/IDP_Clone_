@@ -1,3 +1,8 @@
+:root {
+  --breakpoint-mobile: 768px;
+  --breakpoint-small-mobile: 480px;
+}
+
 .services1 {
   margin-top: 30px;
   display: flex;
@@ -61,9 +66,9 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-mobile)) {
   .services1 {
-    padding: 40px 20px;
+    padding: 40px 10px; /* Adjusted padding for smaller screens */
     flex-direction: column;
     gap: 20px;
   }
@@ -73,7 +78,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: var(--breakpoint-small-mobile)) {
   .services1 {
     padding: 30px 15px;
   }

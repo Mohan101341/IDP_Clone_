@@ -21,9 +21,15 @@
 /* Breadcrumb + heading section */
 
 .healthContainer {
-   background-image: url("/assets/YouTube.png"); /* light blue, change as needed */
-  padding: 60px;
+  background-color: #f7f8fc; /* light blue, change as needed, removed background-image */
+  padding: 60px 20px; /* Adjusted padding */
   border-radius: 8px;
+  text-align: center; /* Center content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px; /* Added margin */
 }
 .breadcrumb {
     font-size: 13px;
@@ -48,7 +54,7 @@
     margin: 32px 0;
     text-align: center;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-    overflow: hidden;
+    overflow: hidden; /* Changed to hidden to clip background blend mode */
     z-index: 1;
 }
 
@@ -150,6 +156,36 @@
 
 /* ---------------- RESPONSIVE ---------------- */
 
+@media (max-width: 1024px) {
+  .insuranceContainer {
+    padding: 15px;
+  }
+  .healthContainer {
+    padding: 40px 15px;
+  }
+  .mainHeading {
+    font-size: 24px;
+  }
+  .infoBanner {
+    padding: 35px 25px;
+  }
+  .infoBanner h1 {
+    font-size: 22px;
+  }
+  .infoBanner p {
+    font-size: 14px;
+  }
+  .simOptions {
+    gap: 15px;
+  }
+  .simCard h2 {
+    font-size: 18px;
+  }
+  .simCard p {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 900px) {
     .simOptions {
         grid-template-columns: 1fr;
@@ -158,15 +194,17 @@
 
 @media (max-width: 600px) {
     .infoBanner h1 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .infoBanner p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .infoBtn {
         width: 100%;
+        font-size: 14px;
+        padding: 10px 15px;
     }
 
     .simCard {
@@ -175,5 +213,48 @@
 
     .simBtn {
         width: 100%;
+        font-size: 13px;
+        padding: 8px 12px;
     }
+    .mainHeading {
+      font-size: 20px;
+    }
+    .breadcrumb {
+      font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+  .insuranceContainer {
+    padding: 10px;
+  }
+  .healthContainer {
+    padding: 30px 10px;
+  }
+  .infoBanner {
+    padding: 25px 15px;
+  }
+  .infoBanner h1 {
+    font-size: 18px;
+  }
+  .infoBanner p {
+    font-size: 11px;
+  }
+  .infoBtn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .simCard {
+    padding: 15px;
+  }
+  .simCard h2 {
+    font-size: 16px;
+  }
+  .simCard p {
+    font-size: 12px;
+  }
+  .simBtn {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
 }

@@ -1,3 +1,8 @@
+:root {
+  --breakpoint-mobile: 768px;
+  --breakpoint-small-mobile: 480px;
+}
+
 /* Container styling */
 .promo-container {
   padding: 2rem;
@@ -31,21 +36,33 @@
   justify-content: space-between;
 }
 
-.shorts-video {
-  width: 515px;
-  height: 560px;
-  border-radius: 10px;
-  border: none;
+/* Responsive video container */
+.video-responsive {
   overflow: hidden;
+  position: relative;
+  width: 100%;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%; 
+  max-width: 600px; /* Limit max width of video container */
+  margin: auto; /* Center video container */
 }
 
-/* Video styling */
-.hero-image video {
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  border: none;
+  border-radius: 10px;
 }
+
+/* Remove fixed dimensions from shorts-video, as it's handled by video-responsive */
+.shorts-video {
+  width: 100%; 
+  height: 100%;
+}
+
 
 /* Text beside video */
 .hero-text {
@@ -65,13 +82,60 @@
 }
 
 /* Responsive tweaks */
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-mobile)) {
+  .promo-container {
+    padding: 1.5rem;
+  }
   .promo-hero {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Center items when stacked */
   }
 
-  .hero-image video {
-    max-width: 100%;
+  .promo-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .promo-description {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-text {
+    text-align: center; /* Center text when stacked */
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .video-responsive {
+    padding-top: 75%; /* Adjust aspect ratio for shorts (3:4) or keep 16:9 if desired */
+  }
+}
+
+@media (max-width: var(--breakpoint-small-mobile)) {
+  .promo-container {
+    padding: 1rem;
+  }
+  .promo-heading {
+    font-size: 1.8rem;
+  }
+  .promo-description {
+    font-size: 0.9rem;
+  }
+  .hero-text h2 {
+    font-size: 1.3rem;
+  }
+  .hero-text p {
+    font-size: 0.85rem;
+  }
+  .video-responsive {
+    padding-top: 100%; /* Make it square for very small screens if needed, or adjust to fit content */
   }
 }

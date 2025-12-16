@@ -51,7 +51,7 @@
     text-align: center;
     margin: 28px 0;
     box-shadow: 0 12px 35px rgba(39, 122, 241, 0.22);
-    overflow: hidden;
+    overflow: auto;
     z-index: 1;
 }
 

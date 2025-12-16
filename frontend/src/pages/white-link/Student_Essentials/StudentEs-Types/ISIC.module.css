@@ -61,7 +61,7 @@
     text-align: center;
     margin: 22px 0;
     box-shadow: 0 12px 32px rgba(39, 122, 241, 0.12);
-    overflow: hidden;
+    overflow: auto;
     z-index: 1;
 }
 

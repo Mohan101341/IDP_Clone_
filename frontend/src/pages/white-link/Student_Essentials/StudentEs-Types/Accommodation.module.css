@@ -13,26 +13,36 @@
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px; /* Adjust padding for responsiveness */
+}
 .overlay{
- 
-    justify-items: center;
-    padding: 60px;
-  background-image: url("/assets/YouTube.png");
+  width: 100%;
+  padding: 60px;
+  background-image: url("/assets/YouTube.png"); /* Assuming this is intentional */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 /* Text */
 .breadcrumb {
-
   color: #adb7df;
-  position: relative;
-  text-align: center;
   font-size: 14px;
- 
- 
+  margin-bottom: 10px; /* Added margin */
 }
 
 .heroTitle {
-  position: relative;
   color: #222;
   font-size: 36px;
   font-weight: 700;
@@ -41,21 +51,19 @@
 }
 
 .heroText {
-  position: relative;
   color: #eaeaea;
   font-size: 16px;
   max-width: 550px;
   margin: 12px 0 20px;
- 
 }
 
 /* Buttons */
 .heroButtons {
-  position: relative;
-  z-index: 1;
   display: flex;
   gap: 14px;
   margin-top: 8px;
+  flex-wrap: wrap; /* Allow buttons to wrap */
+  justify-content: center; /* Center buttons when wrapped */
 }
 
 .heroBtn {
@@ -83,10 +91,91 @@
 /* RESPONSIVE HERO */
 @media (max-width: 768px) {
   .heroSection {
-    height: auto;
-    padding: 40px 20px;
+    padding: 40px 15px; /* Adjusted padding */
   }
-  .heroTitle { font-size: 26px; }
+  .overlay {
+    padding: 40px 15px; /* Adjusted padding */
+  }
+  .heroTitle { 
+    font-size: 26px; 
+  }
+  .heroText {
+    font-size: 14px;
+  }
+  .heroButtons {
+    flex-direction: column; /* Stack buttons vertically */
+    width: 100%;
+  }
+  .heroBtn {
+    width: 100%; /* Full width buttons */
+  }
+  .bannerHeading {
+    font-size: 24px; /* Adjusted font size */
+  }
+  .bannerText {
+    font-size: 14px; /* Adjusted font size */
+  }
+  .bannerBtn {
+    padding: 10px 15px; /* Adjusted padding */
+    font-size: 14px; /* Adjusted font size */
+  }
+  .optionTitle {
+    font-size: 20px; /* Adjusted font size */
+  }
+  .optionDesc {
+    font-size: 13px; /* Adjusted font size */
+  }
+  .optionBtn {
+    padding: 8px 12px; /* Adjusted padding */
+    font-size: 13px; /* Adjusted font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  .heroSection {
+    padding: 30px 10px;
+  }
+  .overlay {
+    padding: 30px 10px;
+  }
+  .heroTitle {
+    font-size: 22px;
+  }
+  .heroText {
+    font-size: 13px;
+  }
+  .breadcrumb {
+    font-size: 12px;
+  }
+  .bannerHeading {
+    font-size: 20px;
+  }
+  .bannerText {
+    font-size: 12px;
+  }
+  .bannerBtn {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  .optionsSection {
+    gap: 15px;
+  }
+  .optionCard {
+    padding: 20px;
+  }
+  .optionTitle {
+    font-size: 18px;
+  }
+  .optionDesc {
+    font-size: 12px;
+  }
+  .optionBtn {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
 }
 
 /* ---------------- BANNER ---------------- */
@@ -158,11 +247,4 @@
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-}
-
-/* RESPONSIVE OPTIONS */
-@media (max-width: 768px) {
-  .optionsSection {
-    grid-template-columns: 1fr;
-  }
 }

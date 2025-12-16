@@ -59,7 +59,7 @@ export default function HowItWorks() {
           <button
             className="free-btn"
             onClick={() => {
-              window.location.hash = "/pages/white-link/Sign_Up";
+              window.location.hash = "/signup";
             }}
           >
             Talk to a counsellor

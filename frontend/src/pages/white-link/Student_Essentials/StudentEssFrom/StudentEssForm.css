@@ -1,3 +1,8 @@
+:root {
+  --breakpoint-tablet: 900px; /* Custom tablet breakpoint for this form */
+  --breakpoint-mobile: 576px; /* Custom mobile breakpoint for this form */
+}
+
 /* ===== Reset & box sizing ===== */
 *,
 *::before,
@@ -263,11 +268,15 @@
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 900px) {
+@media (max-width: var(--breakpoint-tablet)) {
+  .contact1-page {
+    padding: 20px 10px; /* Adjusted padding for smaller screens */
+  }
   .contact-container {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 0 10px; /* Adjusted padding for smaller screens */
   }
 
   .contact-left,
@@ -288,4 +297,58 @@
   }
 
   .background-shapes { display: none; }
+
+  /* Adjust font sizes for smaller screens */
+  .contact-header h1 {
+    font-size: 22px;
+  }
+
+  .contact-subtitle {
+    font-size: 13px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: var(--breakpoint-mobile)) {
+  .contact-header h1 {
+    font-size: 20px;
+  }
+  .contact-subtitle {
+    font-size: 12px;
+  }
+  .form-field label {
+    font-size: 13px;
+  }
+  .form-field input,
+  .form-field select,
+  .country-code,
+  .mobile-number {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  .form-checkbox label,
+  .checkbox-label {
+    font-size: 13px;
+  }
+  .submit-button {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  .mobile-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .country-code {
+    width: 100%;
+    border-radius: 8px;
+    border-right: 1px solid #d1d5db;
+  }
+  .mobile-number {
+    width: 100%;
+    border-radius: 8px;
+  }
 }

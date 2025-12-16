@@ -21,9 +21,15 @@
 /* Top section */
 
 .healthContainer {
-   background-image: url("/assets/YouTube.png"); /* light blue, change as needed */
-  padding: 60px;
+  background-color: #f7f8fc; /* light blue, change as needed, removed background-image */
+  padding: 60px 20px; /* Adjusted padding */
   border-radius: 8px;
+  text-align: center; /* Center content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px; /* Added margin */
 }
 
 .breadcrumb {
@@ -49,7 +55,7 @@
     margin: 28px 0;
     text-align: center;
     box-shadow: 0 12px 32px rgba(20, 60, 120, 0.15);
-    overflow: hidden;
+    overflow: hidden; /* Changed to hidden to clip background blend mode */
     z-index: 1;
 }
 
@@ -151,6 +157,36 @@
 
 /* ---------------- RESPONSIVE ---------------- */
 
+@media (max-width: 1024px) {
+  .insuranceContainer {
+    padding: 15px;
+  }
+  .healthContainer {
+    padding: 40px 15px;
+  }
+  .mainHeading {
+    font-size: 24px;
+  }
+  .insuranceBanner {
+    padding: 35px 25px;
+  }
+  .insuranceBanner h1 {
+    font-size: 24px;
+  }
+  .insuranceBanner p {
+    font-size: 14px;
+  }
+  .insuranceOptions {
+    gap: 15px;
+  }
+  .optionCard h2 {
+    font-size: 18px;
+  }
+  .optionCard p {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 900px) {
     .insuranceOptions {
         grid-template-columns: 1fr;
@@ -168,6 +204,8 @@
 
     .ctaBtn {
         width: 100%;
+        font-size: 14px;
+        padding: 10px 15px;
     }
 
     .optionCard {
@@ -176,5 +214,48 @@
 
     .optionBtn {
         width: 100%;
+        font-size: 13px;
+        padding: 8px 12px;
     }
+    .mainHeading {
+      font-size: 20px;
+    }
+    .breadcrumb {
+      font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+  .insuranceContainer {
+    padding: 10px;
+  }
+  .healthContainer {
+    padding: 30px 10px;
+  }
+  .insuranceBanner {
+    padding: 25px 15px;
+  }
+  .insuranceBanner h1 {
+    font-size: 20px;
+  }
+  .insuranceBanner p {
+    font-size: 12px;
+  }
+  .ctaBtn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .optionCard {
+    padding: 15px;
+  }
+  .optionCard h2 {
+    font-size: 16px;
+  }
+  .optionCard p {
+    font-size: 12px;
+  }
+  .optionBtn {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
 }

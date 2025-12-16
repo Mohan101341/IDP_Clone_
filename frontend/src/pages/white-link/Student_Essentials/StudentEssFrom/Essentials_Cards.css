@@ -1,3 +1,9 @@
+:root {
+  --breakpoint-tablet: 1024px;
+  --breakpoint-mobile: 768px;
+  --breakpoint-small-mobile: 480px;
+}
+
 .essential-section {
   padding: 3rem 0 4rem;
   background: #fdfdfe;
@@ -24,12 +30,6 @@
   gap: 18px;
 }
 
-@media (min-width: 1024px) {
-  .essential-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 /* DEFAULT CARD STYLES */
 .essential-card {
   padding: 1.5rem;
@@ -41,10 +41,8 @@
   display: flex;
   gap: 1rem;
   border: 1px solid rgb(236, 236, 236);
-  align-items: flex-start;
+  align-items: flex-start; /* Default alignment */
 }
-
-
 
 /* ICON */
 .essential-icon {
@@ -53,12 +51,11 @@
   color: #4079f3;
 }
 
-/* DESKTOP CENTER ICON */
-@media (min-width: 1024px) {
+/* DESKTOP CENTER ICON (adjusting for larger screens) */
+@media (min-width: var(--breakpoint-tablet)) {
   .essential-card {
     align-items: center;
   }
-
   .essential-icon {
     width: 56px;
     height: 56px;
@@ -105,21 +102,17 @@
   text-decoration: none;
 }
 
-
-
-
-
 /* TABLET */
-@media (max-width: 1024px) {
+@media (max-width: var(--breakpoint-tablet)) {
   .essential-container { padding: 0 1rem; }
-  .essential-title { font-size: 1.8rem; margin-bottom: 2.5rem; }
+  .essential-title { font-size: 2.2rem; margin-bottom: 2.5rem; } /* Adjusted font size */
   .essential-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
   .essential-card { padding: 1.25rem; }
   .essential-text { font-size: 1rem; }
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-mobile)) {
   .essential-section { padding: 3rem 0; }
   .essential-container { padding: 0 1rem; }
   .essential-title { font-size: 1.6rem; margin-bottom: 1rem; }
@@ -132,7 +125,7 @@
 }
 
 /* SMALL MOBILE */
-@media (max-width: 480px) {
+@media (max-width: var(--breakpoint-small-mobile)) {
   .essential-section { padding: 2rem 0; }
   .essential-container { padding: 0 0.75rem; }
   .essential-title { font-size: 1.4rem; margin-bottom: 1.5rem; }

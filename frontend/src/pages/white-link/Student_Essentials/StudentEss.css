@@ -1,5 +1,20 @@
 
 
+:root {
+  --max-width: 1200px; /* Example max-width for content */
+  --accent: #277af1; /* Example accent color */
+  --card: #f9f9f9; /* Example card background color */
+  --breakpoint-tablet: 1024px;
+  --breakpoint-mobile: 768px;
+}
+
+:root {
+  --max-width: 1200px; /* Example max-width for content */
+  --accent: #277af1; /* Example accent color */
+  --card: #f9f9f9; /* Example card background color */
+  --breakpoint-tablet: 1024px;
+  --breakpoint-mobile: 768px;
+}
 
 .essentials-container {
   max-width: var(--max-width);
@@ -7,18 +22,29 @@
   padding: 20px;
 }
 
-
-
 /* ---------- container ---------- */
 .essentials-hero{
   position: relative;
   width: 100%;
-  height: 20rem;
+  height: auto; /* Changed from fixed height */
+  min-height: 20rem; /* Ensure minimum height */
   border-radius: 12px;
-  overflow: hidden;
-  align-items: center;
-  background-color: #548aa4; 
+  display: flex; /* Added flex for better control */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align content to the start */
+  background-color: #548aa4;
+  padding: 20px; /* Added padding */
+  box-sizing: border-box; /* Include padding in element's total width and height */
 }
+
+.hero-heading {
+  font-size: 42px; /* Default size for larger screens */
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
 /* text styles */
 .breadcrumb-text{
   margin-top: 10px;
@@ -35,9 +61,9 @@
 
 
 .hero-cta{
-  margin-top: 5rem;
+  margin-top: 3rem; /* Reduced top margin */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Aligned to start */
   gap: 12px;
   flex-wrap: wrap;
 }
@@ -132,7 +158,7 @@
   transition: transform 0.28s ease, box-shadow 0.3s ease;
   text-align: left;
   position: relative;
-  overflow: hidden;
+  
 }
 
 /* ICON */
@@ -201,7 +227,7 @@
   text-align: left;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
-  overflow: hidden;
+  
 }
 
 /* Quote text */
@@ -234,7 +260,7 @@
 
 /* ---------- FAQ ---------- */
 .faq-section { margin: 40px 0; }
-.faq-item { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+.faq-item { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 12px;  }
 .faq-question { padding: 14px 16px; display:flex; justify-content: space-between; cursor: pointer; background: #f8f8f8; }
 .faq-answer { padding: 14px 16px; background: #fff; color: #444; font-size: 15px; }
 
@@ -252,49 +278,91 @@
 
 
 /* ---------- Responsive --------- */
-@media (max-width: 1024px) {
-  .features-grid, .how-grid, .testimonials-grid { grid-template-columns: repeat(2,1fr); }
-  .hero-heading { font-size: 34px; }
-   .features-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: var(--breakpoint-tablet)) {
+  .essentials-container {
+    padding: 15px;
   }
-    .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .features-grid, .how-grid, .testimonials-grid { 
+    grid-template-columns: repeat(2,1fr); 
   }
-
+  .hero-heading { 
+    font-size: 34px; 
+  }
+  .recommend-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .testimonials-section {
+    margin: 10px 60px;
+  }
+  .features-title {
+    font-size: 28px; /* Adjusted for tablet */
+  }
 }
-@media (max-width: 768px) {
-  .features-grid, .how-grid, .testimonials-grid { grid-template-columns: 1fr; }
-  .newsletter-inner { flex-direction: column; align-items: flex-start; }
-  .destination-select { width: 160px; }
-  .footer-inner { flex-direction: column; gap: 8px; }
-   .features-grid {
-    grid-template-columns: 1fr;
+@media (max-width: var(--breakpoint-mobile)) {
+  .essentials-container {
+    padding: 10px;
   }
-
-  .features-section h1 {
-    font-size: 22px;
+  .features-grid, .how-grid, .testimonials-grid { 
+    grid-template-columns: 1fr; 
   }
-   .testimonials-grid {
-    grid-template-columns: 1fr;
+  .newsletter-inner { 
+    flex-direction: column; 
+    align-items: flex-start; 
   }
-
+  .destination-select { 
+    width: 100%; 
+  }
+  /* Assuming there's a footer-inner, adjusting it here */
+  .footer-inner { 
+    flex-direction: column; 
+    gap: 8px; 
+  }
   .testimonials-section h2 {
     font-size: 24px;
   }
-
+  .testimonials-section {
+    margin: 10px 20px;
+  }
   .testimonial-card {
     padding: 20px;
   }
-    .features-grid {
-    grid-template-columns: 1fr;
-  }
-
   .features-title {
     font-size: 26px;
   }
-
   .feature-card {
     padding: 24px 20px;
+  }
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+  }
+  .newsletter-form input {
+    width: 100%;
+    margin-top: 10px; /* Adjusted margin for stacked elements */
+  }
+  .free-btn1 {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .hero-heading {
+    font-size: 28px;
+  }
+  .hero-subtext {
+    font-size: 14px;
+  }
+  .feature-icon {
+    margin: 10px auto;
+  }
+  .recommend-actions {
+    flex-direction: column; /* Stack actions on mobile */
+    width: 100%;
+  }
+  .contact-scroll-btn {
+    width: 100%; /* Full width button on mobile */
+  }
+  .recommend-section {
+    padding: 12px 15px; /* Adjust padding for smaller screens */
   }
 }

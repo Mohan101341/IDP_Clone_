@@ -13,7 +13,7 @@ export default function Student() {
   const [faqOpen, setFaqOpen] = useState(null);
 
   const handleChange = () => {
-    navigate("/pages/white-link/Sign_Up");
+    navigate("/signup");
   };
 
   // Navigate on dropdown change
@@ -110,38 +110,53 @@ export default function Student() {
           </select>
         </div>
       </div>
-{/* FEATURES */}
-<section className="features-section">
-  <h1 className="features-title">Essential Services for Your Study Abroad Journey</h1>
 
-  <div className="features-grid">
+    <section className="features-section">
+      <h1 className="features-title">
+        Essential Services for Your Study Abroad Journey
+      </h1>
 
-    <div className="feature-card">
-      <div className="feature-icon">📄</div>
-      <h3>Visa & Documentation</h3>
-      <p>
-        End-to-end guidance for visa paperwork and document checking so you apply with confidence.
-      </p>
-    </div>
+      <div className="features-grid">
 
-    <div className="feature-card">
-      <div className="feature-icon">✈️</div>
-      <h3>Pre-departure Support</h3>
-      <p>
-        Airport pick-up advice, accommodation options and settling-in tips from our local partners.
-      </p>
-    </div>
+        <div
+          className="feature-card"
+          onClick={() => navigate("/Visa")}
+        >
+          <div className="feature-icon">📄</div>
+          <h3>Visa & Documentation</h3>
+          <p>
+            End-to-end guidance for visa paperwork and document checking so you apply with confidence.
+          </p>
+        </div>
 
-    <div className="feature-card">
-      <div className="feature-icon">🎓</div>
-      <h3>Test Prep & Courses</h3>
-      <p>
-        IELTS/TOEFL practice, tuition discounts and course bundles to boost your readiness.
-      </p>
-    </div>
+        <div
+          className="feature-card"
+          onClick={() => navigate("/Ongoing")}
+        >
+          <div className="feature-icon">✈️</div>
+          <h3>Pre-departure Support</h3>
+          <p>
+            Airport pick-up advice, accommodation options and settling-in tips from our local partners.
+          </p>
+        </div>
 
-  </div>
-</section>
+        <div
+          className="feature-card"
+          onClick={() => navigate("/ielts/IELTS_prep/Prep")}
+        >
+          <div className="feature-icon">🎓</div>
+          <h3>Test Prep & Courses</h3>
+          <p>
+            IELTS/TOEFL practice, tuition discounts and course bundles to boost your readiness.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
 
 
 

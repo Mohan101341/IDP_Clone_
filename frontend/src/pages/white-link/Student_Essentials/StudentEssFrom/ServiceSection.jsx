@@ -11,7 +11,7 @@ const ServicesSection = () => {
     {
       icon: "✨",
       title: "One-stop solution",
-      desc: "No need to search elsewhere. At IDP, we provide all of the essential study abroad services you need under one roof.",
+      desc: "No need to search elsewhere. At INTAKE, we provide all of the essential study abroad services you need under one roof.",
     },
     {
       icon: "👥",

@@ -15,16 +15,18 @@ const StudyAbroadPromo = () => {
       <div className="promo-hero">
         <div className="hero-image">
           {/* Replace with actual image or component */}
-  <iframe
-  width="515"
-  height="560"
-  class="shorts-video"
-  src="https://www.youtube.com/embed/1kfugHv60ag"
-  title="YouTube Shorts video"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+        <div className="video-responsive">
+          <iframe
+            width="515"
+            height="560"
+            class="shorts-video"
+            src="https://www.youtube.com/embed/1kfugHv60ag"
+            title="YouTube Shorts video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
 
   
 
