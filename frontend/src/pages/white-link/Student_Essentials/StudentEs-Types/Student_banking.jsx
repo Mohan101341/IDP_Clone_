@@ -9,19 +9,21 @@ const Student_banking = () => {
   const [destination, setDestination] = useState("All destinations");
   const navigate = useNavigate();
   return (
-    <div className={`essentials-container ${styles.insuranceContainer}`}>
-      <div className={styles.healthContainer}>
+    <div className="essentials-container">
+      <div className="essentials-hero">
         
         {/* Breadcrumb */}
-        <p className={styles.breadcrumb}>
+        <p className="breadcrumb-text">
           Study Abroad, Overseas Education... / Student Essentials / Student Banking
         </p>
 
         {/* Heading */}
-        <h1 className={styles.mainHeading}>
+        <h1 className="hero-heading">
           Student Banking services for International Students
         </h1>
-       
+        <p className="hero-subtext">
+          Open a student bank account before you fly.
+        </p>
        
       </div>
 

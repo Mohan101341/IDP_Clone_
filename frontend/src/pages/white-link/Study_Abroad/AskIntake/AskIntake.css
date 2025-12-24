@@ -1,0 +1,47 @@
+.shorts-gallery {
+    overflow: auto;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.shorts-video {
+  flex: 0 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(44,62,80,0.09);
+  background: #fff;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .shorts-gallery {
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  .shorts-video {
+    width: 80%; /* Adjust as needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .shorts-gallery {
+    padding: 0.8rem 0;
+    gap: 0.8rem;
+  }
+
+  .shorts-video {
+    width: 90%; /* Adjust as needed */
+  }
+}
+
+@media (max-width: 360px) {
+  .shorts-gallery {
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+  }
+
+  .shorts-video {
+    width: 95%; /* Adjust as needed */
+  }
+}

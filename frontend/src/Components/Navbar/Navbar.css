@@ -1,8 +1,7 @@
 /* ============================= */
 /* Top Black Bar */
 /* ============================= */
-.black-container,
-.black-containera {
+.black-container {
   background-color: #292929;
   color: white;
   display: flex;
@@ -15,9 +14,10 @@
   border-bottom: 1px solid rgb(65, 65, 65);
   z-index: 9999;
 }
-
-.black-links,
-.black-linksa {
+.icon-btn-account{
+  margin-left: -5px;
+}
+.black-links {
   display: flex;
   align-items: center;
   gap: 25px;
@@ -25,18 +25,16 @@
   margin: 0;
   padding: 0;
 }
-
-.black-links li,
-.black-linksa li {
+.black-links li {
   color: #e9dddd;
   text-decoration: none;
   font-weight: 500;
+  font-size: var(--font-size-base);
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.black-li a,
 .black-lia a {
   display: inline-flex;
   align-items: center;
@@ -46,8 +44,6 @@
   color: #e9dddd;
   text-decoration: none;
 }
-
-.black-li a:hover,
 .black-lia a:hover {
   text-decoration: underline;
 }
@@ -59,7 +55,7 @@
   padding: 0;
 }
 
-.black-li1>button,
+.black-li1 > button,
 .nav-button {
   padding: 6px 10px;
   border-radius: 12px;
@@ -77,7 +73,7 @@
   vertical-align: middle;
 }
 
-.black-li1>button {
+.black-li1 > button {
   color: #e9dddd;
 }
 
@@ -90,7 +86,7 @@
   color: rgb(46, 119, 192);
 }
 
-.black-li1>button:hover {
+.black-li1 > button:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
@@ -110,8 +106,7 @@
   color: #ffffff;
 }
 
-.black-links>li.nav-separator:not(:last-child)::after,
-.black-linksa>li.nav-separator:not(:last-child)::after {
+.black-links > li.nav-separator:not(:last-child)::after {
   content: "|";
   display: inline-block;
   margin-left: 12px;
@@ -121,8 +116,7 @@
 
 /* Hide top black bar on mobile */
 @media (max-width: 768px) {
-  .black-container,
-  .black-containera {
+  .black-container {
     display: none;
   }
 }
@@ -130,11 +124,58 @@
 /* ============================= */
 /* Main Navbar */
 /* ============================= */
+/* ============================= */
+/* Dropdown Menu */
+/* ============================= */
+.dropdown-menu {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 8px rgba(18, 2, 2, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin-top: 5px;
+  border-radius: 4px;
+  z-index: 1000;
+  min-width: 200px;
+}
+
+.dropdown-item {
+  padding: 8px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-link {
+  color: #161111ff;
+  text-decoration: none;
+}
+
+
+.nav-item {
+  cursor: pointer;
+  position: relative;
+}
+
+.second-level-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(18, 2, 2, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin-top: 0;
+  border-radius: 4px;
+  z-index: 1001;
+  min-width: 260px;
+  height: 100%;
+}
+
 .main-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0 70px;
   background-color: #fff;
   color: black;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -143,18 +184,13 @@
   height: 80px;
   width: 100%;
   z-index: 1003;
-  gap: 20px;
+  gap: 10px;
 }
 
 .logo {
-  height: 70px;
-  width:80px ;
+  height: 80px;
+  width: 280px;
   cursor: pointer;
-}
-
-/* Hide icons in the white navbar */
-.main-navbar .icon-btn {
-  display: none;
 }
 
 /* ============================= */
@@ -168,13 +204,13 @@
   padding: 0;
   justify-content: space-around;
   align-items: center;
-  gap: 18px;
+  gap: 10px; /* Decreased gap between main navigation items */
 }
 
 .nav-links li {
   margin-top: 0;
   padding: 6px 8px;
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 500;
   color: #333;
   cursor: pointer;
@@ -188,14 +224,14 @@
 }
 
 .nav-links li a:hover {
-  color: #2a4866ff;
+  color: var(--primary-color);
 }
 
 /* Wrapper for right-side elements */
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px; /* Decreased gap between nav-buttons and right-icons */
 }
 
 /* ============================= */
@@ -206,7 +242,7 @@
   background: none;
   border: none;
   font-size: 24px;
-  color: #333;
+  color: #000;
   cursor: pointer;
   padding: 8px;
   margin: 0;
@@ -216,7 +252,7 @@
 }
 
 .mobile-menu-btn:hover {
-  color: #294b80ff;
+  color: var(--primary-color);
   /* Use a consistent hover color */
   background-color: transparent !important;
   /* Prevent other hover styles from applying */
@@ -236,6 +272,7 @@
   display: none;
 }
 
+
 /* Mobile links styled as boxes */
 .mobile-links {
   list-style: none;
@@ -245,7 +282,7 @@
 }
 
 .mobile-links li {
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Reduced margin to move elements up slightly */
 }
 
 .mobile-links li a {
@@ -254,7 +291,7 @@
   background: #f5f5f5;
   border-radius: 8px;
   color: #333;
-  font-size: 16px;
+  font-size: var(--font-size-base);
   text-decoration: none;
   font-weight: 500;
   transition: background 0.3s;
@@ -271,7 +308,7 @@
   background: #f5f5f5;
   border-radius: 8px;
   color: #333;
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 500;
   border: none;
   cursor: pointer;
@@ -279,7 +316,7 @@
 }
 
 .mobile-links li .login-btn {
-  background-color: rgb(6 132 104 / 1);
+  background-color: var(--primary-color);
   color: #fff;
 }
 
@@ -294,7 +331,7 @@
 }
 
 .mobile-links li .signup-btn:hover {
-  background-color: #294b80ff;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
@@ -326,10 +363,10 @@
   overflow-y: auto;
   background: #222;
   color: #fff;
-  position: absolute;
+  position: absolute; /* Ensure positioning context */
   left: 50%;
   right: auto;
-  top: 100%;
+  top: calc(100% - 6px); /* Adjust to remove gap from parent's padding */
   min-width: 240px;
   width: max-content;
   border-radius: 4px;
@@ -342,7 +379,7 @@
 }
 
 .find-us-dropdown button {
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   padding: 10px 15px;
@@ -352,7 +389,7 @@
   font-weight: 500;
   transition: background-color 0.2s;
   margin: 8px;
-  width: calc(100% - 16px);
+  width: calc(100% - var(--font-size-base));
 }
 
 .find-us-dropdown button:hover {
@@ -376,7 +413,7 @@
   cursor: pointer;
   text-align: left;
   list-style: none;
-  font-size: 16px;
+  font-size: var(--font-size-base);
   line-height: 1.5;
   transition: background 0.2s, color 0.2s;
   box-sizing: border-box;
@@ -407,7 +444,7 @@
 
 .english-dropdown li:hover,
 .english-dropdown li a:hover {
-  background: #294b80ff;
+  background: var(--primary-color);
   color: #fff;
 }
 
@@ -422,20 +459,20 @@
   position: absolute;
   left: 50%;
   right: auto;
-  top: 100%;
+  top: calc(100% - 6px); /* Adjust to remove gap from parent's padding */
   min-width: 260px;
   width: max-content;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   padding: 8px 0;
   margin: 6px 0 0 0;
-  transform: translateX(-50%);
+  margin: 0;
   text-align: left;
 }
 
 .white-dropdown-item {
   padding: 10px 18px;
-  color: #222; 
+  color: #222;
   text-align: left;
 }
 
@@ -475,6 +512,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  transform: translateY(-12px); /* Keep buttons further up for better alignment */
 }
 
 .nav-buttons button {
@@ -489,7 +527,7 @@
 
 .login-btn {
   border: none;
-  background-color: rgb(6 132 104 / 1);
+  background-color: var(--primary-color);
   color: #fff;
 }
 
@@ -503,10 +541,9 @@
 }
 
 .signup-btn:hover {
-  background-color: #294b80ff;
+  background-color: var(--primary-color);
   color: #fff;
 }
-
 
 /* ============================= */
 /* Heart Icon */
@@ -524,21 +561,12 @@
   color: darkred;
 }
 
-/* ============================= */
-/* Account Icon */
-/* ============================= */
-
 @media (min-width: 769px) {
-  .icon-btn.account {
-    display: none;
-  }
-}
-
-
 /* ============================= */
 /* Right-side icons wrapper */
 /* ============================= */
 .right-icons {
+  /* This rule already exists, just ensuring it's in the right place */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -548,8 +576,9 @@
 .icon-btn {
   font-size: 1.2rem;
   color: #333;
+  display: inline-flex; /* Make icons visible on desktop */
 }
-
+}
 /* ============================= */
 /* Responsive Breakpoints */
 /* ============================= */
@@ -559,7 +588,7 @@
   }
 
   .nav-links li {
-    font-size: 18px;
+    font-size: 1rem;
   }
 
   .nav-buttons button {
@@ -630,7 +659,7 @@
   }
 
   .nav-links li {
-    font-size: 16px;
+    font-size: var(--font-size-base);
   }
 }
 

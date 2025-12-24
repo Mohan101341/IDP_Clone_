@@ -22,7 +22,7 @@ const StudyAbroadHero = ({ title, subtitle, imageUrl, imageAlt }) => {
       className="stdy-btn"
       onClick={() => navigate("/contact")} // Must match the route path
     >
-      Contact Jramsys
+      Contact INTAKE
     </button>
             </div>
             <div className={`stdab-right${animate ? ' slide-in-right' : ''}`}>

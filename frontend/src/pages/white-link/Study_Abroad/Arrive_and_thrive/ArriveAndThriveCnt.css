@@ -1,10 +1,68 @@
 .arrive-thrive-container {
-    padding: 2rem;
-    font-family: Arial, sans-serif;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .arrive-thrive-section {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.arrive-thrive-section h2 {
+  font-size: 1.8rem;
+  color: #1d4ed8;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #1d4ed8;
+  padding-bottom: 0.5rem;
+}
+
+.arrive-thrive-section h3 {
+  font-size: 1.5rem;
+  color: #113a92;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.arrive-thrive-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.arrive-thrive-section ul {
+  list-style-position: inside;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.arrive-thrive-section li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.arrive-thrive-section li strong {
+  font-weight: 600;
+  color: #222;
+}
+
+@media (max-width: 768px) {
+  .arrive-thrive-container {
+    padding: 1.5rem;
+  }
+
+  .arrive-thrive-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .arrive-thrive-section h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .arrive-thrive-container {
+    padding: 1rem;
+  }
 }

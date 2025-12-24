@@ -1,26 +1,28 @@
 .asked-questions{
-  background: #e0e9ea;
+  background: #f0f4f8; /* Light gray background for a softer look */
   padding: 4rem;
-  border-radius: 10px;
+  border-radius: 12px; /* Slightly more rounded corners */
   max-width: 100%;
   margin: 2rem auto;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
 }
 
 .accordion-title {
-  font-size: 2rem;
+  font-size: 2.2rem; /* Slightly larger for prominence */
   font-weight: 700;
-  color: #23272b;
+  color: #2c3e50; /* Darker, more professional text color */
   margin-bottom: 2.2rem;
   position: relative;
 }
 .accordion-title::after {
   content: "";
   display: block;
-  width: 38px;
+  width: 45px; /* Slightly wider underline */
   height: 4px;
-  background: #ffb300;
+  background: #3498db; /* A more modern blue accent color */
   border-radius: 2px;
-  margin-top: 0.4rem;
+  margin-top: 0.6rem; /* More space between title and underline */
 }
 
 .accordion-list {
@@ -36,55 +38,114 @@
   background: none;
   border: none;
   outline: none;
-  font-size: 1.35rem;
+  font-size: 1.45rem; /* Slightly larger font */
   font-weight: 600;
-  color: #23272b;
+  color: #34495e; /* Darker text for better contrast */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.1rem 0;
+  padding: 1.2rem 0; /* Increased vertical padding */
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.3s ease, color 0.3s ease; /* Smoother transition */
 }
 
 .accordion-header:hover {
-  background: #f0f4f8;
+  background: #eef2f6; /* Lighter hover background */
+  color: #2980b9; /* Blue color on hover */
 }
 
 .accordion-icon {
-  font-size: 2rem;
+  font-size: 2.2rem; /* Larger icon */
   font-weight: 400;
-  color: #23272b;
+  color: #3498db; /* Icon color matches accent */
   margin-left: 1.2rem;
   line-height: 1;
+  transition: transform 0.3s ease; /* Smooth rotation for icon */
+}
+
+/* Add a class for rotated icon when accordion is open */
+.accordion-header.open .accordion-icon {
+  transform: rotate(45deg); /* Rotate for plus/minus effect */
 }
 
 .accordion-content {
-  padding: 0.7rem 0 1.2rem 0.2rem;
-  font-size: 1.07rem;
-  color: #444;
-  line-height: 1.7;
+  padding: 0.8rem 0 1.5rem 0.5rem; /* Adjusted padding */
+  font-size: 1.05rem; /* Slightly refined font size */
+  color: #616a6b; /* Softer text color */
+  line-height: 1.8; /* Increased line height for readability */
 }
 
 .accordion-content ul {
-  margin: 0.7rem 0 0.7rem 1.2rem;
-  padding-left: 1.2rem;
+  margin: 0.8rem 0 0.8rem 1.5rem; /* Adjusted margins */
+  padding-left: 1.5rem;
 }
 
 .accordion-divider {
-  border-bottom: 1.5px solid #e0e0e0;
+  border-bottom: 1px solid #dcdcdc; /* Lighter, subtle divider */
   margin: 0;
 }
 
-@media (max-width: 700px) {
-  .accordion-outer {
-    padding: 1.2rem 0.3rem;
+@media (max-width: 768px) {
+  .asked-questions {
+    padding: 2.5rem 1.5rem;
+    margin: 2rem auto;
   }
   .accordion-title {
-    font-size: 1.25rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+  }
+  .accordion-header {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+  .accordion-icon {
+    font-size: 1.9rem;
+  }
+  .accordion-content {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .asked-questions {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+  }
+  .accordion-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   .accordion-header {
     font-size: 1.05rem;
     padding: 0.8rem 0;
+  }
+  .accordion-icon {
+    font-size: 1.6rem;
+  }
+  .accordion-content {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .asked-questions {
+    padding: 1rem 0.8rem;
+    margin: 1rem auto;
+    border-radius: 8px;
+  }
+  .accordion-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .accordion-header {
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+  }
+  .accordion-icon {
+    font-size: 1.4rem;
+  }
+  .accordion-content {
+    font-size: 0.85rem;
   }
 }

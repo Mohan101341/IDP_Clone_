@@ -9,20 +9,22 @@ const Health_Insurance = () => {
   const navigate = useNavigate();
 
   return (
-    <div className={`essentials-container ${styles.insuranceContainer}`}>
-      <div className={styles.healthContainer}>
+    <div className="essentials-container">
+      <div className="essentials-hero">
         
         {/* Breadcrumb */}
-        <p className={styles.breadcrumb}>
+        <p className="breadcrumb-text">
           Study Abroad, Overseas Education... / Student Essentials / Health Insurance
         </p>
 
         {/* Heading */}
-        <h1 className={styles.mainHeading}>
+        <h1 className="hero-heading">
           Health Insurance services for International Students
         </h1>
 
-        {/* Recommendation Section */}
+        <p className="hero-subtext">
+          Stay protected with the right health cover for your study destination.
+        </p>
       
 
        

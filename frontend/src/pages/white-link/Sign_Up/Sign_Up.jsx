@@ -1,77 +1,66 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./SignUp.css"; // You'll need to create a corresponding CSS file
+import "./SignUp.css";
 
-const API_BASE = "http://127.0.0.1:5000";
+const API_BASE = import.meta.env.VITE_API_URL;
 
 const SignUp = () => {
-  const [fullName, setFullName] = useState("");
+  const [name, setName] = useState("");        
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  async function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(""); // Clear previous errors
+    setError("");
 
-    // Validate password length
     if (password.length < 6) {
-      setError("Password must be at least 6 characters long.");
+      setError("Password must be at least 6 characters long");
       return;
     }
 
     try {
-      console.log("Attempting signup to:", `${API_BASE}/api/auth/signup`);
-      
       const res = await fetch(`${API_BASE}/api/auth/signup`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ fullName, email, password }),
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name,        
+          email,
+          password
+        })
       });
-      
-      console.log("Response status:", res.status);
-      
-      let data = {};
-      try {
-        data = await res.json();
-        console.log("Response data:", data);
-      } catch (parseError) {
-        console.error("Failed to parse response:", parseError);
-        setError("Invalid response from server. Please try again.");
-        return;
-      }
-      
-      if (res.ok && data.success) {
-        alert("Account created successfully! Please log in.");
-        navigate("/pages/white-link/Sign_In"); // Redirect to login page
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert("Account created successfully. Please login.");
+        navigate("/login");
       } else {
-        setError(data.message || "Failed to create account. Please try again.");
+        setError(data.message || "Signup failed");
       }
-    } catch (err) {
-      console.error("Signup error:", err);
-      if (err.message.includes("Failed to fetch") || err.message.includes("NetworkError")) {
-        setError("Cannot connect to server. Make sure the backend is running on http://127.0.0.1:5000");
-      } else {
-        setError(err.message || "Failed to connect to the server. Please try again later.");
-      }
+    } catch (_err) {
+      setError("Cannot connect to server. Make sure backend is running.");
     }
-  }
+  };
 
   return (
     <div className="signup-container">
       <div className="signup-card">
         <h2>Create Account</h2>
+
         <form onSubmit={handleSubmit}>
           {error && <p className="error-message">{error}</p>}
+
           <div className="input-group">
             <label>Full Name</label>
             <input
               type="text"
               placeholder="Enter your full name"
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               required
             />
           </div>
@@ -103,7 +92,8 @@ const SignUp = () => {
           </button>
 
           <p className="login-link">
-            Already have an account? <Link to="/pages/white-link/Sign_In">Login</Link>
+            Already have an account?{" "}
+            <Link to="/login">Login</Link>
           </p>
         </form>
       </div>

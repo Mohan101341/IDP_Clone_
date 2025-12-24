@@ -1,8 +1,7 @@
 import React from "react"
-import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./StdyAustcnt.css"
 function StdyAustcnt() {
- const navigate = useNavigate();
     return(
         <div className="std-aust-container">
 <div className="study-australia">
@@ -61,12 +60,7 @@ function StdyAustcnt() {
         Australian universities offer a range of services to help students adjust to life in Australia and succeed academically, from orientation programs to legal services and career advice.
       </p>
     </div>
-    <button
-      
-      onClick={() => navigate("/contact")} // Must match the route path
-    >
-     Aval Free Councling
-    </button>
+  
   </div>
 </div>
 
@@ -146,12 +140,7 @@ function StdyAustcnt() {
 
 We know you have a lot of questions in your mind, so have answered common questions students as you raise about studying and living in Australia.</p>
 
- <button
-      
-      onClick={() => navigate("/contact")} // Must match the route path
-    >
-      Avail Free Councling
-    </button>
+
 </div>
 <div className="visa-requirements">
   <h1>Student visa requirements for Australia</h1>
@@ -201,12 +190,7 @@ We know you have a lot of questions in your mind, so have answered common questi
       </tr>
     </tbody>
   </table>
-   <button
-      
-      onClick={() => navigate("/contact")} // Must match the route path
-    >
-      Avail Free Councling
-    </button>
+ 
 </div>
 
 <div>
@@ -221,7 +205,7 @@ Unlike a single intake in Indian universities, Australian colleges and universit
 </div>
 
 <h1>Live life in the FastLane</h1>
-<p>Want to check if you're eligible to get into your dream university? With IDP Fastlane you can get an in-principle offer in seconds!
+<p>Want to check if you're eligible to get into your dream university? With INTAKE Fastlane you can get an in-principle offer in seconds!
 
 Enter your preferences to find and short list matching courses, provide your academic details and get ready to receive a response from your dream university within seconds!</p>
 </div>

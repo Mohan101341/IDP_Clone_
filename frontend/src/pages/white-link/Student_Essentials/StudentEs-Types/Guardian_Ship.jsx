@@ -10,20 +10,21 @@ const Guardian_Ship = () => {
     const [destination, setDestination] = useState("All destinations");
     const navigate = useNavigate();
   return (
-    <div className={`essentials-container ${styles.insuranceContainer}`}>
-      <div className={styles.healthContainer}>
+    <div className="essentials-container">
+      <div className="essentials-hero">
         
         {/* Breadcrumb */}
-        <p className={styles.breadcrumb}>
+        <p className="breadcrumb-text">
           Study Abroad, Overseas Education... / Student Essentials / Guardian ship
         </p>
 
         {/* Heading */}
-        <h1 className={styles.mainHeading}>
+        <h1 className="hero-heading">
           Guardian ship services for International Students
         </h1>
-
-        {/* Recommendation Section */}
+        <p className="hero-subtext">
+          Find a guardian for your study abroad journey.
+        </p>
        
       </div>
 

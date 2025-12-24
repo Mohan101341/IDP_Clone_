@@ -12,7 +12,7 @@ export default function CourseAdvice() {
       <section className="course-banner">
         <div className="course-banner-content">
           {/* Breadcrumb navigation. */}
-          <p className="ula">JRAMSYS OVERSEASE/Course Advice for students....</p>
+          <Link to="/"><p className="ula" href="/">INTAKE/Course Advice for students....</p></Link>
           {/* Main heading and description. */}
           <h1>Course Advice For Students Planning To
             Study Abroad</h1>

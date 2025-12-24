@@ -18,18 +18,18 @@ export default function TermsOfUse() {
           </p>
           <h2>Use License</h2>
           <p>
-            Permission is granted to temporarily access the materials on IDP Education's website for personal, 
+            Permission is granted to temporarily access the materials on INTAKE Education's website for personal, 
             non-commercial transitory viewing only.
           </p>
           <h2>Disclaimer</h2>
           <p>
-            The materials on IDP Education's website are provided on an 'as is' basis. IDP Education makes no 
+            The materials on INTAKE Education's website are provided on an 'as is' basis. INTAKE Education makes no 
             warranties, expressed or implied, and hereby disclaims and negates all other warranties.
           </p>
           <h2>Limitations</h2>
           <p>
-            In no event shall IDP Education or its suppliers be liable for any damages arising out of the use 
-            or inability to use the materials on IDP Education's website.
+            In no event shall INTAKE Education or its suppliers be liable for any damages arising out of the use 
+            or inability to use the materials on INTAKE Education's website.
           </p>
         </div>
       </div>

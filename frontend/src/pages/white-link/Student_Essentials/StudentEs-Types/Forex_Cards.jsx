@@ -10,25 +10,20 @@ const Forex_Cards = () => {
   const [destination, setDestination] = useState("All destinations");
   const navigate = useNavigate();
   return (
-    <div className={`essentials-container ${styles.insuranceContainer}`}>
-      <div className={styles.healthContainer}>
+    <div className="essentials-container">
+      <div className="essentials-hero">
         {/* Breadcrumb */}
-        <p className={styles.breadcrumb}>
+        <p className="breadcrumb-text">
           Study Abroad, Overseas Education... / Student Essentials / Forex Cards
         </p>
 
         {/* Heading */}
-        <h1 className={styles.mainHeading}>
+        <h1 className="hero-heading">
           Forex Card services for International Students
         </h1>
-
-       
-     
-
-       
-       
-       
-       
+        <p className="hero-subtext">
+          The smart, safe and easy way to carry money when you study abroad.
+        </p>
       </div>
 
       {/* Top Banner */}

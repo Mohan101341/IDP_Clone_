@@ -1,33 +1,46 @@
 
 /* Styling for the main banner container on the scholarship page. */
 .Scholar-container {
-    
     background-image: url('/public/assets/scholarship.jpg');
-    background-size: 550px;
-    background-position: right;
+
+    background-position: right; 
+    background-size: 520px;
     background-repeat: no-repeat;
     height: 300px;
     background-color: rgb(7, 7, 46);
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Add some padding */
 }
-
+.find-scholar-btn{
+    color: #ffffff;
+    background-color: #007bff;
+    padding-left: 10px;
+    margin-left: 0; /* Remove fixed margin */
+    margin-top: 20px; /* Adjust top margin */
+    text-align: center; /* Center button text */
+}
 /* Styling for the breadcrumb text in the banner. */
-.l1 {
+.l1np1 {
     color:white;
-    padding-left: 120px;
-    padding-top: 30px;
+    padding-top: 0; /* Remove fixed padding */
+    padding-left: 0; /* Remove fixed padding */
     font-size: 1.2rem;
     cursor: pointer;
-   
+    text-align: center; /* Center text */
 }
 
 /* Styling for the main heading in the banner. */
-.head {
+.Scholar-head {
     color:white;
     font-size: 43px;
     padding-top: 20px;
-    margin-right:200px;
-    padding-left: 100px;
-    margin-right: 680px;
+    margin-right: 0; /* Remove fixed margin */
+    padding-left: 0; /* Remove fixed padding */
+    text-align: center; /* Center text */
+    max-width: 80%; /* Limit width for readability */
 }
 
 /* Container for the introductory paragraph below the banner. */
@@ -83,7 +96,7 @@
 /* Styling for individual category/destination cards. */
 .card {
   background: white;
-  padding: 25px 20px 16px 30px;
+  padding: 25px 20px var(--font-size-base) 30px;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
@@ -163,14 +176,7 @@
     display: flex;
     gap: 25px;
     padding: 30px 0;
-    overflow-x: auto;
-    -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
     scroll-behavior: smooth; /* Enables smooth scrolling */
-}
-
-/* Hides scrollbar in Chrome, Safari, and Opera. */
-.scholarship-cards-wrapper::-webkit-scrollbar {
-    display: none;
 }
 
 /* Styling for a single card in the carousel. */
@@ -192,7 +198,7 @@
 
 /* Styling for the title within a scholarship card. */
 .card-title {
-    font-size: 16px;
+    font-size: var(--font-size-base);
     font-weight: bold;
     margin: 0 0 5px 0;
     line-height: 1.5;
@@ -231,7 +237,7 @@
 
 /* Styling for the emoji icons in the details. */
 .detail-icon {
-    font-size: 16px;
+    font-size: var(--font-size-base);
 }
 
 /* Styling for the "View more info" link at the bottom of the card. */
@@ -301,8 +307,9 @@
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
-    margin-left: 100px;
+    font-size: var(--font-size-base);
+    margin-left: 9
+    0px;
     margin-top: 20px;
     display: inline-block;
     transition: background-color 0.3s ease;
@@ -311,4 +318,168 @@
 /* Hover effect for the "Find Scholarships" button. */
 .find-scholar-btn:hover {
     background-color: #e67300;
+}
+@media (max-width: 768px) {
+    .Scholar-container {
+        background-size: cover; /* Ensure image covers the area */
+        height: 250px;
+        padding: 15px; /* Adjust padding */
+    }
+    .l1np1 {
+        font-size: 1rem;
+    }
+    .Scholar-head {
+        font-size: 30px; /* Adjust font size */
+        margin-right: 0; /* Remove fixed margin */
+        padding-left: 0; /* Remove fixed padding */
+        max-width: 90%; /* Adjust max-width */
+    }
+    .find-scholar-btn {
+        margin-left: 0; /* Remove fixed margin */
+        margin-top: 15px; /* Adjust margin */
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .l2 {
+        padding: 30px 20px; /* Adjust padding */
+        font-size: var(--font-size-base); /* Adjust font size */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .Scholar-browse {
+        padding: 30px 20px; /* Adjust padding */
+        margin-left: 0;
+    }
+
+    .head2 {
+        font-size: 28px;
+    }
+
+    .l3 {
+        padding-left: 0; /* Remove fixed padding */
+        font-size: 24px;
+        text-align: center;
+    }
+    .l4 {
+        padding-left: 0; /* Remove fixed padding */
+        font-size: 24px;
+        text-align: center;
+    }
+    .link {
+        padding-left: 20px; /* Adjust padding */
+        text-align: center;
+        display: block; /* Make it a block element to center */
+    }
+    .head3 {
+        padding-left: 20px; /* Adjust padding */
+        font-size: 28px;
+        text-align: center;
+    }
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust minmax for smaller screens */
+        padding: 0 20px;
+    }
+    .scholarship-cards-container {
+        padding: 0 20px; /* Adjust padding */
+    }
+    .scholarship-cards-wrapper {
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .scholarship-card {
+        width: 100%; /* Make card full width within wrapper */
+        flex-shrink: 1; /* Allow shrinking */
+    }
+    .card-navigation {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Scholar-container {
+        height: 200px; /* Further adjust height */
+        padding: 10px;
+    }
+    .Scholar-head {
+        font-size: 24px; /* Further adjust font size */
+        max-width: 100%;
+    }
+    .l1np1 {
+        font-size: 0.9rem;
+    }
+    .l2 {
+        font-size: 14px;
+        padding: 20px 10px;
+    }
+    .head2, .head3 {
+        font-size: 24px;
+        padding-left: 10px;
+    }
+    .l3, .l4 {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    .link {
+        font-size: var(--font-size-base);
+        padding-left: 10px;
+    }
+    .container {
+        grid-template-columns: 1fr; /* Single column */
+        padding: 0 10px;
+    }
+    .scholarship-cards-container {
+        padding: 0 10px;
+    }
+    .scholarship-card {
+        width: 95%; /* Adjust width slightly for spacing */
+        margin: 0 auto; /* Center cards */
+    }
+    .card-title {
+        font-size: 15px;
+    }
+    .card-university, .detail-item, .view-more-link {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .Scholar-container {
+        height: 180px; /* Further adjust height for very small screens */
+        padding: 8px;
+    }
+    .Scholar-head {
+        font-size: 20px; /* Smaller font size for the main heading */
+        max-width: 100%;
+    }
+    .l1np1 {
+        font-size: 0.8rem; /* Smaller breadcrumb font size */
+    }
+    .find-scholar-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    .l2 {
+        font-size: 12px; /* Smaller introductory paragraph font size */
+        padding: 15px 8px;
+    }
+    .head2, .head3 {
+        font-size: 20px; /* Smaller section headings */
+        padding-left: 8px;
+    }
+    .l3, .l4 {
+        font-size: 18px; /* Smaller sub-headings */
+        padding-left: 8px;
+    }
+    .link {
+        font-size: 14px; /* Smaller link font size */
+        padding-left: 8px;
+    }
+    .container {
+        padding: 0 8px;
+    }
+    .scholarship-cards-container {
+        padding: 0 8px;
+    }
 }

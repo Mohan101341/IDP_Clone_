@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Duolingo.css";
 export default function Duolingo(){
     return(
         <div>
             <div className="Duolingo-bas">
-            <p1 className="side-head">JRAMSYS OVERSEASE/Duolingo....</p1>
+           <Link to="/"> <p1 className="side-head">INTAKE/Duolingo....</p1></Link>
             <h1 className="Duolingo-head">Duolingo English Test</h1>
             <p className="Duolingo-mat">The Duolingo English Test is an affordable, convenient, and secure online English proficiency test accepted by thousands of institutions worldwide. It assesses reading, writing, speaking, and listening skills through interactive tasks.</p>
             </div>

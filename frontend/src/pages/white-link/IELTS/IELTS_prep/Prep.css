@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-position: right;
     background-size: 380px;
-    height: 380px;
+    height: 300px;
     background-color: black;
     box-shadow: 7px 6px 15px rgb(65, 65, 65);
 
@@ -22,13 +22,13 @@
     font-size: 40px;
     color: #ffffff;
     font-weight: 700;
-    margin-top: -50px;
+    margin-top: -40px;
     margin-bottom: 10px;
 }
 
 /* Styling for the introductory paragraph in the banner. */
 .p2 {
-    margin-top: -30px;
+    margin-top: 30px;
     color: white;
 }
 
@@ -88,14 +88,37 @@
     margin-bottom: 20px;
     margin-right: 200px;
 }
-
-/* Styling for the secondary button at the bottom of the page. */
-.btn1 {
-    margin-left: 7px;
-    margin-top: 10px;
-    font-weight: bold;
-    border: 1px solid rgb(237, 237, 237);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 50px;
-    border-radius: 30px;
+@media (max-width: 768px) {
+    .prep {
+        background-size: 210px;
+        height: 230px;
+        background-position: right;
+    }
+    .prep h1 {
+        font-size: 32px;
+        margin-top: -70px;
+    }
+    .p2{
+        font-size: 12px;
+        margin-top: -20px;
+        padding-right: 220px;
+    }
+    .p1{
+        font-size: 13px;
+        margin-left: -210px;
+        padding-right: 20px;
+    }
+    .prep1 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .p3, .line1 {
+        padding-right: 0;
+        margin-left: 140px;
+        margin-right: 20px;
+        padding-right: 120px;
+    }
+    .line{
+        margin-left: 0;
+    }
 }

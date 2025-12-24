@@ -3,24 +3,30 @@
     padding-top:20px;
     padding-left: 150px;
     background-image: url("/public/assets/bg1.jpg");
-    box-shadow: 1px 2px 9px rgb(135, 132, 132);
+    box-shadow: 8px 6px 11px rgb(135, 132, 132);
 }
-.sa{
+.sas{
     padding-top: 20px;
+    font-size: 18px;
+    margin-left: -850px;
+    color: black;
 }
-.sa:hover{
+.sas:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 .Toefl-head{
     font-size: 35px;
+    color: black;
+    font-weight: bold;
+    padding-left: 50px;
     padding-top: 17px;
-    margin-left: -3px;
+  align-items: center;
 }
 .Toefl-mat{
     font-size: 19px;
     padding-right: 190px;
- 
+    color: black;
 }
 .Toefl-body{
     padding:30px 150px;
@@ -45,9 +51,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-.Toefl-table-wrapper {
-  overflow-x: auto;
-}
 
 .Toefl-table {
   width: 100%;
@@ -79,4 +82,54 @@
 
 .Toefl-table a:hover {
   text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .Toefl-container {
+    padding: 1rem;
+    margin: 20px;
+    height: 620px;
+  }
+
+  .Toefl-heading {
+    font-size: 1.5rem;
+  }
+
+  .Toefl-table th,
+  .Toefl-table td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  .Toefl-bas{
+    background-position: right top;
+    background-size: 320px;
+    height: 200px;
+    padding: 20px 0 40px 0;
+  }
+  .sas{
+    margin-left: 0;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 220px;
+  }
+  .Toefl-head{
+    font-size: 28px;
+    padding-right: 20px;
+    padding-left: 360px;
+    line-height: normal;
+    padding-top: 15px;
+  }
+  .Toefl-mat{
+    padding-left: 120px;
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: normal;
+    padding-top: 5px;
+  }
+  .Toefl-table{
+    font-size: 14px;
+    height: 220px;
+  }
+  .Toefl-table-wrapper{
+    height: 920px;
+  }
 }

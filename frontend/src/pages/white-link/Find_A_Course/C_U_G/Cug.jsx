@@ -1,5 +1,6 @@
 // Import React and its hooks for state management.
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // Import the corresponding CSS file for styling.
 import './Cug.css';
 
@@ -95,10 +96,10 @@ export default function Cug() {
         {/* This is the main banner section for the CUG rankings page. */}
         <div className="cug">
             {/* Breadcrumb navigation. */}
-            <p className="p1">JRAMSYS OVERSEASE/University Ranking/CUG</p>
+            <Link to="/"><p className="p21">INTAKE/University Ranking/CUG</p></Link>
             {/* Main heading and description. */}
-            <h1 className="h1">CUG university rankings in United Kingdom for 2024</h1>
-            <p className="p2">Discover UK's top-ranking universities according to the Complete University Guide (CUG) Rankings 2024. Search by subject or study level, and explore the courses and experience they offer.</p>
+            <h1 className="h21">CUG university rankings in United Kingdom for 2024</h1>
+            <p className="p22">Discover UK's top-ranking universities according to the Complete University Guide (CUG) Rankings 2024. Search by subject or study level, and explore the courses and experience they offer.</p>
         </div>
         {/* This section contains the search bars for filtering universities. */}
         <div className="search-bars">

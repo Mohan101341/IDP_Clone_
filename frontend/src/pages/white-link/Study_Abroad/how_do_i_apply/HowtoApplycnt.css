@@ -100,3 +100,18 @@
     padding: 1rem;
   }
 }
+
+@media (max-width: 360px) {
+  .apply-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .apply-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .apply-section p,
+  .apply-section li {
+    font-size: 0.9rem;
+  }
+}

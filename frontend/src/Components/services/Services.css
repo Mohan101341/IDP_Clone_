@@ -1,7 +1,9 @@
 /* ===== Services Section ===== */
 .services-section {
-  padding: 3rem 0 4rem;
-  background: #fdfdfe;
+  background-color: azure;
+  padding: 20px;
+
+
 }
 
 .services-container {

@@ -1,0 +1,88 @@
+.stdabvid {
+    padding: 1rem;
+    background-color: rgb(194, 209, 209);
+    max-width: 1200px; /* Limit width on large screens */
+    margin: 0 auto; /* Center the content */
+}
+
+.vid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    border-radius: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 20px;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 20px;
+}
+
+.vid-txt {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+button:hover {
+    background-color: rgb(235, 235, 245);
+    color: black;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .stdabvid {
+        padding: 1.5rem;
+    }
+
+    .vid-txt {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stdabvid {
+        padding: 1rem;
+    }
+
+    .vid-txt {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+  .stdabvid {
+    padding: 0.8rem;
+  }
+
+  .vid-txt {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+}

@@ -1,14 +1,12 @@
 import React, { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import IntakeWrapper from './components/IntakeWrapper/IntakeWrapper'
 
-import IdpWrapper from './IdpWrapper'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  
-      <IdpWrapper />
-    
+    <IntakeWrapper/>
   </StrictMode>,
 )

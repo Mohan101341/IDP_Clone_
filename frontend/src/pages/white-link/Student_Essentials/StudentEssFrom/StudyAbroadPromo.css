@@ -1,141 +1,84 @@
 :root {
   --breakpoint-mobile: 768px;
-  --breakpoint-small-mobile: 480px;
 }
 
-/* Container styling */
 .promo-container {
-  padding: 2rem;
-  background-color: white;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+  font-family: "Poppins", sans-serif;
   color: #333;
-  max-width: 1200px;
+  max-width: 100%;
   margin: auto;
+  text-align: center;
 }
 
-/* Heading and description */
 .promo-heading {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #1a73e8;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1f2937;
 }
 
 .promo-description {
   font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #555;
+  margin-bottom: 3rem;
+  color: #495057;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Hero section layout */
 .promo-hero {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Responsive video container */
 .video-responsive {
+  flex: 1;
+  min-width: 300px;
+  max-width: 560px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
   overflow: hidden;
-  position: relative;
-  width: 100%;
-  /* 16:9 aspect ratio */
-  padding-top: 56.25%; 
-  max-width: 600px; /* Limit max width of video container */
-  margin: auto; /* Center video container */
 }
 
 .video-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 315px;
   border: none;
-  border-radius: 10px;
 }
 
-/* Remove fixed dimensions from shorts-video, as it's handled by video-responsive */
-.shorts-video {
-  width: 100%; 
-  height: 100%;
-}
-
-
-/* Text beside video */
 .hero-text {
   flex: 1;
-  min-width: 280px;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: left;
 }
 
 .hero-text h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: #0b3d91;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
 }
 
 .hero-text p {
-  font-size: 1rem;
-  color: #444;
+  font-size: 1.1rem;
+  color: #495057;
+  line-height: 1.7;
 }
 
-/* Responsive tweaks */
 @media (max-width: var(--breakpoint-mobile)) {
-  .promo-container {
-    padding: 1.5rem;
-  }
   .promo-hero {
     flex-direction: column;
-    align-items: center; /* Center items when stacked */
-  }
-
-  .promo-heading {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .promo-description {
-    font-size: 1rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
   }
 
   .hero-text {
-    text-align: center; /* Center text when stacked */
-  }
-
-  .hero-text h2 {
-    font-size: 1.5rem;
-  }
-
-  .hero-text p {
-    font-size: 0.9rem;
-  }
-
-  .video-responsive {
-    padding-top: 75%; /* Adjust aspect ratio for shorts (3:4) or keep 16:9 if desired */
-  }
-}
-
-@media (max-width: var(--breakpoint-small-mobile)) {
-  .promo-container {
-    padding: 1rem;
-  }
-  .promo-heading {
-    font-size: 1.8rem;
-  }
-  .promo-description {
-    font-size: 0.9rem;
-  }
-  .hero-text h2 {
-    font-size: 1.3rem;
-  }
-  .hero-text p {
-    font-size: 0.85rem;
-  }
-  .video-responsive {
-    padding-top: 100%; /* Make it square for very small screens if needed, or adjust to fit content */
+    text-align: center;
   }
 }

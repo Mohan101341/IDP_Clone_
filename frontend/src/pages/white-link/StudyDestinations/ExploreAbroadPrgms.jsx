@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./ExploreAbroadPrgms.css";
+
 const programs = [
   {
     title: "Study Abroad in Australia",
@@ -41,8 +42,6 @@ const programs = [
 ];
 
 function ExploreAbroadPrgms() {
-  const [hovered, setHovered] = useState(null);
-
   return (
     <div className="explore-abroad-container">
       <h2 className="explore-abroad-title">
@@ -50,35 +49,25 @@ function ExploreAbroadPrgms() {
       </h2>
       <div className="explore-abroad-grid">
         {programs.map((prg, idx) => (
-          <div
-            className="explore-abroad-card"
-            key={idx}
-            onMouseEnter={() => setHovered(idx)}
-            onMouseLeave={() => setHovered(null)}
-          >
+          <Link to={prg.path} className="explore-abroad-card" key={idx}>
             <div
-              className={`explore-abroad-img${hovered === idx ? " hovered" : ""}`}
+              className="explore-abroad-img"
               style={{
-                backgroundImage: hovered === idx
-                  ? "none"
-                  : `url(${prg.img})`
+                backgroundImage: `url(${prg.img})`
               }}
             >
-              {hovered === idx ? (
-                <div className="explore-abroad-hover-content">
-                  <span className="explore-abroad-card-title">{prg.title}</span>
-                  <p className="explore-abroad-card-desc">{prg.desc}</p>
-                  <Link to={prg.path} className="explore-abroad-discover-btn">
-                    Discover
-                  </Link>
-                </div>
-              ) : (
-                <div className="explore-abroad-overlay">
-                  <span className="explore-abroad-card-title">{prg.title}</span>
-                </div>
-              )}
+              <div className="explore-abroad-overlay">
+                <span className="explore-abroad-card-title">{prg.title}</span>
+              </div>
             </div>
-          </div>
+            <div className="explore-abroad-hover-content">
+              <span className="explore-abroad-card-title">{prg.title}</span>
+              <p className="explore-abroad-card-desc">{prg.desc}</p>
+              <div className="explore-abroad-discover-btn">
+                Discover
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

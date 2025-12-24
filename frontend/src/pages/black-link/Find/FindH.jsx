@@ -7,13 +7,13 @@ const FindH = () => {
             <div className="find-h-content">
                 {/* Breadcrumb */}
                 <p className="breadcrumb2">
-                    Home / Find an Jramsys office
+                    Home / Find an INTAKE'S office
                 </p>
 
                 {/* Heading */}
                 <div className="header-section">
                     <h1 className="main-heading">
-                        Find  Jramsys office near you
+                        Find  INTAKE'S office near you
                     </h1>
                     <p className="sub-heading">
                         Our counsellors are ready to help you on your study abroad journey.

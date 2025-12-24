@@ -1,158 +1,124 @@
-/* ISIC.module.css
-   Clean, consistent styles for the ISIC page
-*/
-
 :root {
-    --accent: #277af1;
-    --muted: #6b7280;
-    --bg-card: #ffffff;
-    --radius: 12px;
-    --max-width: 1200px;
+  --accent: #007bff;
+  --text: #1f2937;
+  --muted: #495057;
+  --card-bg: #ffffff;
+  --max-width: 1200px;
+  --radius: 15px;
 }
 
-/* Container */
 .insuranceContainer {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #222;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
 }
-
-/* Top area */
 
 .healthContainer {
-   background-image: url("/assets/YouTube.png"); /* light blue, change as needed */
-  padding: 60px;
-  border-radius: 8px;
+  background-color: #f8f9fa;
+  padding: 80px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .breadcrumb {
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 8px;
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
 }
 
 .mainHeading {
-    font-size: 28px;
-    font-weight: 700;
-    color: #15355f;
-    margin: 6px 0 12px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 auto 1rem;
+  max-width: 800px;
 }
 
-/* Intro / card wrapper (optional area for content you might add) */
 .intro {
-    background: var(--bg-card);
-    padding: 18px;
-    border-radius: var(--radius);
-    border: 1px solid #eef2f6;
-    box-shadow: 0 8px 20px rgba(11, 20, 40, 0.04);
-    margin-bottom: 24px;
-    color: #444;
-    line-height: 1.6;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--radius);
+  border: 1px solid #e9ecef;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1.1rem;
 }
 
-/* Example call-to-action banner (if you add one later) */
 .banner {
-    position: relative;
-    color: white;
-    padding: 28px;
-    border-radius: var(--radius);
-    text-align: center;
-    margin: 22px 0;
-    box-shadow: 0 12px 32px rgba(39, 122, 241, 0.12);
-    overflow: auto;
-    z-index: 1;
-}
-
-.banner::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    /* Replace with your image path */
-    background-image: url('/assets/isic-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Dark overlay for text readability */
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: multiply;
-    z-index: -1;
+  position: relative;
+  color: white;
+  padding: 80px 30px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin: 40px 0;
+  overflow: hidden;
+  background: linear-gradient(45deg, rgba(0, 123, 255, 0.8), rgba(0, 210, 255, 0.8));
 }
 
 .banner h2 {
-    margin: 0 0 8px;
-    font-size: 22px;
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .banner p {
-    margin: 0;
-    font-size: 15px;
-    opacity: 0.95;
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.95;
 }
 
-/* Cards area (use when listing ISIC benefits / partners) */
 .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .card {
-    background: var(--bg-card);
-    padding: 18px;
-    border-radius: var(--radius);
-    border: 1px solid #e8eef6;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
-    transition: transform .18s ease, box-shadow .18s ease;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--radius);
+  border: 1px solid #e9ecef;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
-    margin: 0 0 8px;
-    font-size: 18px;
-    color: #123254;
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .card p {
-    margin: 0;
-    color: #555;
-    line-height: 1.5;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
-/* Hover */
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
-    border-color: #dceaff;
-}
-
-/* Small utility */
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .small {
-    font-size: 13px;
-    color: var(--muted);
+  font-size: 1rem;
+  color: var(--muted);
 }
 
-/* Responsive rules */
-@media (max-width: 1024px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 640px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .mainHeading {
-        font-size: 24px;
-    }
-
-    .banner h2 {
-        font-size: 18px;
-    }
+@media (max-width: 768px) {
+  .mainHeading {
+    font-size: 2.5rem;
+  }
+  .banner h2 {
+    font-size: 2rem;
+  }
 }

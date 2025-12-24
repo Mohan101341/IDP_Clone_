@@ -2,7 +2,7 @@
 .find-scholar-banner {
     position: relative;
     background-image: url('/public/assets/scholars.jpg');
-    background-size: 1640px;
+    background-size: cover; /* Ensure background covers the area responsively by default */
     background-position: center;
     opacity: 1;
     padding: 4rem 2rem;
@@ -50,7 +50,7 @@
 .search-bar {
     width: 100%;
     padding: 12px;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     border: 1px solid #ced4da;
     border-radius: 4px;
 }
@@ -64,7 +64,7 @@
 /* Styling for the select (dropdown) elements. */
 .filter-options select {
     padding: 12px;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     border: 1px solid #ced4da;
     border-radius: 4px;
     flex-grow: 1;
@@ -155,7 +155,7 @@
 
 /* Styling for the pagination buttons. */
 .pagination-container button {
-    padding: 8px 16px;
+    padding: 8px var(--font-size-base);
     border: 1px solid #dee2e6;
     background-color: #fff;
     cursor: pointer;
@@ -172,4 +172,87 @@
 .pagination-container button:disabled {
     cursor: not-allowed;
     opacity: 0.6;
+}
+@media (max-width: 768px) {
+    .find-scholar-banner {
+        padding: 2.5rem 1rem; /* Adjust banner padding for smaller screens */
+    }
+
+    .find-scholar-banner h1 {
+        font-size: 2.2px; /* Smaller font size for banner heading */
+    }
+
+    .find-scholar-banner p {
+        font-size: 1rem; /* Smaller font size for banner paragraph */
+    }
+
+    .find-scholar-container {
+        padding: 1rem; /* Adjust main container padding */
+    }
+
+    .search-filter-container {
+        padding: 1.5rem; /* Adjust search/filter container padding */
+    }
+
+    .filter-options {
+        flex-direction: column; /* Stack filter dropdowns vertically */
+        gap: 0.75rem; /* Adjust gap between stacked dropdowns */
+    }
+
+    .filter-options select {
+        width: 100%; /* Make select elements take full width when stacked */
+    }
+
+    .result-card-body {
+        grid-template-columns: 1fr; /* Ensure details stack on very small screens */
+    }
+
+    .pagination-container {
+        flex-wrap: wrap; /* Allow pagination buttons to wrap to the next line */
+        gap: 0.5rem; /* Adjust gap for wrapped pagination buttons */
+    }
+
+    .pagination-container button {
+        padding: 8px 14px; /* Adjust padding for pagination buttons */
+        font-size: 0.9rem; /* Adjust font size for pagination buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .find-scholar-banner {
+        padding: 2rem 0.5rem; /* Further adjust banner padding */
+    }
+    .find-scholar-banner h1 {
+        font-size: 2rem; /* Further reduce font size for banner heading */
+    }
+    .find-scholar-banner p {
+        font-size: 0.9rem; /* Further reduce font size for banner paragraph */
+    }
+    .find-scholar-container {
+        padding: 0.5rem; /* Further adjust main container padding */
+    }
+    .search-filter-container {
+        padding: 1rem; /* Further adjust search/filter container padding */
+    }
+    .search-bar,
+    .filter-options select {
+        padding: 10px; /* Smaller padding for inputs */
+        font-size: 14px; /* Smaller font size for inputs */
+    }
+    .results-summary {
+        font-size: 0.85rem; /* Smaller font for summary */
+    }
+    .result-card-header h3 {
+        font-size: 1.1rem; /* Smaller font for card title */
+    }
+    .result-card-header p {
+        font-size: 0.8rem; /* Smaller font for university name */
+    }
+    .result-detail {
+        font-size: 0.8rem; /* Smaller font for details */
+    }
+    .pagination-container button {
+        padding: 6px 10px; /* Smaller padding for pagination buttons */
+        font-size: 0.8rem; /* Smaller font size for pagination buttons */
+    }
 }

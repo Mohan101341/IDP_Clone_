@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./Stdycanct.css"
 function Stdycancnt() {
 
@@ -22,23 +23,23 @@ function Stdycancnt() {
 
      Help me study in Canada  </p>
 
-     <button>Help Me Study In Canada</button>
+
 
    
 
     <div >
       <h1>Latest Update for Canada</h1>
       <p>
-       <strong>Study Permit Cap:</strong> In 2025, IRCC plans to issue 437,000 visas, a 10% reduction compared to the 2024 targets. Despite a 35% cap introduced in January 2024, IDP observed no significant impact on student seat allocations. It is advised to expedite the student application process at all stages to mitigate any potential risks due to the cap. </p>
-      <p> <strong>Changes to Master’s and PhD Programs: </strong>A Pre-Arrival Letter (PAL) is now required for Master’s and higher-level programs. 12% of permits are specifically reserved for these students. The process for obtaining a PAL has been streamlined by universities and poses no risk for IDP. PAL has become a mandatory document for study permit applications for Master’s programs.</p>
+       <strong>Study Permit Cap:</strong> In 2025, IRCC plans to issue 437,000 visas, a 10% reduction compared to the 2024 targets. Despite a 35% cap introduced in January 2024, INTAKE observed no significant impact on student seat allocations. It is advised to expedite the student application process at all stages to mitigate any potential risks due to the cap. </p>
+      <p> <strong>Changes to Master’s and PhD Programs: </strong>A Pre-Arrival Letter (PAL) is now required for Master’s and higher-level programs. 12% of permits are specifically reserved for these students. The process for obtaining a PAL has been streamlined by universities and poses no risk for INTAKE. PAL has become a mandatory document for study permit applications for Master’s programs.</p>
     
-      <p>  <strong>Post-Graduation Work Permit (PGWP):</strong> Graduates from programs at public colleges that are linked to occupations facing long-term labor shortages will remain eligible for a PGWP of up to 3 years. IDP continues to service all study levels with the potential to secure a 3-year PGWP, aligned with labor market needs as defined by provincial and federal governments.</p>
+      <p>  <strong>Post-Graduation Work Permit (PGWP):</strong> Graduates from programs at public colleges that are linked to occupations facing long-term labor shortages will remain eligible for a PGWP of up to 3 years. INTAKE continues to service all study levels with the potential to secure a 3-year PGWP, aligned with labor market needs as defined by provincial and federal governments.</p>
      <p> <strong>ELT Requirement for PGWP:</strong> From November 1, 2024, all PGWP applicants must demonstrate a minimum language proficiency. University graduates need to meet Canadian Language Benchmark (CLB) Level 7, and college graduates need CLB Level 5. An IELTS score of 6 is equivalent to CLB 7, and a score of 4-4.5 is equivalent to CLB 5.</p>
      <p> <strong>Spouse Work Permit: </strong>Spouses of Master’s students enrolled in a 16-month program or longer in designated essential programs will be eligible for a work permit. This makes it essential for students to enroll in qualifying Master’s programs to enable their spouses to work in Canada.
 
     </p>
 
-    <button>Avail Free Councling</button>
+  
     </div>
 
     <div >
@@ -165,7 +166,7 @@ function Stdycancnt() {
      
     
  
-<button>Avail free counselling</button>
+
 </div>
 <div className="visa-requirements">
   <h1>Cost to study in Canada</h1>
@@ -217,7 +218,7 @@ function Stdycancnt() {
       </tr>
     </tbody>
   </table>
-  <button>Avail free councling</button>
+ 
 </div>
 
 <div>
@@ -232,7 +233,7 @@ Unlike a single intake in Indian universities, Australian colleges and universit
 </div>
 
 <h1>Live life in the FastLane</h1>
-<p>Want to check if you're eligible to get into your dream university? With IDP Fastlane you can get an in-principle offer in seconds!
+<p>Want to check if you're eligible to get into your dream university? With INTAKE Fastlane you can get an in-principle offer in seconds!
 
 Enter your preferences to find and short list matching courses, provide your academic details and get ready to receive a response from your dream university within seconds!</p>
 </div>

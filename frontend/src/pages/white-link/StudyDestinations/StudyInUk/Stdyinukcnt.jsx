@@ -219,7 +219,7 @@ const Stdyinukcnt = () => {
 
                 <div className="fastlane-cta">
                     <h3>Live life in the FastLane</h3>
-                    <p>Want to check if you're eligible to get into your dream university? With IDP Fastlane you can get an in-principle offer in seconds!</p>
+                    <p>Want to check if you're eligible to get into your dream university? With INTAKE Fastlane you can get an in-principle offer in seconds!</p>
                     <p>Enter your preferences to find and short list matching courses, provide your academic details and get ready to receive a response from your dream university within seconds!</p>
                 </div>
             </section>
@@ -250,7 +250,7 @@ const Stdyinukcnt = () => {
                 <p>Here’s a list of the minimum monthly amount you should expect for living expenses in the UK:</p>
                 {renderCostOfLivingTable()}
                 <p>Read more about <a href="#">cost of living</a></p>
-                <p>*Please note that all figures are indicative, connect with <a href="#">IDP experts</a> for more details.</p>
+                <p>*Please note that all figures are indicative, connect with <a href="#">INTAKE experts</a> for more details.</p>
             </section>
 
             <section>

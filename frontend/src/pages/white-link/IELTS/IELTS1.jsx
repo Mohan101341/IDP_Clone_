@@ -11,14 +11,14 @@ export default function IELTSPage() {
             {/* This section is the main banner of the page. */}
             <div className='ma'>
                 {/* Breadcrumb navigation link. */}
-                <p className='pa'>JRAMSYS OVERSEASE/IELTS - one test, countless...</p>
+               <Link to="/"><p className='pa'>INTAKE/IELTS - one test, countless...</p></Link> 
                 {/* Main heading and introductory text. */}
-                <h1 className='la'>IELTS - one test, countless opportunities</h1>
+                <h1 className='laa'>IELTS - one test, countless opportunities</h1>
                 <p className='aa'>IELTS is trusted by over 12,000 organisations as a true indicator of one's real-world English communication capabilities</p>
                 
             </div>
             {/* This section contains a detailed paragraph explaining what IELTS is. */}
-            <div className='mt'>The International English Language Testing System (IELTS) is a vital English proficiency test required globally for individuals seeking international education, professional registration, or migration. The test is designed to measure proficiency across all four core skills: Listening, Reading, Writing, and Speaking. While the Listening and Speaking sections are the same for everyone, the Reading and Writing content differs based on the chosen module: Academic or General Training. The Academic module presents complex, university-level texts and requires the description of graphs or data in the Writing section, preparing test-takers for higher education. In contrast, the General Training module features texts related to everyday social and workplace survival and includes letter writing in the Writing section, making it suitable for work or immigration purposes. Regardless of the module, the final result is presented on a comprehensive 9-Band Scale, offering a clear and accepted measure of a candidate's readiness for life in an English-speaking country.</div>
+            <div className='mattt'>The International English Language Testing System (IELTS) is a vital English proficiency test required globally for individuals seeking international education, professional registration, or migration. The test is designed to measure proficiency across all four core skills: Listening, Reading, Writing, and Speaking. While the Listening and Speaking sections are the same for everyone, the Reading and Writing content differs based on the chosen module: Academic or General Training. The Academic module presents complex, university-level texts and requires the description of graphs or data in the Writing section, preparing test-takers for higher education. In contrast, the General Training module features texts related to everyday social and workplace survival and includes letter writing in the Writing section, making it suitable for work or immigration purposes. Regardless of the module, the final result is presented on a comprehensive 9-Band Scale, offering a clear and accepted measure of a candidate's readiness for life in an English-speaking country.</div>
            {/* This container holds a table with key details about the IELTS test. */}
            <div className="ielts_container">
       <h2 className="ielts_heading">IELTS – International English Language Testing System </h2>
@@ -94,7 +94,7 @@ export default function IELTSPage() {
         {/* This container holds navigation boxes to other pages. */}
         <div className="box-container">
        {/* Each Link component navigates to a different page or external site. */}
-       <Link to="https://ieltsidpindia.com/?utm_term=www.ieltsidpindia.com&utm_content=Brand%20Gold%20Standard&msclkid=312fa7a26ece113da714ceabaa265e4c&utm_medium=cpc&utm_source=bing&utm_campaign=Pmax_Bing"><p className="box">Why take IELTS with IDP?</p></Link>
+       <Link to="https://r.search.yahoo.com/_ylt=Awr1UUrSbz9p_QEArDq7HAx.;_ylu=Y29sbwNzZzMEcG9zAzIEdnRpZAMEc2VjA3Ny/RV=2/RE=1766974674/RO=10/RU=https%3a%2f%2ftakeielts.britishcouncil.org%2fblog%2fbenefits-ielts-why-take-test/RK=2/RS=EqFgHy55sBlz0FdUtDqcQqh0Fhs-"><p className="box">Why take IELTS?</p></Link>
        <Link to="/pages/Prep"><p className="box">How to Prepare for IELTS</p></Link>
       <Link to="/pages/Book"><p className="box">Book an IELTS test</p></Link>
     </div>

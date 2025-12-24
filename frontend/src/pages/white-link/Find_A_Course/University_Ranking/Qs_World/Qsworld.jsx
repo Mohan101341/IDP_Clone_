@@ -1,5 +1,6 @@
 // Import React to build the component.
-import react from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 // Import the corresponding CSS file for styling.
 import './Qsworld.css';
 
@@ -10,9 +11,9 @@ export default function Qsworld() {
         {/* This is the main banner section for the page. */}
         <div className='Qs-container'>
             {/* Breadcrumb navigation. */}
-            <p className='p1'>JRAMSYS OVERSEASE/QS World University Ranking...</p>
+           <Link to="/"> <p className='p11'>INTAKE/QS World University Ranking...</p></Link>
             {/* Main heading. */}
-            <h1 className='h1'>QS World University Rankings 2025: Top global universities</h1>            </div>
+            <h1 className='h11'>QS World University Rankings 2025: Top global universities</h1>            </div>
             <h1 className='mat'><span className='ul'>C</span>heck the ranking of your university on the world map</h1>
         {/* This container holds the main informational content about the QS rankings. */}
         <div className='Qs-container2'>

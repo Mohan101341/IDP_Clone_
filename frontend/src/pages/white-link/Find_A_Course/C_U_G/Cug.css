@@ -1,4 +1,3 @@
-/* Styling for the main banner section of the CUG page. */
 .cug {
     background-color: #ffffff;
     padding: 40px 0 80px 0;
@@ -11,30 +10,34 @@
 }
 
 /* Styling for the breadcrumb text in the banner. */
-.p1 {
+.p21 {
     font-size: 18px;
+    margin-top: 10px;
+    color: black;
     padding-left: 126px;
 }
 
 /* Hover effect for the breadcrumb text. */
-.p1:hover{
+.p21:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 
 /* Styling for the main heading in the banner. */
-.h1 {
+.h21 {
     font-weight: bold;
     font-size: 45px;
-    padding-top: 16px;
-    padding-left: 99px;
+    color: black;
+    padding-right: 320px;
+    padding-top: var(--font-size-base);
+    padding-left: 230px;
 }
 
 /* Styling for the descriptive paragraph in the banner. */
-.p2 {
-    padding-left: 120px;
+.p22 {
+    padding-left: 250px;
     font-size: 20px;
-    padding-right: 180px;
+    padding-right: 380px;
     line-height: 30px;
     padding-top: 21px;
 }
@@ -46,7 +49,7 @@
     margin: 0 auto;
     background-color: #ffffff;
     border: 1px solid #dedede;
-    border-radius: 16px;
+    border-radius: var(--font-size-base);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     padding: 28px 32px;
     display: flex;
@@ -63,10 +66,10 @@
 .input {
     width: 100%;
     height: 56px;
-    padding: 0 16px;
+    padding: 0 var(--font-size-base);
     border: 1px solid #dcdcdc;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     background-color: #fbfbfb;
 }
 
@@ -118,12 +121,12 @@
 .rank-card {
     background: #ffffff;
     border: 1px solid #e8e8e8;
-    border-radius: 16px;
+    border-radius: var(--font-size-base);
     padding: 18px 22px;
     display: grid;
     grid-template-columns: 64px 1fr auto;
     align-items: center;
-    box-shadow: 0 6px 18px rgba(20, 165, 255, 0.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 /* Hover effect for the ranking card. */
@@ -213,4 +216,210 @@
     margin: 6px 0 0 0;
     color: #4a4c51;
     font-size: 15px;
+}
+@media (max-width: 768px) {
+    .cug {
+        background-position: center top; /* Adjusted background position */
+        background-size: contain; /* Adjusted background size */
+        height: auto; /* Allow height to adjust */
+        padding: 20px 0 40px 0;
+        background-image: url(/public/assets/UK.jpg); /* Keep background image */
+        background-repeat: no-repeat;
+    }
+
+    .p21 {
+        margin-left: 0;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px; /* Adjusted padding */
+        text-align: center;
+    }
+
+    .h21 {
+        font-size: 28px;
+        padding-right: 20px; /* Adjusted padding */
+        padding-left: 20px;
+        line-height: normal;
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    .p22 {
+        padding-left: 20px;
+        padding-right: 20px; /* Adjusted padding */
+        font-size: 14px;
+        line-height: normal;
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    .search-bars {
+        flex-direction: column;
+        padding: 20px;
+        gap: var(--font-size-base);
+    }
+
+    .line {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+
+    .rankings {
+        padding: 0 20px;
+    }
+
+    .rank-card {
+        grid-template-columns: 1fr; /* Stack elements vertically */
+        gap: 10px;
+        text-align: center;
+    }
+
+    .rank-num-wrap {
+        margin-bottom: 10px;
+    }
+
+    /* Pagination adjustments for mobile */
+    .FIndU-Arrs {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        justify-content: center;
+        gap: 8px; /* Add some space between page numbers */
+        padding: 20px;
+    }
+
+    .FIndU-page-link {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* Media query for screens up to 400px wide */
+@media (max-width: 400px) {
+    .cug {
+        padding: 10px 0 20px 0; /* Further reduced padding for very small screens */
+        background-size: 200px; /* Adjust background image size */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .p21 {
+        font-size: 11px; /* Smaller text for very small screens */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .h21 {
+        font-size: 20px; /* Smaller heading for very small screens */
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+
+    .p22 {
+        font-size: 12px; /* Smaller text for very small screens */
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+
+    .search-bars {
+        padding: 15px; /* Further reduced padding */
+        gap: 10px;
+        flex-direction: column; /* Stack search inputs vertically */
+    }
+
+    .field {
+        width: 100%; /* Full width for fields */
+    }
+
+    .input {
+        height: 40px; /* Smaller input height */
+        font-size: 12px; /* Smaller font size in input */
+    }
+
+    .or {
+        font-size: 14px; /* Adjust 'or' text size */
+    }
+
+    .search-btn {
+        height: 40px; /* Smaller button height */
+        font-size: 14px; /* Smaller font size in button */
+        padding: 0 15px;
+        width: 100%; /* Full width button */
+    }
+
+    .line {
+        font-size: 12px; /* Smaller font size for university count */
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .rankings {
+        padding: 0 10px; /* Further reduced padding for ranking cards container */
+    }
+
+    .rank-card {
+        padding: 10px; /* Further reduced padding for individual cards */
+        gap: 8px;
+    }
+
+    .FIndU-page-link {
+        font-size: 12px; /* Smaller pagination link font size */
+        min-width: 20px;
+        height: 20px;
+        margin: 0 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cug {
+        padding: 15px 0 30px 0; /* Further reduced padding */
+    }
+
+    .p21 {
+        font-size: 12px;
+    }
+
+    .h21 {
+        font-size: 22px;
+        padding-top: 10px;
+    }
+
+    .p22 {
+        font-size: 12px;
+        padding-top: 10px;
+    }
+
+    .search-btn {
+        font-size: var(--font-size-base);
+        padding: 0 20px;
+    }
+
+    .uni-name {
+        font-size: 18px;
+    }
+
+    .uni-country,
+    .uni-rank {
+        font-size: 13px;
+    }
+
+    .details-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .rank-num {
+        width: 35px;
+        height: 35px;
+        font-size: var(--font-size-base);
+    }
+
+    /* Further refine pagination for very small screens */
+    .FIndU-page-link {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
 }

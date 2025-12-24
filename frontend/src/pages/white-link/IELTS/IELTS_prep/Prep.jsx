@@ -1,5 +1,6 @@
 // Import React to build the component and the CSS file for styling.
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Prep.css";
 
 // This is the main component for the IELTS Preparation page.
@@ -10,12 +11,12 @@ export default function Prep() {
         {/* This section is the main banner of the page. */}
         <div className="prep">
            {/* Breadcrumb navigation link. */}
-           <p className="p1"> JRAMSYS OVERSEASE/Prepare for IELTS</p>
+           <Link to="/"><p className="p1"> INTAKE/Prepare for IELTS</p></Link>
            <br />
            <br />
             {/* Main heading and introductory text. */}
             <h1 className="h1">Prepare for IELTS</h1>
-            <p className="p2">Jramsys provides a comprehensive set of resources to facilitate your IELTS preparation, ensuring a smooth journey towards success.</p>
+            <p className="p2">INTAKE provides a comprehensive set of resources to facilitate your IELTS preparation, ensuring a smooth journey towards success.</p>
 
         </div>
         {/* This section contains the detailed content about IELTS preparation. */}
@@ -29,7 +30,6 @@ export default function Prep() {
                 <li>Free Self assessment tool to check English level</li>
                 <li>70+ IELTS Practice Tests</li>
                 <li>Free IELTS Masterclass</li>
-                <li>IELTS by Jramsys App</li>
                 <li>Familiarisation test for IELTS on Computer</li>
                 <li>IELTS Preparation Guide</li>
                 <li>Section-Wise IELTS test preparation</li>
@@ -46,8 +46,6 @@ export default function Prep() {
             {/* Content section about the community. */}
             <h2><span className="ul">P</span>articipate in our community</h2>
             <p className="line1">Connect with us on Facebook for daily updates, advice, and insights on test format and tips. You'll also engage with fellow test takers and get answers to common questions like preparation material sources and language preferences.Stay Supported: While preparing for the IELTS test might seem challenging, with effective strategies, expert advice, and consistent practice, you can gain confidence in all four skills. Embrace the challenge, stay focused, and best of luck on your IELTS journey!</p>
-            {/* A final call-to-action button. */}
-            <button className="btn1">Book your IELTS test today!</button>
 
 
         </div>

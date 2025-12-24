@@ -7,7 +7,7 @@ export default function Investors() {
       <div className="footer-page-wrap">
         <h1>Investors</h1>
         <p>
-          IDP Education is a leading global education services company. Learn about our financial performance, 
+          INTAKE Education is a leading global education services company. Learn about our financial performance, 
           corporate governance, and investment opportunities.
         </p>
         <div className="footer-page-content">
@@ -21,7 +21,7 @@ export default function Investors() {
           </ul>
           <h2>Financial Highlights</h2>
           <p>
-            IDP Education continues to grow and expand its global presence, delivering strong financial results 
+            INTAKE Education continues to grow and expand its global presence, delivering strong financial results 
             and creating value for our shareholders.
           </p>
           <button className="footer-page-btn">View Investor Resources</button>

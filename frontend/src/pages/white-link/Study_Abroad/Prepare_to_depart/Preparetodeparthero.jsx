@@ -14,11 +14,11 @@ const Preparetodeparthero = () => {
         <h3>We're here to help set you up for your study abroad adventure</h3>
 
        
-        <button className='stdy-btn'> contact Jramsys</button>
+        <button className='stdy-btn'> contact Intake</button>
       </div>
       <div className={`stdab-right${animate ? ' slide-in-right' : ''}`}>
          <img
-          src="https://www.idp.com/medias/pre-departure-support-from-idp.jpg?context=bWFzdGVyfGltYWdlc3w3MjY5NHxpbWFnZS9qcGVnfGg5My9oZTYvODg0NDI4OTU4OTI3OC9wcmUtZGVwYXJ0dXJlIHN1cHBvcnQgZnJvbSBpZHAuanBnfDEzYjU2YjQzYjU2YjQzYjU2YjQzYjU2YjQzYjU2YjQzYjU2YjQzYjU2YjQzYjU2YjQzYjU2YjQ"
+          src="https://placehold.co/600x400"
           alt="Student packing a suitcase"
           className="stdab-img"
         />

@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Toefl.css";
 export default function Toefl(){
     return(
         <div>
             <div className="Toefl-bas">
-            <p1 className="sa">JRAMSYS OVERSEASE/Toefl....</p1>
+            <Link to="/"><p1 className="sas">INTAKE/Toefl....</p1></Link>
             <h1 className="Toefl-head">TOEFL-Test of English as a Foreign Language</h1>
             <p className="Toefl-mat">TOEFL focuses more on academic English used in universities. It is fully computer-based and measures integrated skills like reading, listening, speaking, and writing together.</p>
             </div>

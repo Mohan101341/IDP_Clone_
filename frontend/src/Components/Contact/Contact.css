@@ -1,7 +1,7 @@
 /* ===== Layout ===== */
 .contact-page {
   padding: 60px 20px;
-  background-color:#a5c1c5;
+  background-color:var(--background-color);
 }
 
 .contact-container {
@@ -28,7 +28,7 @@
 
 
 .contact-subtitle {
-  font-size: 16px;
+  font-size: var(--font-size-base);
   color: #4a5568;
   margin-bottom: 25px;
 }
@@ -103,10 +103,10 @@
 
 /* Submit Button */
 .submit-button {
-  background: #2563eb;
+  background: var(--primary-color);
   color: white;
   padding: 14px 24px;
-  font-size: 16px;
+  font-size: var(--font-size-base);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -116,6 +116,29 @@
 
 .submit-button:hover {
   background: #1e40af;
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Message */
+.message {
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
 }
 
 /* ===== Right Section (Image) ===== */
@@ -140,7 +163,7 @@
 }
 
 /* Decorative Shapes */
-.background-shapes {
+.background-.shapes {
   position: absolute;
   top: -20px;
   left: -20px;
@@ -176,7 +199,13 @@
   
 }
 .shape-orange {
-  width: 80px;
+  width: 80px;.message {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
   height: 80px;
   background: #f97316;
   bottom: 20%;
@@ -186,7 +215,7 @@
 .shape-blue {
   width: 100px;
   height: 100px;
-  background: #3b82f6;
+  background: var(--primary-color);
   top: 50%;
   right: -10%;
 }

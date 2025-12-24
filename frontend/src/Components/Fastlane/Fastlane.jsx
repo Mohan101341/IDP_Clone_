@@ -6,7 +6,7 @@ const Fastlane = () => {
   const navigate = useNavigate(); // React Router hook
 
   const handleGetStarted = () => {
-    navigate("/pages/white-link/Sign_Up"); 
+    navigate("/signup") 
   };
 
   return (

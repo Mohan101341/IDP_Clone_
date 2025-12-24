@@ -32,11 +32,11 @@ const Education_loan = () => {
   };
 
   return (
-    <div className={`essentials-container ${styles.insuranceContainer}`}>
-
-      <div className={styles.healthContainer}>
-        <p className={styles.breadcrumb}>Study Abroad, Overseas Education... / Student Essentials / Education_loan</p>
-        <h1 className={styles.mainHeading}>Education Loan services for International Students</h1>
+    <div className="essentials-container">
+      <div className="essentials-hero">
+        <p className="breadcrumb-text">Study Abroad, Overseas Education... / Student Essentials / Education_loan</p>
+        <h1 className="hero-heading">Education Loan services for International Students</h1>
+        <p className="hero-subtext">Everything you need to know about education loans for your study abroad journey.</p>
       </div>
 
 

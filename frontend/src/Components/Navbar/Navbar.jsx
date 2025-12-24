@@ -5,77 +5,32 @@ import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faAngleDown, faBars, faTimes, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as faRegularHeart } from "@fortawesome/free-regular-svg-icons";
-const styles = {
-  navButton: {
-    background: "none",
-    border: "none",
-    cursor: "pointer",
-    fontSize: "inherit",
-    color: "inherit",
-    display: "flex",
-    alignItems: "center",
-    gap: "3px",
-  },
-  dropdownMenu: {
-    position: "absolute",
-    backgroundColor: "rgba(255, 255, 255, 1)",
-    boxShadow: "0 4px 8px rgba(18, 2, 2, 0.1)",
-    listStyle: "none",
-    padding: "10px 0",
-    marginTop: "5px",
-    borderRadius: "4px",
-    zIndex: 1000,
-    minWidth: 200,
-  },
-  dropdownItem: {
-    padding: "8px 20px",
-    cursor: "pointer",
-    whiteSpace: "nowrap",
-  },
-  navItem: {
-    cursor: "pointer",
-    position: "relative",
-  },
-  secondLevelMenu: {
-    position: "absolute",
-    top: 0,
-    left: "100%",
-    backgroundColor: "#f5f5f5",
-    boxShadow: "0 4px 8px rgba(18, 2, 2, 0.1)",
-    listStyle: "none",
-    padding: "10px 0",
-    marginTop: 0,
-    borderRadius: "4px",
-    zIndex: 1001,
-    minWidth: 260,
-    height: "100%",
-  },
-};
+
 // Black bar dropdown data
 const balckDropworn = {
   "Find-us": {
     path: "/pages/black-link/Find",
     items: [
-      { label: "Jramsys Australia", path: "/find-us/australia" },
-      { label: "Jramsys Bahrain", path: "/find-us/bahrain" },
-      { label: "Jramsys Bangladesh", path: "/find-us/bangladesh" },
-      { label: "Jramsys Cambodia", path: "/find-us/cambodia" },
-      { label: "Jramsys Canada", path: "/find-us/canada" },
-      { label: "Jramsys China", path: "/find-us/china" },
-      { label: "Jramsys Egypt", path: "/find-us/egypt" },
-      { label: "Jramsys Ghana", path: "/find-us/ghana" },
-      { label: "Jramsys Hong Kong", path: "/find-us/hong-kong" },
-      { label: "Jramsys Indonesia", path: "/find-us/indonesia" },
-      { label: "Jramsys Iran", path: "/find-us/iran" },
-      { label: "Jramsys Jordan", path: "/find-us/jordan" },
-      { label: "Jramsys Kenya", path: "/find-us/kenya" },
-      { label: "Jramsys Korea", path: "/find-us/korea" },
-      { label: "Jramsys Kuwait", path: "/find-us/kuwait" },
-      { label: "Jramsys Lebanon", path: "/find-us/lebanon" },
-      { label: "Jramsys Malaysia", path: "/find-us/malaysia" },
-      { label: "Jramsys Mauritius", path: "/find-us/mauritius" },
-      { label: "Jramsys Middle East", path: "/find-us/middle-east" },
-      { label: "Jramsys Nepal", path: "/find-us/nepal" },
+      { label: "INTAKE Australia", path: "/find-us/australia" },
+      { label: "INTAKE Bahrain", path: "/find-us/bahrain" },
+      { label: "INTAKE Bangladesh", path: "/find-us/bangladesh" },
+      { label: "INTAKE Cambodia", path: "/find-us/cambodia" },
+      { label: "INTAKE Canada", path: "/find-us/canada" },
+      { label: "INTAKE China", path: "/find-us/china" },
+      { label: "INTAKE Egypt", path: "/find-us/egypt" },
+      { label: "INTAKE Ghana", path: "/find-us/ghana" },
+      { label: "INTAKE Hong Kong", path: "/find-us/hong-kong" },
+      { label: "INTAKE Indonesia", path: "/find-us/indonesia" },
+      { label: "INTAKE Iran", path: "/find-us/iran" },
+      { label: "INTAKE Jordan", path: "/find-us/jordan" },
+      { label: "INTAKE Kenya", path: "/find-us/kenya" },
+      { label: "INTAKE Korea", path: "/find-us/korea" },
+      { label: "INTAKE Kuwait", path: "/find-us/kuwait" },
+      { label: "INTAKE Lebanon", path: "/find-us/lebanon" },
+      { label: "INTAKE Malaysia", path: "/find-us/malaysia" },
+      { label: "INTAKE Mauritius", path: "/find-us/mauritius" },
+      { label: "INTAKE Middle East", path: "/find-us/middle-east" },
+      { label: "INTAKE Nepal", path: "/find-us/nepal" },
     ],
   },
 };
@@ -193,12 +148,12 @@ const Navbar = () => {
   }, [openDropdown]);
   return (
     <>
-      <div className="black-containera">
-        <ul className="black-linksa">
-          <li className="black-lia">
+      <div className="black-container">
+        <ul className="black-links">
+          <li className="black-li">
             <Link to="/pages/NewAndA">News and articles</Link>
           </li>
-          <li className="black-lia">
+          <li className="black-li">
             <Link to="/pages/Events">Events</Link>
           </li>
 
@@ -224,7 +179,7 @@ const Navbar = () => {
                     <button
 
                     >
-                      Find nearest Jramsys Offices
+                      Find nearest INTAKE Offices
                     </button>
                   </Link>
                 </li>
@@ -252,7 +207,7 @@ const Navbar = () => {
       {/* Main Navbar */}
       <nav className="main-navbar">
         <Link to="/">
-          <img src="/assets/jramsys_infotech_pvt_ltd_logo.jpg" alt="Logo" className="logo" />
+          <img src="/assets/INTAKE1.png" alt="Logo" className="logo" />
         </Link>
 
         <div className="nav-links-wrapper">
@@ -277,33 +232,35 @@ const Navbar = () => {
                 </Link>
 
                 {openDropdown === key && (
-                  <ul style={styles.dropdownMenu} ref={dropdownRef}>
+                  <ul className="dropdown-menu" ref={dropdownRef}>
                     {items.items.map((item, idx) => (
                       <li
                         key={idx}
-                        style={styles.dropdownItem}
+                        className="dropdown-item"
                         onMouseEnter={() => setOpenSecondLevel(item.label)}
                         onMouseLeave={() => setOpenSecondLevel(null)}
                       >
                         <Link
                           to={item.path}
                           onClick={closeDropdown}
-                          style={{ color: "#161111ff", textDecoration: "none" }}
+                          className="dropdown-link"
                         >
                           {item.label}
                         </Link>
 
                         {submenuData[item.label] && openSecondLevel === item.label && (
-                          <ul style={{
-                            ...styles.secondLevelMenu,
-                            height: dropdownHeight ? dropdownHeight : styles.secondLevelMenu.height,
-                          }}>
+                          <ul 
+                            className="second-level-menu"
+                            style={{
+                              height: dropdownHeight ? dropdownHeight : '100%',
+                            }}
+                          >
                             {submenuData[item.label].map((sub, sIdx) => (
-                              <li key={sIdx} style={styles.dropdownItem}>
+                              <li key={sIdx} className="dropdown-item">
                                 <Link
                                   to={sub.path}
                                   onClick={closeDropdown}
-                                  style={{ color: "#161111ff", textDecoration: "none" }}
+                                  className="dropdown-link"
                                 >
                                   {sub.label}
                                 </Link>
@@ -325,8 +282,11 @@ const Navbar = () => {
             <Link to="/pages/white-link/Avail">
               <button className="login-btn">Avail Free counselling</button>
             </Link>
-            <Link to="/pages/white-link/SignIN">
+            <Link to="/login">
               <button className="signup-btn">Login</button>
+            </Link>
+            <Link to="/signup">
+              <button className="signup-btn">Sign Up</button>
             </Link>
           </div>
 
@@ -334,7 +294,7 @@ const Navbar = () => {
             <Link to="/ShortList" className="icon-btn heart">
               <FontAwesomeIcon icon={faRegularHeart} />
             </Link>
-            <Link to="/pages/white-link/SignIN" className="icon-btn account">
+            <Link to="/components/Profile" className="icon-btn-account">
               <FontAwesomeIcon icon={faUser} />
             </Link>
             <button className="mobile-menu-btn" onClick={toggleMobileMenu}>

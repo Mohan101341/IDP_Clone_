@@ -1,19 +1,19 @@
 import React from 'react'
 import './Find.css'
-import ContactPage from '../../../Components/Contact/Contact'
+import ContactPage from '../../../components/Contact/Contact'
 import FindH from './FindH'
-import WhyIDPCounsellors from './WhyIDPCounsellors'
-import IdpOfficeList from './IdpOfficelist'
+import WhyIntakeCounsellors from './WhyIntakeCounsellors'
+import IntakeOfficelist from './IntakeOfficelist'
 import StudyAbroadPromo from '../../white-link/Student_Essentials/StudentEssFrom/StudyAdroadPromo'
 
-import IDP from '../../../Components/IdpStudents/IDP'
+import IDP from '../../../components/IntakeStudents/Intake'
 
 const Find = () => {
   return (
     <div className="find-page-container">
      
-      <WhyIDPCounsellors />
-      <IdpOfficeList />
+      <WhyIntakeCounsellors />
+      <IntakeOfficelist />
       <IDP />
       <StudyAbroadPromo />
       <ContactPage />

@@ -12,13 +12,13 @@ const Arriveandthrivehero = () => {
       <div className={`stdab-left${animate ? ' slide-in-left' : ''}`}>
         <h1>Arrive and Thrive</h1>
         <h3>Learn how to make the most of your study abroad experience
-Contact IDP</h3>
+Contact INTAKE</h3>
        
-        <button className='stdy-btn'> contact IDP</button>
+        <button className='stdy-btn'> contact INTAKE</button>
       </div>
       <div className={`stdab-right${animate ? ' slide-in-right' : ''}`}>
          <img
-          src="https://www.idp.com/medias/students-in-a-classroom.jpg?context=bWFzdGVyfGltYWdlc3w5NjYyN3xpbWFnZS9qcGVnfGg2MC9oYjAvODg0NDI4OTI2MjYyMi9zdHVkZW50cy1pbi1hLWNsYXNzcm9vbS5qcGd8ZDYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjYwZjY"
+          src="https://placehold.co/600x400"
           alt="Students in a classroom"
           className="stdab-img"
         />

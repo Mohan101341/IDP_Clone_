@@ -26,19 +26,21 @@ const Money_transfer = () => {
   };
 
   return (
-    <div className={`essentials-container ${styles.insuranceContainer}`}>
-      <div className={styles.healthContainer}>
+    <div className="essentials-container">
+      <div className="essentials-hero">
         
         {/* Breadcrumb */}
-        <p className={styles.breadcrumb}>
+        <p className="breadcrumb-text">
           Study Abroad, Overseas Education... / Student Essentials / Money Transfer
         </p>
 
         {/* Heading */}
-        <h1 className={styles.mainHeading}>
+        <h1 className="hero-heading">
           Money Transfer services for International Students
         </h1>
-
+        <p className="hero-subtext">
+          A safe, fast and convenient way to pay tuition fees and manage your money.
+        </p>
         
 
 

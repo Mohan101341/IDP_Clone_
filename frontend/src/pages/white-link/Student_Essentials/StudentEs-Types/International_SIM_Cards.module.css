@@ -1,260 +1,131 @@
-/* International_SIM_Cards.module.css */
-/* Clean + professional design consistent with all other essentials pages */
-
 :root {
-    --accent: #277af1;
-    --muted: #6b7280;
-    --card: #ffffff;
-    --radius: 12px;
-    --max-width: 1200px;
+  --accent: #007bff;
+  --text: #1f2937;
+  --muted: #495057;
+  --card-bg: #ffffff;
+  --max-width: 1200px;
+  --radius: 15px;
 }
 
-/* Main container */
 .insuranceContainer {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #222;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
 }
-
-/* Breadcrumb + heading section */
 
 .healthContainer {
-  background-color: #f7f8fc; /* light blue, change as needed, removed background-image */
-  padding: 60px 20px; /* Adjusted padding */
-  border-radius: 8px;
-  text-align: center; /* Center content */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 28px; /* Added margin */
+  background-color: #f8f9fa;
+  padding: 80px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-bottom: 40px;
 }
+
 .breadcrumb {
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 6px;
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
 }
 
 .mainHeading {
-    font-size: 28px;
-    font-weight: 700;
-    color: #13345a;
-    margin-bottom: 14px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 auto 1rem;
+  max-width: 800px;
 }
-
-/* ---------------- INFO BANNER ---------------- */
 
 .infoBanner {
-    position: relative;
-    color: #fff;
-    padding: 40px 28px;
-    border-radius: var(--radius);
-    margin: 32px 0;
-    text-align: center;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-    overflow: hidden; /* Changed to hidden to clip background blend mode */
-    z-index: 1;
-}
-
-.infoBanner::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    /* Replace with your image path */
-    background-image: url('/assets/sim-cards-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Dark overlay for text readability */
-    background-color: rgba(0, 0, 0, 0.45);
-    background-blend-mode: multiply;
-    z-index: -1;
+  position: relative;
+  color: #fff;
+  padding: 80px 30px;
+  border-radius: var(--radius);
+  margin: 40px 0;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(45deg, rgba(0, 123, 255, 0.8), rgba(0, 210, 255, 0.8));
 }
 
 .infoBanner h1 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .infoBanner p {
-    max-width: 700px;
-    margin: 0 auto 16px;
-    line-height: 1.6;
-    font-size: 15px;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
 }
 
 .infoBtn {
-    background: #fff;
-    color: #277af1;
-    padding: 10px 20px;
-    font-size: 15px;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.25s ease;
+  background: #fff;
+  color: var(--accent);
+  padding: var(--font-size-base) 32px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .infoBtn:hover {
-    background: #eef4ff;
-    transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ---------------- SIM CARD OPTIONS ---------------- */
-
 .simOptions {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    margin: 32px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
 }
 
 .simCard {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 22px;
-    border: 1px solid #e7eaf0;
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
-    transition: 0.25s ease;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--radius);
+  border: 1px solid #e9ecef;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .simCard h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #123254;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text);
 }
 
 .simCard p {
-    margin-bottom: 14px;
-    color: #555;
-    line-height: 1.5;
-}
-
-.simCard:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 .simBtn {
-    background: var(--accent);
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.25s ease;
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
 }
 
 .simBtn:hover {
-    background: #1f5eb8;
-    transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
 }
 
-/* ---------------- RESPONSIVE ---------------- */
-
-@media (max-width: 1024px) {
-  .insuranceContainer {
-    padding: 15px;
-  }
-  .healthContainer {
-    padding: 40px 15px;
-  }
+@media (max-width: 768px) {
   .mainHeading {
-    font-size: 24px;
-  }
-  .infoBanner {
-    padding: 35px 25px;
+    font-size: 2.5rem;
   }
   .infoBanner h1 {
-    font-size: 22px;
-  }
-  .infoBanner p {
-    font-size: 14px;
-  }
-  .simOptions {
-    gap: 15px;
-  }
-  .simCard h2 {
-    font-size: 18px;
-  }
-  .simCard p {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 900px) {
-    .simOptions {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    .infoBanner h1 {
-        font-size: 20px;
-    }
-
-    .infoBanner p {
-        font-size: 13px;
-    }
-
-    .infoBtn {
-        width: 100%;
-        font-size: 14px;
-        padding: 10px 15px;
-    }
-
-    .simCard {
-        padding: 18px;
-    }
-
-    .simBtn {
-        width: 100%;
-        font-size: 13px;
-        padding: 8px 12px;
-    }
-    .mainHeading {
-      font-size: 20px;
-    }
-    .breadcrumb {
-      font-size: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-  .insuranceContainer {
-    padding: 10px;
-  }
-  .healthContainer {
-    padding: 30px 10px;
-  }
-  .infoBanner {
-    padding: 25px 15px;
-  }
-  .infoBanner h1 {
-    font-size: 18px;
-  }
-  .infoBanner p {
-    font-size: 11px;
-  }
-  .infoBtn {
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-  .simCard {
-    padding: 15px;
-  }
-  .simCard h2 {
-    font-size: 16px;
-  }
-  .simCard p {
-    font-size: 12px;
-  }
-  .simBtn {
-    font-size: 12px;
-    padding: 7px 10px;
+    font-size: 2rem;
   }
 }

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./StdAbhlp.css";
 
 function StdAbhlp () {
@@ -13,10 +15,21 @@ function StdAbhlp () {
             From quality education, personal growth to career progression, discover how studying abroad can help you succeed through these helpful articles and videos.
           </p>
           <ul>
-            <li>What is studying abroad</li>
-            <li>Why study abroad</li>
+           <li>
+             <Link to="/pages/white-link/Study_Abroad/WhyStudyAbrd/What_is_studying">
+                What is Studying Abroad
+            </Link>
+            </li>
+
+             <Link to="/pages/white-link/Study_Abroad/WhyStudyAbrd/Reasons_for_stdy_abrd">
+                Why Studying Abroad
+            </Link>
             <li>Study abroad vs study locally</li>
-            <li>Benefits</li>
+            <li>
+             <Link to="/pages/white-link/Study_Abroad/WhyStudyAbrd/Benefits">
+                Benefits
+            </Link>
+            </li>
           </ul>
         </div>
       ),

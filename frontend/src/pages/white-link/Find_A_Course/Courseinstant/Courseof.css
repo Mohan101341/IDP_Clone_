@@ -12,18 +12,22 @@
 }
 
 /* Styling for the breadcrumb text in the banner. */
-.h {
-    padding-left: 40px;
+.Courseof-h {
+    padding-left: 190px;
+    font-size: 21px;
     color: rgb(230, 213, 66);
 }
-
+.Courseof-h:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 /* Styling for the main heading in the banner. */
 .Courseof-t {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 36px;
     padding-right: 280px;
     color:rgb(230, 213, 66);
-    padding-left: 20px;
+    padding-left: 190px;
 }
 
 /* Styling for the filter and reset buttons. */
@@ -137,22 +141,27 @@
 /* Header section of the card, containing the heart icon. */
 .Courseof-card-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-start;
     margin-bottom: 15px;
 }
 
 /* Styling for the heart icon. */
 .Courseof-heart-icon {
-    font-size: 27px;
-    color: #dd1f1f;
+    font-size: 20px;
+    color: #a0a0a0; /* Changed default color to light grey for a more distinct "turn to red" effect on click */
     cursor: pointer;
     margin-top: 8px;
 }
 
 /* Hover effect for the heart icon. */
 .Courseof-heart-icon:hover {
-    color: #440505;
+    color: #808080; /* Darker grey on hover for the outline heart */
+}
+
+/* Styling for the favorited heart icon to ensure it's red */
+.Courseof-heart-icon.favorited {
+    color: red; /* Explicitly set to red when favorited */
 }
 
 .Courseof-University-logo {
@@ -321,4 +330,55 @@
     color: #000000;
     padding: 0 10px;
     margin-top:-30px;
+}
+@media (max-width: 768px) {
+    .Courseof-boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Courseof-h{
+        font-size: 15px;
+        margin-left:0px;
+
+    }
+    .Courseof-t{
+        font-size: 25px;
+        padding-right: 100px;
+        margin-left: -250px;
+    }
+    .Courseof-container{
+        height: auto;
+        background-size: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .Courseof-boxes {
+        grid-template-columns: repeat(1, 1fr); /* Stack cards vertically */
+        padding: 20px 10px; /* Adjust padding for smaller screens */
+    }
+    .Courseof-h {
+        font-size: 13px;
+        margin-left: 20px; /* Further adjust margin */
+        padding-left: 20px;
+    }
+    .Courseof-t {
+        font-size: 20px;
+        padding-right: 20px;
+        margin-left: -20px; /* Further adjust margin */
+        padding-left: 20px;
+    }
+    .Courseof-container {
+        padding-left: 20px;
+        background-size: 100px; /* Smaller background image */
+        height: 200px; /* Reduce container height */
+    }
+    .filter-section {
+        flex-direction: column; /* Stack filter elements vertically */
+        gap: 15px;
+        padding: 15px;
+    }
+    .filter-group select {
+        min-width: unset; /* Allow select to shrink */
+        width: 100%; /* Take full width */
+    }
 }

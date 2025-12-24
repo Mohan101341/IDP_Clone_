@@ -1,5 +1,6 @@
 // Import React and its hooks for state management.
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // Import the corresponding CSS file for styling.
 import "./Uranking.css";
 
@@ -107,10 +108,10 @@ export default function Uranking() {
         {/* This is the main banner section for the page. */}
         <div className="Uranking">
             {/* Breadcrumb navigation. */}
-            <p className="p1">JRAMSYS OVERSEASE/University Ranking/THE</p>
+            <Link to="/"><p className="p1">INTAKE/University Ranking/THE</p></Link>{/* Removed padding-right */}
             {/* Main heading and description. */}
-            <h1 className="h1">THE University Rankings for 2025</h1>
-            <p className="p2">Discover the world's top-ranking universities according to Times Higher Education University Rankings 2025. Search globally or by country and explore the courses and experience they offer.</p>
+            <h1 className="h1">THE University Rankings for 2025</h1>{/* Removed padding-right */}
+            <p className="p2">Discover the world's top-ranking universities according to Times Higher Education University Rankings 2025. Search globally or by country and explore the courses and experience they offer.</p>{/* Removed padding-right and text-align */}
         </div>
         {/* This section contains the search bars for filtering universities. */}
         <div className="search-bars">
@@ -119,7 +120,7 @@ export default function Uranking() {
                 type="text" 
                 placeholder="Search by university name" 
                 className="input"
-                value={uniSearch}
+                value={uniSearch} 
                 onChange={(e) => setUniSearch(e.target.value)} // Update state on input change.
               />
             </div>
@@ -129,7 +130,7 @@ export default function Uranking() {
                 type="text" 
                 placeholder="Study destinations" 
                 className="input"
-                value={destSearch}
+                value={destSearch} 
                 onChange={(e) => setDestSearch(e.target.value)} // Update state on input change.
               />
             </div>

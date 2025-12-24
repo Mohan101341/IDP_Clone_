@@ -7,15 +7,18 @@ const ISIC = () => {
   const [destination, setDestination] = useState("All destinations");
 
   return (
-    <div className={`essentials-container ${styles.insuranceContainer}`}>
-      <div className={styles.healthContainer}>
+    <div className="essentials-container">
+      <div className="essentials-hero">
         {/* Breadcrumb */}
-        <p className={styles.breadcrumb}>
+        <p className="breadcrumb-text">
           Study Abroad, Overseas Education... / Student Essentials / ISIC
         </p>
 
         {/* Heading */}
-        <h1 className={styles.mainHeading}>ISIC Services for International Students</h1>
+        <h1 className="hero-heading">ISIC Services for International Students</h1>
+        <p className="hero-subtext">
+          Your globally-recognised student identity card for discounts and offers.
+        </p>
       </div>
 
       {/* Intro content */}

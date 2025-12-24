@@ -1,8 +1,8 @@
 
 .testimonials-section {
   padding: 20px 24px;
-  background: #fff;
-  max-width: 1300px;
+ 
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -47,7 +47,7 @@ h2 {
   position: relative; /* Changed from 'fixed' to 'relative' for correct layout behavior */
   display: flex;
   flex-direction: column;
-  margin: 16px;
+  margin: var(--font-size-base);
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
@@ -89,14 +89,14 @@ display: flex;
 
 .details {
   font-size: 1.00rem;
-  margin-bottom: 16px;
+  margin-bottom: var(--font-size-base);
   color: #444;
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 .student-area {
   margin-top: auto;
-  padding-top: 16px;
+  padding-top: var(--font-size-base);
 }
 
 .student {
@@ -125,7 +125,7 @@ display: flex;
   }
 
   .testimonials-row {
-    gap: 16px; /* Keep gap for spacing between cards in the scroll view */
+    gap: var(--font-size-base); /* Keep gap for spacing between cards in the scroll view */
     overflow-x: auto; /* Enable horizontal scrolling */
     scroll-snap-type: x mandatory; /* Enable scroll snapping */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
@@ -141,7 +141,7 @@ display: flex;
   .testimonial-card {
     min-width: calc(100% - 32px); /* Ensure card takes full visible width, accounting for margins */
     max-width: calc(100% - 32px); /* Ensure card takes full visible width, accounting for margins */
-    margin: 0 16px; /* Add horizontal margins for spacing within the scroll view */
+    margin: 0 var(--font-size-base); /* Add horizontal margins for spacing within the scroll view */
     flex-shrink: 0; /* Prevent cards from shrinking */
     scroll-snap-align: start; /* Snap to the start of each card */
   }

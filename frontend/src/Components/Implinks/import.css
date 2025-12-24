@@ -1,6 +1,6 @@
 .implik-section {
   padding: 3rem 0 4rem;
-  background: #fdfdfe;
+  background-color: azure;
 }
 
 .implik-container {
@@ -44,6 +44,7 @@
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(48, 172, 255, 0.15);
   border-color: #98b4ff;
+  cursor: pointer;
 }
 
 .implik-content {
@@ -105,7 +106,7 @@
 
   .implik-card {
     align-items: center;
-    padding: 14px 16px;
+    padding: 14px var(--font-size-base);
   }
 
   .implik-card:hover {

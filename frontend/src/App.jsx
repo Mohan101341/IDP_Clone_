@@ -2,20 +2,20 @@ import React from "react";
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
 
 // Common Components
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
-import Contact from "./Components/Contact/Contact";
-import Services from "./Components/Services/Services";
-import Destinations from "./Components/Destination/Destinations";
-import Hero from "./Components/Hero/Hero";
-import Testimonials from "./Components/Testimonials/Testimonials";
-import Import from "./Components/Implinks/Import";
-import Fastlane from "./Components/Fastlane/Fastlane";
-import IDP from "./Components/IdpStudents/IDP";
-import Essentials from "./Components/Essentials/Essentials";
-import Aboutidp from "./Components/IDP-P/Aboutidp";
-import StudySteps from "./Components/StudySteps/StudySteps";
-import BlueNav from "./Components/bLUE-nav/BlueNav";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Contact from "./components/Contact/Contact";
+import Services from "./components/Services/Services";
+import Destinations from "./components/Destination/Destinations";
+import Hero from "./components/Hero/Hero";
+import Testimonials from "./components/Testimonials/Testimonials";
+import Import from "./components/Implinks/Import";
+import Fastlane from "./components/Fastlane/Fastlane";
+import INTAKE from "./components/IntakeStudents/Intake";
+import Essentials from "./components/Essentials/Essentials";
+import AboutIntake from "./components/AboutIntakeP/AboutIntake";
+import StudySteps from "./components/StudySteps/StudySteps";
+import BlueNav from "./components/BlueNav/BlueNav";
 
 // Black-Link Pages
 import English from "./pages/black-link/English";
@@ -23,6 +23,7 @@ import Events from "./pages/black-link/Events";
 import EventRegistration from "./pages/black-link/EventRegistration.jsx";
 import EnglishPrograms from "./pages/black-link/EnglishProgramPage.jsx";
 import Find from "./pages/black-link/Find/Find";
+
 import NewAndA from "./pages/black-link/NewAndA";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
 
@@ -37,12 +38,40 @@ import Sign_Up from "./pages/white-link/Sign_Up/Sign_Up";
 
 // Study Abroad
 import WhyStudyAbroadPage from "./pages/white-link/Study_Abroad/WhyStudyAbroadPage";
-import AfterOfferPage from "./pages/white-link/Study_Abroad/AfterOfferPage";
-import HowToApplyPage from "./pages/white-link/Study_Abroad/HowToApplyPage";
-import WhereToStudyPage from "./pages/white-link/Study_Abroad/WhereToStudyPage";
-import PrepareToDepartPage from "./pages/white-link/Study_Abroad/PrepareToDepartPage";
-import ArriveAndThrivePage from "./pages/white-link/Study_Abroad/ArriveAndThrivePage";
+
 import StudyAbNavbar from "./pages/white-link/Study_Abroad/WhyStudyAbrd/StudyAbNavbar";
+import WhereStdhero from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereStdhero.jsx";
+import WhereStdyVid from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereStdyvid.jsx";
+import WhereStdycnt from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereToStudyCnt.jsx";
+import StdyabroadOptions from "./pages/white-link/Study_Abroad/Where_to_study_abroad/StdyabroadOptions.jsx";  
+import WhereToStdyFAQ from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereToStudyFAQ.jsx"
+import WhereToStyHelp from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereToStudyHelp.jsx"
+import HowToApplyhero from "./pages/white-link/Study_Abroad/how_do_i_apply/HowtoApplyhero.jsx";
+
+import HowToApplyvid from "./pages/white-link/Study_Abroad/how_do_i_apply/howdoaplyvid.jsx"
+import HowToApplycnt from './pages/white-link/Study_Abroad/how_do_i_apply/Howdoapplycnt.jsx';
+import HowToApplyFAQ from "./pages/white-link/Study_Abroad/how_do_i_apply/HowToApplyFAQ.jsx";
+import HowToApplyHelp from "./pages/white-link/Study_Abroad/how_do_i_apply/HowToApplyHelp.jsx";
+
+import AfterOfferhero from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferhero.jsx";
+import AfterOffervid from "./pages/white-link/Study_Abroad/AfterOffe/AfterOffervid.jsx";
+import AfterOffercnt from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferCnt.jsx";
+import AfterOfferHelp from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferHelp.jsx";
+import AfterOfferFAQ from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferFAQ.jsx";
+
+import Preparetodeparthero from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetodeparthero.jsx";
+import Preparetodepartvid from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetodepartvid.jsx";
+import Preparetodepartcnt from "./pages/white-link/Study_Abroad/Prepare_to_depart/PrepareToDepartCnt.jsx";
+import PrepareToDepartFAQ from "./pages/white-link/Study_Abroad/Prepare_to_depart/PrepareFAQ.jsx";
+import PrepareToDepartHelp from "./pages/white-link/Study_Abroad/Prepare_to_depart/Preparetohlp.jsx";
+
+import Arriveandthrivehero from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arriveandthrivehero.jsx";
+import ArriveandthriveVid from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arriveandthrivevid.jsx";
+import ArriveAndThriveCnt from "./pages/white-link/Study_Abroad/Arrive_and_thrive/ArriveAndThriveCnt.jsx";
+import ArriveAndThriveFAQ from "./pages/white-link/Study_Abroad/Arrive_and_thrive/ArrivethriveFAQ.jsx";
+import ArriveAndThrivehlp from "./pages/white-link/Study_Abroad/Arrive_and_thrive/Arrivethrivehlp.jsx";
+
+
 
 // Student Essentials
 import Student from "./pages/white-link/Student_Essentials/Student";
@@ -71,10 +100,9 @@ import HealthInsuranceApply from "./pages/white-link/Student_Essentials/StudentE
 import StudentBankingApply from "./pages/white-link/Student_Essentials/StudentEs-Types/StudentBankingApply";
 import MoneyTransferApply from "./pages/white-link/Student_Essentials/StudentEs-Types/MoneyTransferApply";
 import ServicesSection from "./pages/white-link/Student_Essentials/StudentEssFrom/ServiceSection";
-import EssentialsCards from "./pages/white-link/Student_Essentials/StudentEssFrom/EssentialsCards";
 import MoneyTransfer from "./pages/white-link/Student_Essentials/StudentEs-Types/Money_transfer";
 import StudyAbroadPromo from "./pages/white-link/Student_Essentials/StudentEssFrom/StudyAdroadPromo";
-import ShortList from "./Components/ShortList/ShortList";
+import ShortList from "./components/ShortList/ShortList";
 import Related_Articles from "./pages/Related_Articles/Related_Articles";
 import ArticleDetail from "./pages/Related_Articles/ArticleDetail";
 import FindH from "./pages/black-link/Find/FindH";
@@ -89,7 +117,7 @@ import Sabroad from "./pages/white-link/Find_A_Course/Study_Abroad/Sabroad";
 import FindScholar from "./pages/white-link/Find_A_Course/FindScholar/findsc/findscholar.jsx";
 import Scholar from "./pages/white-link/Find_A_Course/FindScholar/Scholar"
 import FindU from "./pages/white-link/Find_A_Course/Find_Universities/FindU";
-import Oneac from "./Components/On_signin_banner/Oneac";
+import Oneac from "./components/OnSignInBanner/Oneac";
 import Uranking from "./pages/white-link/Find_A_Course/University_Ranking/Uranking";
 import Qsworld from "./pages/white-link/Find_A_Course/University_Ranking/Qs_World/Qsworld";
 import Cug from "./pages/white-link/Find_A_Course/C_U_G/Cug";
@@ -97,7 +125,7 @@ import Cug from "./pages/white-link/Find_A_Course/C_U_G/Cug";
 import What from "./pages/white-link/IELTS/What_is_IELTS/What";
 import Prep from "./pages/white-link/IELTS/IELTS_prep/Prep";
 // Study Destinations
-import Askidp from "./pages/white-link/Study_Abroad/AskIdp/Askidp";
+import AskIntakeStudyAbroad from "./pages/white-link/Study_Abroad/AskIntake/AskIntake";
 import ExploreAbroadPrgms from "./pages/white-link/StudyDestinations/ExploreAbroadPrgms";
 import Studydestcnt from "./pages/white-link/StudyDestinations/Studydestcnt";
 import StdyAushero from "./pages/white-link/StudyDestinations/StudyInAustralia/StdyAushero";
@@ -109,10 +137,11 @@ import StdyIrlndhero from "./pages/white-link/StudyDestinations/StudyInIreland/S
 import StdyUsahero from "./pages/white-link/StudyDestinations/StudyInUsa/StdyUsahero.jsx";
 import StdyIrlndcnt from "./pages/white-link/StudyDestinations/StudyInIreland/StudyIn/StdyIrlndcnt.jsx";
 import Stdyinukcnt from "./pages/white-link/StudyDestinations/StudyInUk/Stdyinukcnt.jsx";
+import StudyDestinationsHero from "./pages/white-link/StudyDestinations/StudyDestinationsHero";
 
 // Footer Pages
-import IDPCareers from "./pages/white-link/FooterPages/IDPCareers";
-import AskIDP from "./pages/white-link/FooterPages/AskIDP";
+import IntakeCareers from "./pages/white-link/FooterPages/IntakeCareers";
+import AskIntake from "./pages/white-link/FooterPages/AskIntake";
 import CostOfLiving from "./pages/white-link/FooterPages/CostOfLiving";
 import StatementOfPurpose from "./pages/white-link/FooterPages/StatementOfPurpose";
 import LetterOfRecommendation from "./pages/white-link/FooterPages/LetterOfRecommendation";
@@ -122,7 +151,19 @@ import Investors from "./pages/white-link/FooterPages/Investors";
 import TermsOfUse from "./pages/white-link/FooterPages/TermsOfUse";
 import PrivacyPolicy from "./pages/white-link/FooterPages/PrivacyPolicy";
 import Disclaimer from "./pages/white-link/FooterPages/Disclaimer";
-import PaymentPage from "./paymentgetway/Ui_paymentget.jsx";
+import PaymentPage from "./components/PaymentGateway/PaymentGateway.jsx";
+import SignUp from "./pages/white-link/Sign_Up/Sign_Up";
+import VisaAssistance from "./pages/black-link/Find/GET_EXPERT/VisaAssistance.jsx";
+import OngoingSupport from "./pages/black-link/Find/GET_EXPERT/OngoingSupport.jsx";
+import ApplicationProcess from "./components/services/servicesTypes/ApplicationProcess.jsx";
+import ProfileAssessment from "./components/services/servicesTypes/ProfileAssessment.jsx";
+import PreDeparture from "./components/services/servicesTypes/PreDeparture.jsx";
+import AdmissionAcceptance from "./components/services/servicesTypes/AdmissionAcceptance.jsx";
+import Profile from "./components/Profile/Profile.jsx";
+import WhereToStudyFAQ from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereToStudyFAQ.jsx";
+import WhereToStdyHelp from "./pages/white-link/Study_Abroad/Where_to_study_abroad/WhereToStudyHelp.jsx";
+import Howdoapplycnt from "./pages/white-link/Study_Abroad/how_do_i_apply/Howdoapplycnt.jsx";
+import AfterOfferCnt from "./pages/white-link/Study_Abroad/AfterOffe/AfterOfferCnt.jsx";
 
 
 
@@ -153,9 +194,9 @@ export default function App() {
               <StudySteps />
               <Import />
               <Fastlane />
-              <IDP />
+              <INTAKE />
               <Essentials />
-              <Aboutidp />
+              <AboutIntake />
               <Footer />
             </>
           }
@@ -170,14 +211,51 @@ export default function App() {
             </WhiteLinkLayout>
           }
         />
-         <Route
-          path="/contact"
+           <Route
+          path="/services"
           element={
             <WhiteLinkLayout>
-            <Contact/>
+              <Services />
             </WhiteLinkLayout>
           }
         />
+           <Route
+          path="/Apply"
+          element={
+            <WhiteLinkLayout>
+              <ApplicationProcess/>
+            </WhiteLinkLayout>
+          }
+        />
+           <Route
+          path="/PreD"
+          element={
+            <WhiteLinkLayout>
+            <PreDeparture/>
+            </WhiteLinkLayout>
+          }
+        />
+           <Route
+          path="/Pro"
+          element={
+            <WhiteLinkLayout>
+              <ProfileAssessment/>
+            </WhiteLinkLayout>
+          }
+        />
+         <Route
+          path="/Adm"
+          element={
+            <WhiteLinkLayout>
+            <AdmissionAcceptance/>
+            </WhiteLinkLayout>
+          }
+        />
+        
+       
+       
+
+
 
         {/* 📚 Study Details - Generic and Specific */}
         <Route
@@ -263,7 +341,6 @@ export default function App() {
         />
 
 
-
         {/* ⚪ White-Link Pages */}
         <Route
           path="/study-abroad/why-study-abroad"
@@ -281,7 +358,11 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StudyAbNavbar />
-              <HowToApplyPage />
+              <HowToApplyhero />
+              <HowToApplyvid/>
+             <Howdoapplycnt />
+             <HowToApplyHelp />
+             <HowToApplyFAQ />
               <NewAndA />
               <Contact />
             </WhiteLinkLayout>
@@ -292,7 +373,12 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StudyAbNavbar />
-              <WhereToStudyPage />
+              <WhereStdhero/>
+              <WhereStdyVid/>
+              <WhereStdycnt />
+             <StdyabroadOptions/>
+            <WhereToStudyFAQ />
+           <WhereToStdyHelp />
               <NewAndA />
               <Contact />
             </WhiteLinkLayout>
@@ -303,7 +389,11 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StudyAbNavbar />
-              <AfterOfferPage />
+              <AfterOfferhero />
+              <AfterOffervid />
+              <AfterOfferCnt />
+              <AfterOfferFAQ />
+              <AfterOfferHelp />
               <NewAndA />
               <Contact />
             </WhiteLinkLayout>
@@ -314,7 +404,11 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StudyAbNavbar />
-              <PrepareToDepartPage />
+              <Preparetodeparthero />
+              <Preparetodepartvid />
+              <Preparetodepartcnt />
+              <PrepareToDepartFAQ />
+              <PrepareToDepartHelp />
               <NewAndA />
               <Contact />
             </WhiteLinkLayout>
@@ -325,7 +419,11 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <StudyAbNavbar />
-              <ArriveAndThrivePage />
+              <Arriveandthrivehero />
+              <ArriveandthriveVid />
+              <ArriveAndThriveCnt />
+              <ArriveAndThriveFAQ />
+              <ArriveAndThrivehlp />
               <NewAndA />
               <Contact />
             </WhiteLinkLayout>
@@ -336,10 +434,14 @@ export default function App() {
           path="/study-destinations"
           element={
             <WhiteLinkLayout>
-              {/* <StudyDs /> This component was not provided */}
+              <StudyDestinationsHero
+                title="Find Your Perfect Study Abroad Destination"
+                subtitle="Explore top universities and programs across the globe."
+                backgroundImage="/assets/abroad.jpg"
+              />
               <ExploreAbroadPrgms />
               <Studydestcnt />
-              <Askidp />
+              <AskIntakeStudyAbroad />
               <Contact />
             </WhiteLinkLayout>
           }
@@ -393,7 +495,24 @@ export default function App() {
             </WhiteLinkLayout>
           }
         />
-
+        <Route
+          path="/study-destinations/usa"
+          element={
+            <WhiteLinkLayout>
+            
+            </WhiteLinkLayout>
+          }
+        />
+        <Route
+          path="/components/Profile"
+          element={
+            <>
+              <Navbar />
+              <Profile />
+              <Footer />
+            </>
+          }
+        />
         {/* Find A course */}
         <Route
           path="/pages/CourseA"
@@ -412,7 +531,7 @@ export default function App() {
             <>
               <Navbar />
               <Scholar />
-              <IDP />
+              <INTAKE />
               <Contact />
               <Footer />
             </>
@@ -775,7 +894,7 @@ export default function App() {
           }
         />
         <Route
-          path="/pages/paymentgetway"
+          path="/paymentgateway"
           element={
             <WhiteLinkLayout>
               <PaymentPage />
@@ -785,7 +904,7 @@ export default function App() {
 
 
         <Route
-          path="/pages/white-link/SignIN"
+          path="/login"
           element={
             <WhiteLinkLayout>
               <SignIN />
@@ -794,10 +913,10 @@ export default function App() {
         />
 
         <Route
-          path="/pages/white-link/Sign_Up"
+          path="/signup"
           element={
             <WhiteLinkLayout>
-              <Sign_Up />
+              <SignUp/>
             </WhiteLinkLayout>
           }
         />
@@ -823,18 +942,18 @@ export default function App() {
 
         {/* 📄 Footer Pages */}
         <Route
-          path="/idp-careers"
+          path="/intake-careers"
           element={
             <WhiteLinkLayout>
-              <IDPCareers />
+              <IntakeCareers />
             </WhiteLinkLayout>
           }
         />
         <Route
-          path="/ask-idp"
+          path="/ask-intake"
           element={
             <WhiteLinkLayout>
-              <AskIDP />
+              <AskIntake />
             </WhiteLinkLayout>
           }
         />
@@ -920,6 +1039,27 @@ export default function App() {
             </WhiteLinkLayout>}
         />
 
+ <Route
+          path="/Visa"
+          element={
+            <WhiteLinkLayout>
+              <VisaAssistance/>
+            </WhiteLinkLayout>}
+        />
+
+         <Route
+          path="/Ongoing"
+          element={
+            <WhiteLinkLayout>
+              <OngoingSupport/>
+            </WhiteLinkLayout>}
+        />
+
+
+
+
+        
+
         {/* 🔗 Footer Links Routes */}
         <Route
           path="/find-a-course"
@@ -937,7 +1077,7 @@ export default function App() {
           element={
             <WhiteLinkLayout>
               <Scholar />
-              <IDP />
+              <INTAKE />
               <Contact />
             </WhiteLinkLayout>
           }

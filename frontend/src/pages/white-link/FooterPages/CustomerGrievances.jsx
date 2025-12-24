@@ -13,8 +13,8 @@ export default function CustomerGrievances() {
         <div className="footer-page-content">
           <h2>How to File a Grievance</h2>
           <ul>
-            <li>Contact your local IDP office directly</li>
-            <li>Email us at grievances@idp.com</li>
+            <li>Contact your local INTAKE office directly</li>
+            <li>Email us at grievances@intake.com</li>
             <li>Call our customer service helpline</li>
             <li>Submit a complaint through our online form</li>
           </ul>

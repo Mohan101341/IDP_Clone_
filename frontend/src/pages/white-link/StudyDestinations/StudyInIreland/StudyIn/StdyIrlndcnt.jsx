@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './StdyIrlndcnt.css';
 const  StdyIrlndcnt = () => {
 
@@ -310,7 +311,7 @@ const  StdyIrlndcnt = () => {
                 <h3>6. Can I study in Ireland backlog?</h3>
                 <p>Irish institutions typically consider applications with a maximum of **four to five backlogs**, although some may accept a maximum of two to three backlogs</p>
                 
-                <p><button>Help me study in Ireland</button></p>
+
             </section>
 
             <section>

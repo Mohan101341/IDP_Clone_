@@ -2,7 +2,7 @@ import React from "react";
 import "./ServiceSection.css";
 
 const ServicesSection = () => {
-  const services = [
+  const services1 = [
     {
       icon: "📋",
       title: "Wide range of services",
@@ -21,13 +21,12 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="services1">
-      
-      {services.map((service, index) => (
-        <div key={index} className="service-card1">
-          <div className="icon1">{service.icon}</div>
-          <h3>{service.title}</h3>
-          <p>{service.desc}</p>
+    <section className="m-services">
+      {services1.map((service, index) => (
+        <div key={index} className="m-service-card">
+          <div className="m-service-icon">{service.icon}</div>
+          <h3 className="m-service-title">{service.title}</h3>
+          <p className="m-service-desc">{service.desc}</p>
         </div>
       ))}
     </section>

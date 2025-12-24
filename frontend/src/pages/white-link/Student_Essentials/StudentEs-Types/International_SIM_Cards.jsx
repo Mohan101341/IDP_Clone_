@@ -7,17 +7,20 @@ const International_SIM_Cards = () => {
   const [destination, setDestination] = useState("All destinations");
 
   return (
-    <div className={`essentials-container ${styles.insuranceContainer}`}>
-      <div className={styles.healthContainer}>
+    <div className="essentials-container">
+      <div className="essentials-hero">
         {/* Breadcrumb */}
-        <p className={styles.breadcrumb}>
+        <p className="breadcrumb-text">
           Study Abroad, Overseas Education... / Student Essentials / International SIM Cards
         </p>
 
         {/* Heading */}
-        <h1 className={styles.mainHeading}>
+        <h1 className="hero-heading">
           International SIM Cards Services for International Students
         </h1>
+        <p className="hero-subtext">
+          Arrive and connect instantly with a local or international SIM card.
+        </p>
       </div>
 
       {/* Hero / info banner */}

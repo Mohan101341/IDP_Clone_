@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: 600px;
     background-position: right;
-    margin-top: 30px;
+  
     height: 230px;
     opacity: 0.8;
     background-color: rgb(255, 255, 255);
@@ -14,13 +14,19 @@
 /* Styling for the breadcrumb text in the banner. */
 .pa{
     padding-left: 130px;
+    font-size: 18px;
+    margin-left: -850px;
     padding-top: 20px;
     color: black;
 }
 
 /* Styling for the main heading in the banner. */
-.la{
-    padding-left: 110px;
+.laa{
+    padding-left: 130px;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    padding-right: 400px;
     padding-top: 10px;
 }
 
@@ -33,10 +39,11 @@
 
 
 /* Styling for the main text block below the banner. */
-.mt{
-    size: 24px;
+.mattt{
     height: 219px;
     margin-top: 40px;
+    height: auto;
+    font-size: 20px;
     margin-left: 80px;
     line-height: 1.9;
     margin-right: 50px;
@@ -63,10 +70,6 @@
   color: #2b2b2b;
 }
 
-/* Wrapper to make the table responsive (scrollable on small screens). */
-.ielts_table_wrapper {
-  overflow-x: auto;
-}
 
 /* Main styling for the IELTS details table. */
 .ielts_table {
@@ -114,4 +117,34 @@
 
 .box:hover{
     text-decoration: none;
+}
+@media (max-width: 768px) {
+    .ma {
+        background-size: 320px;
+        background-position: right ;
+        height: 220px;
+        background-repeat: no-repeat;
+        padding: 20px;
+    }
+
+    .laa {
+        font-size: 30px;
+        padding-right: 20px;
+        padding-top: 0px;
+        margin-left: -120px;
+        padding-right: 220px;
+    }
+
+    .pa {
+        margin-left: -220px;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .mattt {
+        margin-left: 20px;
+        font-size: 12px;
+        margin-right: 20px;
+    }
 }

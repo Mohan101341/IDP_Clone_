@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
       <div className="footer-page-wrap">
         <h1>Privacy Policy</h1>
         <p>
-          At IDP Education, we are committed to protecting your privacy. This privacy policy explains how we 
+          At INTAKE Education, we are committed to protecting your privacy. This privacy policy explains how we 
           collect, use, and safeguard your personal information.
         </p>
         <div className="footer-page-content">

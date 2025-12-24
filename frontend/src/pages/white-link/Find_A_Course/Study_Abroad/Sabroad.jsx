@@ -90,7 +90,7 @@ export default function Sabroad() {
             {/* This is the main banner section for the page. */}
             <div className="Sabroad-container"> 
                 {/* Breadcrumb navigation. */}
-                <p className="Sabroad-description">JRAMSYS OVERSEASE/Study Abroad Subjects</p>
+                <Link to="/"><p className="Sabroad-description">INTAKE/Study Abroad Subjects</p></Link>
                 {/* Main heading and description. */}
                 <h1 className="Sabroad-title">Explore subjects</h1>
                 <h3 className="Sabroad-p">
@@ -99,7 +99,7 @@ export default function Sabroad() {
             </div>
             {/* This container holds the "Browse Subjects" title and the search bar. */}
             <div className="Sabroad-card-container">
-                <h1><span className="Sabroad-l">B</span>rowse Subjects</h1>
+                <h1 className="sabroad-aa"><span className="Sabroad-l">B</span>rowse Subjects</h1>
                 <div className="search-bar-container">
                     {/* Input field for searching subjects. */}
                     <input
@@ -115,7 +115,7 @@ export default function Sabroad() {
             {/* This is a side panel with a call-to-action to find a course. */}
             <div className="Sabroad-in">
                 <h1 className="side">Want to find a suitable course?</h1>
-                <p>
+                <p className="sabroad-line">
                     Sign in to get personalised content for you or get in touch with one of our counsellors for free consultation.
                 </p>
                 {/* Link to the "Find a Course" page. */}

@@ -1,271 +1,144 @@
-/* Education_loan.module.css
-   Clean, responsive styles for Education_loan component
-*/
-
 :root {
-  --accent: #277af1;
-  --muted: #6b7280;
+  --accent: #007bff;
+  --text: #1f2937;
+  --muted: #495057;
   --card-bg: #ffffff;
   --max-width: 1200px;
-  --radius: 12px;
+  --radius: 15px;
 }
 
-/* Container */
 .insuranceContainer {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #222;
-  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
 .healthContainer {
-  background-color: #f7f8fc; /* light blue, change as needed, removed background-image */
-  padding: 60px 20px; /* Adjusted padding */
-  border-radius: 8px;
-  text-align: center; /* Center content */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.partner{
-  margin-top: 50px;
-  text-align: center; /* Center heading of partner section */
-}
-
-.heroSection {
-  position: relative;
-  border-radius: 12px;
-  overflow: auto;
-  margin-bottom: 28px;
-  min-height: 340px;
-  display: flex;
-  align-items: center;
-}
-
-/* background image element (kept separate for layering & accessibility) */
-.heroBg {
-  position: absolute;
-  inset: 0;
-  background-image: url("/assets/YouTube.png"); /* replace if needed */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: scale(1.02);
-  z-index: 0;
-  filter: contrast(0.95);
-  will-change: transform;
-  transition: transform 700ms ease;
-}
-
-
-/* Top area */
-.healthContainer {
-  margin-bottom: 18px;
+  background-color: #f8f9fa;
+  padding: 80px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .breadcrumb {
-  font-size: 13px;
+  font-size: 1rem;
   color: var(--muted);
-  margin: 0 0 8px;
+  margin-bottom: 1rem;
 }
 
 .mainHeading {
-  font-size: 28px;
+  font-size: 3rem;
   font-weight: 700;
-  color: #16325c;
-  margin: 6px 0 18px;
-  max-width: 800px; /* Limit width to prevent overly long lines */
+  color: var(--text);
+  margin: 0 auto 1rem;
+  max-width: 800px;
 }
 
-/* Partner grid */
+.partner {
+  margin-top: 50px;
+  text-align: center;
+}
+
 .partnerGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
 }
 
-/* Partner card */
 .partnerCard {
   background: var(--card-bg);
-  border: 1px solid #eef2f6;
+  border: 1px solid #e9ecef;
   border-radius: var(--radius);
-  padding: 18px;
+  padding: 30px;
   display: flex;
-  text-decoration: none;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 8px 20px rgba(11,20,40,0.04);
-  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
-/* Card header: bank name + logo */
-.partnerCard > div:first-child {
-  margin-bottom: 12px;
+.partnerCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.partnerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .partnerCard h3 {
-  font-size: 16px;
-  margin: 0 0 8px;
-  color: #16325c;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
-/* Logo style */
-.partnerCard img {
-  height: 44px;
+.partnerLogo {
+  height: 50px;
   object-fit: contain;
-  display: inline-block;
-  margin-top: 6px;
-  /* keep logos from stretching card height */
-  max-width: 100%;
 }
 
-/* Features list */
-.partnerCard ul {
-  margin: 10px 0;
-  padding-left: 18px;
-  color: #444;
-  font-size: 14px;
-  line-height: 1.5;
-  text-align: left; /* Align list items to left */
-}
-
-.partnerCard li {
-  margin-bottom: 6px;
-  list-style: none;
-}
-
-/* Destinations text */
-.partnerCard p {
-  font-size: 13px;
+.featureList {
+  margin: 20px 0;
+  padding-left: 20px;
   color: var(--muted);
-  margin-top: 8px;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
 }
 
-/* Buttons */
+.featureList li {
+  margin-bottom: 10px;
+}
+
+.destinationText {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 20px;
+}
+
 .buttonGroup {
   display: flex;
-  gap: 10px; /* Reduced gap */
-  margin: 20px 0; /* Adjusted margin */
-  align-items: center;
-  justify-content: center; /* Center buttons */
-  flex-wrap: wrap; /* Allow buttons to wrap */
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .buttonPrimary,
 .buttonSecondary {
-  padding: 9px 14px;
-  border-radius: 8px;
+  flex: 1;
+  padding: 14px;
+  border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
   border: none;
-  font-size: 14px;
-  white-space: nowrap; /* Prevent button text from wrapping */
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-/* Primary (accent) */
 .buttonPrimary {
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 8px 24px rgba(39,122,241,0.12);
 }
-.buttonPrimary:hover { transform: translateY(-2px); }
 
-/* Secondary (outline) */
 .buttonSecondary {
   background: transparent;
-  color: #16325c;
-  border: 1px solid #dbe9ff;
+  color: var(--accent);
+  border: 1px solid var(--accent);
 }
+
+.buttonPrimary:hover,
 .buttonSecondary:hover {
-  background: #f5fbff;
-  transform: translateY(-2px);
-}
-
-/* Card hover */
-.partnerCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(11,20,40,0.08);
-}
-
-/* Utility helpers (optional: used in earlier examples if needed) */
-.flexRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .insuranceContainer {
-    padding: 15px;
-  }
-  .partnerGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .mainHeading {
-    font-size: 24px;
-  }
-  .partnerCard h3 {
-    font-size: 15px;
-  }
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
 }
 
 @media (max-width: 768px) {
-  .insuranceContainer {
-    padding: 10px;
-  }
-  .healthContainer {
-    padding: 40px 15px;
-  }
-  .partnerGrid {
-    grid-template-columns: 1fr;
-  }
   .mainHeading {
-    font-size: 22px;
-  }
-  .partnerCard {
-    padding: 14px;
-  }
-  .partnerCard img {
-    height: 40px;
-  }
-  .buttonGroup {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px; /* Further reduced gap */
-  }
-  .buttonPrimary,
-  .buttonSecondary {
-    width: 100%;
-    font-size: 13px;
-    padding: 8px 12px;
-  }
-  .partnerCard ul {
-    font-size: 13px;
-  }
-  .partnerCard p {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .insuranceContainer {
-    padding: 8px;
-  }
-  .healthContainer {
-    padding: 30px 10px;
-  }
-  .mainHeading {
-    font-size: 20px;
-  }
-  .breadcrumb {
-    font-size: 11px;
-  }
-  .partnerCard h3 {
-    font-size: 14px;
+    font-size: 2.5rem;
   }
 }

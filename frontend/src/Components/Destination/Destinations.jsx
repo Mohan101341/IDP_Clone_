@@ -45,7 +45,7 @@ export default function Destinations() {
   return (
     <section className="destinations-sec">
       <div className="destinations-wrap">
-        <h2 className="dest-title"><span className="underline-green ">K</span>now your destination</h2>
+        <h2 className="dest-title">Know your destination</h2>
 
         <div className="dest-grid">
           {DESTINATIONS.map((d) => (
@@ -54,12 +54,12 @@ export default function Destinations() {
               className="dest-card"
               style={{ backgroundImage: `url(${d.img})` }}
             >
-              {/* Always-visible label */}
+             
               <div className="dest-label">
                 <span>{d.name}</span>
               </div>
 
-              {/* Shown on hover/focus */}
+             
               <div className="dest-hover">
                 <p>{d.info}</p>
                 <Link className="dest-btn" to={`/study-destinations/${d.slug.toLowerCase().replace(/ /g, "-")}`}>

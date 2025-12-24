@@ -7,7 +7,7 @@ export default function CorporateResponsibility() {
       <div className="footer-page-wrap">
         <h1>Corporate Responsibility</h1>
         <p>
-          At IDP Education, we are committed to making a positive impact on society through our corporate 
+          At INTAKE Education, we are committed to making a positive impact on society through our corporate 
           responsibility initiatives. We believe in giving back to communities and supporting educational 
           access for all.
         </p>

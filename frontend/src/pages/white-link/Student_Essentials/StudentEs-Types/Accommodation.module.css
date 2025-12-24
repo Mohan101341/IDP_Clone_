@@ -1,250 +1,132 @@
 :root {
-  --accent: #277af1;
-  --text: #222;
-  --muted: #555;
-  --light-bg: #f7f8fc;
-  --radius: 12px;
+  --accent: #007bff;
+  --text: #1f2937;
+  --muted: #495057;
+  --light-bg: #f8f9fa;
+  --radius: 15px;
 }
 
-/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
+
 .heroSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 80px 20px;
   text-align: center;
-  padding: 60px 20px; /* Adjust padding for responsiveness */
+  background: linear-gradient(45deg, rgba(0, 123, 255, 0.1), rgba(0, 210, 255, 0.1));
+  border-radius: var(--radius);
 }
-.overlay{
-  width: 100%;
-  padding: 60px;
-  background-image: url("/assets/YouTube.png"); /* Assuming this is intentional */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 5px;
-  box-sizing: border-box; /* Ensure padding is included in width */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-/* Text */
+
 .breadcrumb {
-  color: #adb7df;
-  font-size: 14px;
-  margin-bottom: 10px; /* Added margin */
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .heroTitle {
-  color: #222;
-  font-size: 36px;
+  color: var(--text);
+  font-size: 3rem;
   font-weight: 700;
-  max-width: 650px;
-  line-height: 1.2;
+  max-width: 750px;
+  line-height: 1.3;
+  margin: 0 auto 1rem;
 }
 
 .heroText {
-  color: #eaeaea;
-  font-size: 16px;
-  max-width: 550px;
-  margin: 12px 0 20px;
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto 2rem;
 }
 
-/* Buttons */
-.heroButtons {
-  display: flex;
-  gap: 14px;
-  margin-top: 8px;
-  flex-wrap: wrap; /* Allow buttons to wrap */
-  justify-content: center; /* Center buttons when wrapped */
-}
-
-.heroBtn {
-  background: var(--accent);
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.heroBtn:hover {
-  background: #1e63c4;
-}
-
-.heroLink {
-  color: #fff;
-  text-decoration: underline;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* RESPONSIVE HERO */
-@media (max-width: 768px) {
-  .heroSection {
-    padding: 40px 15px; /* Adjusted padding */
-  }
-  .overlay {
-    padding: 40px 15px; /* Adjusted padding */
-  }
-  .heroTitle { 
-    font-size: 26px; 
-  }
-  .heroText {
-    font-size: 14px;
-  }
-  .heroButtons {
-    flex-direction: column; /* Stack buttons vertically */
-    width: 100%;
-  }
-  .heroBtn {
-    width: 100%; /* Full width buttons */
-  }
-  .bannerHeading {
-    font-size: 24px; /* Adjusted font size */
-  }
-  .bannerText {
-    font-size: 14px; /* Adjusted font size */
-  }
-  .bannerBtn {
-    padding: 10px 15px; /* Adjusted padding */
-    font-size: 14px; /* Adjusted font size */
-  }
-  .optionTitle {
-    font-size: 20px; /* Adjusted font size */
-  }
-  .optionDesc {
-    font-size: 13px; /* Adjusted font size */
-  }
-  .optionBtn {
-    padding: 8px 12px; /* Adjusted padding */
-    font-size: 13px; /* Adjusted font size */
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 10px;
-  }
-  .heroSection {
-    padding: 30px 10px;
-  }
-  .overlay {
-    padding: 30px 10px;
-  }
-  .heroTitle {
-    font-size: 22px;
-  }
-  .heroText {
-    font-size: 13px;
-  }
-  .breadcrumb {
-    font-size: 12px;
-  }
-  .bannerHeading {
-    font-size: 20px;
-  }
-  .bannerText {
-    font-size: 12px;
-  }
-  .bannerBtn {
-    font-size: 12px;
-    padding: 8px 10px;
-  }
-  .optionsSection {
-    gap: 15px;
-  }
-  .optionCard {
-    padding: 20px;
-  }
-  .optionTitle {
-    font-size: 18px;
-  }
-  .optionDesc {
-    font-size: 12px;
-  }
-  .optionBtn {
-    font-size: 12px;
-    padding: 7px 10px;
-  }
-}
-
-/* ---------------- BANNER ---------------- */
 .banner {
   margin: 40px 0;
   background: var(--light-bg);
-  padding: 30px 20px;
+  padding: 50px 30px;
   border-radius: var(--radius);
   text-align: center;
 }
 
 .bannerHeading {
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--text);
+  margin-bottom: 1rem;
 }
 
 .bannerText {
-  font-size: 16px;
+  font-size: 1.1rem;
   color: var(--muted);
-  max-width: 750px;
-  margin: 10px auto 20px;
+  max-width: 800px;
+  margin: 0 auto 2rem;
 }
 
 .bannerBtn {
   background: var(--accent);
   color: #fff;
   border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: var(--font-size-base) 32px;
+  border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-/* ---------------- OPTIONS SECTION ---------------- */
+.bannerBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
 .optionsSection {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin: 50px 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
 }
 
 .optionCard {
   background: #fff;
-  padding: 24px;
+  padding: 40px;
   border-radius: var(--radius);
-  border: 1px solid #eaeaea;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  border: 1px solid #e9ecef;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .optionTitle {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .optionDesc {
-  font-size: 15px;
+  font-size: 1rem;
   color: var(--muted);
-  margin-bottom: 16px;
-  line-height: 1.5;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .optionBtn {
   background: var(--accent);
   color: #fff;
   border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.optionBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
 }

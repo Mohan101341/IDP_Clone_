@@ -11,8 +11,8 @@ const HowtoApplyhero = () => {
     <div className='stdab'>
       <div className={`stdab-left${animate ? ' slide-in-left' : ''}`}>
         <h1> How to apply to universities abroad</h1>
-        <h3>Jramsys can support you through the application process</h3>
-        <button className='stdy-btn'> contact IDP</button>
+        <h3>Intake can support you through the application process</h3>
+        <button className='stdy-btn'> contact INTAKE</button>
       </div> 
       <div className={`stdab-right${animate ? ' slide-in-right' : ''}`}>
          <img

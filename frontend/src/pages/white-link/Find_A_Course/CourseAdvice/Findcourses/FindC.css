@@ -1,7 +1,7 @@
 /* Styling for the main banner section of the "Find a Course" page. */
 .FindC-1 {
     background-color: #ffffff;
-    height: 300px;
+    height: 260px;
    box-shadow: 1px 5px 9px rgb(227, 227, 227);
    border-bottom: 2px solid rgb(232, 232, 232);
    background-image: url('/public/assets/findcourse.jpg');
@@ -13,10 +13,10 @@
 
 /* Styling for the breadcrumb and descriptive text in the banner. */
 .FindC-div {
-    padding-left: 180px;
     font-size: 19px;
     padding-top: 15px;
     cursor: pointer;
+    text-align: center;
 }
 
 /* Styling for the "Get Instant Offer" heading. */
@@ -28,10 +28,21 @@
 
 /* Styling for the main heading in the banner. */
 .FindC-a {
-    padding-left: 160px;
+    font-weight: bold;
     font-size: 40px;
+    text-align: center;
+    padding: 0 20px;
 }
-
+.FindC-d{
+    font-size: 20px;
+    margin-top: 15px;
+    color: #333333;
+    text-align: center;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
 /* --- Filter Dropdown Styles (seem to be for a more complex filter UI that is not currently used) --- */
 .FindC-filter-container {
     position: relative;
@@ -46,12 +57,12 @@
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
-    padding: 18px 20px 16px;
+    padding: 18px 20px var(--font-size-base);
     opacity: 0;
     transform: translateY(-8px);
     pointer-events: none;
     max-height: 0;
-    overflow: hidden;
+    overflow: auto;
     transition: opacity 0.25s ease, transform 0.25s ease, max-height 0.25s ease;
     z-index: 100;
 }
@@ -65,12 +76,12 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    margin-bottom: 16px;
+    margin-bottom: var(--font-size-base);
 }
 .FindC-filter-title {
     font-weight: 600;
     color: #111827;
-    font-size: 16px;
+    font-size: var(--font-size-base);
 }
 .FindC-filter-subtitle {
     font-size: 13px;
@@ -82,7 +93,6 @@
     margin: 0;
     padding: 0;
     max-height: 220px;
-    overflow-y: auto;
     border: 1px solid #f1f5f9;
     border-radius: 10px;
 }
@@ -99,8 +109,8 @@
     cursor: pointer;
 }
 .FindC-filter-option input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
+    width: var(--font-size-base);
+    height: var(--font-size-base);
     accent-color: #0ea5e9;
     cursor: pointer;
 }
@@ -110,7 +120,7 @@
 .FindC-filter-actions {
     display: flex;
     justify-content: flex-end;
-    margin-top: 16px;
+    margin-top: var(--font-size-base);
 }
 .FindC-clear-btn {
     background: none;
@@ -136,7 +146,7 @@
     text-align: center;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    border-radius: 16px;
+    border-radius: var(--font-size-base);
     padding: 30px 28px;
     color: #475569;
     font-size: 15px;
@@ -144,7 +154,8 @@
 }
 .aa{
     color: white;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 30px;
 }
 .FindC-b1 {
     padding: 20px 60px 20px 90px;
@@ -156,21 +167,21 @@
     margin-left: 180px;
 }
 
-/* Styling for the image displayed next to the quiz promotion banner. */
 .FindC-img {
     position: relative;
-    margin-top: -236px;
-    margin-left: 1120px;
+    margin-top: -200px;
+    margin-left: 1080px;
     margin-right: auto;
     padding-right: 90px;
     display: block;
-    width: 430px;
+    width: 480px;
     height: 290px;
     z-index: 1;
 }
 
 .see {
     margin-top: 10px;
+    font-size: 20px;
     margin-bottom: 18px;
     color: white;
 }
@@ -255,9 +266,10 @@
 
 .FindC-heart-icon {
     font-size: 18px;
-    color: #f01818;
-    cursor: pointer;
+    color: #ccc; /* Changed default color to light grey for a more distinct "turn to red" effect on click */
+    cursor: pointer; /* Ensure cursor indicates interactivity */
     margin-top: 8px;
+    margin-left: auto; /* Pushes the icon to the right within its flex container */
 }
 
 /* Hover effect for the heart icon. */
@@ -265,6 +277,11 @@
     color:rgb(133, 23, 23);
     transform: translate(2px);
     transition: all 0.3s ease;
+}
+
+/* Style for when the heart icon is "clicked" or active */
+.FindC-heart-icon.active {
+    color: red; /* Changes the heart to a full red color when the 'active' class is applied */
 }
 
 /* Container for the university logo/name. */
@@ -339,7 +356,7 @@
 /* Styling for the icon next to each detail item. */
 .FindC-detail-icon {
     margin-right: 10px;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     width: 20px;
     text-align: center;
 }
@@ -397,7 +414,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 20px;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     color: #333;
     line-height: 1.6;
     background-color: #ffffff;
@@ -471,7 +488,7 @@
     /* Main container for the course cards grid. */
     width: 100%;
     clear: both;
-    overflow: hidden;
+    overflow: auto;
     margin-top: 40px;
     margin-bottom: 40px;
     max-width: none; 
@@ -499,10 +516,10 @@
     background-color: #ffffff;
     border: 1px solid #d7d7d7;
     color: #333;
-    padding: 8px 16px;
+    padding: 8px var(--font-size-base);
     border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     transition: all 0.3s ease;
 }
 
@@ -550,7 +567,7 @@
     border-radius: 8px;
     border: 1px solid #d1d5db;
     min-width: 250px;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     background-color: white;
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -563,7 +580,7 @@
     padding: 12px 30px;
     margin-top: 60px;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -586,7 +603,7 @@
     padding: 12px 30px;
     margin-top: 60px;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -614,7 +631,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -626,12 +643,13 @@
     background-color: rgb(251, 251, 251);
     padding: 30px 25px;
     border-radius: 12px;
-    width: 40%;
-    height: 800px;
-    max-width: 400px;
+    width: 90%; /* Responsive width */
+    max-width: 450px; /* Max width for larger screens */
+    height: auto; /* Allow height to adjust */
     text-align: center;
     position: relative;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin: auto; /* Center the modal horizontally and vertically */
 }
 
 /* Styling for the quiz question heading. */
@@ -655,7 +673,7 @@
 
 /* Hover effect for the quiz close button. */
 .quiz-close-btn:hover {
-    color: #ffffff;
+    color: #333; /* Darken color on hover */
     background-color: transparent;
 }
 
@@ -681,6 +699,7 @@
     display: flex;
     align-items: center;
     min-height: 50px; /* Ensures consistent height */
+    justify-content: center; /* Center text in button */
 }
 
 /* Hover effect for the quiz answer buttons. */
@@ -700,15 +719,15 @@
     color: #000000;
     cursor: pointer;
     font-weight: 600;
-    font-size: 16px;
+    font-size: var(--font-size-base);
 }
 
 /* Hover effect for the quiz "Back" button. */
 .quiz-back-btn:hover {
     background-color: none;
     text-decoration: underline;
-    background-color: rgb(39, 147, 255);
-    color: #ffffff;
+    background-color: transparent; /* Remove blue background */
+    color: #007bff; /* Change color on hover */
 }
 
 .quiz-show-matches-btn {
@@ -740,6 +759,25 @@
     .FindC-filter-container {
         margin-left: 40px;
     }
+
+    .FindC-1 {
+        background-size: 250px; /* Adjust background image size */
+        background-position: top right;
+        height: auto; /* Allow height to adjust */
+        padding-bottom: 20px; /* Add some padding at the bottom */
+    }
+
+    .FindC-get {
+        margin-left: 20px; /* Adjust margin */
+    }
+
+    .FindC-a {
+        font-size: 32px; /* Adjust font size */
+    }
+
+    .FindC-d {
+        font-size: 18px; /* Adjust font size */
+    }
 }
 
 @media (max-width: 900px) {
@@ -755,7 +793,101 @@
         width: 100%;
         max-width: 480px;
     }
+
+    .FindC-1 {
+        background-size: 200px; /* Further adjust background image size */
+        height: auto; /* Allow height to adjust */
+        padding-bottom: 20px;
+    }
+
+    .FindC-a {
+        font-size: 28px;
+    }
+
+    .FindC-d {
+        font-size: var(--font-size-base);
+    }
+
+    .FindC-img {
+        display: none; /* Hide image on smaller screens */
+    }
+
+    .FindC-b1 {
+        width: 90%; /* Adjust width */
+        margin-left: 5%; /* Center it */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .FindC-get, .see {
+        text-align: center;
+        margin-left: 0;
+    }
 }
+
+@media (max-width: 768px) {
+    .FindC-1 {
+        background-size: 180px; /* Even smaller background image */
+        padding-bottom: 15px;
+    }
+    .FindC-a {
+        font-size: 26px;
+    }
+    .FindC-d {
+        font-size: 15px;
+        padding-right: 180px;
+        padding-left: 80px;
+    }
+
+    .filter-section-findc {
+        flex-direction: column; /* Stack filters vertically */
+        gap: 20px;
+        padding: 20px;
+        align-items: stretch; /* Stretch items to full width */
+    }
+
+    .filter-group-findc {
+        width: 100%; /* Make filter groups full width */
+    }
+
+    .filter-group-findc select {
+        min-width: unset; /* Remove min-width constraint */
+        width: 100%; /* Make select full width */
+    }
+
+    .apply-filter-btn, .reset-filter-btn {
+        width: 100%; /* Make buttons full width */
+        margin-top: 0; /* Remove top margin */
+        height: auto; /* Allow height to adjust */
+        padding: 12px 0; /* Adjust padding */
+    }
+
+    .filter-group-findc:has(.apply-filter-btn) {
+        justify-content: flex-start; /* Adjust alignment */
+    }
+
+    .quiz-modal-overlay {
+        top: 0; /* Align to top */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        margin-top: 0;
+        margin-left: 0;
+        align-items: center; /* Center vertically */
+    }
+
+    .quiz-modal {
+        width: 90%; /* Take 90% width */
+        max-width: 450px; /* Max width for modal */
+        height: auto; /* Auto height */
+        margin: auto; /* Center modal */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .quiz-modal h3 {
+        font-size: 20px; /* Adjust font size */
+    }
+}
+
 
 @media (max-width: 600px) {
     .FindC-boxes {
@@ -769,5 +901,95 @@
     }
     .FindC-filter-dropdown.open {
         transform: translate(-50%, 0);
+    }
+    .FindC-1 {
+        background-size: 150px; /* Further adjust background image size */
+        padding-bottom: 15px;
+    }
+    .FindC-a {
+        font-size: 24px;
+    }
+    .FindC-d {
+        font-size: 14px;
+    }
+    .FindC-b1 {
+        width: 95%; /* Adjust width for very small screens */
+        margin-left: 2.5%; /* Center it */
+        padding: 15px; /* Adjust padding */
+    }
+    .aa {
+        font-size: 24px;
+    }
+    .see {
+        font-size: var(--font-size-base);
+    }
+    .FindC-button1 {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .FindC-points {
+        grid-template-columns: 1fr; /* Stack related searches vertically */
+        padding: 0 20px; /* Adjust padding */
+        margin: 10px auto; /* Center the section */
+    }
+    .points {
+        padding-left: 0; /* Remove fixed padding */
+        text-align: center;
+    }
+    .FindC-line {
+        padding-left: 0; /* Remove fixed padding */
+        text-align: center;
+        margin-bottom: 15px; /* Add space between sections */
+    }
+    .FindC-more {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 20px 0;
+        text-align: justify; /* Justify text for better readability */
+    }
+    .FindC-related {
+        padding-left: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .related {
+        display: inline-block; /* Make it inline-block to center */
+        padding-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .FindC-1 {
+        background-size: 120px; /* Even smaller background image */
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .FindC-a {
+        font-size: 20px;
+    }
+    .FindC-d {
+        font-size: 12px;
+    }
+    .aa {
+        font-size: 20px;
+    }
+    .see {
+        font-size: 14px;
+    }
+    .FindC-button1 {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .quiz-modal h3 {
+        font-size: 18px;
+    }
+    .quiz-options button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    .quiz-back-btn {
+        font-size: 14px;
     }
 }

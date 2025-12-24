@@ -1,157 +1,175 @@
+import React, { useState, useMemo } from "react";
+import "./NewAndA.css";
 
-import React, { useState } from "react";
-import "./News.css";
+const ARTICLES_PER_PAGE = 9;
 
-const articlesData = [
+/* ===============================
+   Trusted NON-IDP Article Sources
+================================ */
+const allArticles = [
   {
-    img: "/assets/Ai.jpg",
-    countries: "New Zealand, United States, Canada, Ireland, United Kingdom, Australia",
-    title: "AI-powered support for your study-abroad journey",
-    publishedAt: "2025-02-01",
+    id: 1,
+    title: "The Ultimate Guide to Studying Abroad",
+    description: "A complete roadmap for students planning to study overseas.",
+    url: "https://www.topuniversities.com/student-info/studying-abroad",
   },
   {
-    img: "/assets/Cyber_security_in_science.webp",
-    countries: "United Kingdom",
-    title: "Why UK is the top choice for Indian students in 2025",
-    publishedAt: "2025-01-20",
+    id: 2,
+    title: "Top Scholarships for International Students",
+    description: "Discover fully funded and partial scholarships worldwide.",
+    url: "https://www.britishcouncil.org/study-work-abroad/scholarships",
   },
   {
-    img: "/assets/cost_of_studying_in_canda.webp",
-    countries: "United States",
-    title: "Scholarship opportunities for studying in the US",
-    publishedAt: "2025-01-12",
+    id: 3,
+    title: "Navigating Student Visa Applications",
+    description: "Step-by-step guidance on student visa processes.",
+    url: "https://www.qs.com/student-guides/student-visa-guide/",
   },
   {
-    img: "/assets/Highest-Paying_Part-Time_Jobs_In_The_UK.webp",
-    countries: "Canada",
-    title: "Canada opens new post-study work options",
-    publishedAt: "2025-01-10",
+    id: 4,
+    title: "Study in Canada: Complete Guide",
+    description: "Everything you need to know about studying in Canada.",
+    url: "https://www.educanada.ca/study-plan-etudes/index.aspx?lang=eng",
   },
   {
-    img: "/assets/MAY19-ARTICLE-WEB-13.jpg_.webp",
-    countries: "Australia",
-    title: "Australia announces updated visa rules for students",
-    publishedAt: "2025-01-05",
+    id: 5,
+    title: "IELTS Preparation Tips",
+    description: "Proven strategies to score high in IELTS.",
+    url: "https://takeielts.britishcouncil.org/take-ielts/prepare",
   },
   {
-    img: "/assets/Ielts banner.jpg",
-    countries: "Ireland",
-    title: "Top universities in Ireland for international students",
-    publishedAt: "2025-01-03",
+    id: 6,
+    title: "Post Study Work Opportunities",
+    description: "Work options available after completing studies abroad.",
+    url: "https://www.internationalstudent.com/study-abroad/work-abroad/",
   },
   {
-    img: "/assets/Medical_School.webp",
-    countries: "Global",
-    title: "Visa updates for international students in 2025",
-    publishedAt: "2024-12-28",
+    id: 7,
+    title: "Choosing the Right University",
+    description: "How to select the best university for your career goals.",
+    url: "https://www.topuniversities.com/student-info/choosing-university",
   },
   {
-    img: "/assets/Radiologist.jpg",
-    countries: "Global",
-    title: "10 travel tips for your study abroad journey",
-    publishedAt: "2024-12-20",
+    id: 8,
+    title: "Cost of Studying Abroad",
+    description: "Understand tuition fees and living expenses.",
+    url: "https://www.internationalstudent.com/study-abroad/cost-of-study/",
   },
   {
-    img: "/assets/Am.jpg",
-    countries: "United States, United Kingdom, Australia",
-    title: "Building your career abroad: A student guide",
-    publishedAt: "2024-12-10",
+    id: 9,
+    title: "Accommodation Options for International Students",
+    description: "Find the best housing options overseas.",
+    url: "https://www.britishcouncil.org/study-work-abroad/study-abroad/accommodation",
+  },
+  {
+    id: 10,
+    title: "Health Insurance for International Students",
+    description: "Why health insurance is mandatory when studying abroad.",
+    url: "https://www.internationalstudent.com/insurance/",
   },
 ];
 
-const NewsAndA = () => {
+const NewAndA = () => {
   const [search, setSearch] = useState("");
-  const [sortType, setSortType] = useState("date");
-  const [filterCountry, setFilterCountry] = useState("All");
+  const [page, setPage] = useState(1);
 
-  // 1️⃣ Filter by Country
-  let filtered = articlesData.filter((article) =>
-    filterCountry === "All"
-      ? true
-      : article.countries.toLowerCase().includes(filterCountry.toLowerCase())
+  /* ===============================
+     Filter Logic
+  ================================ */
+  const filteredArticles = useMemo(() => {
+    const term = search.toLowerCase();
+    return allArticles.filter(
+      (article) =>
+        article.title.toLowerCase().includes(term) ||
+        article.description.toLowerCase().includes(term)
+    );
+  }, [search]);
+
+  /* ===============================
+     Pagination
+  ================================ */
+  const totalPages = Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE);
+
+  const currentArticles = filteredArticles.slice(
+    (page - 1) * ARTICLES_PER_PAGE,
+    page * ARTICLES_PER_PAGE
   );
 
-  // 2️⃣ Search Filter
-  if (search) {
-    filtered = filtered.filter((article) =>
-      article.title.toLowerCase().includes(search.toLowerCase())
-    );
-  }
-
-  // 3️⃣ Sort
-  if (sortType === "date") {
-    filtered.sort(
-      (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
-    );
-  } else if (sortType === "title") {
-    filtered.sort((a, b) => a.title.localeCompare(b.title));
-  }
+  /* ===============================
+     Safe External Navigation
+  ================================ */
+  const openArticle = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   return (
-    <div className="news-section">
-      <div className="news-container">
-        <p>Jramsys India</p>
+    <section className="news-articles-section">
+      <div className="news-articles-container">
 
-        <h1 className="news-title "><span className="underline-green">764</span> News and Articles</h1>
+        {/* Header */}
+        <h1 className="news-articles-heading">
+          <span className="underline-green">I</span>NTAKE Insights
+        </h1>
 
-        {/* FILTER & SORT UI */}
-        <div className="news-controls">
-          {/* Country Filter */}
-          <select onChange={(e) => setFilterCountry(e.target.value)}>
-            <option value="All">All Countries</option>
-            <option value="United States">United States</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="Australia">Australia</option>
-            <option value="Canada">Canada</option>
-            <option value="Ireland">Ireland</option>
-            <option value="Global">Global</option>
-          </select>
-
-          {/* Sort */}
-          <select onChange={(e) => setSortType(e.target.value)}>
-            <option value="date">Sort by Date</option>
-            <option value="title">Sort by Title</option>
-          </select>
-
-          {/* Search Bar */}
+        {/* Search */}
+        <div className="search-bar">
           <input
-            type="text"
+            type="search"
             placeholder="Search articles..."
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => {
+              setSearch(e.target.value);
+              setPage(1);
+            }}
           />
         </div>
 
-        <p className="result-count">
-          Showing {filtered.length} of {articlesData.length} results
-        </p>
+        {/* Articles */}
+        <div className="articles-grid">
+          {currentArticles.length ? (
+            currentArticles.map((article) => (
+              <article key={article.id} className="article-card">
+                <h2>{article.title}</h2>
+                <p>{article.description}</p>
 
-        {/* ARTICLES */}
-        <div className="news-grid">
-          {filtered.map((article, index) => (
-            <div key={index} className="news-card">
-              <div className="news-img-wrapper">
-                <img src={article.img} alt={article.title} className="news-img" />
-              </div>
-
-              <div className="news-content">
-                <p className="article-country">{article.countries}</p>
-                <h4 className="article-title">{article.title}</h4>
-
-                <a href="#" className="news-link">
-                  Read More <span className="news-chevron">→</span>
-                </a>
-
-                <p className="published-date">
-                  Published: {new Date(article.publishedAt).toLocaleDateString()}
-                </p>
-              </div>
-            </div>
-          ))}
+                <button
+                  className="read-more-btn"
+                  onClick={() => openArticle(article.url)}
+                >
+                  Read Full Article →
+                </button>
+              </article>
+            ))
+          ) : (
+            <p className="no-results">No articles found.</p>
+          )}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="pagination">
+            <button
+              onClick={() => setPage(page - 1)}
+              disabled={page === 1}
+            >
+              Previous
+            </button>
+
+            <span>
+              Page {page} of {totalPages}
+            </span>
+
+            <button
+              onClick={() => setPage(page + 1)}
+              disabled={page === totalPages}
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
-    </div>
+    </section>
   );
 };
 
-export default NewsAndA;
+export default NewAndA;

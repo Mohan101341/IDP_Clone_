@@ -16,6 +16,8 @@ export default function ContactPage() {
     funding: "",
     agreeTerms: false,
   });
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -25,9 +27,48 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setLoading(true);
+    setMessage("");
+
+    try {
+      const res = await fetch("http://localhost:5000/api/counselling/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
+      setMessage("✅ Counselling request submitted successfully!");
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        destination: "",
+        startTime: "",
+        office: "",
+        counsellingMode: "",
+        studyLevel: "",
+        funding: "",
+        agreeTerms: false,
+      });
+    } catch (error) {
+      setMessage("❌ Failed to submit. Please try again later.");
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -144,7 +185,7 @@ export default function ContactPage() {
             {/* OFFICE + MODE */}
             <div className="form-row">
               <div className="form-field">
-                <label>Nearest Jramsys Office*</label>
+                <label>Nearest INTAKE Office*</label>
                 <select
                   name="office"
                   value={formData.office}
@@ -219,20 +260,29 @@ export default function ContactPage() {
                   onChange={handleInputChange}
                   required
                 />
-                I agree to Jramsys{" "}
-                <a href="#" className="link">
-                  Terms
-                </a>{" "}
-                and{" "}
-                <a href="#" className="link">
-                  Privacy Policy
-                </a>{" "}
-                *
+                I agree to Jramsys
+                <br />
+                <span className="terms-text">Terms & Privacy Policy</span>
               </label>
             </div>
 
-            <button type="submit" className="submit-button">
-              Avail FREE Counselling
+
+            {message && (
+              <p
+                className={`message ${
+                  message.startsWith("✅") ? "success" : "error"
+                }`}
+              >
+                {message}
+              </p>
+            )}
+
+            <button
+              type="submit"
+              className="submit-button"
+              disabled={loading}
+            >
+              {loading ? "Submitting..." : "Avail FREE Counselling"}
             </button>
           </form>
         </div>

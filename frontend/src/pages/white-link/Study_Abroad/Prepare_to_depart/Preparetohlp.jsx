@@ -10,7 +10,7 @@ function Preparetohlp () {
       content: (
         <div>
           <p>
-           Download the Jramsys Live app to refine your search or book a free appointment with an IDP counsellor.
+           Download the Intake Live app to refine your search or book a free appointment with an INTAKE counsellor.
           </p>
           <ul>
             <li>What is studying abroad</li>

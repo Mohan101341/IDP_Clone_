@@ -64,6 +64,7 @@
   margin-left: 10px;
   color: rgb(140, 140, 140);
 }
+
     /*  Mobile devices (up to 600px) */
 @media (max-width: 600px) {
   .footer-sections {
@@ -79,15 +80,22 @@
   }
 
   .footer-column h2 {
-    font-size: 16px;
+    font-size: var(--font-size-base);
   }
 
-  .footer-row ul {
-    padding: 0;
+  .footer-row ul { /* Adjust gap for very small screens if needed */
+    gap: 10px;
   }
 
-  .footer-row ul li {
-    margin: 0 8px;
+  /* Ensure separator for legal links is still there on small screens */
+  .footer-row:last-of-type ul li:not(:last-child)::after {
+    content: "|";
+    margin-left: 8px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+    line-height: 1.5;
   }
   
 }
@@ -124,4 +132,3 @@
     
   
     
-

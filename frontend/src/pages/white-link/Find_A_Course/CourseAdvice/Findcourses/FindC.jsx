@@ -337,6 +337,8 @@ export default function FindC() {
     const [isQuizFilterActive, setIsQuizFilterActive] = useState(false);
     // State to store the user's answers to the quiz questions.
     const [quizAnswers, setQuizAnswers] = useState({});
+    // State to track which courses are favorited. Uses a unique identifier for each course.
+    const [favoritedCourses, setFavoritedCourses] = useState({});
 
     // A ref to the course cards container to scroll to it after the quiz.
     const coursesContainerRef = useRef(null);
@@ -467,6 +469,14 @@ export default function FindC() {
         }
     };
 
+    // Function to handle clicking the heart icon, toggling its favorited status.
+    const handleHeartClick = (courseIdentifier) => {
+        setFavoritedCourses(prevFavorites => ({
+            ...prevFavorites,
+            [courseIdentifier]: !prevFavorites[courseIdentifier] // Toggle the favorite status for the given course
+        }));
+    };
+
     const totalPages = Math.ceil(filteredCourses.length / COURSES_PER_PAGE);
     const startIndex = (currentPage - 1) * COURSES_PER_PAGE;
     const currentCourses = filteredCourses.slice(startIndex, startIndex + COURSES_PER_PAGE);
@@ -483,10 +493,10 @@ export default function FindC() {
         {/* This is the main banner section for the page. */}
         <div className="FindC-1">
         {/* Breadcrumb navigation. */}
-        <p className="FindC-div">JRAMSYS OVERSEASE/Find a course</p>
+       <Link to="/"> <p className="FindC-div">INTAKE/Find a course</p></Link>
         {/* Main heading and description. */}
         <h1 className="FindC-a">Find courses to study abroad</h1>
-        <p className="FindC-div">Discover courses from top universities below. Use the filters to refine by study level, destination and more.</p> 
+        <p className="FindC-d">Discover courses from top universities below. Use the filters to refine by study level, destination and more.</p> 
        </div>
 
         {/* This section contains the filter dropdowns and buttons. */}
@@ -566,7 +576,12 @@ export default function FindC() {
                     // Each card represents a single course.
                     <div className="FindC-box1" key={index}>
                         <div className="FindC-card-header">
-                            <div className="FindC-heart-icon">♡</div>
+                            <div
+                                className={`FindC-heart-icon ${favoritedCourses[course.university + course.program] ? 'active' : ''}`}
+                                onClick={() => handleHeartClick(course.university + course.program)}
+                            >
+                                {favoritedCourses[course.university + course.program] ? '❤️' : '♡'} {/* Change emoji based on favorited state */}
+                            </div>
                         </div>
                         <div className="FindC-university-logo">
                             <div className="FindC-logo-melbourne">{course.university}</div>

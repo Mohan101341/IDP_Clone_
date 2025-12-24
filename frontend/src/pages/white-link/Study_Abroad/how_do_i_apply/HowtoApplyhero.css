@@ -64,10 +64,58 @@
     max-width: 400px;
     width: 100%;
     height: auto;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+    border-radius: var(--font-size-base);
+    box-shadow: 0 4px var(--font-size-base) rgba(44, 62, 80, 0.12);
     object-fit: cover;
 }
 .stdy-btn{
     background-color: rgb(28, 203, 127);
+}
+
+@media (max-width: 768px) {
+  .stdab {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .stdab-left,
+  .stdab-right {
+    flex: 1 1 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stdab-left {
+    padding-left: 0;
+  }
+
+  .stdab-right {
+    padding-right: 0;
+  }
+
+  .stdab-right img {
+    max-width: 280px;
+  }
+
+  /* Animation direction fix for mobile */
+  .slide-in-left,
+  .slide-in-right {
+    animation: slideUpIn 0.7s ease forwards;
+  }
+}
+
+@media (max-width: 480px) {
+  .stdab {
+    padding: 1.5rem 1rem;
+  }
+
+  .stdab-left h1 {
+    font-size: 2rem;
+  }
+
+  .stdab-right img {
+    max-width: 200px;
+  }
 }

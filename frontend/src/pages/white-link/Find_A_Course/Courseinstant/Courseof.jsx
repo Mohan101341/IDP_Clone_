@@ -38,6 +38,8 @@ export default function Courseof() {
   const [filteredUniversities, setFilteredUniversities] = useState(allUniversities);
   // State to manage the current page for pagination.
   const [currentPage, setCurrentPage] = useState(1);
+  // State to track which universities are favorited. Uses university name as key.
+  const [favoritedUniversities, setFavoritedUniversities] = useState({});
   
 
   // This effect runs when the filters change to update the displayed universities.
@@ -93,12 +95,20 @@ export default function Courseof() {
     setFilters(initialFilters);
   };
 
+  // Function to handle clicking the heart icon, toggling its favorited status.
+  const handleHeartClick = (universityName) => {
+    setFavoritedUniversities(prevFavorites => ({
+      ...prevFavorites,
+      [universityName]: !prevFavorites[universityName] // Toggle the favorite status for the given university
+    }));
+  };
+
   return (
     <div>
       {/* This is the main banner section for the page. */}
       <div className="Courseof-container">
         {/* Breadcrumb navigation. */}
-        <p className="h">JRAMSYS OVERSEASE/Find a University</p>
+        <Link to="/"><p className="Courseof-h">INTAKE/Find a University</p></Link>
         {/* Main heading. */}
         <h1 className="Courseof-t">
           Given below are the list of Universities and Colleges with Offers
@@ -137,7 +147,12 @@ export default function Courseof() {
           currentUniversities.map((u, idx) => (
             <div key={idx} className="Courseof-box1">
               <div className="Courseof-card-header">
-                <div className="Courseof-heart-icon">♡</div>
+                <div
+                  className={`Courseof-heart-icon ${favoritedUniversities[u.name] ? 'favorited' : ''}`}
+                  onClick={() => handleHeartClick(u.name)}
+                >
+                  {favoritedUniversities[u.name] ? '❤️' : '♡'} {/* Change emoji based on favorited state */}
+                </div>
               </div>
 
               <div className="Courseof-university-logo">

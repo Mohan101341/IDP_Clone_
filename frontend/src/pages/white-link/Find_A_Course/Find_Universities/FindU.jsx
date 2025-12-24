@@ -64,6 +64,9 @@ export default function FindU() {
         rank: 'Any',
     });
 
+    // State to manage favorited universities.
+    const [favoritedUniversities, setFavoritedUniversities] = useState({});
+
     // This effect runs when the filters change to update the displayed universities.
     useEffect(() => {
         let filteredData = [...universitiesData];
@@ -107,6 +110,14 @@ export default function FindU() {
         setSelection({ country: 'All', rank: 'Any' });
     };
 
+    // Function to toggle the favorited state of a university.
+    const handleHeartClick = (universityName) => {
+        setFavoritedUniversities(prevFavorites => ({
+            ...prevFavorites,
+            [universityName]: !prevFavorites[universityName]
+        }));
+    };
+
     // Pagination logic
     const totalPages = Math.ceil(universities.length / itemsPerPage);
     const paginatedUniversities = universities.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
@@ -132,7 +143,7 @@ export default function FindU() {
          {/* This is the main banner section for the page. */}
          <div className="FindU-container">      
             {/* Breadcrumb navigation. */}
-            <p className="Find-h">JRAMSYS OVERSEASE/Find a University</p>
+           <Link to="/"> <p className="Find-h">INTAKE/Find a University</p></Link>
             {/* Main heading. */}
         <h1 className="FindU-t">
             These are the total Universities and Colleges</h1>            
@@ -165,7 +176,13 @@ export default function FindU() {
                     <div className="FindU-box1" key={index}>
                         {/* Header of the card with a heart icon. */}
                         <div className="FindU-card-header">
-                            <div className="FindU-heart-icon">♡</div>
+                            {/* Modified heart icon logic and class */}
+                            <div
+                                className={`FindU-heart-icon ${favoritedUniversities[uni.name] ? 'favorited' : ''}`}
+                                onClick={() => handleHeartClick(uni.name)}
+                            >
+                                {favoritedUniversities[uni.name] ? '❤️' : '♡'}
+                            </div>
                         </div>
                         <div className="FindU-university-logo">
                             <div className="FindU-logo-m">{uni.name}</div>

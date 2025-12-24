@@ -8,7 +8,7 @@
     background-repeat:no-repeat;
     background-position: right; 
     background-size: contain;
-    height: 300px;
+    height: 250px;
     max-width: 1800px;
     background-color: black;
     margin: 0 auto;
@@ -18,8 +18,8 @@
 
 /* Styling for the breadcrumb text in the banner. */
 .wp {
-    margin-left: -12px;
-    font-size: 18px;
+    margin-left: 12px;
+    font-size: 16px;
     margin-bottom: 13px;
     color: rgb(255, 255, 255);
 }
@@ -32,7 +32,7 @@
 
 /* Styling for the secondary text in the banner. */
 .wr{
-     margin-left: -12px;
+     margin-left: 12px;
     font-size: 18px;
     color: rgb(255, 255, 255);
     margin-bottom: 13px;
@@ -42,15 +42,15 @@
 .wh {
     font-size: 32px;
     font-weight: bold;
-    margin-left: -13px;
+    margin-left: 10px;
     color: rgb(255, 255, 255);
     margin-bottom: 12px;
-    margin-top: 8px;
+    margin-top: 18px;
 }
 
 /* Styling for the button in the banner. */
 .wb {
-    margin-top: 16px;
+    margin-top: var(--font-size-base);
     margin-left: -14;
     border-radius: 8px;
     font-weight: bold;
@@ -69,8 +69,10 @@
     margin-left: 0px;
     padding-top: 10px;
     padding-bottom: 30px;
+    font-size: 20px;
     padding-left: 100px;
     padding-bottom: 30px;
+    align-items: left;
     padding-right: 30px;
     background-color: aliceblue;
 }
@@ -111,12 +113,12 @@
     border: 1px solid rgb(238, 238, 238);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 24px 16px;
+    padding: 24px var(--font-size-base);
     padding: 40px 20px;
     text-align: center;
     cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     transition: all 0.3s ease-in-out;
 }
 
@@ -184,4 +186,35 @@
     line-height: 1.6;
     margin: 0;
     color: #666;
+}
+@media (max-width: 768px) {
+    .what-container {
+        background-size: 250px;
+        background-position: right;
+        height: 220px;
+        padding: 20px;
+    }
+    .wp {
+        margin-left: -250px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .wr{
+        margin-left: 0px;
+        font-size: 14px;
+        padding-right: 220px;
+    }
+    .wh {
+        font-size: 22px;
+        padding-right: 220px;
+        padding-left: 520px;
+        line-height: normal;
+        padding-top: 15px;
+        margin-bottom: 10px;
+    }
+    .mm{
+        font-size: 15px;
+        line-height: normal;
+        padding-top: 5px
+    }
 }

@@ -13,12 +13,12 @@ export default function Disclaimer() {
         <div className="footer-page-content">
           <h2>No Warranty</h2>
           <p>
-            IDP Education makes no warranty, expressed or implied, regarding the accuracy, adequacy, completeness, 
+            INTAKE Education makes no warranty, expressed or implied, regarding the accuracy, adequacy, completeness, 
             legality, reliability, or usefulness of any information on this website.
           </p>
           <h2>Limitation of Liability</h2>
           <p>
-            In no event shall IDP Education be liable for any loss or damage including without limitation, 
+            In no event shall INTAKE Education be liable for any loss or damage including without limitation, 
             indirect or consequential loss or damage, arising from the use of this website.
           </p>
           <h2>External Links</h2>

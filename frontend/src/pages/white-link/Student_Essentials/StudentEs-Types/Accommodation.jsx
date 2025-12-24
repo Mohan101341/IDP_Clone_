@@ -9,22 +9,17 @@ const Accommodation = () => {
   const navigate = useNavigate();
 
   return (
-    <div className={`essentials-container ${styles.container}`}>
+    <div className="essentials-container">
 
       {/* HERO SECTION */}
-      <div className={styles.heroSection}>
-        <div className={styles.overlay}>
-
-        <p className={styles.breadcrumb}>
+      <div className="essentials-hero">
+        <p className="breadcrumb-text">
           Study Abroad, Overseas Education... / Student Essentials / Student Accommodation
         </p>
-
-        <h1 className={styles.heroTitle}>Accommodation Services for International Students</h1>
-
-        <p className={styles.heroText}>
+        <h1 className="hero-heading">Accommodation Services for International Students</h1>
+        <p className="hero-subtext">
           Find the best, safe, and budget-friendly accommodation options to make your study abroad journey smooth.
         </p>
-      </div>
       </div>
 
       {/* TOP BANNER */}

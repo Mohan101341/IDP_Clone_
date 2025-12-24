@@ -113,8 +113,8 @@ export default function Scholar() {
         <div>
         {/* This is the main banner section of the page. */}
         <div className="Scholar-container">
-            <p className="l1">JRAMSYS INFO TECH india/Find a Scholarship</p>
-            <h1 className="head">Scholarships for international students studying abroad</h1>
+           <Link to="/"> <p className="l1np1">INTAKE/Find a Scholarship</p></Link>
+            <h1 className="Scholar-head">Scholarships for international students studying abroad</h1>
             {/* This button links to the dedicated scholarship search page. */}
             <Link to="/pages/FindScholar" className="find-scholar-btn">
                 Find Scholarships

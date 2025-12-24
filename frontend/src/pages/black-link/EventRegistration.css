@@ -20,7 +20,7 @@
 .reg-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--font-size-base);
 }
 
 .reg-form label {
@@ -45,12 +45,12 @@
 
 .reg-submit-btn {
   margin-top: 10px;
-  padding: 10px 16px;
+  padding: 10px var(--font-size-base);
   border: none;
   border-radius: 6px;
   cursor: pointer;
   background: #0c0c96;
   color: white;
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 600;
 }

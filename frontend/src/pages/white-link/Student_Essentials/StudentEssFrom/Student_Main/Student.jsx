@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../StudentEss.css";
 
-import StudentEssFrom from "../StudentEssFrom";
 import ServicesSection from "../ServiceSection";
 import StudyAbroadPromo from "../StudyAdroadPromo";
 import EssentialsCards from "../EssentialsCards";
+import ContactPage from "../../../../../components/Contact/Contact";
 
 export default function Student() {
   const navigate = useNavigate();
@@ -255,7 +255,7 @@ export default function Student() {
         <div className="form-inner">
           <h2>Get personalised help</h2>
           <p>Fill the quick enquiry and our counsellor will contact you.</p>
-          <StudentEssFrom />
+        <ContactPage/>
         </div>
       </section>
 

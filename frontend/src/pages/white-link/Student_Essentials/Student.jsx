@@ -6,6 +6,7 @@ import StudentEssFrom from "./StudentEssFrom/StudentEssFrom";
 import ServicesSection from "./StudentEssFrom/ServiceSection";
 import StudyAbroadPromo from "./StudentEssFrom/StudyAdroadPromo";
 import EssentialsCards from "./StudentEssFrom/EssentialsCards";
+import ContactPage from "../../../components/Contact/Contact";
 
 export default function Student() {
   const navigate = useNavigate();
@@ -242,7 +243,7 @@ export default function Student() {
         <div className="form-inner">
           <h2>Get personalised help</h2>
           <p>Fill the quick enquiry and our counsellor will contact you.</p>
-          <StudentEssFrom />
+          <ContactPage/>
         </div>
       </section>
 
