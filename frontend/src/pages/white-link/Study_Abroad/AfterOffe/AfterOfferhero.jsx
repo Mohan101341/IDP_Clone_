@@ -16,7 +16,7 @@ const AfterOfferhero = () => {
         <h3>Here are the steps to take from accepting an offer through to planning for your trip to make your study abroad dream a reality</h3>
        
        <button
-      className="stdy-btn"
+     
       onClick={() => navigate("/contact")} // Must match the route path
     >
       Contact INTAKE

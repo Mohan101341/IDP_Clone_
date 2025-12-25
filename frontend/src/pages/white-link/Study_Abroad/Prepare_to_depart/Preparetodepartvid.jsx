@@ -1,6 +1,8 @@
 import React from "react";
 import "./PreparetodepartVid.css";
+import { useNavigate } from 'react-router-dom';
 function Preparetodepartvid() {
+  const navigate = useNavigate();
   return (
     <div className="hdap">
       <div>
@@ -28,7 +30,12 @@ function Preparetodepartvid() {
           <h3>
             Create your profile and unlock a wide array of features including personalised recommendations, fast-tracked applications and much more.
           </h3>
-          <button>Signup</button>
+          <button
+      className="stdy-btn"
+      onClick={() => navigate("/contact")} // Must match the route path
+    >
+      Contact INTAKE
+    </button>
         </div>
       </div>
     </div>

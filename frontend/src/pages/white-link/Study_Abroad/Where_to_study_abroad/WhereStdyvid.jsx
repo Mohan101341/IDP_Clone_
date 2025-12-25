@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useNavigate } from 'react-router-dom';
 function WhereStdyVid() {
+  const navigate = useNavigate();
   return (
     <div className="stdabvid">
       <div>
@@ -41,7 +42,12 @@ Your choice depends on your priorities:
         <h2>One account for all your study abroad needs</h2>
         <h3>Create your profile and unlock a wide array of features including personalised recommendations, fast-tracked applications and much more.</h3>
         
-        <button>Signup</button>
+         <button
+      className="stdy-btn"
+      onClick={() => navigate("/signup")} // Must match the route path
+    >
+     Signup
+    </button>
         </div>
         
 

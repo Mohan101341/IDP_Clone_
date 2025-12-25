@@ -321,7 +321,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/pages/white-link/SignIN">
+              <Link to="/login">
                 <button className="signup-btn" onClick={toggleMobileMenu}>
                   Login
                 </button>

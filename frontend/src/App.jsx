@@ -34,7 +34,8 @@ import Duolingo from "./pages/white-link/EnglishTests/Duolingo/Duolingo.jsx";
 import Avail from "./pages/white-link/Avail_Free/Avail";
 import IELTSPage from "./pages/white-link/IELTS/IELTS1.jsx";
 import SignIN from "./pages/white-link/Sign_In/SignIN";
-import Sign_Up from "./pages/white-link/Sign_Up/Sign_Up";
+
+import Signup from "./pages/white-link/Sign_Up/Sign_Up.jsx";
 
 // Study Abroad
 import WhyStudyAbroadPage from "./pages/white-link/Study_Abroad/WhyStudyAbroadPage";
@@ -202,6 +203,14 @@ export default function App() {
           }
         />
 
+          <Route
+  path="/contact"
+  element={
+    <WhiteLinkLayout>
+      <Contact />
+    </WhiteLinkLayout>
+  }
+/>
         {/* ⚙️ Services Page */}
         <Route
           path="/services"
@@ -254,7 +263,8 @@ export default function App() {
         
        
        
-
+          
+       <Route path="/login" element={<SignIN />} />
 
 
         {/* 📚 Study Details - Generic and Specific */}
